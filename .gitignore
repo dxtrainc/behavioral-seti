@@ -1,0 +1,8 @@
+*.npz
+*.npy
+*.csv
+*.dat
+*.hdf
+*.tar.gz
+psrcat.json
+__pycache__/

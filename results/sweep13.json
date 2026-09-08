@@ -1,0 +1,1834 @@
+[
+ {
+  "pair": "sunspot / X-ray bg",
+  "form": "ratio",
+  "obs": -1.779295877230169,
+  "p": 0.00016663889351774705,
+  "nnull": 6000,
+  "null_med": -1.9923262009035132
+ },
+ {
+  "pair": "IMF |B| / wind density",
+  "form": "log-ratio",
+  "obs": -2.0517185232488964,
+  "p": 0.00016663889351774705,
+  "nnull": 6000,
+  "null_med": -2.371460408865792
+ },
+ {
+  "pair": "proton temp / alpha/proton",
+  "form": "ratio",
+  "obs": -1.642951008583622,
+  "p": 0.00016663889351774705,
+  "nnull": 6000,
+  "null_med": -1.7771418053152703
+ },
+ {
+  "pair": "wind density / alpha/proton",
+  "form": "log-ratio",
+  "obs": -2.0784151983331784,
+  "p": 0.00016663889351774705,
+  "nnull": 6000,
+  "null_med": -2.3027050903222404
+ },
+ {
+  "pair": "F10.7 / X-ray bg",
+  "form": "ratio",
+  "obs": -1.8581702635814332,
+  "p": 0.0003332777870354941,
+  "nnull": 6000,
+  "null_med": -1.9885259271398867
+ },
+ {
+  "pair": "IMF |B| / wind speed",
+  "form": "log-ratio",
+  "obs": -2.0206588953563855,
+  "p": 0.0003332777870354941,
+  "nnull": 6000,
+  "null_med": -2.0882191914017985
+ },
+ {
+  "pair": "wind speed / alpha/proton",
+  "form": "ratio",
+  "obs": -1.6397695339258518,
+  "p": 0.0003332777870354941,
+  "nnull": 6000,
+  "null_med": -1.6900391763600062
+ },
+ {
+  "pair": "wind density / wind speed",
+  "form": "log-ratio",
+  "obs": -2.1689864106962857,
+  "p": 0.0008331944675887352,
+  "nnull": 6000,
+  "null_med": -2.226412898716682
+ },
+ {
+  "pair": "proton temp / wind speed",
+  "form": "ratio",
+  "obs": -1.7312519801710138,
+  "p": 0.0009998333611064823,
+  "nnull": 6000,
+  "null_med": -1.781401148326174
+ },
+ {
+  "pair": "cosmic ray / IMF |B|",
+  "form": "ratio",
+  "obs": -1.8649364435056568,
+  "p": 0.0014997500416597234,
+  "nnull": 6000,
+  "null_med": -1.9186604749245624
+ },
+ {
+  "pair": "MgII / cosmic ray",
+  "form": "log-ratio",
+  "obs": -1.6780870680394013,
+  "p": 0.0018330278286952174,
+  "nnull": 6000,
+  "null_med": -1.749249582274878
+ },
+ {
+  "pair": "proton temp / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.69405132319544,
+  "p": 0.007665389101816364,
+  "nnull": 6000,
+  "null_med": -1.7490596221624113
+ },
+ {
+  "pair": "F10.7 / sunspot",
+  "form": "log-ratio",
+  "obs": -1.698554244502919,
+  "p": 0.008665222462922846,
+  "nnull": 6000,
+  "null_med": -1.7182835376081225
+ },
+ {
+  "pair": "TSI / MgII",
+  "form": "ratio",
+  "obs": -1.9632516013727286,
+  "p": 0.00899850024995834,
+  "nnull": 6000,
+  "null_med": -1.9762307246400463
+ },
+ {
+  "pair": "MgII / cosmic ray",
+  "form": "ratio",
+  "obs": -1.654488678830318,
+  "p": 0.013497750374937511,
+  "nnull": 6000,
+  "null_med": -1.7096349444914942
+ },
+ {
+  "pair": "cosmic ray / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.6689116742993644,
+  "p": 0.013497750374937511,
+  "nnull": 6000,
+  "null_med": -1.684303853451287
+ },
+ {
+  "pair": "X-ray bg / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -1.729099511840662,
+  "p": 0.013664389268455257,
+  "nnull": 6000,
+  "null_med": -1.7640382549049383
+ },
+ {
+  "pair": "MgII / proton temp",
+  "form": "log-ratio",
+  "obs": -1.6122080229829323,
+  "p": 0.01633061156473921,
+  "nnull": 6000,
+  "null_med": -1.6193115303258505
+ },
+ {
+  "pair": "TSI / F10.7",
+  "form": "log-ratio",
+  "obs": -1.8471932270754112,
+  "p": 0.018496917180469922,
+  "nnull": 6000,
+  "null_med": -1.85366186267971
+ },
+ {
+  "pair": "F10.7 / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.678330838446513,
+  "p": 0.02066322279620063,
+  "nnull": 6000,
+  "null_med": -1.7068729859537584
+ },
+ {
+  "pair": "TSI / proton temp",
+  "form": "log-ratio",
+  "obs": -1.5441853315556324,
+  "p": 0.022162972837860357,
+  "nnull": 6000,
+  "null_med": -1.5451149498675978
+ },
+ {
+  "pair": "F10.7 / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -1.8393216043826106,
+  "p": 0.02416263956007332,
+  "nnull": 6000,
+  "null_med": -1.9009629345951726
+ },
+ {
+  "pair": "IMF |B| / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.8909990667360228,
+  "p": 0.03199466755540743,
+  "nnull": 6000,
+  "null_med": -1.9270057222599568
+ },
+ {
+  "pair": "cosmic ray / IMF |B|",
+  "form": "log-ratio",
+  "obs": -2.0017266556689415,
+  "p": 0.03616063989335111,
+  "nnull": 6000,
+  "null_med": -2.0118626088051323
+ },
+ {
+  "pair": "proton temp / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.9876601197945445,
+  "p": 0.04115980669888352,
+  "nnull": 6000,
+  "null_med": -2.008718076102255
+ },
+ {
+  "pair": "wind density / X-ray bg",
+  "form": "log-ratio",
+  "obs": -2.071074542741515,
+  "p": 0.04149308448591901,
+  "nnull": 6000,
+  "null_med": -2.1123139165289118
+ },
+ {
+  "pair": "cosmic ray / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.59757362806171,
+  "p": 0.04399266788868522,
+  "nnull": 6000,
+  "null_med": -1.6258093319140126
+ },
+ {
+  "pair": "alpha/proton / X-ray bg",
+  "form": "ratio",
+  "obs": -1.9752651008411164,
+  "p": 0.054157640393267786,
+  "nnull": 6000,
+  "null_med": -2.008096145637036
+ },
+ {
+  "pair": "F10.7 / MgII",
+  "form": "ratio",
+  "obs": -1.7527591296663618,
+  "p": 0.061323112814530914,
+  "nnull": 6000,
+  "null_med": -1.7682545767650817
+ },
+ {
+  "pair": "proton temp / wind density",
+  "form": "resid-product",
+  "obs": -1.760868108810522,
+  "p": 0.0733211131478087,
+  "nnull": 6000,
+  "null_med": -1.7821106791085999
+ },
+ {
+  "pair": "IMF |B| / X-ray bg",
+  "form": "ratio",
+  "obs": -1.977525376353136,
+  "p": 0.07748708548575238,
+  "nnull": 6000,
+  "null_med": -1.9995239537587084
+ },
+ {
+  "pair": "F10.7 / wind density",
+  "form": "ratio",
+  "obs": -1.6557666774207505,
+  "p": 0.07982002999500083,
+  "nnull": 6000,
+  "null_med": -1.6859951982510033
+ },
+ {
+  "pair": "wind density / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.8850480816612794,
+  "p": 0.08031994667555407,
+  "nnull": 6000,
+  "null_med": -1.9026950983307969
+ },
+ {
+  "pair": "sunspot / alpha/proton",
+  "form": "ratio",
+  "obs": -1.6884081383804856,
+  "p": 0.08198633561073154,
+  "nnull": 6000,
+  "null_med": -1.7315192480593216
+ },
+ {
+  "pair": "alpha/proton / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.8496923238133558,
+  "p": 0.08365272454590901,
+  "nnull": 6000,
+  "null_med": -1.880902212789258
+ },
+ {
+  "pair": "MgII / wind speed",
+  "form": "resid-product",
+  "obs": -1.6858409984286713,
+  "p": 0.0874854190968172,
+  "nnull": 6000,
+  "null_med": -1.709525796316436
+ },
+ {
+  "pair": "cosmic ray / wind speed",
+  "form": "log-ratio",
+  "obs": -2.094134370871359,
+  "p": 0.08848525245792369,
+  "nnull": 6000,
+  "null_med": -2.1093652155253215
+ },
+ {
+  "pair": "proton >10MeV / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.5566289314371642,
+  "p": 0.09265122479586736,
+  "nnull": 6000,
+  "null_med": -1.5959550681582957
+ },
+ {
+  "pair": "proton temp / X-ray bg",
+  "form": "ratio",
+  "obs": -2.0570024608966526,
+  "p": 0.09315114147642059,
+  "nnull": 6000,
+  "null_med": -2.0771590373712976
+ },
+ {
+  "pair": "TSI / MgII",
+  "form": "log-ratio",
+  "obs": -1.9343373131206874,
+  "p": 0.09448425262456257,
+  "nnull": 6000,
+  "null_med": -1.9414697295111318
+ },
+ {
+  "pair": "F10.7 / cosmic ray",
+  "form": "log-ratio",
+  "obs": -1.8424868972518356,
+  "p": 0.11131478086985502,
+  "nnull": 6000,
+  "null_med": -1.8579723258813465
+ },
+ {
+  "pair": "IMF |B| / alpha/proton",
+  "form": "log-ratio",
+  "obs": -2.103588843499647,
+  "p": 0.1208131978003666,
+  "nnull": 6000,
+  "null_med": -2.1332130841794097
+ },
+ {
+  "pair": "TSI / F10.7",
+  "form": "ratio",
+  "obs": -1.9522234855826075,
+  "p": 0.12881186468921846,
+  "nnull": 6000,
+  "null_med": -1.9553842382545101
+ },
+ {
+  "pair": "wind density / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.7109589894707187,
+  "p": 0.13914347608731878,
+  "nnull": 6000,
+  "null_med": -1.730141293889083
+ },
+ {
+  "pair": "wind speed / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.699198577106428,
+  "p": 0.14147642059656723,
+  "nnull": 6000,
+  "null_med": -1.7137992910688307
+ },
+ {
+  "pair": "TSI / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.6362136831679626,
+  "p": 0.15897350441593067,
+  "nnull": 6000,
+  "null_med": -1.639221912825835
+ },
+ {
+  "pair": "sunspot / cosmic ray",
+  "form": "ratio",
+  "obs": -1.7027065387629232,
+  "p": 0.16463922679553408,
+  "nnull": 6000,
+  "null_med": -1.7098014926054879
+ },
+ {
+  "pair": "sunspot / wind speed",
+  "form": "resid-product",
+  "obs": -1.7111269208475948,
+  "p": 0.1718046992167972,
+  "nnull": 6000,
+  "null_med": -1.7247889938796732
+ },
+ {
+  "pair": "F10.7 / alpha/proton",
+  "form": "ratio",
+  "obs": -1.703102721205673,
+  "p": 0.17330444925845692,
+  "nnull": 6000,
+  "null_med": -1.7258174899355072
+ },
+ {
+  "pair": "cosmic ray / proton temp",
+  "form": "log-ratio",
+  "obs": -1.5490050218539713,
+  "p": 0.18046992167972004,
+  "nnull": 6000,
+  "null_med": -1.5533499853373702
+ },
+ {
+  "pair": "sunspot / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.7062861016977418,
+  "p": 0.18396933844359273,
+  "nnull": 6000,
+  "null_med": -1.7180117984017962
+ },
+ {
+  "pair": "wind speed / alpha/proton",
+  "form": "log-ratio",
+  "obs": -1.9037144699328077,
+  "p": 0.18463589401766373,
+  "nnull": 6000,
+  "null_med": -1.9177291615363832
+ },
+ {
+  "pair": "cosmic ray / alpha/proton",
+  "form": "ratio",
+  "obs": -1.6857581111625553,
+  "p": 0.1856357273787702,
+  "nnull": 6000,
+  "null_med": -1.6953319646817486
+ },
+ {
+  "pair": "TSI / proton temp",
+  "form": "ratio",
+  "obs": -1.7212318179863724,
+  "p": 0.19513414430928178,
+  "nnull": 6000,
+  "null_med": -1.7215263252225976
+ },
+ {
+  "pair": "F10.7 / MgII",
+  "form": "log-ratio",
+  "obs": -1.872813607509106,
+  "p": 0.19596733877687053,
+  "nnull": 6000,
+  "null_med": -1.8813981942680753
+ },
+ {
+  "pair": "IMF |B| / proton temp",
+  "form": "log-ratio",
+  "obs": -1.5220917882825895,
+  "p": 0.20246625562406265,
+  "nnull": 6000,
+  "null_med": -1.5390463260146972
+ },
+ {
+  "pair": "cosmic ray / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -2.0617634031194365,
+  "p": 0.21263122812864524,
+  "nnull": 6000,
+  "null_med": -2.1100969341000244
+ },
+ {
+  "pair": "cosmic ray / X-ray bg",
+  "form": "ratio",
+  "obs": -1.9245799708156146,
+  "p": 0.21913014497583735,
+  "nnull": 6000,
+  "null_med": -1.9330850824483012
+ },
+ {
+  "pair": "wind speed / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.880753798934223,
+  "p": 0.22229628395267456,
+  "nnull": 6000,
+  "null_med": -1.8934594065182486
+ },
+ {
+  "pair": "IMF |B| / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.6770455997412324,
+  "p": 0.2337943676053991,
+  "nnull": 6000,
+  "null_med": -1.6889408102045746
+ },
+ {
+  "pair": "MgII / wind density",
+  "form": "log-ratio",
+  "obs": -2.1333575329822527,
+  "p": 0.2369605065822363,
+  "nnull": 6000,
+  "null_med": -2.1359148776102126
+ },
+ {
+  "pair": "wind speed / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.9322551356151738,
+  "p": 0.24295950674887518,
+  "nnull": 6000,
+  "null_med": -1.957747600641504
+ },
+ {
+  "pair": "sunspot / proton temp",
+  "form": "ratio",
+  "obs": -1.7986592926130935,
+  "p": 0.2479586735544076,
+  "nnull": 6000,
+  "null_med": -1.8114537360868588
+ },
+ {
+  "pair": "MgII / alpha/proton",
+  "form": "ratio",
+  "obs": -1.6890636484839647,
+  "p": 0.266122312947842,
+  "nnull": 6000,
+  "null_med": -1.6943312940959299
+ },
+ {
+  "pair": "proton >10MeV / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.7718115301851376,
+  "p": 0.266122312947842,
+  "nnull": 6000,
+  "null_med": -1.7892527716101145
+ },
+ {
+  "pair": "IMF |B| / proton temp",
+  "form": "ratio",
+  "obs": -1.7015327109711158,
+  "p": 0.2916180636560573,
+  "nnull": 6000,
+  "null_med": -1.7085126152930648
+ },
+ {
+  "pair": "F10.7 / wind density",
+  "form": "resid-product",
+  "obs": -1.8044848390625565,
+  "p": 0.2919513414430928,
+  "nnull": 6000,
+  "null_med": -1.811581925386729
+ },
+ {
+  "pair": "TSI / wind density",
+  "form": "log-ratio",
+  "obs": -2.1594167605654033,
+  "p": 0.2939510081653058,
+  "nnull": 6000,
+  "null_med": -2.1598139154118234
+ },
+ {
+  "pair": "X-ray bg / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.8588868876356726,
+  "p": 0.29728378603566075,
+  "nnull": 6000,
+  "null_med": -1.868507832496741
+ },
+ {
+  "pair": "IMF |B| / alpha/proton",
+  "form": "ratio",
+  "obs": -1.6707482480731417,
+  "p": 0.2981169805032495,
+  "nnull": 6000,
+  "null_med": -1.679737940586497
+ },
+ {
+  "pair": "TSI / wind speed",
+  "form": "log-ratio",
+  "obs": -2.113874328758067,
+  "p": 0.30061656390601565,
+  "nnull": 6000,
+  "null_med": -2.1148013211885353
+ },
+ {
+  "pair": "TSI / wind density",
+  "form": "resid-product",
+  "obs": -1.7663607900187344,
+  "p": 0.3056157307115481,
+  "nnull": 6000,
+  "null_med": -1.773671452781127
+ },
+ {
+  "pair": "proton temp / alpha/proton",
+  "form": "log-ratio",
+  "obs": -1.5468470458982941,
+  "p": 0.32294617563739375,
+  "nnull": 6000,
+  "null_med": -1.5563639732345964
+ },
+ {
+  "pair": "alpha/proton / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.7182746459213227,
+  "p": 0.3249458423596067,
+  "nnull": 6000,
+  "null_med": -1.7291925296741404
+ },
+ {
+  "pair": "MgII / wind density",
+  "form": "ratio",
+  "obs": -1.764272326129706,
+  "p": 0.3316113981003166,
+  "nnull": 6000,
+  "null_med": -1.7680201217122917
+ },
+ {
+  "pair": "TSI / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -2.0350625411400483,
+  "p": 0.3472754540909848,
+  "nnull": 6000,
+  "null_med": -2.0365708684919483
+ },
+ {
+  "pair": "sunspot / IMF |B|",
+  "form": "resid-product",
+  "obs": -1.7272062474713339,
+  "p": 0.36177303782702885,
+  "nnull": 6000,
+  "null_med": -1.7321658866461707
+ },
+ {
+  "pair": "wind density / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.6728342441449595,
+  "p": 0.38310281619730047,
+  "nnull": 6000,
+  "null_med": -1.6769248252734246
+ },
+ {
+  "pair": "cosmic ray / wind speed",
+  "form": "ratio",
+  "obs": -2.160679008424361,
+  "p": 0.3876020663222796,
+  "nnull": 6000,
+  "null_med": -2.1655288264611556
+ },
+ {
+  "pair": "MgII / alpha/proton",
+  "form": "log-ratio",
+  "obs": -1.8674299191122614,
+  "p": 0.3942676220629895,
+  "nnull": 6000,
+  "null_med": -1.8689200037644902
+ },
+ {
+  "pair": "TSI / alpha/proton",
+  "form": "log-ratio",
+  "obs": -1.8990939004267018,
+  "p": 0.4162639560073321,
+  "nnull": 6000,
+  "null_med": -1.899428917664515
+ },
+ {
+  "pair": "F10.7 / wind speed",
+  "form": "resid-product",
+  "obs": -1.7912432878841191,
+  "p": 0.4182636227295451,
+  "nnull": 6000,
+  "null_med": -1.794408829588157
+ },
+ {
+  "pair": "IMF |B| / wind density",
+  "form": "ratio",
+  "obs": -1.6772176432871162,
+  "p": 0.4232627895350775,
+  "nnull": 6000,
+  "null_med": -1.6804194850953833
+ },
+ {
+  "pair": "TSI / wind density",
+  "form": "ratio",
+  "obs": -1.767158766768584,
+  "p": 0.42776203966005666,
+  "nnull": 6000,
+  "null_med": -1.7673599920441743
+ },
+ {
+  "pair": "F10.7 / proton temp",
+  "form": "ratio",
+  "obs": -1.7338142897422617,
+  "p": 0.43559406765539077,
+  "nnull": 6000,
+  "null_med": -1.736837716551249
+ },
+ {
+  "pair": "MgII / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.6779251701221165,
+  "p": 0.45575737377103814,
+  "nnull": 6000,
+  "null_med": -1.6784932925338802
+ },
+ {
+  "pair": "cosmic ray / proton temp",
+  "form": "ratio",
+  "obs": -1.7219406191535682,
+  "p": 0.45859023496083984,
+  "nnull": 6000,
+  "null_med": -1.722554819309516
+ },
+ {
+  "pair": "wind speed / X-ray bg",
+  "form": "ratio",
+  "obs": -2.0114721019384723,
+  "p": 0.4597567072154641,
+  "nnull": 6000,
+  "null_med": -2.0125241645223486
+ },
+ {
+  "pair": "alpha/proton / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.8932711272966305,
+  "p": 0.4619230128311948,
+  "nnull": 6000,
+  "null_med": -1.8949639744650755
+ },
+ {
+  "pair": "wind density / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -2.221007045982215,
+  "p": 0.464422596233961,
+  "nnull": 6000,
+  "null_med": -2.2218798893622824
+ },
+ {
+  "pair": "cosmic ray / alpha/proton",
+  "form": "log-ratio",
+  "obs": -1.8774070928600683,
+  "p": 0.46742209631728043,
+  "nnull": 6000,
+  "null_med": -1.8778800514050964
+ },
+ {
+  "pair": "TSI / IMF |B|",
+  "form": "ratio",
+  "obs": -1.917786813648545,
+  "p": 0.48541909681719714,
+  "nnull": 6000,
+  "null_med": -1.9178146930236704
+ },
+ {
+  "pair": "proton temp / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.7156918635141403,
+  "p": 0.4967505415764039,
+  "nnull": 6000,
+  "null_med": -1.715884920144524
+ },
+ {
+  "pair": "sunspot / MgII",
+  "form": "log-ratio",
+  "obs": -1.7784507208915263,
+  "p": 0.5057490418263623,
+  "nnull": 6000,
+  "null_med": -1.7784188486437216
+ },
+ {
+  "pair": "wind density / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.7467780277708056,
+  "p": 0.5120813197800367,
+  "nnull": 6000,
+  "null_med": -1.7463113634909062
+ },
+ {
+  "pair": "F10.7 / alpha/proton",
+  "form": "log-ratio",
+  "obs": -1.8716281326434077,
+  "p": 0.523746042326279,
+  "nnull": 6000,
+  "null_med": -1.8708366489885613
+ },
+ {
+  "pair": "sunspot / proton temp",
+  "form": "log-ratio",
+  "obs": -1.5504148146963646,
+  "p": 0.5270788201966339,
+  "nnull": 6000,
+  "null_med": -1.5490107841838552
+ },
+ {
+  "pair": "proton temp / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.7933554570918446,
+  "p": 0.5277453757707049,
+  "nnull": 6000,
+  "null_med": -1.7919717209001107
+ },
+ {
+  "pair": "alpha/proton / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.727644162813633,
+  "p": 0.5437427095484086,
+  "nnull": 6000,
+  "null_med": -1.7246718741700666
+ },
+ {
+  "pair": "alpha/proton / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -1.8423817374350056,
+  "p": 0.5450758206965506,
+  "nnull": 6000,
+  "null_med": -1.8407915860423392
+ },
+ {
+  "pair": "sunspot / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -1.744643019084989,
+  "p": 0.5509081819696717,
+  "nnull": 6000,
+  "null_med": -1.743630066935141
+ },
+ {
+  "pair": "TSI / wind speed",
+  "form": "resid-product",
+  "obs": -1.7557234354133082,
+  "p": 0.561906348941843,
+  "nnull": 6000,
+  "null_med": -1.7535094575948018
+ },
+ {
+  "pair": "proton temp / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -2.0576073915951065,
+  "p": 0.5759040159973338,
+  "nnull": 6000,
+  "null_med": -2.0555494879721454
+ },
+ {
+  "pair": "TSI / cosmic ray",
+  "form": "ratio",
+  "obs": -1.7123600097172433,
+  "p": 0.576403932677887,
+  "nnull": 6000,
+  "null_med": -1.7106742672570059
+ },
+ {
+  "pair": "wind speed / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.726351888408397,
+  "p": 0.5775704049325112,
+  "nnull": 6000,
+  "null_med": -1.7221894784346072
+ },
+ {
+  "pair": "F10.7 / wind density",
+  "form": "log-ratio",
+  "obs": -2.16680488922315,
+  "p": 0.5904015997333778,
+  "nnull": 6000,
+  "null_med": -2.1646284157122406
+ },
+ {
+  "pair": "sunspot / alpha/proton",
+  "form": "log-ratio",
+  "obs": -1.8046111921232995,
+  "p": 0.5949008498583569,
+  "nnull": 6000,
+  "null_med": -1.7991897547909208
+ },
+ {
+  "pair": "sunspot / wind speed",
+  "form": "ratio",
+  "obs": -1.7219162707069362,
+  "p": 0.5974004332611231,
+  "nnull": 6000,
+  "null_med": -1.718796846818231
+ },
+ {
+  "pair": "IMF |B| / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.6819021413305433,
+  "p": 0.6020663222796201,
+  "nnull": 6000,
+  "null_med": -1.676093243078399
+ },
+ {
+  "pair": "proton temp / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.7144822984014922,
+  "p": 0.6147308781869688,
+  "nnull": 6000,
+  "null_med": -1.7102352079860381
+ },
+ {
+  "pair": "sunspot / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.7098432356103,
+  "p": 0.6332277953674388,
+  "nnull": 6000,
+  "null_med": -1.7043910115781966
+ },
+ {
+  "pair": "sunspot / cosmic ray",
+  "form": "log-ratio",
+  "obs": -1.711606529779111,
+  "p": 0.633727712047992,
+  "nnull": 6000,
+  "null_med": -1.710218209841234
+ },
+ {
+  "pair": "IMF |B| / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.680610571766812,
+  "p": 0.6390601566405599,
+  "nnull": 6000,
+  "null_med": -1.6754204039728273
+ },
+ {
+  "pair": "sunspot / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.9579264989441274,
+  "p": 0.6472254624229296,
+  "nnull": 6000,
+  "null_med": -1.9489983464751788
+ },
+ {
+  "pair": "sunspot / proton temp",
+  "form": "resid-product",
+  "obs": -1.9170774472159515,
+  "p": 0.6498916847192134,
+  "nnull": 6000,
+  "null_med": -1.9101140042585807
+ },
+ {
+  "pair": "sunspot / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.6248531389588314,
+  "p": 0.6507248791868022,
+  "nnull": 6000,
+  "null_med": -1.618142664981614
+ },
+ {
+  "pair": "wind speed / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.7259656334993925,
+  "p": 0.6530578236960507,
+  "nnull": 6000,
+  "null_med": -1.717810637558627
+ },
+ {
+  "pair": "TSI / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.6702892283962423,
+  "p": 0.6582236293951008,
+  "nnull": 6000,
+  "null_med": -1.6698078315222982
+ },
+ {
+  "pair": "sunspot / IMF |B|",
+  "form": "log-ratio",
+  "obs": -1.8677674046809947,
+  "p": 0.66272287952008,
+  "nnull": 6000,
+  "null_med": -1.8597573080480183
+ },
+ {
+  "pair": "proton temp / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.6105543954630974,
+  "p": 0.6663889351774704,
+  "nnull": 6000,
+  "null_med": -1.602280251367915
+ },
+ {
+  "pair": "wind density / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.830713853223171,
+  "p": 0.6723879353441093,
+  "nnull": 6000,
+  "null_med": -1.8227673403709592
+ },
+ {
+  "pair": "MgII / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.7282892581508977,
+  "p": 0.675220796533911,
+  "nnull": 6000,
+  "null_med": -1.7203413115944297
+ },
+ {
+  "pair": "sunspot / wind speed",
+  "form": "log-ratio",
+  "obs": -1.738634441657687,
+  "p": 0.6760539910014998,
+  "nnull": 6000,
+  "null_med": -1.7316432324306006
+ },
+ {
+  "pair": "wind density / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.766574508315363,
+  "p": 0.6807198800199966,
+  "nnull": 6000,
+  "null_med": -1.7564546461599577
+ },
+ {
+  "pair": "TSI / IMF |B|",
+  "form": "log-ratio",
+  "obs": -2.020115402493715,
+  "p": 0.6817197133811032,
+  "nnull": 6000,
+  "null_med": -2.019719430793997
+ },
+ {
+  "pair": "sunspot / wind density",
+  "form": "log-ratio",
+  "obs": -1.9326041422306028,
+  "p": 0.6825529078486919,
+  "nnull": 6000,
+  "null_med": -1.9231644806600166
+ },
+ {
+  "pair": "cosmic ray / wind density",
+  "form": "ratio",
+  "obs": -1.7618465852438363,
+  "p": 0.6905515747375437,
+  "nnull": 6000,
+  "null_med": -1.7565534070602524
+ },
+ {
+  "pair": "F10.7 / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.597552004849074,
+  "p": 0.7127145475754041,
+  "nnull": 6000,
+  "null_med": -1.5825571862998256
+ },
+ {
+  "pair": "IMF |B| / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.9098352267758254,
+  "p": 0.7307115480753208,
+  "nnull": 6000,
+  "null_med": -1.8999056041177567
+ },
+ {
+  "pair": "sunspot / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.7325729185584633,
+  "p": 0.7360439926678887,
+  "nnull": 6000,
+  "null_med": -1.722579022060925
+ },
+ {
+  "pair": "MgII / wind speed",
+  "form": "log-ratio",
+  "obs": -2.122565320057913,
+  "p": 0.7425429095150808,
+  "nnull": 6000,
+  "null_med": -2.1164017791489336
+ },
+ {
+  "pair": "F10.7 / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.8175109030407022,
+  "p": 0.7427095484085986,
+  "nnull": 6000,
+  "null_med": -1.8054711357063415
+ },
+ {
+  "pair": "TSI / cosmic ray",
+  "form": "log-ratio",
+  "obs": -1.7521587267109182,
+  "p": 0.7502082986168972,
+  "nnull": 6000,
+  "null_med": -1.74628573525334
+ },
+ {
+  "pair": "TSI / sunspot",
+  "form": "resid-product",
+  "obs": -1.8373021981064916,
+  "p": 0.7648725212464589,
+  "nnull": 6000,
+  "null_med": -1.8116998311600643
+ },
+ {
+  "pair": "MgII / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.6693884477219008,
+  "p": 0.7658723546075654,
+  "nnull": 6000,
+  "null_med": -1.6626593687895215
+ },
+ {
+  "pair": "cosmic ray / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.635486803854222,
+  "p": 0.7680386602232961,
+  "nnull": 6000,
+  "null_med": -1.6278402794079327
+ },
+ {
+  "pair": "X-ray bg / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.9483824296378918,
+  "p": 0.7717047158806866,
+  "nnull": 6000,
+  "null_med": -1.9255364543862776
+ },
+ {
+  "pair": "MgII / wind speed",
+  "form": "ratio",
+  "obs": -2.172991520259386,
+  "p": 0.7810364939176804,
+  "nnull": 6000,
+  "null_med": -2.163721855355939
+ },
+ {
+  "pair": "MgII / X-ray bg",
+  "form": "ratio",
+  "obs": -1.88415431560133,
+  "p": 0.7863689385102482,
+  "nnull": 6000,
+  "null_med": -1.8708400923933364
+ },
+ {
+  "pair": "proton >10MeV / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -1.5548430619728573,
+  "p": 0.7895350774870855,
+  "nnull": 6000,
+  "null_med": -1.5317191771061685
+ },
+ {
+  "pair": "alpha/proton / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.705234653390701,
+  "p": 0.7900349941676388,
+  "nnull": 6000,
+  "null_med": -1.6937483738570842
+ },
+ {
+  "pair": "proton temp / X-ray bg",
+  "form": "resid-product",
+  "obs": -2.004780696340986,
+  "p": 0.7970338276953841,
+  "nnull": 6000,
+  "null_med": -1.989465742217893
+ },
+ {
+  "pair": "TSI / wind speed",
+  "form": "ratio",
+  "obs": -2.180393765567384,
+  "p": 0.7975337443759374,
+  "nnull": 6000,
+  "null_med": -2.1791088341462364
+ },
+ {
+  "pair": "F10.7 / sunspot",
+  "form": "resid-product",
+  "obs": -1.8712416712384032,
+  "p": 0.8033661056490585,
+  "nnull": 6000,
+  "null_med": -1.852586612129128
+ },
+ {
+  "pair": "TSI / sunspot",
+  "form": "log-ratio",
+  "obs": -1.7084974131081778,
+  "p": 0.813531078153641,
+  "nnull": 6000,
+  "null_med": -1.7079446720606597
+ },
+ {
+  "pair": "MgII / proton temp",
+  "form": "ratio",
+  "obs": -1.7492404239199597,
+  "p": 0.814197633727712,
+  "nnull": 6000,
+  "null_med": -1.7465869948517576
+ },
+ {
+  "pair": "sunspot / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.8081545225279267,
+  "p": 0.8153641059823363,
+  "nnull": 6000,
+  "null_med": -1.7807040011019097
+ },
+ {
+  "pair": "cosmic ray / Lyman-alpha",
+  "form": "ratio",
+  "obs": -2.2650525415738696,
+  "p": 0.8196967172137977,
+  "nnull": 6000,
+  "null_med": -2.2216575490091595
+ },
+ {
+  "pair": "MgII / proton temp",
+  "form": "resid-product",
+  "obs": -2.0012863585567224,
+  "p": 0.8235294117647058,
+  "nnull": 6000,
+  "null_med": -1.9870774589837883
+ },
+ {
+  "pair": "cosmic ray / wind density",
+  "form": "log-ratio",
+  "obs": -2.161203939449926,
+  "p": 0.8373604399266789,
+  "nnull": 6000,
+  "null_med": -2.1570556569403356
+ },
+ {
+  "pair": "MgII / wind density",
+  "form": "resid-product",
+  "obs": -1.756812706231352,
+  "p": 0.8383602732877854,
+  "nnull": 6000,
+  "null_med": -1.7410548244414854
+ },
+ {
+  "pair": "MgII / IMF |B|",
+  "form": "resid-product",
+  "obs": -1.7549726248024131,
+  "p": 0.8435260789868355,
+  "nnull": 6000,
+  "null_med": -1.738805905824817
+ },
+ {
+  "pair": "IMF |B| / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -2.040509165877102,
+  "p": 0.8443592734544243,
+  "nnull": 6000,
+  "null_med": -2.026180516158967
+ },
+ {
+  "pair": "sunspot / IMF |B|",
+  "form": "ratio",
+  "obs": -1.7292587768167045,
+  "p": 0.8460256623896018,
+  "nnull": 6000,
+  "null_med": -1.7143441334744247
+ },
+ {
+  "pair": "cosmic ray / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.7040048200310915,
+  "p": 0.8531911348108648,
+  "nnull": 6000,
+  "null_med": -1.6892266843486061
+ },
+ {
+  "pair": "sunspot / wind density",
+  "form": "resid-product",
+  "obs": -1.7478934873635237,
+  "p": 0.8578570238293618,
+  "nnull": 6000,
+  "null_med": -1.73322273887238
+ },
+ {
+  "pair": "X-ray bg / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.924641733696026,
+  "p": 0.859690051658057,
+  "nnull": 6000,
+  "null_med": -1.8817635796478103
+ },
+ {
+  "pair": "F10.7 / proton temp",
+  "form": "resid-product",
+  "obs": -1.9883321805948144,
+  "p": 0.8636893851024829,
+  "nnull": 6000,
+  "null_med": -1.9659440888661512
+ },
+ {
+  "pair": "F10.7 / IMF |B|",
+  "form": "log-ratio",
+  "obs": -2.0170427028864713,
+  "p": 0.8640226628895185,
+  "nnull": 6000,
+  "null_med": -2.0040104321013734
+ },
+ {
+  "pair": "F10.7 / proton temp",
+  "form": "log-ratio",
+  "obs": -1.6203430391199451,
+  "p": 0.8663556073987668,
+  "nnull": 6000,
+  "null_med": -1.605109032370957
+ },
+ {
+  "pair": "F10.7 / wind speed",
+  "form": "log-ratio",
+  "obs": -2.0971705961100437,
+  "p": 0.8706882186302283,
+  "nnull": 6000,
+  "null_med": -2.073446413022099
+ },
+ {
+  "pair": "MgII / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.642582527201805,
+  "p": 0.8783536077320446,
+  "nnull": 6000,
+  "null_med": -1.628575350653484
+ },
+ {
+  "pair": "wind speed / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.7033860571540251,
+  "p": 0.8805199133477754,
+  "nnull": 6000,
+  "null_med": -1.6767878094603255
+ },
+ {
+  "pair": "wind density / X-ray bg",
+  "form": "ratio",
+  "obs": -2.008313149537248,
+  "p": 0.8853524412597901,
+  "nnull": 6000,
+  "null_med": -1.99490000514835
+ },
+ {
+  "pair": "sunspot / cosmic ray",
+  "form": "resid-product",
+  "obs": -1.780004051680452,
+  "p": 0.8916847192134644,
+  "nnull": 6000,
+  "null_med": -1.7511827841197505
+ },
+ {
+  "pair": "TSI / alpha/proton",
+  "form": "ratio",
+  "obs": -1.6877859452775916,
+  "p": 0.8955174137643725,
+  "nnull": 6000,
+  "null_med": -1.6861702630454871
+ },
+ {
+  "pair": "wind speed / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -2.1767049564683245,
+  "p": 0.8970171638060324,
+  "nnull": 6000,
+  "null_med": -2.142937480316751
+ },
+ {
+  "pair": "cosmic ray / wind density",
+  "form": "resid-product",
+  "obs": -1.728564946234175,
+  "p": 0.8971838026995501,
+  "nnull": 6000,
+  "null_med": -1.7116887097556277
+ },
+ {
+  "pair": "TSI / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.6336680559491155,
+  "p": 0.8993501083152808,
+  "nnull": 6000,
+  "null_med": -1.6312624800213888
+ },
+ {
+  "pair": "F10.7 / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.7872796509032178,
+  "p": 0.9060156640559907,
+  "nnull": 6000,
+  "null_med": -1.6980865745046558
+ },
+ {
+  "pair": "sunspot / wind density",
+  "form": "ratio",
+  "obs": -1.729599909313612,
+  "p": 0.9060156640559907,
+  "nnull": 6000,
+  "null_med": -1.7112896225032692
+ },
+ {
+  "pair": "IMF |B| / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.6858523786047237,
+  "p": 0.9075154140976504,
+  "nnull": 6000,
+  "null_med": -1.6647827694713766
+ },
+ {
+  "pair": "sunspot / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.8726889245181697,
+  "p": 0.9120146642226296,
+  "nnull": 6000,
+  "null_med": -1.837783545421699
+ },
+ {
+  "pair": "IMF |B| / wind speed",
+  "form": "ratio",
+  "obs": -1.7191028049800252,
+  "p": 0.9120146642226296,
+  "nnull": 6000,
+  "null_med": -1.6975660527991696
+ },
+ {
+  "pair": "X-ray bg / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.9791830093244294,
+  "p": 0.9191801366438926,
+  "nnull": 6000,
+  "null_med": -1.9430090867722498
+ },
+ {
+  "pair": "MgII / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.859738747874744,
+  "p": 0.9193467755374104,
+  "nnull": 6000,
+  "null_med": -1.8253110839142137
+ },
+ {
+  "pair": "wind speed / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.8029754792081385,
+  "p": 0.9195134144309282,
+  "nnull": 6000,
+  "null_med": -1.7832003891407855
+ },
+ {
+  "pair": "MgII / IMF |B|",
+  "form": "log-ratio",
+  "obs": -2.041017812480957,
+  "p": 0.9208465255790702,
+  "nnull": 6000,
+  "null_med": -2.034165888026405
+ },
+ {
+  "pair": "F10.7 / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.841421924886843,
+  "p": 0.9215130811531411,
+  "nnull": 6000,
+  "null_med": -1.7767780310554362
+ },
+ {
+  "pair": "F10.7 / wind speed",
+  "form": "ratio",
+  "obs": -1.9008698174555594,
+  "p": 0.9221796367272121,
+  "nnull": 6000,
+  "null_med": -1.8604323071514213
+ },
+ {
+  "pair": "IMF |B| / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.7825040296278967,
+  "p": 0.930178303616064,
+  "nnull": 6000,
+  "null_med": -1.7512068534802299
+ },
+ {
+  "pair": "F10.7 / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.9098134136664473,
+  "p": 0.9316780536577237,
+  "nnull": 6000,
+  "null_med": -1.8757780404627074
+ },
+ {
+  "pair": "alpha/proton / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.8704869172666396,
+  "p": 0.9331778036993834,
+  "nnull": 6000,
+  "null_med": -1.8288930379823023
+ },
+ {
+  "pair": "F10.7 / cosmic ray",
+  "form": "ratio",
+  "obs": -1.784115424471193,
+  "p": 0.9353441093151141,
+  "nnull": 6000,
+  "null_med": -1.7640240687499014
+ },
+ {
+  "pair": "TSI / proton temp",
+  "form": "resid-product",
+  "obs": -1.971913883100791,
+  "p": 0.9423429428428596,
+  "nnull": 6000,
+  "null_med": -1.9485085610044623
+ },
+ {
+  "pair": "TSI / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.903134413402651,
+  "p": 0.9425095817363772,
+  "nnull": 6000,
+  "null_med": -1.8678202709891765
+ },
+ {
+  "pair": "cosmic ray / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.7655404843161977,
+  "p": 0.9450091651391435,
+  "nnull": 6000,
+  "null_med": -1.7202913496219012
+ },
+ {
+  "pair": "MgII / cosmic ray",
+  "form": "resid-product",
+  "obs": -1.7593509572752744,
+  "p": 0.9491751374770871,
+  "nnull": 6000,
+  "null_med": -1.712239178852993
+ },
+ {
+  "pair": "proton temp / wind density",
+  "form": "ratio",
+  "obs": -1.7946474236782002,
+  "p": 0.9511748041993001,
+  "nnull": 6000,
+  "null_med": -1.7700961141023883
+ },
+ {
+  "pair": "TSI / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.7849082710690323,
+  "p": 0.9521746375604065,
+  "nnull": 6000,
+  "null_med": -1.757261934585347
+ },
+ {
+  "pair": "TSI / MgII",
+  "form": "resid-product",
+  "obs": -1.844748964222166,
+  "p": 0.9528411931344776,
+  "nnull": 6000,
+  "null_med": -1.7657954630122548
+ },
+ {
+  "pair": "X-ray bg / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.697729410536176,
+  "p": 0.9533411098150308,
+  "nnull": 6000,
+  "null_med": -1.6709497049863433
+ },
+ {
+  "pair": "TSI / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.9834986448565521,
+  "p": 0.9553407765372438,
+  "nnull": 6000,
+  "null_med": -1.911031627206576
+ },
+ {
+  "pair": "alpha/proton / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.8073076105497945,
+  "p": 0.9645059156807199,
+  "nnull": 6000,
+  "null_med": -1.7799636214738865
+ },
+ {
+  "pair": "sunspot / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.7240741753131426,
+  "p": 0.9655057490418264,
+  "nnull": 6000,
+  "null_med": -1.6936386542583524
+ },
+ {
+  "pair": "sunspot / MgII",
+  "form": "resid-product",
+  "obs": -1.8072217947662912,
+  "p": 0.9681719713381103,
+  "nnull": 6000,
+  "null_med": -1.7714413471809944
+ },
+ {
+  "pair": "wind density / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.7800575745979215,
+  "p": 0.9685052491251458,
+  "nnull": 6000,
+  "null_med": -1.7418341516774598
+ },
+ {
+  "pair": "TSI / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.8358933112080524,
+  "p": 0.9718380269955007,
+  "nnull": 6000,
+  "null_med": -1.7588011774607246
+ },
+ {
+  "pair": "TSI / Lyman-alpha",
+  "form": "ratio",
+  "obs": -2.172600042726521,
+  "p": 0.9721713047825362,
+  "nnull": 6000,
+  "null_med": -2.1637472000894578
+ },
+ {
+  "pair": "wind density / wind speed",
+  "form": "ratio",
+  "obs": -1.754323080173019,
+  "p": 0.9726712214630895,
+  "nnull": 6000,
+  "null_med": -1.727409681205594
+ },
+ {
+  "pair": "IMF |B| / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.85404652629842,
+  "p": 0.9775037493751042,
+  "nnull": 6000,
+  "null_med": -1.8247029323850696
+ },
+ {
+  "pair": "F10.7 / X-ray bg",
+  "form": "resid-product",
+  "obs": -2.012340922035621,
+  "p": 0.9783369438426929,
+  "nnull": 6000,
+  "null_med": -1.932514239577268
+ },
+ {
+  "pair": "F10.7 / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.805856533243157,
+  "p": 0.9785035827362106,
+  "nnull": 6000,
+  "null_med": -1.7615922671170599
+ },
+ {
+  "pair": "F10.7 / MgII",
+  "form": "resid-product",
+  "obs": -1.8685441887134235,
+  "p": 0.9795034160973171,
+  "nnull": 6000,
+  "null_med": -1.7899372415503412
+ },
+ {
+  "pair": "cosmic ray / wind speed",
+  "form": "resid-product",
+  "obs": -1.7120131869703263,
+  "p": 0.9813364439260124,
+  "nnull": 6000,
+  "null_med": -1.6843376335753124
+ },
+ {
+  "pair": "TSI / X-ray bg",
+  "form": "ratio",
+  "obs": -1.9590323354132282,
+  "p": 0.9831694717547076,
+  "nnull": 6000,
+  "null_med": -1.952661773546248
+ },
+ {
+  "pair": "TSI / F10.7",
+  "form": "resid-product",
+  "obs": -1.9244935281565305,
+  "p": 0.9836693884352607,
+  "nnull": 6000,
+  "null_med": -1.832911828173765
+ },
+ {
+  "pair": "TSI / IMF |B|",
+  "form": "resid-product",
+  "obs": -1.813467544791233,
+  "p": 0.9845025829028495,
+  "nnull": 6000,
+  "null_med": -1.775271809320025
+ },
+ {
+  "pair": "F10.7 / IMF |B|",
+  "form": "ratio",
+  "obs": -1.882780451140131,
+  "p": 0.9846692217963673,
+  "nnull": 6000,
+  "null_med": -1.7335457351457095
+ },
+ {
+  "pair": "F10.7 / cosmic ray",
+  "form": "resid-product",
+  "obs": -1.8544335171938753,
+  "p": 0.986835527412098,
+  "nnull": 6000,
+  "null_med": -1.785586013094337
+ },
+ {
+  "pair": "cosmic ray / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.944088960901055,
+  "p": 0.9875020829861689,
+  "nnull": 6000,
+  "null_med": -1.8914828555167253
+ },
+ {
+  "pair": "MgII / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.9615863005093226,
+  "p": 0.98816863856024,
+  "nnull": 6000,
+  "null_med": -1.8867502416508908
+ },
+ {
+  "pair": "proton temp / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.6529663908303642,
+  "p": 0.990834860856524,
+  "nnull": 6000,
+  "null_med": -1.6149221660849946
+ },
+ {
+  "pair": "MgII / IMF |B|",
+  "form": "ratio",
+  "obs": -1.931405332375637,
+  "p": 0.9923346108981836,
+  "nnull": 6000,
+  "null_med": -1.9108249491983098
+ },
+ {
+  "pair": "cosmic ray / IMF |B|",
+  "form": "resid-product",
+  "obs": -1.7496248527576317,
+  "p": 0.9943342776203966,
+  "nnull": 6000,
+  "null_med": -1.713752617478323
+ },
+ {
+  "pair": "wind speed / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.7140566291742927,
+  "p": 0.995334110981503,
+  "nnull": 6000,
+  "null_med": -1.6790720146967901
+ },
+ {
+  "pair": "cosmic ray / proton temp",
+  "form": "resid-product",
+  "obs": -1.9378825327412117,
+  "p": 0.9960006665555741,
+  "nnull": 6000,
+  "null_med": -1.910523239600081
+ },
+ {
+  "pair": "F10.7 / IMF |B|",
+  "form": "resid-product",
+  "obs": -1.85452469273185,
+  "p": 0.998000333277787,
+  "nnull": 6000,
+  "null_med": -1.8117477813439518
+ },
+ {
+  "pair": "TSI / cosmic ray",
+  "form": "resid-product",
+  "obs": -1.840116560627602,
+  "p": 0.9986668888518581,
+  "nnull": 6000,
+  "null_med": -1.7575365548351973
+ },
+ {
+  "pair": "cosmic ray / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.8614939935718737,
+  "p": 0.9988335277453758,
+  "nnull": 6000,
+  "null_med": -1.8188346575977565
+ },
+ {
+  "pair": "proton temp / wind speed",
+  "form": "log-ratio",
+  "obs": -1.6834121818214398,
+  "p": 0.9988335277453758,
+  "nnull": 6000,
+  "null_med": -1.624620594290456
+ },
+ {
+  "pair": "sunspot / MgII",
+  "form": "ratio",
+  "obs": -1.7376033029139717,
+  "p": 0.9990001666388936,
+  "nnull": 6000,
+  "null_med": -1.7289841867715814
+ },
+ {
+  "pair": "wind density / wind speed",
+  "form": "resid-product",
+  "obs": -1.729046313692848,
+  "p": 0.9991668055324112,
+  "nnull": 6000,
+  "null_med": -1.6826609194037876
+ },
+ {
+  "pair": "IMF |B| / proton temp",
+  "form": "resid-product",
+  "obs": -1.8676841293214983,
+  "p": 1.0,
+  "nnull": 6000,
+  "null_med": -1.7969401641319118
+ },
+ {
+  "pair": "IMF |B| / wind density",
+  "form": "resid-product",
+  "obs": -1.7476621988764303,
+  "p": 1.0,
+  "nnull": 6000,
+  "null_med": -1.6874395870994796
+ },
+ {
+  "pair": "IMF |B| / wind speed",
+  "form": "resid-product",
+  "obs": -1.7450344766330876,
+  "p": 1.0,
+  "nnull": 6000,
+  "null_med": -1.6814041710157892
+ },
+ {
+  "pair": "proton temp / wind density",
+  "form": "log-ratio",
+  "obs": -1.6282781055952076,
+  "p": 1.0,
+  "nnull": 6000,
+  "null_med": -1.5169070917956247
+ },
+ {
+  "pair": "proton temp / wind speed",
+  "form": "resid-product",
+  "obs": -1.8868468644098466,
+  "p": 1.0,
+  "nnull": 6000,
+  "null_med": -1.7706555991241855
+ },
+ {
+  "pair": "wind density / alpha/proton",
+  "form": "ratio",
+  "obs": -1.7768240359814957,
+  "p": 1.0,
+  "nnull": 6000,
+  "null_med": -1.6921844805908224
+ }
+]

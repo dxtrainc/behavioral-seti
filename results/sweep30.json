@@ -1,0 +1,8594 @@
+[
+ {
+  "pair": "sunspot / X-ray bg",
+  "form": "ratio",
+  "obs": -1.779295877230169,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -1.9905883127472042
+ },
+ {
+  "pair": "MgII / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.8374680721837318,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -1.9745343248832126
+ },
+ {
+  "pair": "MgII / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -1.8778984556895595,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -1.9927064400648873
+ },
+ {
+  "pair": "IMF |B| / wind density",
+  "form": "log-ratio",
+  "obs": -2.0517185232488964,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.371365930305934
+ },
+ {
+  "pair": "IMF |B| / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -2.048480392534668,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.2549294409286245
+ },
+ {
+  "pair": "IMF |B| / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.932255849554501,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.1583441444845426
+ },
+ {
+  "pair": "proton temp / alpha/proton",
+  "form": "ratio",
+  "obs": -1.642951008583622,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -1.7769151651649815
+ },
+ {
+  "pair": "wind density / alpha/proton",
+  "form": "log-ratio",
+  "obs": -2.0784151983331784,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.302584672057019
+ },
+ {
+  "pair": "wind density / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -2.04005644993944,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.2898091922478607
+ },
+ {
+  "pair": "wind density / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -2.0189165457537244,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.292622312056918
+ },
+ {
+  "pair": "wind density / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -2.0504162053000647,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.1183201703353616
+ },
+ {
+  "pair": "wind density / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -2.0243091652419776,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.2512960590027675
+ },
+ {
+  "pair": "wind density / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -2.0395058437106157,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.214697562200861
+ },
+ {
+  "pair": "cak_emdx / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.8853248200135124,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.1278962624867908
+ },
+ {
+  "pair": "cak_emdx / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -1.9519057307925927,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.179263415552889
+ },
+ {
+  "pair": "cak_emdx / cak_delk1",
+  "form": "log-ratio",
+  "obs": -1.8016314935643196,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -1.9385494340644125
+ },
+ {
+  "pair": "cak_k2vk3 / cak_k3",
+  "form": "ratio",
+  "obs": -1.945427961594142,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.1128692258751762
+ },
+ {
+  "pair": "cme_rate / cme_speed",
+  "form": "log-ratio",
+  "obs": -2.3261653979013253,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.571816221080161
+ },
+ {
+  "pair": "swics_o7to6 / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -1.6736573962237884,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.243169638450173
+ },
+ {
+  "pair": "swics_c6to5 / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.9634783183188298,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.089103998824057
+ },
+ {
+  "pair": "swics_fetoo / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.9036106517857472,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.1135415813245237
+ },
+ {
+  "pair": "swics_fetoo / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.9285104319056274,
+  "p": 1.666638889351844e-05,
+  "nnull": 60000,
+  "null_med": -2.0968820861611457
+ },
+ {
+  "pair": "F10.7 / cme_rate",
+  "form": "log-ratio",
+  "obs": -2.498013851334721,
+  "p": 0.00011666472225462909,
+  "nnull": 60000,
+  "null_med": -2.5404335049356384
+ },
+ {
+  "pair": "IMF |B| / wind speed",
+  "form": "log-ratio",
+  "obs": -2.0206588953563855,
+  "p": 0.00013333111114814753,
+  "nnull": 60000,
+  "null_med": -2.087448153886113
+ },
+ {
+  "pair": "cak_k2vk3 / cak_delk1",
+  "form": "log-ratio",
+  "obs": -1.8384648883904933,
+  "p": 0.00014999750004166597,
+  "nnull": 60000,
+  "null_med": -1.9501467995128108
+ },
+ {
+  "pair": "cak_k2vk3 / cak_k3",
+  "form": "log-ratio",
+  "obs": -1.9061253680632162,
+  "p": 0.0001999966667222213,
+  "nnull": 60000,
+  "null_med": -2.0531045385111537
+ },
+ {
+  "pair": "wind density / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.6412648943678647,
+  "p": 0.0002499958334027766,
+  "nnull": 60000,
+  "null_med": -1.7363469768253441
+ },
+ {
+  "pair": "swics_avqfe / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -1.764985347380077,
+  "p": 0.0002499958334027766,
+  "nnull": 60000,
+  "null_med": -1.895688506578296
+ },
+ {
+  "pair": "F10.7 / X-ray bg",
+  "form": "ratio",
+  "obs": -1.8581702635814332,
+  "p": 0.00033332777787036883,
+  "nnull": 60000,
+  "null_med": -1.9884498675502107
+ },
+ {
+  "pair": "proton temp / wind speed",
+  "form": "ratio",
+  "obs": -1.7312519801710138,
+  "p": 0.00033332777787036883,
+  "nnull": 60000,
+  "null_med": -1.7815168339257044
+ },
+ {
+  "pair": "wind density / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -2.052008250577487,
+  "p": 0.00038332694455092415,
+  "nnull": 60000,
+  "null_med": -2.117611100198565
+ },
+ {
+  "pair": "wind speed / alpha/proton",
+  "form": "ratio",
+  "obs": -1.6397695339258518,
+  "p": 0.00038332694455092415,
+  "nnull": 60000,
+  "null_med": -1.6897952921364219
+ },
+ {
+  "pair": "wind density / wind speed",
+  "form": "log-ratio",
+  "obs": -2.1689864106962857,
+  "p": 0.0005333244445925901,
+  "nnull": 60000,
+  "null_med": -2.226291226345162
+ },
+ {
+  "pair": "cak_emdx / cak_delk1",
+  "form": "ratio",
+  "obs": -1.7819802699832779,
+  "p": 0.000716654722421293,
+  "nnull": 60000,
+  "null_med": -1.8764572602833725
+ },
+ {
+  "pair": "IMF |B| / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -2.1244072661636983,
+  "p": 0.0008333194446759221,
+  "nnull": 60000,
+  "null_med": -2.2691009448410155
+ },
+ {
+  "pair": "cosmic ray / IMF |B|",
+  "form": "ratio",
+  "obs": -1.8649364435056568,
+  "p": 0.0009666505558240696,
+  "nnull": 60000,
+  "null_med": -1.9187946028333207
+ },
+ {
+  "pair": "TSI / cak_k3",
+  "form": "ratio",
+  "obs": -1.883672981204985,
+  "p": 0.0012833119448009199,
+  "nnull": 60000,
+  "null_med": -1.8946037113227527
+ },
+ {
+  "pair": "swics_hetoo / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.8363044556229422,
+  "p": 0.0015999733337777704,
+  "nnull": 60000,
+  "null_med": -1.9212721505435608
+ },
+ {
+  "pair": "MgII / cosmic ray",
+  "form": "log-ratio",
+  "obs": -1.6780870680394013,
+  "p": 0.0016333061115648073,
+  "nnull": 60000,
+  "null_med": -1.749397625626934
+ },
+ {
+  "pair": "cosmic ray / cak_delk1",
+  "form": "ratio",
+  "obs": -1.7486857796904833,
+  "p": 0.0016499725004583256,
+  "nnull": 60000,
+  "null_med": -1.8222392617798597
+ },
+ {
+  "pair": "proton temp / cak_emdx",
+  "form": "log-ratio",
+  "obs": -1.5847907949342408,
+  "p": 0.0016833052782453625,
+  "nnull": 60000,
+  "null_med": -1.6115500173009754
+ },
+ {
+  "pair": "IMF |B| / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -1.954002206904594,
+  "p": 0.0021999633339444343,
+  "nnull": 60000,
+  "null_med": -2.0203034000597078
+ },
+ {
+  "pair": "TSI / cme_speed",
+  "form": "ratio",
+  "obs": -1.6796618290781349,
+  "p": 0.0024832919451342477,
+  "nnull": 60000,
+  "null_med": -1.6828778591417062
+ },
+ {
+  "pair": "cak_k3 / cak_delk1",
+  "form": "log-ratio",
+  "obs": -1.8781818540049202,
+  "p": 0.0025166247229212848,
+  "nnull": 60000,
+  "null_med": -1.9913897053192975
+ },
+ {
+  "pair": "alpha/proton / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.939571545172686,
+  "p": 0.0031999466675555407,
+  "nnull": 60000,
+  "null_med": -2.0471102894519846
+ },
+ {
+  "pair": "swics_c6to5 / swics_fetoo",
+  "form": "ratio",
+  "obs": -1.6626169199623053,
+  "p": 0.0033832769453842437,
+  "nnull": 60000,
+  "null_med": -1.7479783197339978
+ },
+ {
+  "pair": "alpha/proton / cak_emdx",
+  "form": "resid-product",
+  "obs": -1.5948944641345444,
+  "p": 0.0036832719454675754,
+  "nnull": 60000,
+  "null_med": -1.6812355799024885
+ },
+ {
+  "pair": "cosmic ray / cak_delk1",
+  "form": "log-ratio",
+  "obs": -1.825642196277339,
+  "p": 0.0037832702788286863,
+  "nnull": 60000,
+  "null_med": -1.878859340897868
+ },
+ {
+  "pair": "swics_c6to5 / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -2.075384679632621,
+  "p": 0.004149930834486092,
+  "nnull": 60000,
+  "null_med": -2.191709337667968
+ },
+ {
+  "pair": "X-ray bg / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.857186780823318,
+  "p": 0.004549924167930534,
+  "nnull": 60000,
+  "null_med": -1.9498161655233397
+ },
+ {
+  "pair": "spot_asym / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -1.5058245827371044,
+  "p": 0.004599923334611089,
+  "nnull": 60000,
+  "null_med": -1.5529414087744582
+ },
+ {
+  "pair": "MgII / cak_delk1",
+  "form": "log-ratio",
+  "obs": -1.840475663269343,
+  "p": 0.004666588890185164,
+  "nnull": 60000,
+  "null_med": -1.8751633377657226
+ },
+ {
+  "pair": "spot_area / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.7426414198410798,
+  "p": 0.004833252779120348,
+  "nnull": 60000,
+  "null_med": -1.8049923427806265
+ },
+ {
+  "pair": "alpha/proton / cak_k3",
+  "form": "resid-product",
+  "obs": -1.6107117625070546,
+  "p": 0.00566657222379627,
+  "nnull": 60000,
+  "null_med": -1.6830524073909088
+ },
+ {
+  "pair": "MgII / cme_rate",
+  "form": "log-ratio",
+  "obs": -2.3756141418672496,
+  "p": 0.005749904168263862,
+  "nnull": 60000,
+  "null_med": -2.3776337720576324
+ },
+ {
+  "pair": "wind density / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -2.0932355988537936,
+  "p": 0.005833236112731455,
+  "nnull": 60000,
+  "null_med": -2.170741089766062
+ },
+ {
+  "pair": "spot_area / cme_rate",
+  "form": "ratio",
+  "obs": -1.7760469707088522,
+  "p": 0.005899901668305528,
+  "nnull": 60000,
+  "null_med": -1.8562325423681996
+ },
+ {
+  "pair": "sunspot / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.671436145439681,
+  "p": 0.005949900834986084,
+  "nnull": 60000,
+  "null_med": -1.7291248081558936
+ },
+ {
+  "pair": "swics_c6to5 / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -2.0477128149070167,
+  "p": 0.00609989833502775,
+  "nnull": 60000,
+  "null_med": -2.14626078704573
+ },
+ {
+  "pair": "cosmic ray / cak_emdx",
+  "form": "ratio",
+  "obs": -1.8696549280892905,
+  "p": 0.006566557224046266,
+  "nnull": 60000,
+  "null_med": -1.9520713817450193
+ },
+ {
+  "pair": "cme_speed / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.645267011552711,
+  "p": 0.006766553890768487,
+  "nnull": 60000,
+  "null_med": -1.7182178844958118
+ },
+ {
+  "pair": "proton temp / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.69405132319544,
+  "p": 0.007599873335444409,
+  "nnull": 60000,
+  "null_med": -1.7492364932824032
+ },
+ {
+  "pair": "F10.7 / sunspot",
+  "form": "log-ratio",
+  "obs": -1.698554244502919,
+  "p": 0.007616539724337928,
+  "nnull": 60000,
+  "null_med": -1.7182083772285504
+ },
+ {
+  "pair": "sunspot / swics_avqo",
+  "form": "log-ratio",
+  "obs": -1.7502858634682719,
+  "p": 0.007883201946634224,
+  "nnull": 60000,
+  "null_med": -1.7715669748343448
+ },
+ {
+  "pair": "spot_area / cme_speed",
+  "form": "ratio",
+  "obs": -1.7421156838705556,
+  "p": 0.007949867502208297,
+  "nnull": 60000,
+  "null_med": -1.7994313128466433
+ },
+ {
+  "pair": "spot_area / swics_avqo",
+  "form": "ratio",
+  "obs": -1.7264465647735916,
+  "p": 0.008183196946717555,
+  "nnull": 60000,
+  "null_med": -1.76085981633329
+ },
+ {
+  "pair": "alpha/proton / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.7379328414346644,
+  "p": 0.008216529724504592,
+  "nnull": 60000,
+  "null_med": -1.8192375914266425
+ },
+ {
+  "pair": "cosmic ray / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -2.009968886353835,
+  "p": 0.009166513891435142,
+  "nnull": 60000,
+  "null_med": -2.0284973885672315
+ },
+ {
+  "pair": "TSI / MgII",
+  "form": "ratio",
+  "obs": -1.9632516013727286,
+  "p": 0.00961650639156014,
+  "nnull": 60000,
+  "null_med": -1.976229736858624
+ },
+ {
+  "pair": "cosmic ray / cak_emdx",
+  "form": "log-ratio",
+  "obs": -1.8187502418826957,
+  "p": 0.009816503058282362,
+  "nnull": 60000,
+  "null_med": -1.9070902074541012
+ },
+ {
+  "pair": "cak_k2vk3 / cak_delk1",
+  "form": "ratio",
+  "obs": -1.8248441175207812,
+  "p": 0.010333161113981434,
+  "nnull": 60000,
+  "null_med": -1.893131356411717
+ },
+ {
+  "pair": "MgII / cosmic ray",
+  "form": "ratio",
+  "obs": -1.654488678830318,
+  "p": 0.011483141947634206,
+  "nnull": 60000,
+  "null_med": -1.7093391401960232
+ },
+ {
+  "pair": "TSI / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.9182820434262866,
+  "p": 0.011816469725504574,
+  "nnull": 60000,
+  "null_med": -1.9376525889793288
+ },
+ {
+  "pair": "wso_meanfield / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -1.646802561787851,
+  "p": 0.012116464725587906,
+  "nnull": 60000,
+  "null_med": -1.708937272610843
+ },
+ {
+  "pair": "cosmic ray / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.6689116742993644,
+  "p": 0.013133114448092531,
+  "nnull": 60000,
+  "null_med": -1.6843472972336722
+ },
+ {
+  "pair": "X-ray bg / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -1.729099511840662,
+  "p": 0.013349777503708271,
+  "nnull": 60000,
+  "null_med": -1.763914375859033
+ },
+ {
+  "pair": "spot_asym / swics_avqo",
+  "form": "ratio",
+  "obs": -1.7196745866104621,
+  "p": 0.014166430559490675,
+  "nnull": 60000,
+  "null_med": -1.743850779112678
+ },
+ {
+  "pair": "X-ray bg / cme_rate",
+  "form": "ratio",
+  "obs": -1.8563836713544846,
+  "p": 0.01421642972617123,
+  "nnull": 60000,
+  "null_med": -1.9356611797050178
+ },
+ {
+  "pair": "MgII / proton temp",
+  "form": "log-ratio",
+  "obs": -1.6122080229829323,
+  "p": 0.015016416393060115,
+  "nnull": 60000,
+  "null_med": -1.6192770414297863
+ },
+ {
+  "pair": "alpha/proton / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.6606033366846051,
+  "p": 0.015733071115481407,
+  "nnull": 60000,
+  "null_med": -1.7293800664605168
+ },
+ {
+  "pair": "alpha/proton / spot_asym",
+  "form": "resid-product",
+  "obs": -1.6694048122154894,
+  "p": 0.01646639222679622,
+  "nnull": 60000,
+  "null_med": -1.7030793060888456
+ },
+ {
+  "pair": "proton temp / swics_avqsi",
+  "form": "ratio",
+  "obs": -1.7308867303904787,
+  "p": 0.01676638722687955,
+  "nnull": 60000,
+  "null_med": -1.7880766259430532
+ },
+ {
+  "pair": "IMF |B| / spot_asym",
+  "form": "log-ratio",
+  "obs": -1.553416886426704,
+  "p": 0.01849969167180547,
+  "nnull": 60000,
+  "null_med": -1.5881044011583847
+ },
+ {
+  "pair": "F10.7 / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.678330838446513,
+  "p": 0.019399676672055464,
+  "nnull": 60000,
+  "null_med": -1.707049207385713
+ },
+ {
+  "pair": "F10.7 / cak_k3",
+  "form": "log-ratio",
+  "obs": -1.6371568177736684,
+  "p": 0.019616339727671205,
+  "nnull": 60000,
+  "null_med": -1.6913006113500542
+ },
+ {
+  "pair": "alpha/proton / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.637326352432109,
+  "p": 0.019633006116564725,
+  "nnull": 60000,
+  "null_med": -1.6907437375834675
+ },
+ {
+  "pair": "TSI / F10.7",
+  "form": "log-ratio",
+  "obs": -1.8471932270754112,
+  "p": 0.019933001116648055,
+  "nnull": 60000,
+  "null_med": -1.8536945652029262
+ },
+ {
+  "pair": "TSI / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.7428421383886556,
+  "p": 0.023066282228629522,
+  "nnull": 60000,
+  "null_med": -1.7457256239930246
+ },
+ {
+  "pair": "F10.7 / cme_speed",
+  "form": "log-ratio",
+  "obs": -2.036747844126234,
+  "p": 0.02341627639539341,
+  "nnull": 60000,
+  "null_med": -2.054615717996292
+ },
+ {
+  "pair": "swics_o7to6 / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -2.014465622739249,
+  "p": 0.023666272228796185,
+  "nnull": 60000,
+  "null_med": -2.0560638017165935
+ },
+ {
+  "pair": "F10.7 / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -1.8393216043826106,
+  "p": 0.023916268062198962,
+  "nnull": 60000,
+  "null_med": -1.9015226168450594
+ },
+ {
+  "pair": "sunspot / cak_k3",
+  "form": "log-ratio",
+  "obs": -1.7532486631771462,
+  "p": 0.024316261395643406,
+  "nnull": 60000,
+  "null_med": -1.777306523993584
+ },
+ {
+  "pair": "spot_area / spot_asym",
+  "form": "resid-product",
+  "obs": -1.7178893755777895,
+  "p": 0.02469958834019433,
+  "nnull": 60000,
+  "null_med": -1.755968399201472
+ },
+ {
+  "pair": "TSI / proton temp",
+  "form": "log-ratio",
+  "obs": -1.5441853315556324,
+  "p": 0.026182896951717473,
+  "nnull": 60000,
+  "null_med": -1.5451295508036156
+ },
+ {
+  "pair": "IMF |B| / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -1.9718447835037023,
+  "p": 0.026566223896268396,
+  "nnull": 60000,
+  "null_med": -2.013547597487135
+ },
+ {
+  "pair": "swics_avqfe / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.783351645572679,
+  "p": 0.02854952417459709,
+  "nnull": 60000,
+  "null_med": -1.8161410700232512
+ },
+ {
+  "pair": "cosmic ray / cme_speed",
+  "form": "log-ratio",
+  "obs": -2.0340729522281094,
+  "p": 0.028832852785786903,
+  "nnull": 60000,
+  "null_med": -2.0444902460544303
+ },
+ {
+  "pair": "swics_o7to6 / swics_avqo",
+  "form": "log-ratio",
+  "obs": -2.03227538575686,
+  "p": 0.029966167230546157,
+  "nnull": 60000,
+  "null_med": -2.060024818470718
+ },
+ {
+  "pair": "IMF |B| / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -2.142641257932804,
+  "p": 0.03069948834186097,
+  "nnull": 60000,
+  "null_med": -2.2292161229401173
+ },
+ {
+  "pair": "swics_avqfe / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.675824022361926,
+  "p": 0.030766153897435044,
+  "nnull": 60000,
+  "null_med": -1.717554623455415
+ },
+ {
+  "pair": "X-ray bg / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.8840382003012264,
+  "p": 0.03134947750870819,
+  "nnull": 60000,
+  "null_med": -1.9366359013065466
+ },
+ {
+  "pair": "IMF |B| / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.8909990667360228,
+  "p": 0.03393276778720355,
+  "nnull": 60000,
+  "null_med": -1.926739282381884
+ },
+ {
+  "pair": "wso_meanfield / cme_rate",
+  "form": "log-ratio",
+  "obs": -1.6869614078105615,
+  "p": 0.035132747787536875,
+  "nnull": 60000,
+  "null_med": -1.7194284261480774
+ },
+ {
+  "pair": "proton temp / cme_speed",
+  "form": "ratio",
+  "obs": -1.6542472079422843,
+  "p": 0.03571607139881002,
+  "nnull": 60000,
+  "null_med": -1.6951190873280244
+ },
+ {
+  "pair": "proton >10MeV / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -1.772102186188342,
+  "p": 0.03636606056565724,
+  "nnull": 60000,
+  "null_med": -1.829448075379752
+ },
+ {
+  "pair": "TSI / cme_rate",
+  "form": "ratio",
+  "obs": -1.6929818329774216,
+  "p": 0.03806603223279612,
+  "nnull": 60000,
+  "null_med": -1.693530482056768
+ },
+ {
+  "pair": "IMF |B| / swics_avqsi",
+  "form": "ratio",
+  "obs": -1.698660599117788,
+  "p": 0.038866018899685,
+  "nnull": 60000,
+  "null_med": -1.7440852521286234
+ },
+ {
+  "pair": "spot_area / swics_fetoo",
+  "form": "ratio",
+  "obs": -1.7727252212169098,
+  "p": 0.038866018899685,
+  "nnull": 60000,
+  "null_med": -1.81034220114644
+ },
+ {
+  "pair": "IMF |B| / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.6714944581837405,
+  "p": 0.03926601223312945,
+  "nnull": 60000,
+  "null_med": -1.7248408062092007
+ },
+ {
+  "pair": "swics_avqsi / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.6336091205668295,
+  "p": 0.03928267862202297,
+  "nnull": 60000,
+  "null_med": -1.6762475314178558
+ },
+ {
+  "pair": "cosmic ray / IMF |B|",
+  "form": "log-ratio",
+  "obs": -2.0017266556689415,
+  "p": 0.039616006399893336,
+  "nnull": 60000,
+  "null_med": -2.0118612704952756
+ },
+ {
+  "pair": "proton temp / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.9876601197945445,
+  "p": 0.0405826569557174,
+  "nnull": 60000,
+  "null_med": -2.0085643575039227
+ },
+ {
+  "pair": "wind density / X-ray bg",
+  "form": "log-ratio",
+  "obs": -2.071074542741515,
+  "p": 0.04094931751137481,
+  "nnull": 60000,
+  "null_med": -2.112312183254547
+ },
+ {
+  "pair": "alpha/proton / swics_avqo",
+  "form": "log-ratio",
+  "obs": -1.880409557031701,
+  "p": 0.04096598390026833,
+  "nnull": 60000,
+  "null_med": -1.909176075254046
+ },
+ {
+  "pair": "wind speed / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.6712168152349995,
+  "p": 0.041099315011416476,
+  "nnull": 60000,
+  "null_med": -1.7100627549306096
+ },
+ {
+  "pair": "cosmic ray / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -1.9068373951768294,
+  "p": 0.04181596973383777,
+  "nnull": 60000,
+  "null_med": -1.9387456478201766
+ },
+ {
+  "pair": "cosmic ray / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.59757362806171,
+  "p": 0.041932634456092396,
+  "nnull": 60000,
+  "null_med": -1.625463370824126
+ },
+ {
+  "pair": "wind speed / spot_area",
+  "form": "resid-product",
+  "obs": -1.7519312015918613,
+  "p": 0.04198263362277296,
+  "nnull": 60000,
+  "null_med": -1.7782317824626939
+ },
+ {
+  "pair": "F10.7 / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.6469438740540512,
+  "p": 0.04314928084531924,
+  "nnull": 60000,
+  "null_med": -1.6803940715607033
+ },
+ {
+  "pair": "cme_speed / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.669006986492676,
+  "p": 0.04326594556757388,
+  "nnull": 60000,
+  "null_med": -1.7339750563244025
+ },
+ {
+  "pair": "swics_avqsi / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.6238236159896489,
+  "p": 0.04396593390110165,
+  "nnull": 60000,
+  "null_med": -1.6637486409661908
+ },
+ {
+  "pair": "proton temp / cak_k3",
+  "form": "ratio",
+  "obs": -1.7775012123615048,
+  "p": 0.04431592806786554,
+  "nnull": 60000,
+  "null_med": -1.8173909200593537
+ },
+ {
+  "pair": "cak_emdx / cak_k3",
+  "form": "log-ratio",
+  "obs": -1.9476631054707165,
+  "p": 0.04576590390160164,
+  "nnull": 60000,
+  "null_med": -2.0322341939885242
+ },
+ {
+  "pair": "IMF |B| / cak_delk1",
+  "form": "log-ratio",
+  "obs": -2.1515759193311808,
+  "p": 0.04606589890168497,
+  "nnull": 60000,
+  "null_med": -2.196518358192329
+ },
+ {
+  "pair": "sunspot / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.6874657334496532,
+  "p": 0.04629922834619423,
+  "nnull": 60000,
+  "null_med": -1.727212153783952
+ },
+ {
+  "pair": "wso_meanfield / cme_speed",
+  "form": "ratio",
+  "obs": -1.6498968778693879,
+  "p": 0.046549224179597004,
+  "nnull": 60000,
+  "null_med": -1.6878733977164686
+ },
+ {
+  "pair": "spot_area / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -1.628731293141683,
+  "p": 0.046582556957384044,
+  "nnull": 60000,
+  "null_med": -1.6869996378552692
+ },
+ {
+  "pair": "TSI / spot_asym",
+  "form": "resid-product",
+  "obs": -1.7027689775719879,
+  "p": 0.047832536124397924,
+  "nnull": 60000,
+  "null_med": -1.7293114710848967
+ },
+ {
+  "pair": "wind speed / cak_k3",
+  "form": "log-ratio",
+  "obs": -1.9385339390464167,
+  "p": 0.04923251279145348,
+  "nnull": 60000,
+  "null_med": -1.9909645101388196
+ },
+ {
+  "pair": "alpha/proton / X-ray bg",
+  "form": "ratio",
+  "obs": -1.9752651008411164,
+  "p": 0.050215829736171065,
+  "nnull": 60000,
+  "null_med": -2.008069602236569
+ },
+ {
+  "pair": "swics_avqsi / swics_fetoo",
+  "form": "ratio",
+  "obs": -2.051014290805039,
+  "p": 0.0508824852919118,
+  "nnull": 60000,
+  "null_med": -2.0941180144677647
+ },
+ {
+  "pair": "alpha/proton / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -2.0424171106110993,
+  "p": 0.05201579973667106,
+  "nnull": 60000,
+  "null_med": -2.1152394773837213
+ },
+ {
+  "pair": "IMF |B| / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -2.0453996383931115,
+  "p": 0.054032432792786786,
+  "nnull": 60000,
+  "null_med": -2.1056881500931635
+ },
+ {
+  "pair": "MgII / cme_rate",
+  "form": "ratio",
+  "obs": -1.6151766942171426,
+  "p": 0.05443242612623123,
+  "nnull": 60000,
+  "null_med": -1.6361639914807122
+ },
+ {
+  "pair": "X-ray bg / spot_asym",
+  "form": "resid-product",
+  "obs": -1.7827317731130954,
+  "p": 0.05479908668188863,
+  "nnull": 60000,
+  "null_med": -1.841609241095819
+ },
+ {
+  "pair": "MgII / cak_delk1",
+  "form": "ratio",
+  "obs": -1.7822141994233722,
+  "p": 0.054899085015249746,
+  "nnull": 60000,
+  "null_med": -1.805953662383486
+ },
+ {
+  "pair": "X-ray bg / spot_asym",
+  "form": "log-ratio",
+  "obs": -1.6626601517184572,
+  "p": 0.05719904668255529,
+  "nnull": 60000,
+  "null_med": -1.6832141132023375
+ },
+ {
+  "pair": "F10.7 / MgII",
+  "form": "ratio",
+  "obs": -1.7527591296663618,
+  "p": 0.058232362793953434,
+  "nnull": 60000,
+  "null_med": -1.768444711501348
+ },
+ {
+  "pair": "cme_speed / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.6385970190796004,
+  "p": 0.05828236196063399,
+  "nnull": 60000,
+  "null_med": -1.6782441655837481
+ },
+ {
+  "pair": "X-ray bg / swics_avqo",
+  "form": "ratio",
+  "obs": -1.873022011118192,
+  "p": 0.05874902084965251,
+  "nnull": 60000,
+  "null_med": -1.8887429667085938
+ },
+ {
+  "pair": "spot_asym / swics_fetoo",
+  "form": "ratio",
+  "obs": -1.6218961930000013,
+  "p": 0.059082348627522874,
+  "nnull": 60000,
+  "null_med": -1.66894841043784
+ },
+ {
+  "pair": "MgII / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -1.9916644752456372,
+  "p": 0.059115681405309914,
+  "nnull": 60000,
+  "null_med": -2.0009603425930655
+ },
+ {
+  "pair": "wind density / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.6399298857511777,
+  "p": 0.0594656755720738,
+  "nnull": 60000,
+  "null_med": -1.6776593853968098
+ },
+ {
+  "pair": "proton >10MeV / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.7654057260750236,
+  "p": 0.06004899918334695,
+  "nnull": 60000,
+  "null_med": -1.806617348185736
+ },
+ {
+  "pair": "spot_asym / cak_delk1",
+  "form": "ratio",
+  "obs": -1.760203959554258,
+  "p": 0.06106564890585157,
+  "nnull": 60000,
+  "null_med": -1.7810952888806502
+ },
+ {
+  "pair": "TSI / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -1.9918072025518878,
+  "p": 0.06158230696155064,
+  "nnull": 60000,
+  "null_med": -1.9940510118455514
+ },
+ {
+  "pair": "wind density / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.6312893422215717,
+  "p": 0.061648972517124714,
+  "nnull": 60000,
+  "null_med": -1.6778269625717108
+ },
+ {
+  "pair": "X-ray bg / cme_speed",
+  "form": "log-ratio",
+  "obs": -1.9433950300705054,
+  "p": 0.06643222612956451,
+  "nnull": 60000,
+  "null_med": -1.9846163988876926
+ },
+ {
+  "pair": "cme_speed / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.6155030891891105,
+  "p": 0.06684888585190246,
+  "nnull": 60000,
+  "null_med": -1.6573155389899337
+ },
+ {
+  "pair": "sunspot / cak_emdx",
+  "form": "log-ratio",
+  "obs": -1.7559892519444773,
+  "p": 0.06699888335194414,
+  "nnull": 60000,
+  "null_med": -1.7694411756836597
+ },
+ {
+  "pair": "cosmic ray / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.8864740211561761,
+  "p": 0.06854885751904134,
+  "nnull": 60000,
+  "null_med": -1.9365258940347259
+ },
+ {
+  "pair": "spot_asym / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.6883019995711683,
+  "p": 0.06888218529691172,
+  "nnull": 60000,
+  "null_med": -1.7213676030317768
+ },
+ {
+  "pair": "cosmic ray / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.7635779822536115,
+  "p": 0.06891551807469876,
+  "nnull": 60000,
+  "null_med": -1.7755887792660707
+ },
+ {
+  "pair": "wind speed / cme_speed",
+  "form": "resid-product",
+  "obs": -1.6565385643333776,
+  "p": 0.06999883335277746,
+  "nnull": 60000,
+  "null_med": -1.6813563111620724
+ },
+ {
+  "pair": "spot_area / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -1.6183054849901306,
+  "p": 0.07178213696438393,
+  "nnull": 60000,
+  "null_med": -1.6653543217111402
+ },
+ {
+  "pair": "cak_emdx / cak_k3",
+  "form": "ratio",
+  "obs": -1.9892018157099307,
+  "p": 0.07371543807603206,
+  "nnull": 60000,
+  "null_med": -2.072464869768549
+ },
+ {
+  "pair": "wso_meanfield / cak_emdx",
+  "form": "ratio",
+  "obs": -1.6636843284200533,
+  "p": 0.0740154330761154,
+  "nnull": 60000,
+  "null_med": -1.6783159182496192
+ },
+ {
+  "pair": "proton temp / wind density",
+  "form": "resid-product",
+  "obs": -1.760868108810522,
+  "p": 0.07503208279862002,
+  "nnull": 60000,
+  "null_med": -1.7817401001325461
+ },
+ {
+  "pair": "IMF |B| / X-ray bg",
+  "form": "ratio",
+  "obs": -1.977525376353136,
+  "p": 0.07514874752087465,
+  "nnull": 60000,
+  "null_med": -1.9996680321050504
+ },
+ {
+  "pair": "swics_o7to6 / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.6923321855433042,
+  "p": 0.07648205863235613,
+  "nnull": 60000,
+  "null_med": -1.7261508592210113
+ },
+ {
+  "pair": "cosmic ray / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.6758646117554685,
+  "p": 0.07663205613239779,
+  "nnull": 60000,
+  "null_med": -1.6894568589197425
+ },
+ {
+  "pair": "alpha/proton / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.6533639178468689,
+  "p": 0.07709871502141631,
+  "nnull": 60000,
+  "null_med": -1.6889800712978498
+ },
+ {
+  "pair": "IMF |B| / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.6968458065991308,
+  "p": 0.07734871085481909,
+  "nnull": 60000,
+  "null_med": -1.7355205814379095
+ },
+ {
+  "pair": "swics_fetoo / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.6531195826981677,
+  "p": 0.07796536724387927,
+  "nnull": 60000,
+  "null_med": -1.6927319152043503
+ },
+ {
+  "pair": "cosmic ray / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -1.8826059786782765,
+  "p": 0.07884868585523575,
+  "nnull": 60000,
+  "null_med": -1.9270008002396732
+ },
+ {
+  "pair": "sunspot / alpha/proton",
+  "form": "ratio",
+  "obs": -1.6884081383804856,
+  "p": 0.08033199446675889,
+  "nnull": 60000,
+  "null_med": -1.7316414341988149
+ },
+ {
+  "pair": "proton temp / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.7376936987337426,
+  "p": 0.08046532557790703,
+  "nnull": 60000,
+  "null_med": -1.7828259821521555
+ },
+ {
+  "pair": "F10.7 / wind density",
+  "form": "ratio",
+  "obs": -1.6557666774207505,
+  "p": 0.0810653155780737,
+  "nnull": 60000,
+  "null_med": -1.6859782495163627
+ },
+ {
+  "pair": "alpha/proton / cme_speed",
+  "form": "log-ratio",
+  "obs": -2.106600659386461,
+  "p": 0.08284861918968017,
+  "nnull": 60000,
+  "null_med": -2.1593040674237254
+ },
+ {
+  "pair": "alpha/proton / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.8496923238133558,
+  "p": 0.08309861502308295,
+  "nnull": 60000,
+  "null_med": -1.8806329989924382
+ },
+ {
+  "pair": "spot_area / cak_emdx",
+  "form": "log-ratio",
+  "obs": -1.695524407525076,
+  "p": 0.08401526641222647,
+  "nnull": 60000,
+  "null_med": -1.712767768571847
+ },
+ {
+  "pair": "wind density / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.8850480816612794,
+  "p": 0.08421526307894868,
+  "nnull": 60000,
+  "null_med": -1.9025478688044486
+ },
+ {
+  "pair": "wso_meanfield / cak_delk1",
+  "form": "ratio",
+  "obs": -1.657786911620175,
+  "p": 0.08448192530124497,
+  "nnull": 60000,
+  "null_med": -1.6777260334462356
+ },
+ {
+  "pair": "X-ray bg / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -2.041536428776793,
+  "p": 0.08453192446792554,
+  "nnull": 60000,
+  "null_med": -2.0907238042052163
+ },
+ {
+  "pair": "MgII / wind speed",
+  "form": "resid-product",
+  "obs": -1.6858409984286713,
+  "p": 0.0847819203013283,
+  "nnull": 60000,
+  "null_med": -1.7095575516351573
+ },
+ {
+  "pair": "cosmic ray / wind speed",
+  "form": "log-ratio",
+  "obs": -2.094134370871359,
+  "p": 0.08578190363493941,
+  "nnull": 60000,
+  "null_med": -2.109301761667777
+ },
+ {
+  "pair": "IMF |B| / swics_avqo",
+  "form": "ratio",
+  "obs": -1.7152821630934394,
+  "p": 0.08618189696838387,
+  "nnull": 60000,
+  "null_med": -1.7422606830470593
+ },
+ {
+  "pair": "alpha/proton / cme_rate",
+  "form": "log-ratio",
+  "obs": -2.465399316505597,
+  "p": 0.08951517474708755,
+  "nnull": 60000,
+  "null_med": -2.5376514159118986
+ },
+ {
+  "pair": "proton >10MeV / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.5566289314371642,
+  "p": 0.08968183863602273,
+  "nnull": 60000,
+  "null_med": -1.5960746466729518
+ },
+ {
+  "pair": "swics_avqsi / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.7821407153128859,
+  "p": 0.08968183863602273,
+  "nnull": 60000,
+  "null_med": -1.8018870845939712
+ },
+ {
+  "pair": "spot_area / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.8360524351802243,
+  "p": 0.09208179863668939,
+  "nnull": 60000,
+  "null_med": -1.8924897877204638
+ },
+ {
+  "pair": "wind density / swics_avqo",
+  "form": "log-ratio",
+  "obs": -2.088647574722704,
+  "p": 0.09226512891451809,
+  "nnull": 60000,
+  "null_med": -2.1044666420813307
+ },
+ {
+  "pair": "wind speed / spot_area",
+  "form": "log-ratio",
+  "obs": -1.5827724680935291,
+  "p": 0.09238179363677272,
+  "nnull": 60000,
+  "null_med": -1.6025742287609575
+ },
+ {
+  "pair": "alpha/proton / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.6585183324653339,
+  "p": 0.09429842835952734,
+  "nnull": 60000,
+  "null_med": -1.6909595382019023
+ },
+ {
+  "pair": "proton temp / X-ray bg",
+  "form": "ratio",
+  "obs": -2.0570024608966526,
+  "p": 0.0943484275262079,
+  "nnull": 60000,
+  "null_med": -2.0771504135964847
+ },
+ {
+  "pair": "X-ray bg / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.8728936911778828,
+  "p": 0.09564840585990234,
+  "nnull": 60000,
+  "null_med": -1.8915474898453963
+ },
+ {
+  "pair": "spot_area / spot_asym",
+  "form": "log-ratio",
+  "obs": -1.6786348298835843,
+  "p": 0.09649839169347177,
+  "nnull": 60000,
+  "null_med": -1.6951745476631694
+ },
+ {
+  "pair": "TSI / MgII",
+  "form": "log-ratio",
+  "obs": -1.9343373131206874,
+  "p": 0.09854835752737455,
+  "nnull": 60000,
+  "null_med": -1.941561980362223
+ },
+ {
+  "pair": "X-ray bg / spot_area",
+  "form": "log-ratio",
+  "obs": -1.5822500069412966,
+  "p": 0.09969833836102732,
+  "nnull": 60000,
+  "null_med": -1.6039844636664267
+ },
+ {
+  "pair": "sunspot / spot_asym",
+  "form": "log-ratio",
+  "obs": -1.5373840327958361,
+  "p": 0.10018166363893935,
+  "nnull": 60000,
+  "null_med": -1.5556376103298115
+ },
+ {
+  "pair": "swics_avqfe / swics_avqsi",
+  "form": "ratio",
+  "obs": -1.7605857777314218,
+  "p": 0.1003149947500875,
+  "nnull": 60000,
+  "null_med": -1.7983604153134456
+ },
+ {
+  "pair": "swics_c6to5 / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -2.0086457239336317,
+  "p": 0.10069832169463842,
+  "nnull": 60000,
+  "null_med": -2.0338891537419426
+ },
+ {
+  "pair": "proton temp / cak_delk1",
+  "form": "ratio",
+  "obs": -1.8637705136290366,
+  "p": 0.10171497141714304,
+  "nnull": 60000,
+  "null_med": -1.8994270978941408
+ },
+ {
+  "pair": "IMF |B| / cak_emdx",
+  "form": "resid-product",
+  "obs": -1.6513818791284105,
+  "p": 0.10224829586173564,
+  "nnull": 60000,
+  "null_med": -1.6870265421133828
+ },
+ {
+  "pair": "proton >10MeV / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.7282065170100576,
+  "p": 0.10396493391776804,
+  "nnull": 60000,
+  "null_med": -1.7588293874544056
+ },
+ {
+  "pair": "swics_c6to5 / swics_avqo",
+  "form": "log-ratio",
+  "obs": -2.012016374803521,
+  "p": 0.10608156530724488,
+  "nnull": 60000,
+  "null_med": -2.0283533313068833
+ },
+ {
+  "pair": "cme_rate / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.658354322595303,
+  "p": 0.10744820919651339,
+  "nnull": 60000,
+  "null_med": -1.6905896227002875
+ },
+ {
+  "pair": "spot_area / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -1.6439456424630676,
+  "p": 0.10969817169713839,
+  "nnull": 60000,
+  "null_med": -1.6690524333679257
+ },
+ {
+  "pair": "proton temp / cme_rate",
+  "form": "log-ratio",
+  "obs": -1.9976888928831706,
+  "p": 0.10979817003049949,
+  "nnull": 60000,
+  "null_med": -2.029141959327001
+ },
+ {
+  "pair": "sunspot / cme_rate",
+  "form": "log-ratio",
+  "obs": -1.960301185238773,
+  "p": 0.11044815919734671,
+  "nnull": 60000,
+  "null_med": -1.9904029307964919
+ },
+ {
+  "pair": "spot_area / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -1.5460473947243631,
+  "p": 0.11239812669788837,
+  "nnull": 60000,
+  "null_med": -1.5797687571328818
+ },
+ {
+  "pair": "sunspot / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.705573993254751,
+  "p": 0.11566473892101799,
+  "nnull": 60000,
+  "null_med": -1.7333134973353315
+ },
+ {
+  "pair": "wind density / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.6651707604017187,
+  "p": 0.11746470892151797,
+  "nnull": 60000,
+  "null_med": -1.6918780075906499
+ },
+ {
+  "pair": "F10.7 / cosmic ray",
+  "form": "log-ratio",
+  "obs": -1.8424868972518356,
+  "p": 0.11808136531057815,
+  "nnull": 60000,
+  "null_med": -1.8578483932202128
+ },
+ {
+  "pair": "sunspot / cme_rate",
+  "form": "ratio",
+  "obs": -1.7077620777654288,
+  "p": 0.11824802919951334,
+  "nnull": 60000,
+  "null_med": -1.757005811094853
+ },
+ {
+  "pair": "proton temp / cak_k3",
+  "form": "resid-product",
+  "obs": -2.0210611389272715,
+  "p": 0.11831469475508742,
+  "nnull": 60000,
+  "null_med": -2.0384975338396654
+ },
+ {
+  "pair": "proton >10MeV / cak_emdx",
+  "form": "resid-product",
+  "obs": -1.8168307256000953,
+  "p": 0.11989800169997167,
+  "nnull": 60000,
+  "null_med": -1.8452742867182383
+ },
+ {
+  "pair": "swics_c6to5 / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.6486183709601934,
+  "p": 0.12066465558907352,
+  "nnull": 60000,
+  "null_med": -1.6755984910454023
+ },
+ {
+  "pair": "wind speed / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.644448569955221,
+  "p": 0.12104798253362443,
+  "nnull": 60000,
+  "null_med": -1.6781751710750847
+ },
+ {
+  "pair": "IMF |B| / alpha/proton",
+  "form": "log-ratio",
+  "obs": -2.103588843499647,
+  "p": 0.12749787503541607,
+  "nnull": 60000,
+  "null_med": -2.1336486690980614
+ },
+ {
+  "pair": "TSI / F10.7",
+  "form": "ratio",
+  "obs": -1.9522234855826075,
+  "p": 0.13156447392543458,
+  "nnull": 60000,
+  "null_med": -1.9553695860914782
+ },
+ {
+  "pair": "spot_asym / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.7166938185955813,
+  "p": 0.13299778337027715,
+  "nnull": 60000,
+  "null_med": -1.7416976597507718
+ },
+ {
+  "pair": "IMF |B| / cak_k3",
+  "form": "log-ratio",
+  "obs": -2.184295361259137,
+  "p": 0.13394776753720772,
+  "nnull": 60000,
+  "null_med": -2.2050792904176375
+ },
+ {
+  "pair": "wind density / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.7109589894707187,
+  "p": 0.13469775503741604,
+  "nnull": 60000,
+  "null_med": -1.7301676225779326
+ },
+ {
+  "pair": "sunspot / cme_speed",
+  "form": "ratio",
+  "obs": -1.6804554986537135,
+  "p": 0.13506441559307344,
+  "nnull": 60000,
+  "null_med": -1.7105432163485303
+ },
+ {
+  "pair": "spot_asym / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.706845038258754,
+  "p": 0.13796436726054565,
+  "nnull": 60000,
+  "null_med": -1.7320724056739591
+ },
+ {
+  "pair": "wind speed / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.699198577106428,
+  "p": 0.1398976683721938,
+  "nnull": 60000,
+  "null_med": -1.7137053823684698
+ },
+ {
+  "pair": "swics_hetoo / swics_avqo",
+  "form": "log-ratio",
+  "obs": -1.7675577292864926,
+  "p": 0.1403309944834253,
+  "nnull": 60000,
+  "null_med": -1.7780859200791677
+ },
+ {
+  "pair": "cosmic ray / cak_k3",
+  "form": "log-ratio",
+  "obs": -1.8446044220512126,
+  "p": 0.1413476442059299,
+  "nnull": 60000,
+  "null_med": -1.8732864956266888
+ },
+ {
+  "pair": "swics_o7to6 / swics_avqo",
+  "form": "ratio",
+  "obs": -1.7220195699124026,
+  "p": 0.14273095448409193,
+  "nnull": 60000,
+  "null_med": -1.7397728612680088
+ },
+ {
+  "pair": "proton >10MeV / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -1.5125013976275619,
+  "p": 0.14313094781753638,
+  "nnull": 60000,
+  "null_med": -1.542207299673049
+ },
+ {
+  "pair": "proton >10MeV / wso_meanfield",
+  "form": "log-ratio",
+  "obs": -1.9270865381694005,
+  "p": 0.14409759837336045,
+  "nnull": 60000,
+  "null_med": -1.9373471440060874
+ },
+ {
+  "pair": "swics_c6to5 / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.6508796752278414,
+  "p": 0.14519758004033267,
+  "nnull": 60000,
+  "null_med": -1.677218222468057
+ },
+ {
+  "pair": "wind density / cme_rate",
+  "form": "ratio",
+  "obs": -1.6966927638389318,
+  "p": 0.14528091198480025,
+  "nnull": 60000,
+  "null_med": -1.715614632972011
+ },
+ {
+  "pair": "X-ray bg / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.8223308092176804,
+  "p": 0.1456809053182447,
+  "nnull": 60000,
+  "null_med": -1.8535124350551735
+ },
+ {
+  "pair": "MgII / wso_meanfield",
+  "form": "log-ratio",
+  "obs": -2.0315801077873967,
+  "p": 0.1479308678188697,
+  "nnull": 60000,
+  "null_med": -2.033169088362469
+ },
+ {
+  "pair": "X-ray bg / cme_speed",
+  "form": "ratio",
+  "obs": -1.887595358343601,
+  "p": 0.1497475042082632,
+  "nnull": 60000,
+  "null_med": -1.9101447072307247
+ },
+ {
+  "pair": "TSI / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.6362136831679626,
+  "p": 0.15071415476408725,
+  "nnull": 60000,
+  "null_med": -1.6392818603418384
+ },
+ {
+  "pair": "proton >10MeV / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.5701138669544203,
+  "p": 0.150930817819703,
+  "nnull": 60000,
+  "null_med": -1.603966093784962
+ },
+ {
+  "pair": "wind density / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.7100958043334094,
+  "p": 0.1557140714321428,
+  "nnull": 60000,
+  "null_med": -1.7338739753727146
+ },
+ {
+  "pair": "alpha/proton / spot_area",
+  "form": "resid-product",
+  "obs": -1.771054855721523,
+  "p": 0.155880735321078,
+  "nnull": 60000,
+  "null_med": -1.786514913028681
+ },
+ {
+  "pair": "F10.7 / cak_delk1",
+  "form": "ratio",
+  "obs": -1.6711281625756862,
+  "p": 0.15713071448809188,
+  "nnull": 60000,
+  "null_med": -1.6960982483951463
+ },
+ {
+  "pair": "TSI / swics_avqsi",
+  "form": "ratio",
+  "obs": -2.0059729875865204,
+  "p": 0.16083065282245296,
+  "nnull": 60000,
+  "null_med": -2.0097732917194104
+ },
+ {
+  "pair": "TSI / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.6833510723799963,
+  "p": 0.16111398143364278,
+  "nnull": 60000,
+  "null_med": -1.68560146606514
+ },
+ {
+  "pair": "alpha/proton / cme_rate",
+  "form": "ratio",
+  "obs": -1.6732192745836325,
+  "p": 0.16128064532257796,
+  "nnull": 60000,
+  "null_med": -1.6969409796495396
+ },
+ {
+  "pair": "swics_c6to5 / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.6459620977218383,
+  "p": 0.16563057282378627,
+  "nnull": 60000,
+  "null_med": -1.667384888568946
+ },
+ {
+  "pair": "sunspot / cosmic ray",
+  "form": "ratio",
+  "obs": -1.7027065387629232,
+  "p": 0.1657472375460409,
+  "nnull": 60000,
+  "null_med": -1.709802288072612
+ },
+ {
+  "pair": "wind speed / spot_asym",
+  "form": "resid-product",
+  "obs": -1.6772649486128002,
+  "p": 0.1661138981016983,
+  "nnull": 60000,
+  "null_med": -1.691655011876943
+ },
+ {
+  "pair": "proton temp / spot_asym",
+  "form": "log-ratio",
+  "obs": -1.6787596620106282,
+  "p": 0.16793053449109183,
+  "nnull": 60000,
+  "null_med": -1.687140718023665
+ },
+ {
+  "pair": "F10.7 / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -1.7384568771108637,
+  "p": 0.16853052449125847,
+  "nnull": 60000,
+  "null_med": -1.7804601866700107
+ },
+ {
+  "pair": "wind speed / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.9212405884905346,
+  "p": 0.1713304778253696,
+  "nnull": 60000,
+  "null_med": -1.9532461301127504
+ },
+ {
+  "pair": "proton temp / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -1.8450280975398674,
+  "p": 0.1724471258812353,
+  "nnull": 60000,
+  "null_med": -1.869290023810441
+ },
+ {
+  "pair": "sunspot / wind speed",
+  "form": "resid-product",
+  "obs": -1.7111269208475948,
+  "p": 0.17311378143697606,
+  "nnull": 60000,
+  "null_med": -1.724665167571963
+ },
+ {
+  "pair": "alpha/proton / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.9412886616747702,
+  "p": 0.1733471108814853,
+  "nnull": 60000,
+  "null_med": -1.9723591413954633
+ },
+ {
+  "pair": "spot_asym / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.6501165610899307,
+  "p": 0.17383043615939733,
+  "nnull": 60000,
+  "null_med": -1.6691085986265517
+ },
+ {
+  "pair": "TSI / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.728441382451175,
+  "p": 0.17464708921517974,
+  "nnull": 60000,
+  "null_med": -1.7517095619846101
+ },
+ {
+  "pair": "spot_area / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -1.664732234464999,
+  "p": 0.17554707421542975,
+  "nnull": 60000,
+  "null_med": -1.683725471171722
+ },
+ {
+  "pair": "cosmic ray / proton temp",
+  "form": "log-ratio",
+  "obs": -1.5490050218539713,
+  "p": 0.17643039282678621,
+  "nnull": 60000,
+  "null_med": -1.5533568233482185
+ },
+ {
+  "pair": "wind speed / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.659818298018064,
+  "p": 0.17799703338277695,
+  "nnull": 60000,
+  "null_med": -1.6807121447593736
+ },
+ {
+  "pair": "wind speed / alpha/proton",
+  "form": "log-ratio",
+  "obs": -1.9037144699328077,
+  "p": 0.1791136814386427,
+  "nnull": 60000,
+  "null_med": -1.9177846800690985
+ },
+ {
+  "pair": "MgII / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.6749366120166327,
+  "p": 0.17961367310544823,
+  "nnull": 60000,
+  "null_med": -1.681683208162383
+ },
+ {
+  "pair": "F10.7 / alpha/proton",
+  "form": "ratio",
+  "obs": -1.703102721205673,
+  "p": 0.18089698505024918,
+  "nnull": 60000,
+  "null_med": -1.7252749121045978
+ },
+ {
+  "pair": "X-ray bg / swics_fetoo",
+  "form": "ratio",
+  "obs": -1.894199428855193,
+  "p": 0.18179697005049916,
+  "nnull": 60000,
+  "null_med": -1.9133746258257949
+ },
+ {
+  "pair": "proton >10MeV / cak_k3",
+  "form": "ratio",
+  "obs": -1.7657440088142329,
+  "p": 0.18186363560607324,
+  "nnull": 60000,
+  "null_med": -1.7824514749026377
+ },
+ {
+  "pair": "cosmic ray / alpha/proton",
+  "form": "ratio",
+  "obs": -1.6857581111625553,
+  "p": 0.18224696255062417,
+  "nnull": 60000,
+  "null_med": -1.6954199015895268
+ },
+ {
+  "pair": "TSI / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -2.031529791710653,
+  "p": 0.18313028116198063,
+  "nnull": 60000,
+  "null_med": -2.03249656406083
+ },
+ {
+  "pair": "X-ray bg / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.8899377954527163,
+  "p": 0.18566357227379543,
+  "nnull": 60000,
+  "null_med": -1.9157863550821879
+ },
+ {
+  "pair": "TSI / proton temp",
+  "form": "ratio",
+  "obs": -1.7212318179863724,
+  "p": 0.18711354810753153,
+  "nnull": 60000,
+  "null_med": -1.7215318879770634
+ },
+ {
+  "pair": "wso_meanfield / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.6832203004854438,
+  "p": 0.1871802136631056,
+  "nnull": 60000,
+  "null_med": -1.7067537627169471
+ },
+ {
+  "pair": "swics_avqsi / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -2.0018728511798725,
+  "p": 0.18723021282978616,
+  "nnull": 60000,
+  "null_med": -2.0180194225601156
+ },
+ {
+  "pair": "wso_meanfield / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.669132335165892,
+  "p": 0.1905134914418093,
+  "nnull": 60000,
+  "null_med": -1.6786465647981434
+ },
+ {
+  "pair": "IMF |B| / proton temp",
+  "form": "log-ratio",
+  "obs": -1.5220917882825895,
+  "p": 0.1962800619989667,
+  "nnull": 60000,
+  "null_med": -1.5389233895956784
+ },
+ {
+  "pair": "sunspot / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.7062861016977418,
+  "p": 0.19698005033249447,
+  "nnull": 60000,
+  "null_med": -1.717869370032661
+ },
+ {
+  "pair": "F10.7 / MgII",
+  "form": "log-ratio",
+  "obs": -1.872813607509106,
+  "p": 0.1974800419993,
+  "nnull": 60000,
+  "null_med": -1.8813310968415533
+ },
+ {
+  "pair": "swics_c6to5 / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -2.0172395418503255,
+  "p": 0.19768003866602224,
+  "nnull": 60000,
+  "null_med": -2.032804366509725
+ },
+ {
+  "pair": "proton temp / cak_k3",
+  "form": "log-ratio",
+  "obs": -1.6062635182858076,
+  "p": 0.19868002199963333,
+  "nnull": 60000,
+  "null_med": -1.61688169731179
+ },
+ {
+  "pair": "swics_o7to6 / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -2.11887237002941,
+  "p": 0.19886335227746205,
+  "nnull": 60000,
+  "null_med": -2.1527895918811657
+ },
+ {
+  "pair": "X-ray bg / cak_emdx",
+  "form": "ratio",
+  "obs": -1.8201900194422869,
+  "p": 0.2000966650555824,
+  "nnull": 60000,
+  "null_med": -1.8293850952762967
+ },
+ {
+  "pair": "spot_area / cak_delk1",
+  "form": "log-ratio",
+  "obs": -1.6894397306730826,
+  "p": 0.20059665672238797,
+  "nnull": 60000,
+  "null_med": -1.7053964173251275
+ },
+ {
+  "pair": "swics_o7to6 / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -2.0492828517787514,
+  "p": 0.2009133181113648,
+  "nnull": 60000,
+  "null_med": -2.07439347858486
+ },
+ {
+  "pair": "F10.7 / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -2.015352945511171,
+  "p": 0.2018133031116148,
+  "nnull": 60000,
+  "null_med": -2.07119181094153
+ },
+ {
+  "pair": "proton >10MeV / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.7441012128306543,
+  "p": 0.20196330061165646,
+  "nnull": 60000,
+  "null_med": -1.77638179876067
+ },
+ {
+  "pair": "alpha/proton / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.6444885897169725,
+  "p": 0.20239662672288794,
+  "nnull": 60000,
+  "null_med": -1.6694101186029549
+ },
+ {
+  "pair": "IMF |B| / cme_speed",
+  "form": "log-ratio",
+  "obs": -2.23938264583676,
+  "p": 0.20296328394526758,
+  "nnull": 60000,
+  "null_med": -2.26828881840421
+ },
+ {
+  "pair": "F10.7 / cak_emdx",
+  "form": "ratio",
+  "obs": -1.7140514868085792,
+  "p": 0.20311328144530924,
+  "nnull": 60000,
+  "null_med": -1.7332957097963348
+ },
+ {
+  "pair": "cosmic ray / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -2.0617634031194365,
+  "p": 0.20511324811253145,
+  "nnull": 60000,
+  "null_med": -2.1100851727081653
+ },
+ {
+  "pair": "wind density / wso_meanfield",
+  "form": "log-ratio",
+  "obs": -1.632227905836421,
+  "p": 0.20657989033516108,
+  "nnull": 60000,
+  "null_med": -1.6419202851104686
+ },
+ {
+  "pair": "swics_o7to6 / swics_fetoo",
+  "form": "ratio",
+  "obs": -1.6953095747723288,
+  "p": 0.21459642339294346,
+  "nnull": 60000,
+  "null_med": -1.7166292772951326
+ },
+ {
+  "pair": "wind speed / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.880753798934223,
+  "p": 0.21486308561523976,
+  "nnull": 60000,
+  "null_med": -1.8934880803155751
+ },
+ {
+  "pair": "cosmic ray / X-ray bg",
+  "form": "ratio",
+  "obs": -1.9245799708156146,
+  "p": 0.2151964133931101,
+  "nnull": 60000,
+  "null_med": -1.933034018399042
+ },
+ {
+  "pair": "wso_meanfield / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -2.0379152558892253,
+  "p": 0.21687971867135547,
+  "nnull": 60000,
+  "null_med": -2.0411886992450325
+ },
+ {
+  "pair": "wso_meanfield / cak_delk1",
+  "form": "log-ratio",
+  "obs": -2.030536750465657,
+  "p": 0.21967967200546656,
+  "nnull": 60000,
+  "null_med": -2.036100546572123
+ },
+ {
+  "pair": "cosmic ray / swics_avqo",
+  "form": "log-ratio",
+  "obs": -1.7061892209203866,
+  "p": 0.2199796670055499,
+  "nnull": 60000,
+  "null_med": -1.7236227610180195
+ },
+ {
+  "pair": "spot_asym / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.6138502097205065,
+  "p": 0.22127964533924435,
+  "nnull": 60000,
+  "null_med": -1.6331938253082625
+ },
+ {
+  "pair": "TSI / cak_delk1",
+  "form": "ratio",
+  "obs": -1.7977599880723392,
+  "p": 0.2220629656172397,
+  "nnull": 60000,
+  "null_med": -1.8006716089584907
+ },
+ {
+  "pair": "spot_asym / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.6605995073811224,
+  "p": 0.2221462975617073,
+  "nnull": 60000,
+  "null_med": -1.6772584313760928
+ },
+ {
+  "pair": "F10.7 / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.6563331114720516,
+  "p": 0.22336294395093415,
+  "nnull": 60000,
+  "null_med": -1.6737734235089072
+ },
+ {
+  "pair": "proton >10MeV / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -1.7471116949573435,
+  "p": 0.22336294395093415,
+  "nnull": 60000,
+  "null_med": -1.7699207187382227
+ },
+ {
+  "pair": "cosmic ray / cak_k3",
+  "form": "ratio",
+  "obs": -1.900565960157953,
+  "p": 0.22421292978450358,
+  "nnull": 60000,
+  "null_med": -1.9238499901586659
+ },
+ {
+  "pair": "sunspot / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.7130162607046384,
+  "p": 0.22491291811803138,
+  "nnull": 60000,
+  "null_med": -1.7295400226474131
+ },
+ {
+  "pair": "spot_area / cak_delk1",
+  "form": "ratio",
+  "obs": -1.7498386560731343,
+  "p": 0.22517958034032767,
+  "nnull": 60000,
+  "null_med": -1.7609055506023712
+ },
+ {
+  "pair": "cme_rate / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -2.5784126019536777,
+  "p": 0.2282795286745221,
+  "nnull": 60000,
+  "null_med": -2.5907468231682222
+ },
+ {
+  "pair": "MgII / wind density",
+  "form": "log-ratio",
+  "obs": -2.1333575329822527,
+  "p": 0.2283795270078832,
+  "nnull": 60000,
+  "null_med": -2.135925876695201
+ },
+ {
+  "pair": "F10.7 / swics_avqo",
+  "form": "log-ratio",
+  "obs": -1.81180908700196,
+  "p": 0.22922951284145265,
+  "nnull": 60000,
+  "null_med": -1.8468972466539637
+ },
+ {
+  "pair": "MgII / spot_area",
+  "form": "log-ratio",
+  "obs": -1.6214433962743469,
+  "p": 0.23154614089765171,
+  "nnull": 60000,
+  "null_med": -1.6239541929351355
+ },
+ {
+  "pair": "TSI / spot_asym",
+  "form": "log-ratio",
+  "obs": -2.2264163544089306,
+  "p": 0.23354610756487393,
+  "nnull": 60000,
+  "null_med": -2.230310050975731
+ },
+ {
+  "pair": "spot_asym / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.734605182718029,
+  "p": 0.23392943450942486,
+  "nnull": 60000,
+  "null_med": -1.7508313958808623
+ },
+ {
+  "pair": "spot_asym / cak_delk1",
+  "form": "log-ratio",
+  "obs": -2.055512785741472,
+  "p": 0.2363293945100915,
+  "nnull": 60000,
+  "null_med": -2.0628592705334015
+ },
+ {
+  "pair": "F10.7 / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.700028103652949,
+  "p": 0.23727937867702206,
+  "nnull": 60000,
+  "null_med": -1.7223321721327762
+ },
+ {
+  "pair": "wind speed / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.9322551356151738,
+  "p": 0.23801269978833686,
+  "nnull": 60000,
+  "null_med": -1.9586837062120863
+ },
+ {
+  "pair": "IMF |B| / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.6770455997412324,
+  "p": 0.23836269395510074,
+  "nnull": 60000,
+  "null_med": -1.6885486398667529
+ },
+ {
+  "pair": "alpha/proton / wso_meanfield",
+  "form": "log-ratio",
+  "obs": -1.7209339516541415,
+  "p": 0.24037932701121648,
+  "nnull": 60000,
+  "null_med": -1.729353274529768
+ },
+ {
+  "pair": "cme_rate / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -2.604321510906099,
+  "p": 0.24079598673355443,
+  "nnull": 60000,
+  "null_med": -2.6362958528197162
+ },
+ {
+  "pair": "cosmic ray / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -1.643939651676098,
+  "p": 0.24089598506691556,
+  "nnull": 60000,
+  "null_med": -1.654205937648983
+ },
+ {
+  "pair": "sunspot / proton temp",
+  "form": "ratio",
+  "obs": -1.7986592926130935,
+  "p": 0.24096265062248962,
+  "nnull": 60000,
+  "null_med": -1.81160174908146
+ },
+ {
+  "pair": "cosmic ray / cme_speed",
+  "form": "ratio",
+  "obs": -1.6638495047654365,
+  "p": 0.24127931201146646,
+  "nnull": 60000,
+  "null_med": -1.67274953332076
+ },
+ {
+  "pair": "F10.7 / spot_asym",
+  "form": "resid-product",
+  "obs": -1.7240976236148255,
+  "p": 0.24186263562273963,
+  "nnull": 60000,
+  "null_med": -1.7353497865038747
+ },
+ {
+  "pair": "X-ray bg / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -2.060326790546309,
+  "p": 0.24309594840086,
+  "nnull": 60000,
+  "null_med": -2.085431210492491
+ },
+ {
+  "pair": "sunspot / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -1.7774051748959385,
+  "p": 0.24461258979017017,
+  "nnull": 60000,
+  "null_med": -1.7871701841728247
+ },
+ {
+  "pair": "sunspot / swics_fetoo",
+  "form": "ratio",
+  "obs": -1.722270339419734,
+  "p": 0.2451125814569757,
+  "nnull": 60000,
+  "null_med": -1.7392963498307328
+ },
+ {
+  "pair": "alpha/proton / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -1.666193268222607,
+  "p": 0.2451959134014433,
+  "nnull": 60000,
+  "null_med": -1.686239712771682
+ },
+ {
+  "pair": "spot_area / cak_k3",
+  "form": "log-ratio",
+  "obs": -1.697697771880708,
+  "p": 0.2457292378460359,
+  "nnull": 60000,
+  "null_med": -1.7088586353686483
+ },
+ {
+  "pair": "IMF |B| / cme_rate",
+  "form": "ratio",
+  "obs": -1.709634546693078,
+  "p": 0.2463458942350961,
+  "nnull": 60000,
+  "null_med": -1.7218867622510488
+ },
+ {
+  "pair": "F10.7 / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -1.7463748251989824,
+  "p": 0.2473625439576007,
+  "nnull": 60000,
+  "null_med": -1.763314386916586
+ },
+ {
+  "pair": "TSI / cak_k3",
+  "form": "log-ratio",
+  "obs": -1.8497059433033871,
+  "p": 0.24849585840235996,
+  "nnull": 60000,
+  "null_med": -1.851928817370998
+ },
+ {
+  "pair": "TSI / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.7077536581479125,
+  "p": 0.24991250145830904,
+  "nnull": 60000,
+  "null_med": -1.7102101031088592
+ },
+ {
+  "pair": "TSI / swics_avqo",
+  "form": "ratio",
+  "obs": -1.7778314058993336,
+  "p": 0.2519291345144248,
+  "nnull": 60000,
+  "null_med": -1.7841292184496114
+ },
+ {
+  "pair": "F10.7 / swics_avqsi",
+  "form": "ratio",
+  "obs": -1.7090609388659637,
+  "p": 0.25249579173680436,
+  "nnull": 60000,
+  "null_med": -1.7302018634759442
+ },
+ {
+  "pair": "wind density / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.7192525023329162,
+  "p": 0.25334577757037385,
+  "nnull": 60000,
+  "null_med": -1.7295203427807788
+ },
+ {
+  "pair": "MgII / swics_avqo",
+  "form": "ratio",
+  "obs": -1.7502426659965358,
+  "p": 0.2539457675705405,
+  "nnull": 60000,
+  "null_med": -1.7681692215369638
+ },
+ {
+  "pair": "swics_avqsi / swics_avqo",
+  "form": "log-ratio",
+  "obs": -1.9883238860612713,
+  "p": 0.25417909701504976,
+  "nnull": 60000,
+  "null_med": -2.0104925554203867
+ },
+ {
+  "pair": "proton temp / cak_emdx",
+  "form": "ratio",
+  "obs": -1.7462072482548694,
+  "p": 0.25732904451592475,
+  "nnull": 60000,
+  "null_med": -1.7595811211662387
+ },
+ {
+  "pair": "cme_rate / swics_avqo",
+  "form": "log-ratio",
+  "obs": -2.487790741597284,
+  "p": 0.26026232896118395,
+  "nnull": 60000,
+  "null_med": -2.4938210255640874
+ },
+ {
+  "pair": "wind density / wso_meanfield",
+  "form": "resid-product",
+  "obs": -1.7279910289596494,
+  "p": 0.2610956484058599,
+  "nnull": 60000,
+  "null_med": -1.738503870543601
+ },
+ {
+  "pair": "wind speed / cme_rate",
+  "form": "log-ratio",
+  "obs": -2.6165946720700872,
+  "p": 0.26159564007266545,
+  "nnull": 60000,
+  "null_med": -2.633171612787291
+ },
+ {
+  "pair": "MgII / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -2.055527415572541,
+  "p": 0.261612306461559,
+  "nnull": 60000,
+  "null_med": -2.0590887692721602
+ },
+ {
+  "pair": "wind speed / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -1.6651495187011482,
+  "p": 0.26287895201746636,
+  "nnull": 60000,
+  "null_med": -1.684162830228059
+ },
+ {
+  "pair": "Lyman-alpha / cme_rate",
+  "form": "ratio",
+  "obs": -1.6862016436427034,
+  "p": 0.2641455975733738,
+  "nnull": 60000,
+  "null_med": -1.7015528562464806
+ },
+ {
+  "pair": "MgII / alpha/proton",
+  "form": "ratio",
+  "obs": -1.6890636484839647,
+  "p": 0.26584556924051267,
+  "nnull": 60000,
+  "null_med": -1.6942376040953167
+ },
+ {
+  "pair": "X-ray bg / swics_avqsi",
+  "form": "ratio",
+  "obs": -1.8813478909505075,
+  "p": 0.2682121964633923,
+  "nnull": 60000,
+  "null_med": -1.890248762182176
+ },
+ {
+  "pair": "proton >10MeV / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.7718115301851376,
+  "p": 0.26887885201913303,
+  "nnull": 60000,
+  "null_med": -1.7893117438507633
+ },
+ {
+  "pair": "proton >10MeV / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.836863175266952,
+  "p": 0.2737287711871469,
+  "nnull": 60000,
+  "null_med": -1.8544284490262861
+ },
+ {
+  "pair": "wind speed / cak_delk1",
+  "form": "log-ratio",
+  "obs": -1.9489264975150573,
+  "p": 0.2743620939651006,
+  "nnull": 60000,
+  "null_med": -1.969976962587293
+ },
+ {
+  "pair": "swics_avqo / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.6750984349216724,
+  "p": 0.27502874952084133,
+  "nnull": 60000,
+  "null_med": -1.68274303054424
+ },
+ {
+  "pair": "wind density / spot_area",
+  "form": "log-ratio",
+  "obs": -1.630415721887554,
+  "p": 0.2776120397993367,
+  "nnull": 60000,
+  "null_med": -1.642216998809571
+ },
+ {
+  "pair": "cosmic ray / swics_fetoo",
+  "form": "ratio",
+  "obs": -2.057783828073118,
+  "p": 0.27887868535524407,
+  "nnull": 60000,
+  "null_med": -2.0765007010794245
+ },
+ {
+  "pair": "TSI / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.7851327547330413,
+  "p": 0.2827952867452209,
+  "nnull": 60000,
+  "null_med": -1.7863518612948752
+ },
+ {
+  "pair": "Lyman-alpha / cme_speed",
+  "form": "log-ratio",
+  "obs": -2.179887972541316,
+  "p": 0.2849952500791654,
+  "nnull": 60000,
+  "null_med": -2.18580269665047
+ },
+ {
+  "pair": "F10.7 / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.7433041400940863,
+  "p": 0.29167847202546626,
+  "nnull": 60000,
+  "null_med": -1.7587057956392202
+ },
+ {
+  "pair": "IMF |B| / cak_k3",
+  "form": "resid-product",
+  "obs": -1.6782399923409501,
+  "p": 0.29216179730337827,
+  "nnull": 60000,
+  "null_med": -1.6937353013589551
+ },
+ {
+  "pair": "F10.7 / wind density",
+  "form": "resid-product",
+  "obs": -1.8044848390625565,
+  "p": 0.2924784586923551,
+  "nnull": 60000,
+  "null_med": -1.8116012098850283
+ },
+ {
+  "pair": "Lyman-alpha / cme_rate",
+  "form": "log-ratio",
+  "obs": -2.3415885395271143,
+  "p": 0.2925284578590357,
+  "nnull": 60000,
+  "null_med": -2.3435944792303585
+ },
+ {
+  "pair": "sunspot / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -2.1424868819434826,
+  "p": 0.2931617806369894,
+  "nnull": 60000,
+  "null_med": -2.1665714536905267
+ },
+ {
+  "pair": "IMF |B| / proton temp",
+  "form": "ratio",
+  "obs": -1.7015327109711158,
+  "p": 0.2942617623039616,
+  "nnull": 60000,
+  "null_med": -1.7085177964985963
+ },
+ {
+  "pair": "cak_k3 / cak_delk1",
+  "form": "ratio",
+  "obs": -1.867693025184368,
+  "p": 0.2952617456375727,
+  "nnull": 60000,
+  "null_med": -1.8921364398597742
+ },
+ {
+  "pair": "TSI / wind speed",
+  "form": "log-ratio",
+  "obs": -2.113874328758067,
+  "p": 0.2968617189713505,
+  "nnull": 60000,
+  "null_med": -2.114841625402926
+ },
+ {
+  "pair": "IMF |B| / alpha/proton",
+  "form": "ratio",
+  "obs": -1.6707482480731417,
+  "p": 0.2976450392493458,
+  "nnull": 60000,
+  "null_med": -1.679318924724423
+ },
+ {
+  "pair": "sunspot / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.7304684147297458,
+  "p": 0.29829502841619304,
+  "nnull": 60000,
+  "null_med": -1.7486172776806779
+ },
+ {
+  "pair": "cme_rate / swics_ctoo",
+  "form": "ratio",
+  "obs": -2.0791625652250723,
+  "p": 0.29881168647189216,
+  "nnull": 60000,
+  "null_med": -2.1336939369364476
+ },
+ {
+  "pair": "spot_area / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.7544853647767509,
+  "p": 0.29901168313861437,
+  "nnull": 60000,
+  "null_med": -1.759977178244823
+ },
+ {
+  "pair": "alpha/proton / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -1.9012582003062577,
+  "p": 0.3011283145280912,
+  "nnull": 60000,
+  "null_med": -1.9128837965324332
+ },
+ {
+  "pair": "TSI / wind density",
+  "form": "log-ratio",
+  "obs": -2.1594167605654033,
+  "p": 0.30117831369477177,
+  "nnull": 60000,
+  "null_med": -2.1597937459631695
+ },
+ {
+  "pair": "F10.7 / spot_area",
+  "form": "log-ratio",
+  "obs": -1.6234404241810099,
+  "p": 0.30214496425059584,
+  "nnull": 60000,
+  "null_med": -1.6289003836585025
+ },
+ {
+  "pair": "TSI / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -2.065818168989834,
+  "p": 0.3069282178630356,
+  "nnull": 60000,
+  "null_med": -2.066595621779832
+ },
+ {
+  "pair": "cak_k3 / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.676233665378955,
+  "p": 0.30887818536357725,
+  "nnull": 60000,
+  "null_med": -1.6889487677614212
+ },
+ {
+  "pair": "wind density / cak_k3",
+  "form": "resid-product",
+  "obs": -1.6788844013084978,
+  "p": 0.3099115014749754,
+  "nnull": 60000,
+  "null_med": -1.6930164565538608
+ },
+ {
+  "pair": "wind speed / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.6759415914260742,
+  "p": 0.310894818419693,
+  "nnull": 60000,
+  "null_med": -1.6882110948057703
+ },
+ {
+  "pair": "TSI / wind density",
+  "form": "resid-product",
+  "obs": -1.7663607900187344,
+  "p": 0.31101148314194765,
+  "nnull": 60000,
+  "null_med": -1.7733434309307994
+ },
+ {
+  "pair": "wso_meanfield / cme_rate",
+  "form": "ratio",
+  "obs": -1.7071480275521953,
+  "p": 0.312211463142281,
+  "nnull": 60000,
+  "null_med": -1.7235951855456149
+ },
+ {
+  "pair": "X-ray bg / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.8588868876356726,
+  "p": 0.3133281111981467,
+  "nnull": 60000,
+  "null_med": -1.8679311448505915
+ },
+ {
+  "pair": "sunspot / spot_area",
+  "form": "log-ratio",
+  "obs": -1.6024051348301565,
+  "p": 0.3151280811986467,
+  "nnull": 60000,
+  "null_med": -1.6106666279768733
+ },
+ {
+  "pair": "spot_area / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.8497722467667594,
+  "p": 0.31907801536641056,
+  "nnull": 60000,
+  "null_med": -1.8624880094048095
+ },
+ {
+  "pair": "proton temp / cak_emdx",
+  "form": "resid-product",
+  "obs": -2.030703481633271,
+  "p": 0.320861318978017,
+  "nnull": 60000,
+  "null_med": -2.037321639634773
+ },
+ {
+  "pair": "alpha/proton / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.7182746459213227,
+  "p": 0.3232612789786837,
+  "nnull": 60000,
+  "null_med": -1.7290273461049928
+ },
+ {
+  "pair": "proton temp / alpha/proton",
+  "form": "log-ratio",
+  "obs": -1.5468470458982941,
+  "p": 0.32532791120147997,
+  "nnull": 60000,
+  "null_med": -1.5561102848776809
+ },
+ {
+  "pair": "F10.7 / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.7857871498325162,
+  "p": 0.3259779003683272,
+  "nnull": 60000,
+  "null_med": -1.7917758597740514
+ },
+ {
+  "pair": "wind speed / cak_k3",
+  "form": "ratio",
+  "obs": -1.8438753965387997,
+  "p": 0.3305111581473642,
+  "nnull": 60000,
+  "null_med": -1.859100600049493
+ },
+ {
+  "pair": "MgII / wind density",
+  "form": "ratio",
+  "obs": -1.764272326129706,
+  "p": 0.33109448175863737,
+  "nnull": 60000,
+  "null_med": -1.7679473193379422
+ },
+ {
+  "pair": "swics_avqfe / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -2.021102527900092,
+  "p": 0.3313444775920401,
+  "nnull": 60000,
+  "null_med": -2.0303198673027425
+ },
+ {
+  "pair": "spot_asym / cme_rate",
+  "form": "log-ratio",
+  "obs": -1.4215747321649648,
+  "p": 0.3404443259279012,
+  "nnull": 60000,
+  "null_med": -1.4404914835042755
+ },
+ {
+  "pair": "spot_area / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.591936014820822,
+  "p": 0.3420609656505725,
+  "nnull": 60000,
+  "null_med": -1.6027464071487643
+ },
+ {
+  "pair": "cme_rate / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.6643240098800804,
+  "p": 0.3443942600956651,
+  "nnull": 60000,
+  "null_med": -1.67539484414038
+ },
+ {
+  "pair": "swics_o7to6 / swics_avqsi",
+  "form": "ratio",
+  "obs": -1.7367091298979416,
+  "p": 0.34476092065132247,
+  "nnull": 60000,
+  "null_med": -1.7461046695847315
+ },
+ {
+  "pair": "alpha/proton / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.898789229737201,
+  "p": 0.34526091231812805,
+  "nnull": 60000,
+  "null_med": -1.9058171379903417
+ },
+ {
+  "pair": "X-ray bg / cak_k3",
+  "form": "ratio",
+  "obs": -1.825717610488986,
+  "p": 0.3462608956517391,
+  "nnull": 60000,
+  "null_med": -1.8314619696460255
+ },
+ {
+  "pair": "sunspot / wso_meanfield",
+  "form": "log-ratio",
+  "obs": -1.7714763502785489,
+  "p": 0.34687755204079934,
+  "nnull": 60000,
+  "null_med": -1.7751846867214232
+ },
+ {
+  "pair": "MgII / swics_avqsi",
+  "form": "ratio",
+  "obs": -2.0062905523054653,
+  "p": 0.3485608573190447,
+  "nnull": 60000,
+  "null_med": -2.012400653136993
+ },
+ {
+  "pair": "TSI / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -2.0350625411400483,
+  "p": 0.3511274812086465,
+  "nnull": 60000,
+  "null_med": -2.036489064420815
+ },
+ {
+  "pair": "wso_meanfield / cak_k3",
+  "form": "ratio",
+  "obs": -1.6726097077145217,
+  "p": 0.3530107831536141,
+  "nnull": 60000,
+  "null_med": -1.6777929527422173
+ },
+ {
+  "pair": "IMF |B| / cme_speed",
+  "form": "resid-product",
+  "obs": -1.6674861676607957,
+  "p": 0.3572273795436743,
+  "nnull": 60000,
+  "null_med": -1.6737687071121816
+ },
+ {
+  "pair": "cosmic ray / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.693912210175524,
+  "p": 0.36064398926684554,
+  "nnull": 60000,
+  "null_med": -1.7032178273783016
+ },
+ {
+  "pair": "wind density / cak_emdx",
+  "form": "log-ratio",
+  "obs": -2.3261764513207783,
+  "p": 0.3612606456559057,
+  "nnull": 60000,
+  "null_med": -2.330143260587109
+ },
+ {
+  "pair": "proton temp / swics_avqo",
+  "form": "log-ratio",
+  "obs": -1.8553756506126522,
+  "p": 0.36226062898951683,
+  "nnull": 60000,
+  "null_med": -1.8617125879418364
+ },
+ {
+  "pair": "alpha/proton / swics_avqsi",
+  "form": "ratio",
+  "obs": -1.8634329829071237,
+  "p": 0.3623106281561974,
+  "nnull": 60000,
+  "null_med": -1.872759391131801
+ },
+ {
+  "pair": "sunspot / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.6977174604998833,
+  "p": 0.36247729204513257,
+  "nnull": 60000,
+  "null_med": -1.708690626221206
+ },
+ {
+  "pair": "sunspot / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.7412065337700189,
+  "p": 0.3647605873235446,
+  "nnull": 60000,
+  "null_med": -1.7535500179957808
+ },
+ {
+  "pair": "sunspot / cme_speed",
+  "form": "log-ratio",
+  "obs": -1.7928509397643357,
+  "p": 0.3648439192680122,
+  "nnull": 60000,
+  "null_med": -1.8001242754317097
+ },
+ {
+  "pair": "IMF |B| / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.6714947569584389,
+  "p": 0.36532724454592425,
+  "nnull": 60000,
+  "null_med": -1.6793343463978703
+ },
+ {
+  "pair": "sunspot / IMF |B|",
+  "form": "resid-product",
+  "obs": -1.7272062474713339,
+  "p": 0.3693438442692622,
+  "nnull": 60000,
+  "null_med": -1.7317417315570323
+ },
+ {
+  "pair": "proton temp / wso_meanfield",
+  "form": "log-ratio",
+  "obs": -1.8045706171897806,
+  "p": 0.36951050815819736,
+  "nnull": 60000,
+  "null_med": -1.8069417340101226
+ },
+ {
+  "pair": "alpha/proton / spot_area",
+  "form": "log-ratio",
+  "obs": -1.6061384643633616,
+  "p": 0.37094381760303996,
+  "nnull": 60000,
+  "null_med": -1.612011442043328
+ },
+ {
+  "pair": "swics_avqfe / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.6675335012786092,
+  "p": 0.3716938051032483,
+  "nnull": 60000,
+  "null_med": -1.6760843608368923
+ },
+ {
+  "pair": "F10.7 / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.7827062945478243,
+  "p": 0.3722271295478409,
+  "nnull": 60000,
+  "null_med": -1.7940924806315437
+ },
+ {
+  "pair": "alpha/proton / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.6853220514973637,
+  "p": 0.3722271295478409,
+  "nnull": 60000,
+  "null_med": -1.6932973090145347
+ },
+ {
+  "pair": "MgII / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -1.6993738550560686,
+  "p": 0.37517708038199366,
+  "nnull": 60000,
+  "null_med": -1.707410150916584
+ },
+ {
+  "pair": "IMF |B| / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.6681192662435,
+  "p": 0.3752270795486742,
+  "nnull": 60000,
+  "null_med": -1.674926772881638
+ },
+ {
+  "pair": "sunspot / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.8546198829473086,
+  "p": 0.37674372093798436,
+  "nnull": 60000,
+  "null_med": -1.8626369036999915
+ },
+ {
+  "pair": "cme_speed / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -2.1333057886076903,
+  "p": 0.3794270095498408,
+  "nnull": 60000,
+  "null_med": -2.144385965618051
+ },
+ {
+  "pair": "IMF |B| / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -1.6702808620194831,
+  "p": 0.38186030232829454,
+  "nnull": 60000,
+  "null_med": -1.6785835919880667
+ },
+ {
+  "pair": "swics_avqsi / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.6801400596758214,
+  "p": 0.3822269628839519,
+  "nnull": 60000,
+  "null_med": -1.6863683867594248
+ },
+ {
+  "pair": "cme_rate / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.7021152644913866,
+  "p": 0.38382693621772973,
+  "nnull": 60000,
+  "null_med": -1.7108072959298675
+ },
+ {
+  "pair": "F10.7 / wso_meanfield",
+  "form": "log-ratio",
+  "obs": -2.0273146988575097,
+  "p": 0.3849269178847019,
+  "nnull": 60000,
+  "null_med": -2.029126872408008
+ },
+ {
+  "pair": "wind speed / wso_meanfield",
+  "form": "log-ratio",
+  "obs": -1.879042738845268,
+  "p": 0.38806019899668337,
+  "nnull": 60000,
+  "null_med": -1.8826209576471025
+ },
+ {
+  "pair": "cosmic ray / wind speed",
+  "form": "ratio",
+  "obs": -2.160679008424361,
+  "p": 0.3883268612189797,
+  "nnull": 60000,
+  "null_med": -2.1655199314562488
+ },
+ {
+  "pair": "wind density / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.6728342441449595,
+  "p": 0.39076015399743336,
+  "nnull": 60000,
+  "null_med": -1.6768268243738937
+ },
+ {
+  "pair": "Lyman-alpha / spot_asym",
+  "form": "log-ratio",
+  "obs": -1.9919278479178517,
+  "p": 0.3918768020532991,
+  "nnull": 60000,
+  "null_med": -1.9960360086509563
+ },
+ {
+  "pair": "MgII / alpha/proton",
+  "form": "log-ratio",
+  "obs": -1.8674299191122614,
+  "p": 0.3920767987200213,
+  "nnull": 60000,
+  "null_med": -1.8689628968334406
+ },
+ {
+  "pair": "alpha/proton / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.6735500317961218,
+  "p": 0.3932101131647806,
+  "nnull": 60000,
+  "null_med": -1.6820619682570523
+ },
+ {
+  "pair": "sunspot / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.7703871225066234,
+  "p": 0.3949434176097065,
+  "nnull": 60000,
+  "null_med": -1.7729061279606682
+ },
+ {
+  "pair": "spot_asym / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.7847438188574014,
+  "p": 0.39867668872185463,
+  "nnull": 60000,
+  "null_med": -1.7870207838063747
+ },
+ {
+  "pair": "TSI / alpha/proton",
+  "form": "log-ratio",
+  "obs": -1.8990939004267018,
+  "p": 0.4000933317778037,
+  "nnull": 60000,
+  "null_med": -1.899451097549305
+ },
+ {
+  "pair": "F10.7 / cak_emdx",
+  "form": "log-ratio",
+  "obs": -1.657309397231741,
+  "p": 0.4014433092781787,
+  "nnull": 60000,
+  "null_med": -1.6644254514933436
+ },
+ {
+  "pair": "cme_speed / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.6742742453784356,
+  "p": 0.40302661622306296,
+  "nnull": 60000,
+  "null_med": -1.6817159890548359
+ },
+ {
+  "pair": "IMF |B| / swics_avqo",
+  "form": "log-ratio",
+  "obs": -2.0129447776804144,
+  "p": 0.40347660872318797,
+  "nnull": 60000,
+  "null_med": -2.0166484797032997
+ },
+ {
+  "pair": "wind density / cak_emdx",
+  "form": "resid-product",
+  "obs": -1.679628414732039,
+  "p": 0.40749320844652587,
+  "nnull": 60000,
+  "null_med": -1.6859507033688939
+ },
+ {
+  "pair": "X-ray bg / wso_meanfield",
+  "form": "log-ratio",
+  "obs": -1.8083365915604586,
+  "p": 0.408493191780137,
+  "nnull": 60000,
+  "null_med": -1.8106079277626284
+ },
+ {
+  "pair": "sunspot / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.750530332512153,
+  "p": 0.4100431659472342,
+  "nnull": 60000,
+  "null_med": -1.7602755351977535
+ },
+ {
+  "pair": "TSI / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -1.9335730712319252,
+  "p": 0.4151930801153314,
+  "nnull": 60000,
+  "null_med": -1.934314956675828
+ },
+ {
+  "pair": "TSI / wind density",
+  "form": "ratio",
+  "obs": -1.767158766768584,
+  "p": 0.41542640955984067,
+  "nnull": 60000,
+  "null_med": -1.7673924769415894
+ },
+ {
+  "pair": "IMF |B| / wind density",
+  "form": "ratio",
+  "obs": -1.6772176432871162,
+  "p": 0.4163597273378777,
+  "nnull": 60000,
+  "null_med": -1.6805869883417042
+ },
+ {
+  "pair": "F10.7 / wind speed",
+  "form": "resid-product",
+  "obs": -1.7912432878841191,
+  "p": 0.4163763937267712,
+  "nnull": 60000,
+  "null_med": -1.7943581482243718
+ },
+ {
+  "pair": "MgII / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.7256006993325075,
+  "p": 0.4171597140047666,
+  "nnull": 60000,
+  "null_med": -1.7280955601461805
+ },
+ {
+  "pair": "X-ray bg / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.8391555667585295,
+  "p": 0.41739304344927586,
+  "nnull": 60000,
+  "null_med": -1.8436384237684904
+ },
+ {
+  "pair": "sunspot / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.6977554657295912,
+  "p": 0.41742637622706286,
+  "nnull": 60000,
+  "null_med": -1.7032468974680808
+ },
+ {
+  "pair": "wind density / spot_area",
+  "form": "resid-product",
+  "obs": -1.79922410392023,
+  "p": 0.41782636956050734,
+  "nnull": 60000,
+  "null_med": -1.802026021822618
+ },
+ {
+  "pair": "spot_asym / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.719581848298624,
+  "p": 0.41929301178313694,
+  "nnull": 60000,
+  "null_med": -1.72461133806925
+ },
+ {
+  "pair": "cme_speed / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -2.0855439497111674,
+  "p": 0.4218429692838453,
+  "nnull": 60000,
+  "null_med": -2.088690726707297
+ },
+ {
+  "pair": "cme_rate / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.664729329357835,
+  "p": 0.4241929301178314,
+  "nnull": 60000,
+  "null_med": -1.6695993126021862
+ },
+ {
+  "pair": "proton temp / cme_speed",
+  "form": "log-ratio",
+  "obs": -1.9242481077430171,
+  "p": 0.4253262445625906,
+  "nnull": 60000,
+  "null_med": -1.9291495662517102
+ },
+ {
+  "pair": "cme_speed / swics_avqo",
+  "form": "log-ratio",
+  "obs": -2.0697352658294874,
+  "p": 0.42564290595156745,
+  "nnull": 60000,
+  "null_med": -2.0709014516735063
+ },
+ {
+  "pair": "IMF |B| / wso_meanfield",
+  "form": "log-ratio",
+  "obs": -1.7219820607009488,
+  "p": 0.4266428892851786,
+  "nnull": 60000,
+  "null_med": -1.724405280355552
+ },
+ {
+  "pair": "wind speed / cme_speed",
+  "form": "log-ratio",
+  "obs": -2.1203505941267684,
+  "p": 0.4290761820636323,
+  "nnull": 60000,
+  "null_med": -2.1241780877363765
+ },
+ {
+  "pair": "TSI / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -1.9535771794052494,
+  "p": 0.42924284595256745,
+  "nnull": 60000,
+  "null_med": -1.9550816853606783
+ },
+ {
+  "pair": "spot_asym / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.6999066108481886,
+  "p": 0.4299261678972017,
+  "nnull": 60000,
+  "null_med": -1.7044220460353716
+ },
+ {
+  "pair": "IMF |B| / cak_k3",
+  "form": "ratio",
+  "obs": -1.7257549248291912,
+  "p": 0.4309928167863869,
+  "nnull": 60000,
+  "null_med": -1.7299777811800214
+ },
+ {
+  "pair": "spot_area / cak_emdx",
+  "form": "ratio",
+  "obs": -1.7613499315202144,
+  "p": 0.43220946317561376,
+  "nnull": 60000,
+  "null_med": -1.7629614613424487
+ },
+ {
+  "pair": "MgII / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.7029229298402768,
+  "p": 0.4354094098431693,
+  "nnull": 60000,
+  "null_med": -1.7048142314567563
+ },
+ {
+  "pair": "swics_avqfe / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.6649097105762725,
+  "p": 0.43725937901034984,
+  "nnull": 60000,
+  "null_med": -1.6689974237378165
+ },
+ {
+  "pair": "X-ray bg / cak_delk1",
+  "form": "ratio",
+  "obs": -1.8322316258511773,
+  "p": 0.43884268595523407,
+  "nnull": 60000,
+  "null_med": -1.834705029912423
+ },
+ {
+  "pair": "wind density / cak_k3",
+  "form": "log-ratio",
+  "obs": -2.330867628196721,
+  "p": 0.4427426209563174,
+  "nnull": 60000,
+  "null_med": -2.332676648341153
+ },
+ {
+  "pair": "X-ray bg / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.882549106200009,
+  "p": 0.4448259195680072,
+  "nnull": 60000,
+  "null_med": -1.8873522528913622
+ },
+ {
+  "pair": "spot_area / cak_k3",
+  "form": "ratio",
+  "obs": -1.7584885747228984,
+  "p": 0.4455425742904285,
+  "nnull": 60000,
+  "null_med": -1.7603439069171976
+ },
+ {
+  "pair": "F10.7 / proton temp",
+  "form": "ratio",
+  "obs": -1.7338142897422617,
+  "p": 0.44559257345710906,
+  "nnull": 60000,
+  "null_med": -1.7363368174870042
+ },
+ {
+  "pair": "proton >10MeV / spot_asym",
+  "form": "resid-product",
+  "obs": -1.8358186689977773,
+  "p": 0.44789253512441457,
+  "nnull": 60000,
+  "null_med": -1.8378028202948693
+ },
+ {
+  "pair": "MgII / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.6724498326949777,
+  "p": 0.44980916984716923,
+  "nnull": 60000,
+  "null_med": -1.6737031971809637
+ },
+ {
+  "pair": "sunspot / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -1.7897721370665232,
+  "p": 0.45030916151397476,
+  "nnull": 60000,
+  "null_med": -1.7914546341387867
+ },
+ {
+  "pair": "proton temp / spot_area",
+  "form": "log-ratio",
+  "obs": -1.5941710969262393,
+  "p": 0.4530424492925118,
+  "nnull": 60000,
+  "null_med": -1.5968674563898244
+ },
+ {
+  "pair": "proton temp / cme_rate",
+  "form": "ratio",
+  "obs": -1.722923231443158,
+  "p": 0.453692438459359,
+  "nnull": 60000,
+  "null_med": -1.7255843229774654
+ },
+ {
+  "pair": "swics_o7to6 / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -2.053375204650732,
+  "p": 0.45419243012616456,
+  "nnull": 60000,
+  "null_med": -2.05615885985492
+ },
+ {
+  "pair": "cme_speed / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -2.2626375190554855,
+  "p": 0.45437576040399325,
+  "nnull": 60000,
+  "null_med": -2.268154805882042
+ },
+ {
+  "pair": "cosmic ray / proton temp",
+  "form": "ratio",
+  "obs": -1.7219406191535682,
+  "p": 0.45560907318211363,
+  "nnull": 60000,
+  "null_med": -1.7226148192199247
+ },
+ {
+  "pair": "X-ray bg / cme_rate",
+  "form": "log-ratio",
+  "obs": -2.4353198683437918,
+  "p": 0.45674238762687286,
+  "nnull": 60000,
+  "null_med": -2.4397329433400916
+ },
+ {
+  "pair": "MgII / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.714420919770513,
+  "p": 0.459125681238646,
+  "nnull": 60000,
+  "null_med": -1.7153836937677525
+ },
+ {
+  "pair": "alpha/proton / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.8932711272966305,
+  "p": 0.4592923451275812,
+  "nnull": 60000,
+  "null_med": -1.8950368837992575
+ },
+ {
+  "pair": "proton temp / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.6773760680366048,
+  "p": 0.46044232596123397,
+  "nnull": 60000,
+  "null_med": -1.6796846513730905
+ },
+ {
+  "pair": "alpha/proton / wso_meanfield",
+  "form": "resid-product",
+  "obs": -1.72086469014696,
+  "p": 0.4607089881835303,
+  "nnull": 60000,
+  "null_med": -1.7224944229465426
+ },
+ {
+  "pair": "spot_area / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.8128237356449022,
+  "p": 0.4620422992950117,
+  "nnull": 60000,
+  "null_med": -1.8180478416132637
+ },
+ {
+  "pair": "cosmic ray / cak_emdx",
+  "form": "resid-product",
+  "obs": -1.7026730652365638,
+  "p": 0.4630589490175164,
+  "nnull": 60000,
+  "null_med": -1.7048714829171376
+ },
+ {
+  "pair": "wind density / spot_asym",
+  "form": "resid-product",
+  "obs": -1.7269044971481982,
+  "p": 0.46314228096198395,
+  "nnull": 60000,
+  "null_med": -1.72813908356715
+ },
+ {
+  "pair": "wind speed / X-ray bg",
+  "form": "ratio",
+  "obs": -2.0114721019384723,
+  "p": 0.46539224346260893,
+  "nnull": 60000,
+  "null_med": -2.0122577425516344
+ },
+ {
+  "pair": "MgII / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.6779251701221165,
+  "p": 0.46580890318494694,
+  "nnull": 60000,
+  "null_med": -1.6783379809773926
+ },
+ {
+  "pair": "cosmic ray / alpha/proton",
+  "form": "log-ratio",
+  "obs": -1.8774070928600683,
+  "p": 0.466325561240646,
+  "nnull": 60000,
+  "null_med": -1.8779601265793655
+ },
+ {
+  "pair": "IMF |B| / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.7154748544966114,
+  "p": 0.4675922067965534,
+  "nnull": 60000,
+  "null_med": -1.7177354220302972
+ },
+ {
+  "pair": "spot_area / swics_avqo",
+  "form": "log-ratio",
+  "obs": -1.6888261489638652,
+  "p": 0.46827552874118766,
+  "nnull": 60000,
+  "null_med": -1.689930756452336
+ },
+ {
+  "pair": "MgII / cak_emdx",
+  "form": "ratio",
+  "obs": -2.0001527302582356,
+  "p": 0.46939217679705336,
+  "nnull": 60000,
+  "null_med": -2.0028545418970785
+ },
+ {
+  "pair": "wind speed / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.689507203258268,
+  "p": 0.47070882151964133,
+  "nnull": 60000,
+  "null_med": -1.691283883926856
+ },
+ {
+  "pair": "IMF |B| / cak_delk1",
+  "form": "ratio",
+  "obs": -1.7232242491413907,
+  "p": 0.4724587923534608,
+  "nnull": 60000,
+  "null_med": -1.7253466279970207
+ },
+ {
+  "pair": "spot_asym / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -1.9048303772950803,
+  "p": 0.47250879152014136,
+  "nnull": 60000,
+  "null_med": -1.9056301186055389
+ },
+ {
+  "pair": "F10.7 / swics_fetoo",
+  "form": "ratio",
+  "obs": -1.7550592387836503,
+  "p": 0.47297545040915984,
+  "nnull": 60000,
+  "null_med": -1.7589136459057122
+ },
+ {
+  "pair": "MgII / cak_k3",
+  "form": "ratio",
+  "obs": -1.9081153148238452,
+  "p": 0.4757587373543774,
+  "nnull": 60000,
+  "null_med": -1.90934228137853
+ },
+ {
+  "pair": "wind speed / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.7288419714165408,
+  "p": 0.47594206763220614,
+  "nnull": 60000,
+  "null_med": -1.7305296629424305
+ },
+ {
+  "pair": "wind density / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -2.221007045982215,
+  "p": 0.47712538124364595,
+  "nnull": 60000,
+  "null_med": -2.221632718436319
+ },
+ {
+  "pair": "swics_o7to6 / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -2.1144022870642005,
+  "p": 0.4773587106881552,
+  "nnull": 60000,
+  "null_med": -2.1166100515340247
+ },
+ {
+  "pair": "F10.7 / cak_delk1",
+  "form": "log-ratio",
+  "obs": -1.6950924908997833,
+  "p": 0.48094198430026164,
+  "nnull": 60000,
+  "null_med": -1.6963921509961963
+ },
+ {
+  "pair": "spot_asym / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -1.7029553801420059,
+  "p": 0.4827919534674422,
+  "nnull": 60000,
+  "null_med": -1.7041820865587718
+ },
+ {
+  "pair": "proton >10MeV / cak_delk1",
+  "form": "log-ratio",
+  "obs": -1.7444413123628062,
+  "p": 0.4828586190230163,
+  "nnull": 60000,
+  "null_med": -1.7453781845997496
+ },
+ {
+  "pair": "TSI / IMF |B|",
+  "form": "ratio",
+  "obs": -1.917786813648545,
+  "p": 0.48297528374527093,
+  "nnull": 60000,
+  "null_med": -1.917822709216558
+ },
+ {
+  "pair": "Lyman-alpha / spot_area",
+  "form": "resid-product",
+  "obs": -1.7741564049216836,
+  "p": 0.4858585690238496,
+  "nnull": 60000,
+  "null_med": -1.77549909175208
+ },
+ {
+  "pair": "alpha/proton / spot_asym",
+  "form": "log-ratio",
+  "obs": -1.6121571750173749,
+  "p": 0.4873918768020533,
+  "nnull": 60000,
+  "null_med": -1.6127091360689094
+ },
+ {
+  "pair": "TSI / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.756666389158983,
+  "p": 0.4876252062465626,
+  "nnull": 60000,
+  "null_med": -1.7577550830497
+ },
+ {
+  "pair": "TSI / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.6877852759416632,
+  "p": 0.49207513208113196,
+  "nnull": 60000,
+  "null_med": -1.6878574209693975
+ },
+ {
+  "pair": "proton >10MeV / spot_area",
+  "form": "log-ratio",
+  "obs": -1.7036262818923094,
+  "p": 0.4922417959700672,
+  "nnull": 60000,
+  "null_med": -1.7038955388347645
+ },
+ {
+  "pair": "cme_speed / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -2.1823071404633594,
+  "p": 0.492558457359044,
+  "nnull": 60000,
+  "null_med": -2.183523293835192
+ },
+ {
+  "pair": "swics_hetoo / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.7318580470663294,
+  "p": 0.49277512041465976,
+  "nnull": 60000,
+  "null_med": -1.7327294608668584
+ },
+ {
+  "pair": "proton temp / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.7156918635141403,
+  "p": 0.49474175430409495,
+  "nnull": 60000,
+  "null_med": -1.715976664753923
+ },
+ {
+  "pair": "cme_rate / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.6895689087802492,
+  "p": 0.4964417259712338,
+  "nnull": 60000,
+  "null_med": -1.6897956106654588
+ },
+ {
+  "pair": "X-ray bg / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.8285453210539029,
+  "p": 0.4967250545824236,
+  "nnull": 60000,
+  "null_med": -1.8286794381234086
+ },
+ {
+  "pair": "spot_area / cme_rate",
+  "form": "log-ratio",
+  "obs": -1.6825222427139845,
+  "p": 0.4981416976383727,
+  "nnull": 60000,
+  "null_med": -1.6826686978815273
+ },
+ {
+  "pair": "cosmic ray / swics_avqo",
+  "form": "ratio",
+  "obs": -1.7348659907506079,
+  "p": 0.5028082865285579,
+  "nnull": 60000,
+  "null_med": -1.7347017980083366
+ },
+ {
+  "pair": "swics_avqsi / swics_avqo",
+  "form": "ratio",
+  "obs": -1.9311325066462102,
+  "p": 0.505124914584757,
+  "nnull": 60000,
+  "null_med": -1.9308532605159519
+ },
+ {
+  "pair": "TSI / swics_fetoo",
+  "form": "ratio",
+  "obs": -2.0879621540113544,
+  "p": 0.5064415593073449,
+  "nnull": 60000,
+  "null_med": -2.0879366359555727
+ },
+ {
+  "pair": "wind speed / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.675829482410686,
+  "p": 0.5066082231962801,
+  "nnull": 60000,
+  "null_med": -1.6753228946933498
+ },
+ {
+  "pair": "sunspot / proton temp",
+  "form": "log-ratio",
+  "obs": -1.5504148146963646,
+  "p": 0.508441525974567,
+  "nnull": 60000,
+  "null_med": -1.549998858245821
+ },
+ {
+  "pair": "X-ray bg / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.8870575735165152,
+  "p": 0.5089248512524791,
+  "nnull": 60000,
+  "null_med": -1.8862982355078861
+ },
+ {
+  "pair": "IMF |B| / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.7367737240888377,
+  "p": 0.509758170697155,
+  "nnull": 60000,
+  "null_med": -1.7361597276117329
+ },
+ {
+  "pair": "proton temp / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -1.7995831406345295,
+  "p": 0.5111914801419977,
+  "nnull": 60000,
+  "null_med": -1.7985417878828338
+ },
+ {
+  "pair": "sunspot / MgII",
+  "form": "log-ratio",
+  "obs": -1.7784507208915263,
+  "p": 0.5122581290311828,
+  "nnull": 60000,
+  "null_med": -1.7783834668108178
+ },
+ {
+  "pair": "X-ray bg / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -1.7150088050686612,
+  "p": 0.5126414559757337,
+  "nnull": 60000,
+  "null_med": -1.7143515278995964
+ },
+ {
+  "pair": "wind density / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.7467780277708056,
+  "p": 0.5143414276428726,
+  "nnull": 60000,
+  "null_med": -1.7461600628731073
+ },
+ {
+  "pair": "X-ray bg / cak_emdx",
+  "form": "log-ratio",
+  "obs": -1.7146126133133142,
+  "p": 0.5147747537541041,
+  "nnull": 60000,
+  "null_med": -1.7139972720883803
+ },
+ {
+  "pair": "IMF |B| / cme_speed",
+  "form": "ratio",
+  "obs": -1.6680858697263439,
+  "p": 0.5149080848652522,
+  "nnull": 60000,
+  "null_med": -1.6674492413514117
+ },
+ {
+  "pair": "proton >10MeV / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -1.8435655156931696,
+  "p": 0.5161580640322662,
+  "nnull": 60000,
+  "null_med": -1.842629710422006
+ },
+ {
+  "pair": "sunspot / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -2.1701279162505065,
+  "p": 0.5170080498658356,
+  "nnull": 60000,
+  "null_med": -2.168165552640145
+ },
+ {
+  "pair": "IMF |B| / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.6784625432072806,
+  "p": 0.5177247045882568,
+  "nnull": 60000,
+  "null_med": -1.677474774655878
+ },
+ {
+  "pair": "swics_avqfe / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.677567476457928,
+  "p": 0.5187746870885486,
+  "nnull": 60000,
+  "null_med": -1.676659903782356
+ },
+ {
+  "pair": "X-ray bg / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -1.844862145267389,
+  "p": 0.5198746687555208,
+  "nnull": 60000,
+  "null_med": -1.8437315053288679
+ },
+ {
+  "pair": "proton temp / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.7933554570918446,
+  "p": 0.525574573757104,
+  "nnull": 60000,
+  "null_med": -1.791949639080153
+ },
+ {
+  "pair": "wind density / cak_emdx",
+  "form": "ratio",
+  "obs": -1.7249017777093547,
+  "p": 0.5261578973683771,
+  "nnull": 60000,
+  "null_med": -1.723806199418894
+ },
+ {
+  "pair": "wind speed / cak_emdx",
+  "form": "ratio",
+  "obs": -1.8574946959098244,
+  "p": 0.5283411943134281,
+  "nnull": 60000,
+  "null_med": -1.8553838410900432
+ },
+ {
+  "pair": "TSI / cak_delk1",
+  "form": "log-ratio",
+  "obs": -1.876457032992307,
+  "p": 0.5290411826469559,
+  "nnull": 60000,
+  "null_med": -1.8761685395721526
+ },
+ {
+  "pair": "alpha/proton / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.6736062839548824,
+  "p": 0.5304744920917984,
+  "nnull": 60000,
+  "null_med": -1.671612662124052
+ },
+ {
+  "pair": "MgII / cme_rate",
+  "form": "resid-product",
+  "obs": -1.741808654346904,
+  "p": 0.5305411576473725,
+  "nnull": 60000,
+  "null_med": -1.7402421258909253
+ },
+ {
+  "pair": "F10.7 / alpha/proton",
+  "form": "log-ratio",
+  "obs": -1.8716281326434077,
+  "p": 0.5310411493141781,
+  "nnull": 60000,
+  "null_med": -1.8707051400064716
+ },
+ {
+  "pair": "IMF |B| / cak_emdx",
+  "form": "ratio",
+  "obs": -1.73658554108653,
+  "p": 0.5323077948700855,
+  "nnull": 60000,
+  "null_med": -1.734829492278843
+ },
+ {
+  "pair": "proton >10MeV / cme_rate",
+  "form": "ratio",
+  "obs": -1.8020125754848442,
+  "p": 0.5323411276478726,
+  "nnull": 60000,
+  "null_med": -1.800985246474955
+ },
+ {
+  "pair": "cme_speed / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -2.272920910366881,
+  "p": 0.5336577723704605,
+  "nnull": 60000,
+  "null_med": -2.268069389186721
+ },
+ {
+  "pair": "X-ray bg / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.7783959959958264,
+  "p": 0.5361743970933818,
+  "nnull": 60000,
+  "null_med": -1.7758428169260494
+ },
+ {
+  "pair": "X-ray bg / cak_k3",
+  "form": "log-ratio",
+  "obs": -1.7122237602288128,
+  "p": 0.536374393760104,
+  "nnull": 60000,
+  "null_med": -1.710195707358184
+ },
+ {
+  "pair": "wso_meanfield / cak_emdx",
+  "form": "log-ratio",
+  "obs": -2.041229706379843,
+  "p": 0.5364243929267846,
+  "nnull": 60000,
+  "null_med": -2.040767967500518
+ },
+ {
+  "pair": "alpha/proton / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -1.8423817374350056,
+  "p": 0.5383910268162198,
+  "nnull": 60000,
+  "null_med": -1.8408685352876821
+ },
+ {
+  "pair": "F10.7 / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -2.0072381363692053,
+  "p": 0.5384076932051133,
+  "nnull": 60000,
+  "null_med": -2.0056420417535263
+ },
+ {
+  "pair": "spot_asym / cme_rate",
+  "form": "resid-product",
+  "obs": -1.7186692097964587,
+  "p": 0.5394576757054049,
+  "nnull": 60000,
+  "null_med": -1.716580918060208
+ },
+ {
+  "pair": "swics_avqo / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.6656285988946797,
+  "p": 0.5476742054299095,
+  "nnull": 60000,
+  "null_med": -1.663989753294337
+ },
+ {
+  "pair": "F10.7 / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.7009946985858628,
+  "p": 0.5477908701521641,
+  "nnull": 60000,
+  "null_med": -1.6982167243640602
+ },
+ {
+  "pair": "proton temp / swics_fetoo",
+  "form": "ratio",
+  "obs": -1.715393615897123,
+  "p": 0.5479408676522058,
+  "nnull": 60000,
+  "null_med": -1.7117375014932004
+ },
+ {
+  "pair": "alpha/proton / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.727644162813633,
+  "p": 0.548974183763604,
+  "nnull": 60000,
+  "null_med": -1.7243919091282462
+ },
+ {
+  "pair": "cosmic ray / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.7073846483285995,
+  "p": 0.5499908334861086,
+  "nnull": 60000,
+  "null_med": -1.7043235921429072
+ },
+ {
+  "pair": "alpha/proton / cak_delk1",
+  "form": "log-ratio",
+  "obs": -1.8788758025906511,
+  "p": 0.5528241195980067,
+  "nnull": 60000,
+  "null_med": -1.8762515018477628
+ },
+ {
+  "pair": "sunspot / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -1.744643019084989,
+  "p": 0.5550407493208447,
+  "nnull": 60000,
+  "null_med": -1.7435558057746883
+ },
+ {
+  "pair": "TSI / wind speed",
+  "form": "resid-product",
+  "obs": -1.7557234354133082,
+  "p": 0.5568240529324511,
+  "nnull": 60000,
+  "null_med": -1.753497437949217
+ },
+ {
+  "pair": "proton temp / swics_avqo",
+  "form": "ratio",
+  "obs": -1.785878652298594,
+  "p": 0.5572407126547891,
+  "nnull": 60000,
+  "null_med": -1.7833113573095019
+ },
+ {
+  "pair": "cme_rate / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -2.5465170207305734,
+  "p": 0.5592740120997983,
+  "nnull": 60000,
+  "null_med": -2.535892226469317
+ },
+ {
+  "pair": "X-ray bg / cak_delk1",
+  "form": "log-ratio",
+  "obs": -1.7085449816776686,
+  "p": 0.5628072865452243,
+  "nnull": 60000,
+  "null_med": -1.7045636117101592
+ },
+ {
+  "pair": "TSI / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -1.7536519237819157,
+  "p": 0.5630406159897335,
+  "nnull": 60000,
+  "null_med": -1.7495462598413019
+ },
+ {
+  "pair": "cme_speed / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.6797244163349139,
+  "p": 0.5634572757120715,
+  "nnull": 60000,
+  "null_med": -1.6756253609784237
+ },
+ {
+  "pair": "swics_avqfe / swics_fetoo",
+  "form": "ratio",
+  "obs": -2.0795934504335714,
+  "p": 0.5652572457125714,
+  "nnull": 60000,
+  "null_med": -2.074412542500136
+ },
+ {
+  "pair": "proton temp / cak_delk1",
+  "form": "resid-product",
+  "obs": -2.0399344053751696,
+  "p": 0.5666072232129464,
+  "nnull": 60000,
+  "null_med": -2.0380282279397965
+ },
+ {
+  "pair": "wind speed / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.726351888408397,
+  "p": 0.5717238046032566,
+  "nnull": 60000,
+  "null_med": -1.7222436561723102
+ },
+ {
+  "pair": "sunspot / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.7677346193116423,
+  "p": 0.5724571257145714,
+  "nnull": 60000,
+  "null_med": -1.763368079286044
+ },
+ {
+  "pair": "proton temp / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -2.0576073915951065,
+  "p": 0.5727904534924418,
+  "nnull": 60000,
+  "null_med": -2.0555626298461687
+ },
+ {
+  "pair": "proton temp / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.6851028305020208,
+  "p": 0.5742570957150714,
+  "nnull": 60000,
+  "null_med": -1.680953944065535
+ },
+ {
+  "pair": "TSI / cosmic ray",
+  "form": "ratio",
+  "obs": -1.7123600097172433,
+  "p": 0.5758904018266362,
+  "nnull": 60000,
+  "null_med": -1.7106750635363284
+ },
+ {
+  "pair": "proton temp / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -1.876956111038711,
+  "p": 0.5775070415493075,
+  "nnull": 60000,
+  "null_med": -1.8715012663708097
+ },
+ {
+  "pair": "spot_area / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.804934295536648,
+  "p": 0.5787903534941085,
+  "nnull": 60000,
+  "null_med": -1.7991826741910115
+ },
+ {
+  "pair": "F10.7 / wind density",
+  "form": "log-ratio",
+  "obs": -2.16680488922315,
+  "p": 0.5789236846052566,
+  "nnull": 60000,
+  "null_med": -2.1649913552473157
+ },
+ {
+  "pair": "sunspot / wind speed",
+  "form": "ratio",
+  "obs": -1.7219162707069362,
+  "p": 0.5822902951617474,
+  "nnull": 60000,
+  "null_med": -1.7191869750371003
+ },
+ {
+  "pair": "TSI / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -1.6604574035312551,
+  "p": 0.5852735787736871,
+  "nnull": 60000,
+  "null_med": -1.6597625934529878
+ },
+ {
+  "pair": "wind speed / swics_avqfe",
+  "form": "ratio",
+  "obs": -2.029452372215383,
+  "p": 0.5862402293295111,
+  "nnull": 60000,
+  "null_med": -2.021908160489951
+ },
+ {
+  "pair": "spot_asym / cak_emdx",
+  "form": "log-ratio",
+  "obs": -2.167293556114295,
+  "p": 0.5864568923851269,
+  "nnull": 60000,
+  "null_med": -2.164996140634477
+ },
+ {
+  "pair": "wind speed / cme_speed",
+  "form": "ratio",
+  "obs": -1.682216579466937,
+  "p": 0.5877568707188213,
+  "nnull": 60000,
+  "null_med": -1.6776043121100028
+ },
+ {
+  "pair": "cme_speed / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.6830588866041647,
+  "p": 0.5909401509974834,
+  "nnull": 60000,
+  "null_med": -1.676575474858891
+ },
+ {
+  "pair": "cosmic ray / cme_rate",
+  "form": "resid-product",
+  "obs": -1.707226097740261,
+  "p": 0.5920401326644555,
+  "nnull": 60000,
+  "null_med": -1.7030086235160546
+ },
+ {
+  "pair": "spot_asym / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.7484969016961076,
+  "p": 0.593306778220363,
+  "nnull": 60000,
+  "null_med": -1.7429947632918568
+ },
+ {
+  "pair": "cme_rate / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -2.5727396998987153,
+  "p": 0.5934734421092982,
+  "nnull": 60000,
+  "null_med": -2.5571937068532065
+ },
+ {
+  "pair": "sunspot / alpha/proton",
+  "form": "log-ratio",
+  "obs": -1.8046111921232995,
+  "p": 0.593823436276062,
+  "nnull": 60000,
+  "null_med": -1.7995865142070744
+ },
+ {
+  "pair": "wind speed / wso_meanfield",
+  "form": "resid-product",
+  "obs": -1.725981242761971,
+  "p": 0.5961567307211546,
+  "nnull": 60000,
+  "null_med": -1.7220101867467066
+ },
+ {
+  "pair": "sunspot / spot_asym",
+  "form": "resid-product",
+  "obs": -1.713040542394584,
+  "p": 0.5968567190546824,
+  "nnull": 60000,
+  "null_med": -1.7094129097348234
+ },
+ {
+  "pair": "cosmic ray / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.7330897923361566,
+  "p": 0.5989066848885852,
+  "nnull": 60000,
+  "null_med": -1.7293654518883796
+ },
+ {
+  "pair": "cosmic ray / wso_meanfield",
+  "form": "log-ratio",
+  "obs": -2.033260135500769,
+  "p": 0.6006233229446176,
+  "nnull": 60000,
+  "null_med": -2.0322854601010443
+ },
+ {
+  "pair": "proton temp / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.7144822984014922,
+  "p": 0.6013566440559324,
+  "nnull": 60000,
+  "null_med": -1.7107586686217935
+ },
+ {
+  "pair": "proton temp / spot_asym",
+  "form": "resid-product",
+  "obs": -1.9489829316143694,
+  "p": 0.601539974333761,
+  "nnull": 60000,
+  "null_med": -1.9449446938335837
+ },
+ {
+  "pair": "spot_asym / cak_emdx",
+  "form": "ratio",
+  "obs": -1.7894917852402368,
+  "p": 0.6018066365560574,
+  "nnull": 60000,
+  "null_med": -1.7871421424924163
+ },
+ {
+  "pair": "IMF |B| / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.6819021413305433,
+  "p": 0.6025899568340528,
+  "nnull": 60000,
+  "null_med": -1.6758426430532034
+ },
+ {
+  "pair": "spot_asym / cme_speed",
+  "form": "resid-product",
+  "obs": -1.727955183463718,
+  "p": 0.6035566073898768,
+  "nnull": 60000,
+  "null_med": -1.7233143057812887
+ },
+ {
+  "pair": "spot_area / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.794769511903682,
+  "p": 0.6046399226679555,
+  "nnull": 60000,
+  "null_med": -1.7879620628659394
+ },
+ {
+  "pair": "IMF |B| / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.6933906050793988,
+  "p": 0.6053399110014833,
+  "nnull": 60000,
+  "null_med": -1.6854314777870758
+ },
+ {
+  "pair": "IMF |B| / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.6840653768882063,
+  "p": 0.60593990100165,
+  "nnull": 60000,
+  "null_med": -1.6764301521490919
+ },
+ {
+  "pair": "wso_meanfield / cak_emdx",
+  "form": "resid-product",
+  "obs": -1.7293637395316934,
+  "p": 0.6080565323911268,
+  "nnull": 60000,
+  "null_med": -1.7205095156831829
+ },
+ {
+  "pair": "cme_speed / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -2.082629717629961,
+  "p": 0.6099231679472009,
+  "nnull": 60000,
+  "null_med": -2.0792299055454317
+ },
+ {
+  "pair": "wind speed / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.6866260882710116,
+  "p": 0.6106564890585157,
+  "nnull": 60000,
+  "null_med": -1.679141039012151
+ },
+ {
+  "pair": "IMF |B| / cme_rate",
+  "form": "log-ratio",
+  "obs": -2.650320150277823,
+  "p": 0.6115231412809786,
+  "nnull": 60000,
+  "null_med": -2.6375473734260586
+ },
+ {
+  "pair": "spot_asym / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -1.58344362384459,
+  "p": 0.6146397560040666,
+  "nnull": 60000,
+  "null_med": -1.5746973535227744
+ },
+ {
+  "pair": "proton >10MeV / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -1.564706341838856,
+  "p": 0.6152230796153397,
+  "nnull": 60000,
+  "null_med": -1.5559592499764012
+ },
+ {
+  "pair": "MgII / swics_avqo",
+  "form": "log-ratio",
+  "obs": -1.7705672104775871,
+  "p": 0.6170897151714138,
+  "nnull": 60000,
+  "null_med": -1.7624677722199715
+ },
+ {
+  "pair": "wind density / cme_speed",
+  "form": "resid-product",
+  "obs": -1.6798891008996701,
+  "p": 0.6177230379493676,
+  "nnull": 60000,
+  "null_med": -1.6748178519806896
+ },
+ {
+  "pair": "swics_c6to5 / swics_avqo",
+  "form": "ratio",
+  "obs": -1.830416076838775,
+  "p": 0.6195730071165481,
+  "nnull": 60000,
+  "null_med": -1.825373477179976
+ },
+ {
+  "pair": "TSI / cme_speed",
+  "form": "resid-product",
+  "obs": -1.7682304535890774,
+  "p": 0.6203229946167564,
+  "nnull": 60000,
+  "null_med": -1.7628873045830418
+ },
+ {
+  "pair": "TSI / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.8051503867009149,
+  "p": 0.6206396560057332,
+  "nnull": 60000,
+  "null_med": -1.7796562132837623
+ },
+ {
+  "pair": "F10.7 / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.8363127970268456,
+  "p": 0.6210563157280712,
+  "nnull": 60000,
+  "null_med": -1.8169401925113917
+ },
+ {
+  "pair": "MgII / cme_speed",
+  "form": "ratio",
+  "obs": -1.6515047917509706,
+  "p": 0.6220396326727888,
+  "nnull": 60000,
+  "null_med": -1.6498563685322072
+ },
+ {
+  "pair": "spot_asym / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.743146781346702,
+  "p": 0.6247895868402193,
+  "nnull": 60000,
+  "null_med": -1.7359453040459893
+ },
+ {
+  "pair": "TSI / cak_k3",
+  "form": "resid-product",
+  "obs": -1.7776055802921567,
+  "p": 0.6249062515624739,
+  "nnull": 60000,
+  "null_med": -1.7607324791760546
+ },
+ {
+  "pair": "proton >10MeV / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.7249564664732362,
+  "p": 0.6306561557307379,
+  "nnull": 60000,
+  "null_med": -1.7165222345112026
+ },
+ {
+  "pair": "sunspot / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.7098432356103,
+  "p": 0.6306894885085249,
+  "nnull": 60000,
+  "null_med": -1.7045672329216188
+ },
+ {
+  "pair": "sunspot / cosmic ray",
+  "form": "log-ratio",
+  "obs": -1.711606529779111,
+  "p": 0.630789486841886,
+  "nnull": 60000,
+  "null_med": -1.710220354239881
+ },
+ {
+  "pair": "proton temp / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -1.841593328291811,
+  "p": 0.6325061248979184,
+  "nnull": 60000,
+  "null_med": -1.8288777421326108
+ },
+ {
+  "pair": "alpha/proton / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -1.9234033840293416,
+  "p": 0.6345394243429276,
+  "nnull": 60000,
+  "null_med": -1.916196881978208
+ },
+ {
+  "pair": "wind density / cak_delk1",
+  "form": "log-ratio",
+  "obs": -2.33445523321192,
+  "p": 0.6346394226762887,
+  "nnull": 60000,
+  "null_med": -2.3278112299842406
+ },
+ {
+  "pair": "proton >10MeV / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -1.7817851642460354,
+  "p": 0.6347227546207563,
+  "nnull": 60000,
+  "null_med": -1.7764330313569552
+ },
+ {
+  "pair": "F10.7 / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.8007137922981846,
+  "p": 0.6354560757320711,
+  "nnull": 60000,
+  "null_med": -1.7886647180385304
+ },
+ {
+  "pair": "sunspot / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.9727297587827963,
+  "p": 0.636222729621173,
+  "nnull": 60000,
+  "null_med": -1.960263821416083
+ },
+ {
+  "pair": "IMF |B| / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.680610571766812,
+  "p": 0.6373560440659323,
+  "nnull": 60000,
+  "null_med": -1.6755646620884386
+ },
+ {
+  "pair": "cme_rate / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -2.60823846874544,
+  "p": 0.6383393610106498,
+  "nnull": 60000,
+  "null_med": -2.6002372777552676
+ },
+ {
+  "pair": "TSI / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.780316182643606,
+  "p": 0.6395726737887701,
+  "nnull": 60000,
+  "null_med": -1.7689838041379318
+ },
+ {
+  "pair": "F10.7 / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.819204955413963,
+  "p": 0.6407059882335294,
+  "nnull": 60000,
+  "null_med": -1.7966347509814973
+ },
+ {
+  "pair": "proton temp / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -1.6163487253283442,
+  "p": 0.6409726504558257,
+  "nnull": 60000,
+  "null_med": -1.6126810545057817
+ },
+ {
+  "pair": "sunspot / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.7216809794252983,
+  "p": 0.6423226279562008,
+  "nnull": 60000,
+  "null_med": -1.7118391465925433
+ },
+ {
+  "pair": "swics_avqsi / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.6799611067972346,
+  "p": 0.6428892851785803,
+  "nnull": 60000,
+  "null_med": -1.6738988014586473
+ },
+ {
+  "pair": "sunspot / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.6248531389588314,
+  "p": 0.6436892718454692,
+  "nnull": 60000,
+  "null_med": -1.6185129461061991
+ },
+ {
+  "pair": "spot_asym / swics_avqsi",
+  "form": "ratio",
+  "obs": -1.6993277206929198,
+  "p": 0.643872602123298,
+  "nnull": 60000,
+  "null_med": -1.693261727311599
+ },
+ {
+  "pair": "wind speed / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.7259656334993925,
+  "p": 0.6444559257345711,
+  "nnull": 60000,
+  "null_med": -1.7181564560579319
+ },
+ {
+  "pair": "cosmic ray / spot_asym",
+  "form": "resid-product",
+  "obs": -1.6891115623823454,
+  "p": 0.6477892035132747,
+  "nnull": 60000,
+  "null_med": -1.6841188184359688
+ },
+ {
+  "pair": "sunspot / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.9579264989441274,
+  "p": 0.6482891951800803,
+  "nnull": 60000,
+  "null_med": -1.9488530234882218
+ },
+ {
+  "pair": "wind speed / cak_k3",
+  "form": "resid-product",
+  "obs": -1.6982496598041914,
+  "p": 0.6500391660138998,
+  "nnull": 60000,
+  "null_med": -1.6877177066772338
+ },
+ {
+  "pair": "proton >10MeV / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.760700144553049,
+  "p": 0.6506224896251729,
+  "nnull": 60000,
+  "null_med": -1.7520456456777245
+ },
+ {
+  "pair": "sunspot / proton temp",
+  "form": "resid-product",
+  "obs": -1.9170774472159515,
+  "p": 0.6513724771253813,
+  "nnull": 60000,
+  "null_med": -1.9095856792920929
+ },
+ {
+  "pair": "spot_asym / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.6791909964348426,
+  "p": 0.6531391143480942,
+  "nnull": 60000,
+  "null_med": -1.6696552956265205
+ },
+ {
+  "pair": "F10.7 / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -2.0713589624205615,
+  "p": 0.6540724321261312,
+  "nnull": 60000,
+  "null_med": -2.0632360638190783
+ },
+ {
+  "pair": "wind speed / cak_emdx",
+  "form": "log-ratio",
+  "obs": -1.9805918465217442,
+  "p": 0.6545057582373627,
+  "nnull": 60000,
+  "null_med": -1.9697677934293885
+ },
+ {
+  "pair": "spot_area / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.8028279054424585,
+  "p": 0.6546390893485109,
+  "nnull": 60000,
+  "null_med": -1.7920939277683916
+ },
+ {
+  "pair": "cosmic ray / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.7188447059910472,
+  "p": 0.6547224212929784,
+  "nnull": 60000,
+  "null_med": -1.7112815972306135
+ },
+ {
+  "pair": "cme_speed / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.6761760677273894,
+  "p": 0.6589723504608257,
+  "nnull": 60000,
+  "null_med": -1.6663853139450677
+ },
+ {
+  "pair": "TSI / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.8191749179425802,
+  "p": 0.6593556774053766,
+  "nnull": 60000,
+  "null_med": -1.7895705155914994
+ },
+ {
+  "pair": "X-ray bg / swics_avqo",
+  "form": "log-ratio",
+  "obs": -1.72291909890397,
+  "p": 0.6610223162947284,
+  "nnull": 60000,
+  "null_med": -1.7156264943013435
+ },
+ {
+  "pair": "TSI / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.6702892283962423,
+  "p": 0.6612889785170247,
+  "nnull": 60000,
+  "null_med": -1.6698028556263684
+ },
+ {
+  "pair": "proton temp / X-ray bg",
+  "form": "log-ratio",
+  "obs": -1.6105543954630974,
+  "p": 0.6620056332394461,
+  "nnull": 60000,
+  "null_med": -1.6023340176075913
+ },
+ {
+  "pair": "alpha/proton / cak_emdx",
+  "form": "ratio",
+  "obs": -1.913248405916157,
+  "p": 0.662488958517358,
+  "nnull": 60000,
+  "null_med": -1.904463545741209
+ },
+ {
+  "pair": "cosmic ray / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.6926359302302185,
+  "p": 0.6648389193513441,
+  "nnull": 60000,
+  "null_med": -1.6827261159463285
+ },
+ {
+  "pair": "F10.7 / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.813220541749337,
+  "p": 0.6656722387960201,
+  "nnull": 60000,
+  "null_med": -1.7992703933832033
+ },
+ {
+  "pair": "MgII / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.776487583620355,
+  "p": 0.6664555590740154,
+  "nnull": 60000,
+  "null_med": -1.7498619783242588
+ },
+ {
+  "pair": "TSI / IMF |B|",
+  "form": "log-ratio",
+  "obs": -2.020115402493715,
+  "p": 0.668272195463409,
+  "nnull": 60000,
+  "null_med": -2.0197424158402004
+ },
+ {
+  "pair": "sunspot / IMF |B|",
+  "form": "log-ratio",
+  "obs": -1.8677674046809947,
+  "p": 0.6702721621306311,
+  "nnull": 60000,
+  "null_med": -1.8593719612100177
+ },
+ {
+  "pair": "cosmic ray / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -2.0034894152349385,
+  "p": 0.672838786020233,
+  "nnull": 60000,
+  "null_med": -1.9993225441915117
+ },
+ {
+  "pair": "MgII / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.7282892581508977,
+  "p": 0.6745387576873719,
+  "nnull": 60000,
+  "null_med": -1.7203390158951053
+ },
+ {
+  "pair": "sunspot / cme_speed",
+  "form": "resid-product",
+  "obs": -1.7375774636061296,
+  "p": 0.6752387460208996,
+  "nnull": 60000,
+  "null_med": -1.7297375643878035
+ },
+ {
+  "pair": "wind density / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.830713853223171,
+  "p": 0.6758387360210664,
+  "nnull": 60000,
+  "null_med": -1.8227929329989967
+ },
+ {
+  "pair": "wind speed / cme_rate",
+  "form": "ratio",
+  "obs": -1.7058180727661847,
+  "p": 0.676088731854469,
+  "nnull": 60000,
+  "null_med": -1.6986999951380908
+ },
+ {
+  "pair": "wind density / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.766574508315363,
+  "p": 0.6775887068548857,
+  "nnull": 60000,
+  "null_med": -1.7567007366696763
+ },
+ {
+  "pair": "sunspot / wind speed",
+  "form": "log-ratio",
+  "obs": -1.738634441657687,
+  "p": 0.6803886601889968,
+  "nnull": 60000,
+  "null_med": -1.7316464548525767
+ },
+ {
+  "pair": "cosmic ray / wind density",
+  "form": "ratio",
+  "obs": -1.7618465852438363,
+  "p": 0.6840052665788904,
+  "nnull": 60000,
+  "null_med": -1.7568189737008293
+ },
+ {
+  "pair": "F10.7 / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.8377917094124037,
+  "p": 0.6859385676905385,
+  "nnull": 60000,
+  "null_med": -1.8194125671940173
+ },
+ {
+  "pair": "wind speed / cak_delk1",
+  "form": "ratio",
+  "obs": -1.8623658312442455,
+  "p": 0.6864552257462375,
+  "nnull": 60000,
+  "null_med": -1.8457454377349611
+ },
+ {
+  "pair": "Lyman-alpha / spot_area",
+  "form": "log-ratio",
+  "obs": -1.626341686880619,
+  "p": 0.6865552240795987,
+  "nnull": 60000,
+  "null_med": -1.6201559184262178
+ },
+ {
+  "pair": "proton >10MeV / swics_fetoo",
+  "form": "ratio",
+  "obs": -1.5139371700950175,
+  "p": 0.6874885418576357,
+  "nnull": 60000,
+  "null_med": -1.501392096572895
+ },
+ {
+  "pair": "sunspot / wind density",
+  "form": "log-ratio",
+  "obs": -1.9326041422306028,
+  "p": 0.6899718338027699,
+  "nnull": 60000,
+  "null_med": -1.9230950541198841
+ },
+ {
+  "pair": "wind density / cme_rate",
+  "form": "resid-product",
+  "obs": -1.6913889029551576,
+  "p": 0.6929551174147097,
+  "nnull": 60000,
+  "null_med": -1.681926389343199
+ },
+ {
+  "pair": "proton >10MeV / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.6384472302017945,
+  "p": 0.6933051115814737,
+  "nnull": 60000,
+  "null_med": -1.6247405834306679
+ },
+ {
+  "pair": "TSI / spot_area",
+  "form": "log-ratio",
+  "obs": -1.6151485763710902,
+  "p": 0.6952217463042283,
+  "nnull": 60000,
+  "null_med": -1.614987102074186
+ },
+ {
+  "pair": "proton temp / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.869796570859195,
+  "p": 0.6983550274162097,
+  "nnull": 60000,
+  "null_med": -1.8517735812599345
+ },
+ {
+  "pair": "IMF |B| / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.6865365347161252,
+  "p": 0.700838319361344,
+  "nnull": 60000,
+  "null_med": -1.6746534782228177
+ },
+ {
+  "pair": "MgII / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.757916611083559,
+  "p": 0.7022049632506124,
+  "nnull": 60000,
+  "null_med": -1.7322119803976124
+ },
+ {
+  "pair": "sunspot / cak_delk1",
+  "form": "log-ratio",
+  "obs": -1.790741858129723,
+  "p": 0.7059382343627606,
+  "nnull": 60000,
+  "null_med": -1.7821621658509486
+ },
+ {
+  "pair": "proton temp / cme_rate",
+  "form": "resid-product",
+  "obs": -1.6802795596696984,
+  "p": 0.707138214363094,
+  "nnull": 60000,
+  "null_med": -1.6709642389920865
+ },
+ {
+  "pair": "alpha/proton / cak_k3",
+  "form": "ratio",
+  "obs": -1.9132432466071143,
+  "p": 0.7076215396410059,
+  "nnull": 60000,
+  "null_med": -1.8965429944313192
+ },
+ {
+  "pair": "MgII / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.777546308212195,
+  "p": 0.7078882018633023,
+  "nnull": 60000,
+  "null_med": -1.7615066894871398
+ },
+ {
+  "pair": "MgII / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.7847576850319986,
+  "p": 0.7083715271412143,
+  "nnull": 60000,
+  "null_med": -1.7810476906630566
+ },
+ {
+  "pair": "sunspot / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.737490287109697,
+  "p": 0.7084715254745754,
+  "nnull": 60000,
+  "null_med": -1.7249565124715371
+ },
+ {
+  "pair": "IMF |B| / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -2.206189640783886,
+  "p": 0.7087215213079782,
+  "nnull": 60000,
+  "null_med": -2.1981625257754875
+ },
+ {
+  "pair": "cosmic ray / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.680934560366111,
+  "p": 0.7094381760303995,
+  "nnull": 60000,
+  "null_med": -1.675671247570436
+ },
+ {
+  "pair": "F10.7 / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.597552004849074,
+  "p": 0.710421492975117,
+  "nnull": 60000,
+  "null_med": -1.582172904933564
+ },
+ {
+  "pair": "cme_speed / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.7038420068653244,
+  "p": 0.7116548057532375,
+  "nnull": 60000,
+  "null_med": -1.68809375620632
+ },
+ {
+  "pair": "sunspot / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -2.095382660575026,
+  "p": 0.7123881268645522,
+  "nnull": 60000,
+  "null_med": -2.0707995058881115
+ },
+ {
+  "pair": "sunspot / swics_avqsi",
+  "form": "ratio",
+  "obs": -1.7468236130808492,
+  "p": 0.7144214263095615,
+  "nnull": 60000,
+  "null_med": -1.7376901482417333
+ },
+ {
+  "pair": "wind density / swics_avqo",
+  "form": "ratio",
+  "obs": -1.7569746770873547,
+  "p": 0.7163880601989967,
+  "nnull": 60000,
+  "null_med": -1.7485602111465581
+ },
+ {
+  "pair": "spot_area / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.8464735432641124,
+  "p": 0.7180546990883485,
+  "nnull": 60000,
+  "null_med": -1.82381152462478
+ },
+ {
+  "pair": "TSI / cme_speed",
+  "form": "log-ratio",
+  "obs": -2.043290116954393,
+  "p": 0.718971350477492,
+  "nnull": 60000,
+  "null_med": -2.042852144708194
+ },
+ {
+  "pair": "alpha/proton / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.7470415781328592,
+  "p": 0.7190213496441726,
+  "nnull": 60000,
+  "null_med": -1.7277764756337648
+ },
+ {
+  "pair": "swics_o7to6 / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.7535431358506157,
+  "p": 0.7216213063115615,
+  "nnull": 60000,
+  "null_med": -1.737782981499022
+ },
+ {
+  "pair": "wso_meanfield / cak_k3",
+  "form": "resid-product",
+  "obs": -1.747380840359414,
+  "p": 0.7230046165897235,
+  "nnull": 60000,
+  "null_med": -1.7254408667658248
+ },
+ {
+  "pair": "cosmic ray / cme_rate",
+  "form": "log-ratio",
+  "obs": -2.429561911440558,
+  "p": 0.7245879235346078,
+  "nnull": 60000,
+  "null_med": -2.428547166808252
+ },
+ {
+  "pair": "sunspot / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -1.7219922266852923,
+  "p": 0.7256212396460059,
+  "nnull": 60000,
+  "null_med": -1.7069753425789544
+ },
+ {
+  "pair": "spot_asym / cak_k3",
+  "form": "log-ratio",
+  "obs": -2.103964986383313,
+  "p": 0.7301211646472558,
+  "nnull": 60000,
+  "null_med": -2.098689532779574
+ },
+ {
+  "pair": "F10.7 / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.7787293868596947,
+  "p": 0.733371110481492,
+  "nnull": 60000,
+  "null_med": -1.7646546242868892
+ },
+ {
+  "pair": "spot_asym / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.7919330712453334,
+  "p": 0.7334877752037466,
+  "nnull": 60000,
+  "null_med": -1.7782555995040128
+ },
+ {
+  "pair": "proton >10MeV / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.7223316044713468,
+  "p": 0.7339877668705521,
+  "nnull": 60000,
+  "null_med": -1.7063119583263642
+ },
+ {
+  "pair": "IMF |B| / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.9098352267758254,
+  "p": 0.7350377493708439,
+  "nnull": 60000,
+  "null_med": -1.8999670637850146
+ },
+ {
+  "pair": "spot_area / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.8157763700809402,
+  "p": 0.7374043765937235,
+  "nnull": 60000,
+  "null_med": -1.800534676657877
+ },
+ {
+  "pair": "F10.7 / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.8558907502414468,
+  "p": 0.7379877002049966,
+  "nnull": 60000,
+  "null_med": -1.8234275646798177
+ },
+ {
+  "pair": "proton >10MeV / cme_rate",
+  "form": "resid-product",
+  "obs": -1.7724774785545185,
+  "p": 0.7379877002049966,
+  "nnull": 60000,
+  "null_med": -1.7560038996020966
+ },
+ {
+  "pair": "F10.7 / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.8175109030407022,
+  "p": 0.7381543640939318,
+  "nnull": 60000,
+  "null_med": -1.8056372331569943
+ },
+ {
+  "pair": "swics_fetoo / swics_avqo",
+  "form": "log-ratio",
+  "obs": -2.00736919562263,
+  "p": 0.7382710288161864,
+  "nnull": 60000,
+  "null_med": -1.9994178684008341
+ },
+ {
+  "pair": "TSI / cosmic ray",
+  "form": "log-ratio",
+  "obs": -1.7521587267109182,
+  "p": 0.7390543490941818,
+  "nnull": 60000,
+  "null_med": -1.7464653213016745
+ },
+ {
+  "pair": "MgII / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.7543608892820508,
+  "p": 0.7395543407609874,
+  "nnull": 60000,
+  "null_med": -1.7367014134660022
+ },
+ {
+  "pair": "proton >10MeV / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.783352343650331,
+  "p": 0.7408876518724687,
+  "nnull": 60000,
+  "null_med": -1.7704217192786682
+ },
+ {
+  "pair": "alpha/proton / cak_delk1",
+  "form": "ratio",
+  "obs": -1.903026108644652,
+  "p": 0.7414543090948484,
+  "nnull": 60000,
+  "null_med": -1.8811123305385835
+ },
+ {
+  "pair": "MgII / wind speed",
+  "form": "log-ratio",
+  "obs": -2.122565320057913,
+  "p": 0.7434709421509641,
+  "nnull": 60000,
+  "null_med": -2.1165491947515274
+ },
+ {
+  "pair": "swics_avqfe / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.681925959144113,
+  "p": 0.7446209229846169,
+  "nnull": 60000,
+  "null_med": -1.6668973008306576
+ },
+ {
+  "pair": "alpha/proton / cme_speed",
+  "form": "resid-product",
+  "obs": -1.6942076429899187,
+  "p": 0.7450375827069549,
+  "nnull": 60000,
+  "null_med": -1.6823696422394685
+ },
+ {
+  "pair": "sunspot / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.7325729185584633,
+  "p": 0.7457875702071632,
+  "nnull": 60000,
+  "null_med": -1.7229076871915945
+ },
+ {
+  "pair": "proton >10MeV / cak_k3",
+  "form": "log-ratio",
+  "obs": -1.7654362824760845,
+  "p": 0.7512208129864503,
+  "nnull": 60000,
+  "null_med": -1.7534495919391686
+ },
+ {
+  "pair": "MgII / cme_speed",
+  "form": "log-ratio",
+  "obs": -2.0431720116252636,
+  "p": 0.75240412659789,
+  "nnull": 60000,
+  "null_med": -2.0418645662280253
+ },
+ {
+  "pair": "cosmic ray / cak_k3",
+  "form": "resid-product",
+  "obs": -1.7295042390201432,
+  "p": 0.7524374593756771,
+  "nnull": 60000,
+  "null_med": -1.7111412193162754
+ },
+ {
+  "pair": "TSI / cak_emdx",
+  "form": "resid-product",
+  "obs": -1.7832814793955734,
+  "p": 0.7534207763203946,
+  "nnull": 60000,
+  "null_med": -1.7554454963374697
+ },
+ {
+  "pair": "TSI / cak_emdx",
+  "form": "log-ratio",
+  "obs": -1.932049894409663,
+  "p": 0.7541874302094965,
+  "nnull": 60000,
+  "null_med": -1.9291522742393474
+ },
+ {
+  "pair": "cme_speed / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -2.292255450326222,
+  "p": 0.7546707554874086,
+  "nnull": 60000,
+  "null_med": -2.2554988374420644
+ },
+ {
+  "pair": "wind speed / spot_asym",
+  "form": "log-ratio",
+  "obs": -1.7981837398581801,
+  "p": 0.7548040865985567,
+  "nnull": 60000,
+  "null_med": -1.787875275023373
+ },
+ {
+  "pair": "spot_area / cak_k3",
+  "form": "resid-product",
+  "obs": -1.8131907361341055,
+  "p": 0.7549374177097048,
+  "nnull": 60000,
+  "null_med": -1.782566953018399
+ },
+ {
+  "pair": "TSI / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.6856279968814272,
+  "p": 0.7556374060432326,
+  "nnull": 60000,
+  "null_med": -1.6834869047936756
+ },
+ {
+  "pair": "alpha/proton / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.6898543812492404,
+  "p": 0.7561207313211447,
+  "nnull": 60000,
+  "null_med": -1.6728909822170508
+ },
+ {
+  "pair": "cosmic ray / swics_avqsi",
+  "form": "ratio",
+  "obs": -2.021014061769294,
+  "p": 0.7561540640989317,
+  "nnull": 60000,
+  "null_med": -1.999413776535628
+ },
+ {
+  "pair": "cme_rate / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.7155446079044236,
+  "p": 0.7574373760437326,
+  "nnull": 60000,
+  "null_med": -1.7003929269522764
+ },
+ {
+  "pair": "proton >10MeV / cak_emdx",
+  "form": "ratio",
+  "obs": -1.8151252136713045,
+  "p": 0.7580873652105798,
+  "nnull": 60000,
+  "null_med": -1.8043634583853743
+ },
+ {
+  "pair": "spot_area / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.789844340773501,
+  "p": 0.7583540274328762,
+  "nnull": 60000,
+  "null_med": -1.776466804227612
+ },
+ {
+  "pair": "MgII / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.6693884477219008,
+  "p": 0.7601373310444826,
+  "nnull": 60000,
+  "null_med": -1.6626174227170942
+ },
+ {
+  "pair": "MgII / swics_fetoo",
+  "form": "ratio",
+  "obs": -2.1024041852262996,
+  "p": 0.761370643822603,
+  "nnull": 60000,
+  "null_med": -2.09404692371695
+ },
+ {
+  "pair": "wind density / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -1.6978178919306617,
+  "p": 0.7625039582673622,
+  "nnull": 60000,
+  "null_med": -1.6773777147675117
+ },
+ {
+  "pair": "sunspot / swics_avqo",
+  "form": "ratio",
+  "obs": -1.7459646295107114,
+  "p": 0.7629206179897001,
+  "nnull": 60000,
+  "null_med": -1.7388776959882177
+ },
+ {
+  "pair": "cme_rate / cme_speed",
+  "form": "resid-product",
+  "obs": -1.689321157264897,
+  "p": 0.7634372760453992,
+  "nnull": 60000,
+  "null_med": -1.6774661102986055
+ },
+ {
+  "pair": "TSI / sunspot",
+  "form": "resid-product",
+  "obs": -1.8373021981064916,
+  "p": 0.7635206079898669,
+  "nnull": 60000,
+  "null_med": -1.8117881182002264
+ },
+ {
+  "pair": "swics_fetoo / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.6918702879508314,
+  "p": 0.7658039032682789,
+  "nnull": 60000,
+  "null_med": -1.6724780695805013
+ },
+ {
+  "pair": "X-ray bg / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.9483824296378918,
+  "p": 0.7661372310461493,
+  "nnull": 60000,
+  "null_med": -1.925949491700012
+ },
+ {
+  "pair": "cosmic ray / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.635486803854222,
+  "p": 0.766870552157464,
+  "nnull": 60000,
+  "null_med": -1.627726367669692
+ },
+ {
+  "pair": "wind speed / cak_emdx",
+  "form": "resid-product",
+  "obs": -1.70334512027618,
+  "p": 0.7673872102131631,
+  "nnull": 60000,
+  "null_med": -1.6835967068381246
+ },
+ {
+  "pair": "alpha/proton / swics_avqo",
+  "form": "ratio",
+  "obs": -1.892501049520337,
+  "p": 0.770437159380677,
+  "nnull": 60000,
+  "null_med": -1.878207301112122
+ },
+ {
+  "pair": "wind density / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.7274525060547783,
+  "p": 0.7707871535474409,
+  "nnull": 60000,
+  "null_med": -1.7087153987818309
+ },
+ {
+  "pair": "IMF |B| / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.7087183710593836,
+  "p": 0.7716371393810103,
+  "nnull": 60000,
+  "null_med": -1.6868518740265626
+ },
+ {
+  "pair": "swics_hetoo / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.7050970963062957,
+  "p": 0.7721037982700288,
+  "nnull": 60000,
+  "null_med": -1.6879900328522244
+ },
+ {
+  "pair": "sunspot / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -1.7780201123139308,
+  "p": 0.7735371077148714,
+  "nnull": 60000,
+  "null_med": -1.7705066694749605
+ },
+ {
+  "pair": "sunspot / wso_meanfield",
+  "form": "resid-product",
+  "obs": -1.8082180631253653,
+  "p": 0.7737037716038067,
+  "nnull": 60000,
+  "null_med": -1.784431867702983
+ },
+ {
+  "pair": "spot_asym / cme_speed",
+  "form": "log-ratio",
+  "obs": -1.536614643494961,
+  "p": 0.7739704338261029,
+  "nnull": 60000,
+  "null_med": -1.5243713247562305
+ },
+ {
+  "pair": "MgII / wind speed",
+  "form": "ratio",
+  "obs": -2.172991520259386,
+  "p": 0.7752704121597973,
+  "nnull": 60000,
+  "null_med": -2.1637513666630594
+ },
+ {
+  "pair": "MgII / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -2.0360874708808008,
+  "p": 0.7770870485491909,
+  "nnull": 60000,
+  "null_med": -2.032612837231942
+ },
+ {
+  "pair": "proton temp / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.7637526959951322,
+  "p": 0.780820319661339,
+  "nnull": 60000,
+  "null_med": -1.7489546029770884
+ },
+ {
+  "pair": "MgII / X-ray bg",
+  "form": "ratio",
+  "obs": -1.88415431560133,
+  "p": 0.7809036516058065,
+  "nnull": 60000,
+  "null_med": -1.8705790280495034
+ },
+ {
+  "pair": "alpha/proton / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.705234653390701,
+  "p": 0.7823369610506492,
+  "nnull": 60000,
+  "null_med": -1.6938864579906787
+ },
+ {
+  "pair": "swics_avqfe / swics_avqo",
+  "form": "log-ratio",
+  "obs": -1.6973048079481448,
+  "p": 0.7829202846619223,
+  "nnull": 60000,
+  "null_med": -1.6810752636210573
+ },
+ {
+  "pair": "proton >10MeV / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -1.628448423831877,
+  "p": 0.7835702738287695,
+  "nnull": 60000,
+  "null_med": -1.6065680311395094
+ },
+ {
+  "pair": "proton >10MeV / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -1.5548430619728573,
+  "p": 0.7860035666072233,
+  "nnull": 60000,
+  "null_med": -1.5321267866208148
+ },
+ {
+  "pair": "proton temp / X-ray bg",
+  "form": "resid-product",
+  "obs": -2.004780696340986,
+  "p": 0.7872035466075565,
+  "nnull": 60000,
+  "null_med": -1.9893736694096442
+ },
+ {
+  "pair": "wind speed / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.7018763566266326,
+  "p": 0.7873868768853852,
+  "nnull": 60000,
+  "null_med": -1.6832654387072283
+ },
+ {
+  "pair": "MgII / cak_emdx",
+  "form": "log-ratio",
+  "obs": -1.9998986542036579,
+  "p": 0.7876202063298945,
+  "nnull": 60000,
+  "null_med": -1.9771235898883095
+ },
+ {
+  "pair": "spot_asym / cak_k3",
+  "form": "ratio",
+  "obs": -1.7949243971612798,
+  "p": 0.7878868685521908,
+  "nnull": 60000,
+  "null_med": -1.7852519470077
+ },
+ {
+  "pair": "TSI / cak_emdx",
+  "form": "ratio",
+  "obs": -1.9608357193340447,
+  "p": 0.7880368660522324,
+  "nnull": 60000,
+  "null_med": -1.9578166836502353
+ },
+ {
+  "pair": "wind speed / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -2.0086597865821294,
+  "p": 0.7880701988300195,
+  "nnull": 60000,
+  "null_med": -1.9767593127668652
+ },
+ {
+  "pair": "spot_area / cme_rate",
+  "form": "resid-product",
+  "obs": -1.7932911197645545,
+  "p": 0.7904368260528991,
+  "nnull": 60000,
+  "null_med": -1.773319821536213
+ },
+ {
+  "pair": "wind density / cme_speed",
+  "form": "ratio",
+  "obs": -1.6991864472133997,
+  "p": 0.7919868002199963,
+  "nnull": 60000,
+  "null_med": -1.6849677228562183
+ },
+ {
+  "pair": "proton >10MeV / cak_emdx",
+  "form": "log-ratio",
+  "obs": -1.7920240752659469,
+  "p": 0.7926534557757371,
+  "nnull": 60000,
+  "null_med": -1.7797195768947618
+ },
+ {
+  "pair": "wind speed / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.699178508004166,
+  "p": 0.7937201046649223,
+  "nnull": 60000,
+  "null_med": -1.680183700782823
+ },
+ {
+  "pair": "spot_area / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.83491102038294,
+  "p": 0.793936767720538,
+  "nnull": 60000,
+  "null_med": -1.8033368348056373
+ },
+ {
+  "pair": "wind density / swics_fetoo",
+  "form": "ratio",
+  "obs": -1.7241390739525695,
+  "p": 0.7947867535541074,
+  "nnull": 60000,
+  "null_med": -1.7036361428224354
+ },
+ {
+  "pair": "spot_area / cme_speed",
+  "form": "resid-product",
+  "obs": -1.8005655750093574,
+  "p": 0.7951034149430842,
+  "nnull": 60000,
+  "null_med": -1.7850353702240533
+ },
+ {
+  "pair": "TSI / wind speed",
+  "form": "ratio",
+  "obs": -2.180393765567384,
+  "p": 0.7963700604989917,
+  "nnull": 60000,
+  "null_med": -2.179118828710459
+ },
+ {
+  "pair": "swics_o7to6 / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.7444900029265378,
+  "p": 0.7987533541107649,
+  "nnull": 60000,
+  "null_med": -1.7208529550964153
+ },
+ {
+  "pair": "F10.7 / sunspot",
+  "form": "resid-product",
+  "obs": -1.8712416712384032,
+  "p": 0.7999200013333111,
+  "nnull": 60000,
+  "null_med": -1.8527986623540906
+ },
+ {
+  "pair": "IMF |B| / cak_emdx",
+  "form": "log-ratio",
+  "obs": -2.2098007903132495,
+  "p": 0.8020199663338944,
+  "nnull": 60000,
+  "null_med": -2.197244991525111
+ },
+ {
+  "pair": "wind speed / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -2.229040206873372,
+  "p": 0.8021866302228297,
+  "nnull": 60000,
+  "null_med": -2.1972972874585373
+ },
+ {
+  "pair": "cosmic ray / cme_speed",
+  "form": "resid-product",
+  "obs": -1.7186039185373028,
+  "p": 0.803003283278612,
+  "nnull": 60000,
+  "null_med": -1.704978137074975
+ },
+ {
+  "pair": "Lyman-alpha / cme_rate",
+  "form": "resid-product",
+  "obs": -1.7588395977124662,
+  "p": 0.8032199463342278,
+  "nnull": 60000,
+  "null_med": -1.7409188114734717
+ },
+ {
+  "pair": "wind speed / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -1.9951671657959449,
+  "p": 0.8033699438342694,
+  "nnull": 60000,
+  "null_med": -1.9732675795213783
+ },
+ {
+  "pair": "swics_avqfe / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.6867593391943527,
+  "p": 0.8035699405009916,
+  "nnull": 60000,
+  "null_med": -1.667628269692242
+ },
+ {
+  "pair": "X-ray bg / spot_area",
+  "form": "resid-product",
+  "obs": -1.9746404035176293,
+  "p": 0.8044532591123481,
+  "nnull": 60000,
+  "null_med": -1.9515856011839832
+ },
+ {
+  "pair": "IMF |B| / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.7338105756921138,
+  "p": 0.8089031849469176,
+  "nnull": 60000,
+  "null_med": -1.714213242246649
+ },
+ {
+  "pair": "cosmic ray / spot_area",
+  "form": "log-ratio",
+  "obs": -1.6237600618106451,
+  "p": 0.810169830502825,
+  "nnull": 60000,
+  "null_med": -1.6191416505199658
+ },
+ {
+  "pair": "proton >10MeV / swics_avqo",
+  "form": "ratio",
+  "obs": -1.5846244941543903,
+  "p": 0.8111031482808619,
+  "nnull": 60000,
+  "null_med": -1.563512965430615
+ },
+ {
+  "pair": "sunspot / cak_emdx",
+  "form": "ratio",
+  "obs": -1.7806272471178803,
+  "p": 0.8131697805036583,
+  "nnull": 60000,
+  "null_med": -1.7715246290196123
+ },
+ {
+  "pair": "sunspot / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.8081545225279267,
+  "p": 0.8137197713371443,
+  "nnull": 60000,
+  "null_med": -1.7810084072221235
+ },
+ {
+  "pair": "cosmic ray / wso_meanfield",
+  "form": "resid-product",
+  "obs": -1.7697492264045473,
+  "p": 0.814703088281862,
+  "nnull": 60000,
+  "null_med": -1.733229635017099
+ },
+ {
+  "pair": "TSI / sunspot",
+  "form": "log-ratio",
+  "obs": -1.7084974131081778,
+  "p": 0.8163697271712138,
+  "nnull": 60000,
+  "null_med": -1.7079381118956927
+ },
+ {
+  "pair": "MgII / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.698728697982799,
+  "p": 0.8167863868935518,
+  "nnull": 60000,
+  "null_med": -1.6935752328630573
+ },
+ {
+  "pair": "MgII / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.730870521376326,
+  "p": 0.8173363777270379,
+  "nnull": 60000,
+  "null_med": -1.7092680134051819
+ },
+ {
+  "pair": "alpha/proton / cak_k3",
+  "form": "log-ratio",
+  "obs": -1.8879689404164144,
+  "p": 0.8176530391160147,
+  "nnull": 60000,
+  "null_med": -1.8737200750221117
+ },
+ {
+  "pair": "spot_area / cme_speed",
+  "form": "log-ratio",
+  "obs": -1.60313462157966,
+  "p": 0.8188696855052415,
+  "nnull": 60000,
+  "null_med": -1.5834697307279328
+ },
+ {
+  "pair": "wind speed / swics_avqo",
+  "form": "ratio",
+  "obs": -2.1009542392282596,
+  "p": 0.8189196846719221,
+  "nnull": 60000,
+  "null_med": -2.0758337065057537
+ },
+ {
+  "pair": "cosmic ray / Lyman-alpha",
+  "form": "ratio",
+  "obs": -2.2650525415738696,
+  "p": 0.8198863352277462,
+  "nnull": 60000,
+  "null_med": -2.220453283979154
+ },
+ {
+  "pair": "proton temp / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.751247363579307,
+  "p": 0.8200363327277879,
+  "nnull": 60000,
+  "null_med": -1.7286628400735127
+ },
+ {
+  "pair": "cme_rate / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.6906537539626005,
+  "p": 0.8201863302278295,
+  "nnull": 60000,
+  "null_med": -1.6679421709535398
+ },
+ {
+  "pair": "F10.7 / cak_k3",
+  "form": "ratio",
+  "obs": -1.7337241945078765,
+  "p": 0.820619656339061,
+  "nnull": 60000,
+  "null_med": -1.7109140976811699
+ },
+ {
+  "pair": "MgII / proton temp",
+  "form": "resid-product",
+  "obs": -2.0012863585567224,
+  "p": 0.8216029732837786,
+  "nnull": 60000,
+  "null_med": -1.9870596531722153
+ },
+ {
+  "pair": "alpha/proton / cak_emdx",
+  "form": "log-ratio",
+  "obs": -1.8848200154748964,
+  "p": 0.8230529491175147,
+  "nnull": 60000,
+  "null_med": -1.871524177495968
+ },
+ {
+  "pair": "proton temp / cak_delk1",
+  "form": "log-ratio",
+  "obs": -1.6361305559363981,
+  "p": 0.823319611339811,
+  "nnull": 60000,
+  "null_med": -1.621994947342278
+ },
+ {
+  "pair": "MgII / proton temp",
+  "form": "ratio",
+  "obs": -1.7492404239199597,
+  "p": 0.8243362610623156,
+  "nnull": 60000,
+  "null_med": -1.7465365693238157
+ },
+ {
+  "pair": "cosmic ray / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.7417465731325759,
+  "p": 0.8252695788403527,
+  "nnull": 60000,
+  "null_med": -1.7043181501985918
+ },
+ {
+  "pair": "wind speed / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -2.098792416197617,
+  "p": 0.8252695788403527,
+  "nnull": 60000,
+  "null_med": -2.0718482559661893
+ },
+ {
+  "pair": "wind density / swics_avqsi",
+  "form": "ratio",
+  "obs": -1.7691972009984198,
+  "p": 0.8255695738404359,
+  "nnull": 60000,
+  "null_med": -1.7501017070785594
+ },
+ {
+  "pair": "spot_asym / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.7573733719964078,
+  "p": 0.826052899118348,
+  "nnull": 60000,
+  "null_med": -1.7327879236760124
+ },
+ {
+  "pair": "proton >10MeV / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.8164859227702308,
+  "p": 0.8273028782853619,
+  "nnull": 60000,
+  "null_med": -1.7856946260267998
+ },
+ {
+  "pair": "wind speed / cme_rate",
+  "form": "resid-product",
+  "obs": -1.702744828612258,
+  "p": 0.8294361760637323,
+  "nnull": 60000,
+  "null_med": -1.6872569579981216
+ },
+ {
+  "pair": "wind density / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.7673159912865284,
+  "p": 0.8327194546757554,
+  "nnull": 60000,
+  "null_med": -1.747616462300936
+ },
+ {
+  "pair": "wind density / cme_rate",
+  "form": "log-ratio",
+  "obs": -2.6544718853770073,
+  "p": 0.8332027799536674,
+  "nnull": 60000,
+  "null_med": -2.6091963140348104
+ },
+ {
+  "pair": "Lyman-alpha / wso_meanfield",
+  "form": "log-ratio",
+  "obs": -2.010330224087294,
+  "p": 0.833669438842686,
+  "nnull": 60000,
+  "null_med": -2.0047695835033164
+ },
+ {
+  "pair": "IMF |B| / swics_fetoo",
+  "form": "ratio",
+  "obs": -1.7470186450977434,
+  "p": 0.8338527691205146,
+  "nnull": 60000,
+  "null_med": -1.7175135485937871
+ },
+ {
+  "pair": "cosmic ray / wind density",
+  "form": "log-ratio",
+  "obs": -2.161203939449926,
+  "p": 0.8346860885651906,
+  "nnull": 60000,
+  "null_med": -2.15704520891083
+ },
+ {
+  "pair": "MgII / wind density",
+  "form": "resid-product",
+  "obs": -1.756812706231352,
+  "p": 0.8347194213429776,
+  "nnull": 60000,
+  "null_med": -1.741386330963241
+ },
+ {
+  "pair": "proton >10MeV / cme_rate",
+  "form": "log-ratio",
+  "obs": -2.0155673532523513,
+  "p": 0.8347360877318711,
+  "nnull": 60000,
+  "null_med": -1.9860586179239275
+ },
+ {
+  "pair": "MgII / IMF |B|",
+  "form": "resid-product",
+  "obs": -1.7549726248024131,
+  "p": 0.8356527391210147,
+  "nnull": 60000,
+  "null_med": -1.7389451004417644
+ },
+ {
+  "pair": "TSI / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.8216414354600676,
+  "p": 0.836402726621223,
+  "nnull": 60000,
+  "null_med": -1.788522512476618
+ },
+ {
+  "pair": "proton >10MeV / cme_speed",
+  "form": "log-ratio",
+  "obs": -1.6285197425740332,
+  "p": 0.8369360510658156,
+  "nnull": 60000,
+  "null_med": -1.6105079010496017
+ },
+ {
+  "pair": "Lyman-alpha / cme_speed",
+  "form": "resid-product",
+  "obs": -1.763674144355018,
+  "p": 0.8386026899551674,
+  "nnull": 60000,
+  "null_med": -1.7432633238770903
+ },
+ {
+  "pair": "wind speed / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.6978874945032865,
+  "p": 0.8401193313444776,
+  "nnull": 60000,
+  "null_med": -1.6742407620519602
+ },
+ {
+  "pair": "MgII / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -1.9557826989358964,
+  "p": 0.8406193230112832,
+  "nnull": 60000,
+  "null_med": -1.940509788066517
+ },
+ {
+  "pair": "spot_area / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -1.7258903814426496,
+  "p": 0.8406193230112832,
+  "nnull": 60000,
+  "null_med": -1.7128434478789796
+ },
+ {
+  "pair": "proton temp / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.743354448686526,
+  "p": 0.842319294678422,
+  "nnull": 60000,
+  "null_med": -1.7134864196410753
+ },
+ {
+  "pair": "cosmic ray / spot_asym",
+  "form": "log-ratio",
+  "obs": -2.170712808825696,
+  "p": 0.8426359560673988,
+  "nnull": 60000,
+  "null_med": -2.1619712014955224
+ },
+ {
+  "pair": "proton temp / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -2.047130109347548,
+  "p": 0.8428692855119081,
+  "nnull": 60000,
+  "null_med": -2.0356772280504396
+ },
+ {
+  "pair": "sunspot / IMF |B|",
+  "form": "ratio",
+  "obs": -1.7292587768167045,
+  "p": 0.8429026182896951,
+  "nnull": 60000,
+  "null_med": -1.7146721386256676
+ },
+ {
+  "pair": "spot_area / swics_avqsi",
+  "form": "ratio",
+  "obs": -1.7658874711838088,
+  "p": 0.8435859402343294,
+  "nnull": 60000,
+  "null_med": -1.7503805772145238
+ },
+ {
+  "pair": "MgII / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.7512756455594614,
+  "p": 0.8451692471792137,
+  "nnull": 60000,
+  "null_med": -1.7246490896969031
+ },
+ {
+  "pair": "IMF |B| / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -2.040509165877102,
+  "p": 0.8455859069015517,
+  "nnull": 60000,
+  "null_med": -2.0261881361777143
+ },
+ {
+  "pair": "IMF |B| / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.6999602924087598,
+  "p": 0.84723587940201,
+  "nnull": 60000,
+  "null_med": -1.6765201894549018
+ },
+ {
+  "pair": "proton >10MeV / cak_k3",
+  "form": "resid-product",
+  "obs": -1.8800398846133362,
+  "p": 0.8474858752354127,
+  "nnull": 60000,
+  "null_med": -1.8501176327675732
+ },
+ {
+  "pair": "cosmic ray / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.7040048200310915,
+  "p": 0.8500191663472275,
+  "nnull": 60000,
+  "null_med": -1.689444516088068
+ },
+ {
+  "pair": "F10.7 / cak_k3",
+  "form": "resid-product",
+  "obs": -1.8197297002525399,
+  "p": 0.8520024666255562,
+  "nnull": 60000,
+  "null_med": -1.774099066518178
+ },
+ {
+  "pair": "IMF |B| / cme_rate",
+  "form": "resid-product",
+  "obs": -1.7041912162520918,
+  "p": 0.8521024649589174,
+  "nnull": 60000,
+  "null_med": -1.6840462448844502
+ },
+ {
+  "pair": "swics_avqfe / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.7300297198736099,
+  "p": 0.8524524591256812,
+  "nnull": 60000,
+  "null_med": -1.6907990352757625
+ },
+ {
+  "pair": "F10.7 / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -1.6913295504200323,
+  "p": 0.8529691171813804,
+  "nnull": 60000,
+  "null_med": -1.663994998141253
+ },
+ {
+  "pair": "wind density / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.7118324291346372,
+  "p": 0.853119114681422,
+  "nnull": 60000,
+  "null_med": -1.6891764955592081
+ },
+ {
+  "pair": "proton temp / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.791768604155744,
+  "p": 0.8532857785703571,
+  "nnull": 60000,
+  "null_med": -1.7572362784268636
+ },
+ {
+  "pair": "X-ray bg / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.9115060701195472,
+  "p": 0.854052432459459,
+  "nnull": 60000,
+  "null_med": -1.883400445610142
+ },
+ {
+  "pair": "sunspot / wind density",
+  "form": "resid-product",
+  "obs": -1.7478934873635237,
+  "p": 0.8542024299595007,
+  "nnull": 60000,
+  "null_med": -1.7335429158862072
+ },
+ {
+  "pair": "F10.7 / cme_rate",
+  "form": "resid-product",
+  "obs": -1.8450304847446735,
+  "p": 0.8551190813486442,
+  "nnull": 60000,
+  "null_med": -1.822416739770845
+ },
+ {
+  "pair": "proton temp / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.7270762679540874,
+  "p": 0.8555024082931951,
+  "nnull": 60000,
+  "null_med": -1.695950453079154
+ },
+ {
+  "pair": "spot_area / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.8508344830836707,
+  "p": 0.8566857219046349,
+  "nnull": 60000,
+  "null_med": -1.8222630378310678
+ },
+ {
+  "pair": "cme_rate / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -2.7137715223853016,
+  "p": 0.8570857152380794,
+  "nnull": 60000,
+  "null_med": -2.6441975698235263
+ },
+ {
+  "pair": "proton >10MeV / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.8424929804055261,
+  "p": 0.8578523691271812,
+  "nnull": 60000,
+  "null_med": -1.8036553868915657
+ },
+ {
+  "pair": "F10.7 / proton temp",
+  "form": "resid-product",
+  "obs": -1.9883321805948144,
+  "p": 0.8581856969050515,
+  "nnull": 60000,
+  "null_med": -1.9664484517670415
+ },
+ {
+  "pair": "F10.7 / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -2.060763436994933,
+  "p": 0.8607023216279729,
+  "nnull": 60000,
+  "null_med": -2.040794991373743
+ },
+ {
+  "pair": "X-ray bg / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.924641733696026,
+  "p": 0.8642189296845053,
+  "nnull": 60000,
+  "null_med": -1.8807860681295843
+ },
+ {
+  "pair": "swics_o7to6 / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.7165367993861378,
+  "p": 0.864402259962334,
+  "nnull": 60000,
+  "null_med": -1.690905358904079
+ },
+ {
+  "pair": "MgII / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.790958219744136,
+  "p": 0.86495225079582,
+  "nnull": 60000,
+  "null_med": -1.741994545029467
+ },
+ {
+  "pair": "F10.7 / IMF |B|",
+  "form": "log-ratio",
+  "obs": -2.0170427028864713,
+  "p": 0.8650689155180747,
+  "nnull": 60000,
+  "null_med": -2.003956873958288
+ },
+ {
+  "pair": "F10.7 / wso_meanfield",
+  "form": "resid-product",
+  "obs": -1.8831161672327588,
+  "p": 0.8652189130181164,
+  "nnull": 60000,
+  "null_med": -1.823360743331722
+ },
+ {
+  "pair": "spot_asym / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -2.1700522053434854,
+  "p": 0.8665522241295979,
+  "nnull": 60000,
+  "null_med": -2.1587696501786153
+ },
+ {
+  "pair": "F10.7 / proton temp",
+  "form": "log-ratio",
+  "obs": -1.6203430391199451,
+  "p": 0.8669355510741488,
+  "nnull": 60000,
+  "null_med": -1.6047914529477674
+ },
+ {
+  "pair": "proton temp / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.7658377874163078,
+  "p": 0.8677522041299311,
+  "nnull": 60000,
+  "null_med": -1.731711756105501
+ },
+ {
+  "pair": "spot_asym / cak_k3",
+  "form": "resid-product",
+  "obs": -1.7235543563915758,
+  "p": 0.8681021982966951,
+  "nnull": 60000,
+  "null_med": -1.697420278469379
+ },
+ {
+  "pair": "swics_avqsi / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.7087083070865252,
+  "p": 0.87035216079732,
+  "nnull": 60000,
+  "null_med": -1.6821493219883912
+ },
+ {
+  "pair": "MgII / spot_asym",
+  "form": "log-ratio",
+  "obs": -2.1965537352007907,
+  "p": 0.8709354844085931,
+  "nnull": 60000,
+  "null_med": -2.1937703569548135
+ },
+ {
+  "pair": "spot_asym / cme_rate",
+  "form": "ratio",
+  "obs": -1.6975316455766967,
+  "p": 0.8717521374643756,
+  "nnull": 60000,
+  "null_med": -1.6691816901110528
+ },
+ {
+  "pair": "X-ray bg / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.9147518909448635,
+  "p": 0.8725021249645839,
+  "nnull": 60000,
+  "null_med": -1.886340348934759
+ },
+ {
+  "pair": "spot_asym / cme_speed",
+  "form": "ratio",
+  "obs": -1.6681869983374038,
+  "p": 0.8743520941317645,
+  "nnull": 60000,
+  "null_med": -1.6417365308605838
+ },
+ {
+  "pair": "MgII / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.642582527201805,
+  "p": 0.8756187396876719,
+  "nnull": 60000,
+  "null_med": -1.6288506019283366
+ },
+ {
+  "pair": "cosmic ray / cme_rate",
+  "form": "ratio",
+  "obs": -1.6537610921086374,
+  "p": 0.8759187346877552,
+  "nnull": 60000,
+  "null_med": -1.6356547848571927
+ },
+ {
+  "pair": "F10.7 / wind speed",
+  "form": "log-ratio",
+  "obs": -2.0971705961100437,
+  "p": 0.8762520624656256,
+  "nnull": 60000,
+  "null_med": -2.073650502952928
+ },
+ {
+  "pair": "alpha/proton / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -1.8877041533539352,
+  "p": 0.8776020399660006,
+  "nnull": 60000,
+  "null_med": -1.8712755450196994
+ },
+ {
+  "pair": "wso_meanfield / cme_rate",
+  "form": "resid-product",
+  "obs": -1.759616611038407,
+  "p": 0.8782020299661673,
+  "nnull": 60000,
+  "null_med": -1.7256908416991712
+ },
+ {
+  "pair": "wind speed / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.7033860571540251,
+  "p": 0.878418693021783,
+  "nnull": 60000,
+  "null_med": -1.6769880058802284
+ },
+ {
+  "pair": "wind speed / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -2.214802478880497,
+  "p": 0.8788186863552274,
+  "nnull": 60000,
+  "null_med": -2.1657142134307663
+ },
+ {
+  "pair": "MgII / cak_k3",
+  "form": "log-ratio",
+  "obs": -1.8842807509107824,
+  "p": 0.879768670522158,
+  "nnull": 60000,
+  "null_med": -1.8649907022791372
+ },
+ {
+  "pair": "proton temp / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.738642361516431,
+  "p": 0.8798853352444126,
+  "nnull": 60000,
+  "null_med": -1.7051380648562056
+ },
+ {
+  "pair": "X-ray bg / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.9556480922707513,
+  "p": 0.880735321077982,
+  "nnull": 60000,
+  "null_med": -1.9191502101931563
+ },
+ {
+  "pair": "spot_area / cak_emdx",
+  "form": "resid-product",
+  "obs": -1.818089178686034,
+  "p": 0.8846352560790653,
+  "nnull": 60000,
+  "null_med": -1.776744433133953
+ },
+ {
+  "pair": "proton temp / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.819739322531186,
+  "p": 0.8854852419126348,
+  "nnull": 60000,
+  "null_med": -1.785765842169857
+ },
+ {
+  "pair": "wind density / X-ray bg",
+  "form": "ratio",
+  "obs": -2.008313149537248,
+  "p": 0.8875018749687505,
+  "nnull": 60000,
+  "null_med": -1.9951291949893577
+ },
+ {
+  "pair": "cme_speed / swics_fetoo",
+  "form": "ratio",
+  "obs": -1.8144245038846534,
+  "p": 0.8889351844135931,
+  "nnull": 60000,
+  "null_med": -1.766728553667487
+ },
+ {
+  "pair": "sunspot / cak_k3",
+  "form": "resid-product",
+  "obs": -1.7578931707820031,
+  "p": 0.8904351594140097,
+  "nnull": 60000,
+  "null_med": -1.7233814395805744
+ },
+ {
+  "pair": "cak_emdx / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -1.7260269284531105,
+  "p": 0.8909851502474959,
+  "nnull": 60000,
+  "null_med": -1.6938107525142938
+ },
+ {
+  "pair": "proton >10MeV / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.8345320263175042,
+  "p": 0.8917184713588107,
+  "nnull": 60000,
+  "null_med": -1.7901278322354564
+ },
+ {
+  "pair": "F10.7 / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.7623974699856229,
+  "p": 0.8931184480258663,
+  "nnull": 60000,
+  "null_med": -1.7308282417993441
+ },
+ {
+  "pair": "spot_asym / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -1.8955498768209904,
+  "p": 0.8932184463592273,
+  "nnull": 60000,
+  "null_med": -1.880856444981345
+ },
+ {
+  "pair": "proton temp / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -1.8441229071306608,
+  "p": 0.8953017449709172,
+  "nnull": 60000,
+  "null_med": -1.7961765769914297
+ },
+ {
+  "pair": "wind speed / Lyman-alpha",
+  "form": "log-ratio",
+  "obs": -2.1767049564683245,
+  "p": 0.8953684105264912,
+  "nnull": 60000,
+  "null_med": -2.143113602960527
+ },
+ {
+  "pair": "TSI / alpha/proton",
+  "form": "ratio",
+  "obs": -1.6877859452775916,
+  "p": 0.895618406359894,
+  "nnull": 60000,
+  "null_med": -1.6861927194224022
+ },
+ {
+  "pair": "sunspot / cosmic ray",
+  "form": "resid-product",
+  "obs": -1.780004051680452,
+  "p": 0.8961683971933802,
+  "nnull": 60000,
+  "null_med": -1.7509737210670528
+ },
+ {
+  "pair": "cme_speed / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.720221484549557,
+  "p": 0.8966350560823986,
+  "nnull": 60000,
+  "null_med": -1.6779188299850731
+ },
+ {
+  "pair": "wind density / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.7301502110975167,
+  "p": 0.8968850519158014,
+  "nnull": 60000,
+  "null_med": -1.700526740777886
+ },
+ {
+  "pair": "swics_o7to6 / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.717871584068362,
+  "p": 0.8970850485825236,
+  "nnull": 60000,
+  "null_med": -1.685719752799746
+ },
+ {
+  "pair": "swics_c6to5 / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.6920959386675476,
+  "p": 0.8980683655272412,
+  "nnull": 60000,
+  "null_med": -1.6627722388282797
+ },
+ {
+  "pair": "MgII / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.752909019864188,
+  "p": 0.8984350260828986,
+  "nnull": 60000,
+  "null_med": -1.7209041756742611
+ },
+ {
+  "pair": "MgII / wso_meanfield",
+  "form": "resid-product",
+  "obs": -1.802615069356451,
+  "p": 0.8985516908051533,
+  "nnull": 60000,
+  "null_med": -1.7473118134751693
+ },
+ {
+  "pair": "proton >10MeV / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.8051051323548677,
+  "p": 0.8989516841385977,
+  "nnull": 60000,
+  "null_med": -1.7759162181956294
+ },
+ {
+  "pair": "cosmic ray / wind density",
+  "form": "resid-product",
+  "obs": -1.728564946234175,
+  "p": 0.8998516691388477,
+  "nnull": 60000,
+  "null_med": -1.7113907379166236
+ },
+ {
+  "pair": "TSI / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.6336680559491155,
+  "p": 0.9000016666388894,
+  "nnull": 60000,
+  "null_med": -1.631229535550141
+ },
+ {
+  "pair": "F10.7 / proton >10MeV",
+  "form": "ratio",
+  "obs": -1.7872796509032178,
+  "p": 0.90246829219513,
+  "nnull": 60000,
+  "null_med": -1.6995107536569394
+ },
+ {
+  "pair": "swics_c6to5 / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.7534588636157382,
+  "p": 0.9025349577507041,
+  "nnull": 60000,
+  "null_med": -1.7085996617208536
+ },
+ {
+  "pair": "cosmic ray / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.7316772164192935,
+  "p": 0.9027016216396393,
+  "nnull": 60000,
+  "null_med": -1.7020221736645849
+ },
+ {
+  "pair": "spot_area / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.6675195264488316,
+  "p": 0.9031016149730838,
+  "nnull": 60000,
+  "null_med": -1.623631828016799
+ },
+ {
+  "pair": "proton temp / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.7635916045078641,
+  "p": 0.9032516124731255,
+  "nnull": 60000,
+  "null_med": -1.7224537795442219
+ },
+ {
+  "pair": "TSI / swics_avqo",
+  "form": "log-ratio",
+  "obs": -1.7929488944393333,
+  "p": 0.9043015949734171,
+  "nnull": 60000,
+  "null_med": -1.779049531158619
+ },
+ {
+  "pair": "TSI / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.8361277413792043,
+  "p": 0.9045182580290329,
+  "nnull": 60000,
+  "null_med": -1.769166859561956
+ },
+ {
+  "pair": "TSI / wso_meanfield",
+  "form": "log-ratio",
+  "obs": -2.031511733270621,
+  "p": 0.9050682488625189,
+  "nnull": 60000,
+  "null_med": -2.0312803838043387
+ },
+ {
+  "pair": "wind speed / swics_fetoo",
+  "form": "ratio",
+  "obs": -2.029680837470296,
+  "p": 0.9051182480291995,
+  "nnull": 60000,
+  "null_med": -1.9718352014243958
+ },
+ {
+  "pair": "X-ray bg / swics_avqsi",
+  "form": "log-ratio",
+  "obs": -1.7642586442763477,
+  "p": 0.9052682455292412,
+  "nnull": 60000,
+  "null_med": -1.7307321293061155
+ },
+ {
+  "pair": "wind density / cak_k2vk3",
+  "form": "log-ratio",
+  "obs": -2.3457278371932326,
+  "p": 0.9060848985850236,
+  "nnull": 60000,
+  "null_med": -2.331151712402143
+ },
+ {
+  "pair": "proton >10MeV / cme_speed",
+  "form": "ratio",
+  "obs": -1.649374315636353,
+  "p": 0.907384876918718,
+  "nnull": 60000,
+  "null_med": -1.596199987997873
+ },
+ {
+  "pair": "TSI / cme_rate",
+  "form": "resid-product",
+  "obs": -1.7965456195173484,
+  "p": 0.9087181880301995,
+  "nnull": 60000,
+  "null_med": -1.759382303537198
+ },
+ {
+  "pair": "sunspot / wind density",
+  "form": "ratio",
+  "obs": -1.729599909313612,
+  "p": 0.9102514958084031,
+  "nnull": 60000,
+  "null_med": -1.7111886363799795
+ },
+ {
+  "pair": "cak_k2vk3 / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.72331797855116,
+  "p": 0.9103348277528708,
+  "nnull": 60000,
+  "null_med": -1.6878438383803167
+ },
+ {
+  "pair": "cosmic ray / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -2.073689718288238,
+  "p": 0.9103514941417643,
+  "nnull": 60000,
+  "null_med": -2.0613757324955357
+ },
+ {
+  "pair": "IMF |B| / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.6858523786047237,
+  "p": 0.910984816919718,
+  "nnull": 60000,
+  "null_med": -1.6649841689209302
+ },
+ {
+  "pair": "cme_rate / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.7092755212654454,
+  "p": 0.910984816919718,
+  "nnull": 60000,
+  "null_med": -1.6785562071541507
+ },
+ {
+  "pair": "alpha/proton / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.71718704886594,
+  "p": 0.9128347860868985,
+  "nnull": 60000,
+  "null_med": -1.6841243976010623
+ },
+ {
+  "pair": "sunspot / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.8726889245181697,
+  "p": 0.9129681171980467,
+  "nnull": 60000,
+  "null_med": -1.8377462143610206
+ },
+ {
+  "pair": "X-ray bg / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -1.7630384234504617,
+  "p": 0.9142680955317412,
+  "nnull": 60000,
+  "null_med": -1.729911636515768
+ },
+ {
+  "pair": "sunspot / spot_area",
+  "form": "resid-product",
+  "obs": -1.8502516645662794,
+  "p": 0.9153680771987134,
+  "nnull": 60000,
+  "null_med": -1.8290147403189851
+ },
+ {
+  "pair": "MgII / spot_asym",
+  "form": "resid-product",
+  "obs": -1.7193996577484203,
+  "p": 0.9158680688655189,
+  "nnull": 60000,
+  "null_med": -1.6966618887480207
+ },
+ {
+  "pair": "F10.7 / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.7391694015906056,
+  "p": 0.9161347310878152,
+  "nnull": 60000,
+  "null_med": -1.700128362089963
+ },
+ {
+  "pair": "MgII / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.859738747874744,
+  "p": 0.9175013749770837,
+  "nnull": 60000,
+  "null_med": -1.8259009526587324
+ },
+ {
+  "pair": "IMF |B| / wind speed",
+  "form": "ratio",
+  "obs": -1.7191028049800252,
+  "p": 0.9177847035882736,
+  "nnull": 60000,
+  "null_med": -1.6971872667956496
+ },
+ {
+  "pair": "X-ray bg / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.9358808321000642,
+  "p": 0.9189846835886069,
+  "nnull": 60000,
+  "null_med": -1.8992574468187624
+ },
+ {
+  "pair": "IMF |B| / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.733780348007454,
+  "p": 0.9190680155330745,
+  "nnull": 60000,
+  "null_med": -1.694446338902982
+ },
+ {
+  "pair": "X-ray bg / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.9342384723819213,
+  "p": 0.9191680138664355,
+  "nnull": 60000,
+  "null_med": -1.9061097474428135
+ },
+ {
+  "pair": "F10.7 / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.841421924886843,
+  "p": 0.9212513124781254,
+  "nnull": 60000,
+  "null_med": -1.777034918556604
+ },
+ {
+  "pair": "wind speed / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.8029754792081385,
+  "p": 0.9217513041449309,
+  "nnull": 60000,
+  "null_med": -1.7832864536756454
+ },
+ {
+  "pair": "cme_rate / swics_avqo",
+  "form": "ratio",
+  "obs": -2.647453575316056,
+  "p": 0.9244345927567874,
+  "nnull": 60000,
+  "null_med": -2.6193788744760615
+ },
+ {
+  "pair": "X-ray bg / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.9791830093244294,
+  "p": 0.9245679238679355,
+  "nnull": 60000,
+  "null_med": -1.9429901850355062
+ },
+ {
+  "pair": "IMF |B| / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.7825040296278967,
+  "p": 0.9262512291461809,
+  "nnull": 60000,
+  "null_med": -1.7514841029965809
+ },
+ {
+  "pair": "swics_avqfe / swics_avqo",
+  "form": "ratio",
+  "obs": -1.6561083048677387,
+  "p": 0.926351227479542,
+  "nnull": 60000,
+  "null_med": -1.626759414907288
+ },
+ {
+  "pair": "MgII / IMF |B|",
+  "form": "log-ratio",
+  "obs": -2.041017812480957,
+  "p": 0.9270345494241763,
+  "nnull": 60000,
+  "null_med": -2.0341592201442595
+ },
+ {
+  "pair": "sunspot / cak_emdx",
+  "form": "resid-product",
+  "obs": -1.7540640235843854,
+  "p": 0.9279512008133198,
+  "nnull": 60000,
+  "null_med": -1.715661355556513
+ },
+ {
+  "pair": "F10.7 / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.9098134136664473,
+  "p": 0.928151197480042,
+  "nnull": 60000,
+  "null_med": -1.8764873143240313
+ },
+ {
+  "pair": "spot_asym / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -1.5930550394157101,
+  "p": 0.928217863035616,
+  "nnull": 60000,
+  "null_med": -1.5459462140723186
+ },
+ {
+  "pair": "cosmic ray / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.7823358607844129,
+  "p": 0.9306178230362827,
+  "nnull": 60000,
+  "null_med": -1.720070666488758
+ },
+ {
+  "pair": "F10.7 / wind speed",
+  "form": "ratio",
+  "obs": -1.9008698174555594,
+  "p": 0.9306344894251762,
+  "nnull": 60000,
+  "null_med": -1.8596031393100154
+ },
+ {
+  "pair": "proton >10MeV / spot_asym",
+  "form": "log-ratio",
+  "obs": -2.049034652416114,
+  "p": 0.9310678155364077,
+  "nnull": 60000,
+  "null_med": -2.0297368700077354
+ },
+ {
+  "pair": "X-ray bg / wso_meanfield",
+  "form": "resid-product",
+  "obs": -1.968194891256405,
+  "p": 0.9322177963700605,
+  "nnull": 60000,
+  "null_med": -1.9070978466547328
+ },
+ {
+  "pair": "F10.7 / cosmic ray",
+  "form": "ratio",
+  "obs": -1.784115424471193,
+  "p": 0.932617789703505,
+  "nnull": 60000,
+  "null_med": -1.764211776541752
+ },
+ {
+  "pair": "alpha/proton / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.8704869172666396,
+  "p": 0.932617789703505,
+  "nnull": 60000,
+  "null_med": -1.828921234775886
+ },
+ {
+  "pair": "wind density / cak_delk1",
+  "form": "ratio",
+  "obs": -1.758151650140428,
+  "p": 0.9328011199813336,
+  "nnull": 60000,
+  "null_med": -1.7259336410246409
+ },
+ {
+  "pair": "swics_o7to6 / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.7512184714583228,
+  "p": 0.9333677772037132,
+  "nnull": 60000,
+  "null_med": -1.696306439838525
+ },
+ {
+  "pair": "sunspot / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.7654173012080099,
+  "p": 0.9348844185930234,
+  "nnull": 60000,
+  "null_med": -1.741007785149168
+ },
+ {
+  "pair": "sunspot / cme_rate",
+  "form": "resid-product",
+  "obs": -1.7588549167390313,
+  "p": 0.9370177163713939,
+  "nnull": 60000,
+  "null_med": -1.7219028481864265
+ },
+ {
+  "pair": "proton >10MeV / cme_speed",
+  "form": "resid-product",
+  "obs": -1.8036195301060731,
+  "p": 0.9374510424826253,
+  "nnull": 60000,
+  "null_med": -1.7759862652436729
+ },
+ {
+  "pair": "proton temp / wso_meanfield",
+  "form": "resid-product",
+  "obs": -1.9558225345243494,
+  "p": 0.9379010349827502,
+  "nnull": 60000,
+  "null_med": -1.9333268337936151
+ },
+ {
+  "pair": "TSI / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.903134413402651,
+  "p": 0.9383510274828752,
+  "nnull": 60000,
+  "null_med": -1.868199602664237
+ },
+ {
+  "pair": "proton >10MeV / swics_avqsi",
+  "form": "ratio",
+  "obs": -1.6076486638015066,
+  "p": 0.9386676888718521,
+  "nnull": 60000,
+  "null_med": -1.563949007555259
+ },
+ {
+  "pair": "wind speed / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.9018266612349537,
+  "p": 0.9395510074832086,
+  "nnull": 60000,
+  "null_med": -1.8562418422894833
+ },
+ {
+  "pair": "wso_meanfield / cme_speed",
+  "form": "log-ratio",
+  "obs": -1.7378311404362141,
+  "p": 0.9403509941500975,
+  "nnull": 60000,
+  "null_med": -1.7192958595398116
+ },
+ {
+  "pair": "wind density / spot_asym",
+  "form": "log-ratio",
+  "obs": -1.540125255464148,
+  "p": 0.940367660538991,
+  "nnull": 60000,
+  "null_med": -1.5164804468608315
+ },
+ {
+  "pair": "X-ray bg / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.9579425745283263,
+  "p": 0.9415843069282178,
+  "nnull": 60000,
+  "null_med": -1.9140020213766331
+ },
+ {
+  "pair": "proton temp / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.708877064253745,
+  "p": 0.9417509708171531,
+  "nnull": 60000,
+  "null_med": -1.6718303431293786
+ },
+ {
+  "pair": "Lyman-alpha / wso_meanfield",
+  "form": "resid-product",
+  "obs": -1.7953908600151114,
+  "p": 0.9418009699838336,
+  "nnull": 60000,
+  "null_med": -1.7416495779105885
+ },
+ {
+  "pair": "cak_k2vk3 / cak_k3",
+  "form": "resid-product",
+  "obs": -1.7319470152983971,
+  "p": 0.9424342927617873,
+  "nnull": 60000,
+  "null_med": -1.6927316544405875
+ },
+ {
+  "pair": "X-ray bg / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -2.025833429530661,
+  "p": 0.9425509574840419,
+  "nnull": 60000,
+  "null_med": -1.9678644783476238
+ },
+ {
+  "pair": "TSI / proton temp",
+  "form": "resid-product",
+  "obs": -1.971913883100791,
+  "p": 0.9428009533174447,
+  "nnull": 60000,
+  "null_med": -1.948528407967875
+ },
+ {
+  "pair": "cme_rate / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.7214550523430272,
+  "p": 0.9436342727621206,
+  "nnull": 60000,
+  "null_med": -1.681957182092755
+ },
+ {
+  "pair": "sunspot / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.7837218257366483,
+  "p": 0.9438009366510558,
+  "nnull": 60000,
+  "null_med": -1.7393995005162115
+ },
+ {
+  "pair": "cosmic ray / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -1.7364834593610787,
+  "p": 0.9443175947067549,
+  "nnull": 60000,
+  "null_med": -1.698968882002751
+ },
+ {
+  "pair": "wind density / cme_speed",
+  "form": "log-ratio",
+  "obs": -2.394712289764013,
+  "p": 0.9449175847069216,
+  "nnull": 60000,
+  "null_med": -2.332649495892791
+ },
+ {
+  "pair": "X-ray bg / cme_speed",
+  "form": "resid-product",
+  "obs": -1.9089269386852379,
+  "p": 0.9456842385960234,
+  "nnull": 60000,
+  "null_med": -1.88425023958999
+ },
+ {
+  "pair": "cosmic ray / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.7655404843161977,
+  "p": 0.9459509008183197,
+  "nnull": 60000,
+  "null_med": -1.7202700519337553
+ },
+ {
+  "pair": "MgII / cosmic ray",
+  "form": "resid-product",
+  "obs": -1.7593509572752744,
+  "p": 0.948050865818903,
+  "nnull": 60000,
+  "null_med": -1.7117101801455443
+ },
+ {
+  "pair": "IMF |B| / spot_area",
+  "form": "log-ratio",
+  "obs": -1.6472124254918339,
+  "p": 0.9481341977633706,
+  "nnull": 60000,
+  "null_med": -1.6186773372001175
+ },
+ {
+  "pair": "X-ray bg / cak_emdx",
+  "form": "resid-product",
+  "obs": -1.9005144087225776,
+  "p": 0.9482008633189447,
+  "nnull": 60000,
+  "null_med": -1.8476288739013698
+ },
+ {
+  "pair": "proton temp / wind density",
+  "form": "ratio",
+  "obs": -1.7946474236782002,
+  "p": 0.9489175180413659,
+  "nnull": 60000,
+  "null_med": -1.7698923853941941
+ },
+ {
+  "pair": "swics_fetoo / swics_avqo",
+  "form": "ratio",
+  "obs": -1.7325955117313252,
+  "p": 0.949334177763704,
+  "nnull": 60000,
+  "null_med": -1.7075654498100206
+ },
+ {
+  "pair": "cme_rate / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -2.7162580538116354,
+  "p": 0.9496841719304678,
+  "nnull": 60000,
+  "null_med": -2.6258408364167494
+ },
+ {
+  "pair": "proton temp / spot_area",
+  "form": "resid-product",
+  "obs": -2.009367731573949,
+  "p": 0.9498675022082965,
+  "nnull": 60000,
+  "null_med": -1.9880957055607114
+ },
+ {
+  "pair": "TSI / swics_o7to6",
+  "form": "ratio",
+  "obs": -1.723440677950358,
+  "p": 0.9501341644305928,
+  "nnull": 60000,
+  "null_med": -1.720654555041107
+ },
+ {
+  "pair": "TSI / MgII",
+  "form": "resid-product",
+  "obs": -1.844748964222166,
+  "p": 0.9502508291528474,
+  "nnull": 60000,
+  "null_med": -1.7673436631148
+ },
+ {
+  "pair": "TSI / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.7849082710690323,
+  "p": 0.9523841269312178,
+  "nnull": 60000,
+  "null_med": -1.7572319982141134
+ },
+ {
+  "pair": "cme_speed / swics_avqo",
+  "form": "ratio",
+  "obs": -1.7969144302503501,
+  "p": 0.9533174447092548,
+  "nnull": 60000,
+  "null_med": -1.7793458183537192
+ },
+ {
+  "pair": "MgII / cak_k3",
+  "form": "resid-product",
+  "obs": -1.7688933565574585,
+  "p": 0.9546174230429493,
+  "nnull": 60000,
+  "null_med": -1.7214284060390168
+ },
+ {
+  "pair": "cme_speed / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.7395086008636065,
+  "p": 0.9552174130431159,
+  "nnull": 60000,
+  "null_med": -1.692271687913992
+ },
+ {
+  "pair": "alpha/proton / cme_rate",
+  "form": "resid-product",
+  "obs": -1.7322123344719218,
+  "p": 0.955250745820903,
+  "nnull": 60000,
+  "null_med": -1.697012668223925
+ },
+ {
+  "pair": "wind density / cak_k3",
+  "form": "ratio",
+  "obs": -1.7574763180954145,
+  "p": 0.9555174080431993,
+  "nnull": 60000,
+  "null_med": -1.7225294108966804
+ },
+ {
+  "pair": "TSI / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.9834986448565521,
+  "p": 0.9563507274878752,
+  "nnull": 60000,
+  "null_med": -1.9111394082669089
+ },
+ {
+  "pair": "X-ray bg / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.697729410536176,
+  "p": 0.9573507108214863,
+  "nnull": 60000,
+  "null_med": -1.6708635253518498
+ },
+ {
+  "pair": "proton temp / cme_speed",
+  "form": "resid-product",
+  "obs": -1.7043538296468952,
+  "p": 0.9582173630439492,
+  "nnull": 60000,
+  "null_med": -1.6750591631694132
+ },
+ {
+  "pair": "TSI / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.8133850704267498,
+  "p": 0.9590506824886252,
+  "nnull": 60000,
+  "null_med": -1.7707381167174914
+ },
+ {
+  "pair": "alpha/proton / swics_fetoo",
+  "form": "ratio",
+  "obs": -1.893115312533146,
+  "p": 0.9603839936001066,
+  "nnull": 60000,
+  "null_med": -1.8258798043387925
+ },
+ {
+  "pair": "swics_avqsi / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.7388034777204338,
+  "p": 0.9612839786003566,
+  "nnull": 60000,
+  "null_med": -1.7014559339927906
+ },
+ {
+  "pair": "spot_area / cak_k2vk3",
+  "form": "resid-product",
+  "obs": -1.8097596267632763,
+  "p": 0.9615339744337594,
+  "nnull": 60000,
+  "null_med": -1.7690460648789348
+ },
+ {
+  "pair": "cme_rate / swics_avqsi",
+  "form": "ratio",
+  "obs": -2.511350754436651,
+  "p": 0.9623172947117548,
+  "nnull": 60000,
+  "null_med": -2.442789127221951
+ },
+ {
+  "pair": "proton >10MeV / swics_avqo",
+  "form": "log-ratio",
+  "obs": -1.6177985612392252,
+  "p": 0.9624672922117965,
+  "nnull": 60000,
+  "null_med": -1.5752931743135425
+ },
+ {
+  "pair": "X-ray bg / swics_avqfe",
+  "form": "resid-product",
+  "obs": -1.9531045769169986,
+  "p": 0.9626672888785187,
+  "nnull": 60000,
+  "null_med": -1.8962117315025504
+ },
+ {
+  "pair": "swics_o7to6 / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.78864341886683,
+  "p": 0.964317261378977,
+  "nnull": 60000,
+  "null_med": -1.745248620096015
+ },
+ {
+  "pair": "sunspot / MgII",
+  "form": "resid-product",
+  "obs": -1.8072217947662912,
+  "p": 0.9647005883235279,
+  "nnull": 60000,
+  "null_med": -1.7709062066304064
+ },
+ {
+  "pair": "swics_fetoo / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.7086788141393794,
+  "p": 0.9649839169347177,
+  "nnull": 60000,
+  "null_med": -1.6668270660317916
+ },
+ {
+  "pair": "sunspot / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.7240741753131426,
+  "p": 0.9651005816569724,
+  "nnull": 60000,
+  "null_med": -1.6931699782766612
+ },
+ {
+  "pair": "cme_speed / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.8228136537179203,
+  "p": 0.9655005749904169,
+  "nnull": 60000,
+  "null_med": -1.782387061432202
+ },
+ {
+  "pair": "cak_emdx / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.7323565302531063,
+  "p": 0.9656505724904585,
+  "nnull": 60000,
+  "null_med": -1.6882641034026649
+ },
+ {
+  "pair": "wind density / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.7800575745979215,
+  "p": 0.9665838902684956,
+  "nnull": 60000,
+  "null_med": -1.7424231838616564
+ },
+ {
+  "pair": "alpha/proton / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.8073076105497945,
+  "p": 0.9675172080465325,
+  "nnull": 60000,
+  "null_med": -1.779781554542536
+ },
+ {
+  "pair": "swics_avqfe / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.758779573189179,
+  "p": 0.9675172080465325,
+  "nnull": 60000,
+  "null_med": -1.7156349811285434
+ },
+ {
+  "pair": "wso_meanfield / cme_speed",
+  "form": "resid-product",
+  "obs": -1.762753919965856,
+  "p": 0.967950534157764,
+  "nnull": 60000,
+  "null_med": -1.729227883725837
+ },
+ {
+  "pair": "proton temp / swics_hetoo",
+  "form": "log-ratio",
+  "obs": -1.8784451109179643,
+  "p": 0.9680505324911252,
+  "nnull": 60000,
+  "null_med": -1.8107884625070239
+ },
+ {
+  "pair": "cosmic ray / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.7835884560700936,
+  "p": 0.9688338527691205,
+  "nnull": 60000,
+  "null_med": -1.7105839093291912
+ },
+ {
+  "pair": "spot_area / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.78485038461654,
+  "p": 0.9689171847135881,
+  "nnull": 60000,
+  "null_med": -1.7560462563134933
+ },
+ {
+  "pair": "swics_fetoo / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.7274324905801144,
+  "p": 0.9693671772137131,
+  "nnull": 60000,
+  "null_med": -1.6812659205515699
+ },
+ {
+  "pair": "cosmic ray / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.6965044925830992,
+  "p": 0.969750504158264,
+  "nnull": 60000,
+  "null_med": -1.6764340962026139
+ },
+ {
+  "pair": "TSI / Lyman-alpha",
+  "form": "ratio",
+  "obs": -2.172600042726521,
+  "p": 0.9699171680471992,
+  "nnull": 60000,
+  "null_med": -2.163863924067941
+ },
+ {
+  "pair": "wind density / wind speed",
+  "form": "ratio",
+  "obs": -1.754323080173019,
+  "p": 0.970167163880602,
+  "nnull": 60000,
+  "null_med": -1.7273049707576953
+ },
+ {
+  "pair": "MgII / swics_avqfe",
+  "form": "log-ratio",
+  "obs": -1.6763762712753438,
+  "p": 0.9706338227696205,
+  "nnull": 60000,
+  "null_med": -1.6566142113941713
+ },
+ {
+  "pair": "proton temp / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.7159309565292755,
+  "p": 0.9715338077698705,
+  "nnull": 60000,
+  "null_med": -1.6708983258245138
+ },
+ {
+  "pair": "swics_c6to5 / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.7295068401097549,
+  "p": 0.972483791936801,
+  "nnull": 60000,
+  "null_med": -1.6828485719169899
+ },
+ {
+  "pair": "TSI / Lyman-alpha",
+  "form": "resid-product",
+  "obs": -1.8358933112080524,
+  "p": 0.9726337894368428,
+  "nnull": 60000,
+  "null_med": -1.7579351331692354
+ },
+ {
+  "pair": "TSI / cme_rate",
+  "form": "log-ratio",
+  "obs": -2.405867907739858,
+  "p": 0.972867118881352,
+  "nnull": 60000,
+  "null_med": -2.4053103713562756
+ },
+ {
+  "pair": "cme_speed / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.7510851121346023,
+  "p": 0.9731837802703288,
+  "nnull": 60000,
+  "null_med": -1.705279488282424
+ },
+ {
+  "pair": "MgII / cme_speed",
+  "form": "resid-product",
+  "obs": -1.7858231632688555,
+  "p": 0.9736504391593473,
+  "nnull": 60000,
+  "null_med": -1.7428961775305158
+ },
+ {
+  "pair": "sunspot / cak_delk1",
+  "form": "ratio",
+  "obs": -1.8051503150579942,
+  "p": 0.9742004299928334,
+  "nnull": 60000,
+  "null_med": -1.7652923501293547
+ },
+ {
+  "pair": "proton >10MeV / spot_area",
+  "form": "resid-product",
+  "obs": -1.9234805260495556,
+  "p": 0.9742004299928334,
+  "nnull": 60000,
+  "null_med": -1.871099061913237
+ },
+ {
+  "pair": "cme_rate / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.9618098963292723,
+  "p": 0.974733754437426,
+  "nnull": 60000,
+  "null_med": -1.8322434463310135
+ },
+ {
+  "pair": "MgII / spot_area",
+  "form": "resid-product",
+  "obs": -1.8748435799889969,
+  "p": 0.9749837502708288,
+  "nnull": 60000,
+  "null_med": -1.8160897460866698
+ },
+ {
+  "pair": "swics_o7to6 / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.7318908790997192,
+  "p": 0.975567073882102,
+  "nnull": 60000,
+  "null_med": -1.6837617746350448
+ },
+ {
+  "pair": "alpha/proton / cme_speed",
+  "form": "ratio",
+  "obs": -1.746669133464816,
+  "p": 0.9768003866602223,
+  "nnull": 60000,
+  "null_med": -1.6978373365688149
+ },
+ {
+  "pair": "cosmic ray / wind speed",
+  "form": "resid-product",
+  "obs": -1.7120131869703263,
+  "p": 0.9770670488825186,
+  "nnull": 60000,
+  "null_med": -1.6845611155676752
+ },
+ {
+  "pair": "F10.7 / MgII",
+  "form": "resid-product",
+  "obs": -1.8685441887134235,
+  "p": 0.9780003666605557,
+  "nnull": 60000,
+  "null_med": -1.7899653011542143
+ },
+ {
+  "pair": "IMF |B| / wso_meanfield",
+  "form": "resid-product",
+  "obs": -1.7730742425011112,
+  "p": 0.9780503658272363,
+  "nnull": 60000,
+  "null_med": -1.7386216473286153
+ },
+ {
+  "pair": "TSI / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.8149699973087416,
+  "p": 0.9784836919384677,
+  "nnull": 60000,
+  "null_med": -1.7631033560543548
+ },
+ {
+  "pair": "IMF |B| / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.85404652629842,
+  "p": 0.9789170180496992,
+  "nnull": 60000,
+  "null_med": -1.8244702523722558
+ },
+ {
+  "pair": "F10.7 / Lyman-alpha",
+  "form": "ratio",
+  "obs": -1.805856533243157,
+  "p": 0.9792503458275695,
+  "nnull": 60000,
+  "null_med": -1.761367543951191
+ },
+ {
+  "pair": "F10.7 / X-ray bg",
+  "form": "resid-product",
+  "obs": -2.012340922035621,
+  "p": 0.9798170030499491,
+  "nnull": 60000,
+  "null_med": -1.9334493266355628
+ },
+ {
+  "pair": "spot_asym / cak_emdx",
+  "form": "resid-product",
+  "obs": -1.754998762072682,
+  "p": 0.980100331661139,
+  "nnull": 60000,
+  "null_med": -1.7014502916399186
+ },
+ {
+  "pair": "cme_rate / swics_c6to5",
+  "form": "ratio",
+  "obs": -1.691181672241,
+  "p": 0.9805336577723704,
+  "nnull": 60000,
+  "null_med": -1.6396989845056966
+ },
+ {
+  "pair": "wind speed / swics_fetoo",
+  "form": "log-ratio",
+  "obs": -2.211715623470485,
+  "p": 0.9812503124947918,
+  "nnull": 60000,
+  "null_med": -2.1358878708411653
+ },
+ {
+  "pair": "TSI / F10.7",
+  "form": "resid-product",
+  "obs": -1.9244935281565305,
+  "p": 0.9813836436059399,
+  "nnull": 60000,
+  "null_med": -1.8322963233866774
+ },
+ {
+  "pair": "cme_rate / swics_avqfe",
+  "form": "ratio",
+  "obs": -2.5106510161253466,
+  "p": 0.982000299995,
+  "nnull": 60000,
+  "null_med": -2.4290042440540223
+ },
+ {
+  "pair": "swics_avqsi / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.683568731161961,
+  "p": 0.9823836269395511,
+  "nnull": 60000,
+  "null_med": -1.6386331661230038
+ },
+ {
+  "pair": "IMF |B| / spot_asym",
+  "form": "resid-product",
+  "obs": -1.744549452346359,
+  "p": 0.9841502641622639,
+  "nnull": 60000,
+  "null_med": -1.715650228505497
+ },
+ {
+  "pair": "wso_meanfield / cak_k3",
+  "form": "log-ratio",
+  "obs": -2.053683909035848,
+  "p": 0.9842835952734121,
+  "nnull": 60000,
+  "null_med": -2.041705594358656
+ },
+ {
+  "pair": "wind density / swics_fetoo",
+  "form": "resid-product",
+  "obs": -1.7260183188614198,
+  "p": 0.9844835919401344,
+  "nnull": 60000,
+  "null_med": -1.6777294844367552
+ },
+ {
+  "pair": "TSI / IMF |B|",
+  "form": "resid-product",
+  "obs": -1.813467544791233,
+  "p": 0.9851002483291945,
+  "nnull": 60000,
+  "null_med": -1.7751733273047936
+ },
+ {
+  "pair": "MgII / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.9615863005093226,
+  "p": 0.9857002383293612,
+  "nnull": 60000,
+  "null_med": -1.8869286917078454
+ },
+ {
+  "pair": "MgII / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.7893217342745602,
+  "p": 0.985983566940551,
+  "nnull": 60000,
+  "null_med": -1.7359606547558708
+ },
+ {
+  "pair": "TSI / X-ray bg",
+  "form": "ratio",
+  "obs": -1.9590323354132282,
+  "p": 0.9860168997183381,
+  "nnull": 60000,
+  "null_med": -1.9526416520092236
+ },
+ {
+  "pair": "alpha/proton / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.7497428973489269,
+  "p": 0.9862335627739538,
+  "nnull": 60000,
+  "null_med": -1.6971611826448894
+ },
+ {
+  "pair": "F10.7 / IMF |B|",
+  "form": "ratio",
+  "obs": -1.882780451140131,
+  "p": 0.9864168930517825,
+  "nnull": 60000,
+  "null_med": -1.7332421947722207
+ },
+ {
+  "pair": "cosmic ray / X-ray bg",
+  "form": "resid-product",
+  "obs": -1.944088960901055,
+  "p": 0.9865668905518241,
+  "nnull": 60000,
+  "null_med": -1.891544259156435
+ },
+ {
+  "pair": "F10.7 / cosmic ray",
+  "form": "resid-product",
+  "obs": -1.8544335171938753,
+  "p": 0.9869168847185881,
+  "nnull": 60000,
+  "null_med": -1.7867303707468531
+ },
+ {
+  "pair": "F10.7 / cme_rate",
+  "form": "ratio",
+  "obs": -1.7858436094746117,
+  "p": 0.9870835486075232,
+  "nnull": 60000,
+  "null_med": -1.7304420124934796
+ },
+ {
+  "pair": "F10.7 / swics_avqo",
+  "form": "ratio",
+  "obs": -1.7993880456694697,
+  "p": 0.9873168780520325,
+  "nnull": 60000,
+  "null_med": -1.7320849640130038
+ },
+ {
+  "pair": "wind speed / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.8565139156305732,
+  "p": 0.9876335394410093,
+  "nnull": 60000,
+  "null_med": -1.7714756372001337
+ },
+ {
+  "pair": "Lyman-alpha / spot_asym",
+  "form": "resid-product",
+  "obs": -1.7689982319903288,
+  "p": 0.9880668655522408,
+  "nnull": 60000,
+  "null_med": -1.703731259640109
+ },
+ {
+  "pair": "F10.7 / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.8567829729593266,
+  "p": 0.988266862218963,
+  "nnull": 60000,
+  "null_med": -1.7997925969410011
+ },
+ {
+  "pair": "wind density / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.758896395471498,
+  "p": 0.9885668572190464,
+  "nnull": 60000,
+  "null_med": -1.7063957553136253
+ },
+ {
+  "pair": "cak_emdx / cak_k3",
+  "form": "resid-product",
+  "obs": -1.7617052713175796,
+  "p": 0.9891501808303195,
+  "nnull": 60000,
+  "null_med": -1.7034900540731006
+ },
+ {
+  "pair": "wind speed / swics_avqo",
+  "form": "log-ratio",
+  "obs": -2.26884486719143,
+  "p": 0.9892835119414677,
+  "nnull": 60000,
+  "null_med": -2.208057533480006
+ },
+ {
+  "pair": "proton >10MeV / swics_avqsi",
+  "form": "resid-product",
+  "obs": -1.7915579323304829,
+  "p": 0.9905668238862686,
+  "nnull": 60000,
+  "null_med": -1.7438460369930762
+ },
+ {
+  "pair": "proton temp / proton >10MeV",
+  "form": "log-ratio",
+  "obs": -1.6529663908303642,
+  "p": 0.9907501541640973,
+  "nnull": 60000,
+  "null_med": -1.615059104375332
+ },
+ {
+  "pair": "IMF |B| / swics_o7to6",
+  "form": "resid-product",
+  "obs": -1.763358916269272,
+  "p": 0.9910668155530741,
+  "nnull": 60000,
+  "null_med": -1.6996772730385061
+ },
+ {
+  "pair": "proton >10MeV / wso_meanfield",
+  "form": "resid-product",
+  "obs": -1.894677956373162,
+  "p": 0.9913501441642639,
+  "nnull": 60000,
+  "null_med": -1.8399770167265774
+ },
+ {
+  "pair": "spot_asym / swics_avqo",
+  "form": "log-ratio",
+  "obs": -2.0650799175529477,
+  "p": 0.9916501391643473,
+  "nnull": 60000,
+  "null_med": -2.039816623797698
+ },
+ {
+  "pair": "F10.7 / spot_asym",
+  "form": "log-ratio",
+  "obs": -1.9377690962665075,
+  "p": 0.9917001383310278,
+  "nnull": 60000,
+  "null_med": -1.9143389725397242
+ },
+ {
+  "pair": "sunspot / cak_k3",
+  "form": "ratio",
+  "obs": -1.8072545400665936,
+  "p": 0.9917668038866019,
+  "nnull": 60000,
+  "null_med": -1.7696647681951423
+ },
+ {
+  "pair": "F10.7 / cak_emdx",
+  "form": "resid-product",
+  "obs": -1.8430271473132986,
+  "p": 0.9920501324977917,
+  "nnull": 60000,
+  "null_med": -1.7683871965403484
+ },
+ {
+  "pair": "wind speed / swics_hetoo",
+  "form": "ratio",
+  "obs": -1.757451606825538,
+  "p": 0.9921501308311528,
+  "nnull": 60000,
+  "null_med": -1.6868322889904952
+ },
+ {
+  "pair": "F10.7 / cme_speed",
+  "form": "resid-product",
+  "obs": -1.848239422992116,
+  "p": 0.9926334561090648,
+  "nnull": 60000,
+  "null_med": -1.8073958263987555
+ },
+ {
+  "pair": "alpha/proton / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.940997886947442,
+  "p": 0.9928834519424676,
+  "nnull": 60000,
+  "null_med": -1.872241681774799
+ },
+ {
+  "pair": "X-ray bg / cak_k3",
+  "form": "resid-product",
+  "obs": -1.9319281342272085,
+  "p": 0.9930501158314028,
+  "nnull": 60000,
+  "null_med": -1.8519843708553756
+ },
+ {
+  "pair": "MgII / IMF |B|",
+  "form": "ratio",
+  "obs": -1.931405332375637,
+  "p": 0.993250112498125,
+  "nnull": 60000,
+  "null_med": -1.9111237642040964
+ },
+ {
+  "pair": "Lyman-alpha / cme_speed",
+  "form": "ratio",
+  "obs": -1.8385177478826495,
+  "p": 0.9933501108314862,
+  "nnull": 60000,
+  "null_med": -1.7251891636024368
+ },
+ {
+  "pair": "cosmic ray / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.8047775244089923,
+  "p": 0.9934001099981667,
+  "nnull": 60000,
+  "null_med": -1.746867244985192
+ },
+ {
+  "pair": "proton >10MeV / cak_delk1",
+  "form": "ratio",
+  "obs": -1.8323225503476155,
+  "p": 0.9936334394426759,
+  "nnull": 60000,
+  "null_med": -1.7830702559915208
+ },
+ {
+  "pair": "IMF |B| / spot_area",
+  "form": "resid-product",
+  "obs": -1.834016493352062,
+  "p": 0.9939001016649722,
+  "nnull": 60000,
+  "null_med": -1.796902722699153
+ },
+ {
+  "pair": "swics_c6to5 / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.7559448052296802,
+  "p": 0.9939001016649722,
+  "nnull": 60000,
+  "null_med": -1.7015020844409563
+ },
+ {
+  "pair": "TSI / wso_meanfield",
+  "form": "resid-product",
+  "obs": -1.8876727812212213,
+  "p": 0.9939667672205463,
+  "nnull": 60000,
+  "null_med": -1.791353633193557
+ },
+ {
+  "pair": "wind density / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.7361344456086762,
+  "p": 0.9940334327761204,
+  "nnull": 60000,
+  "null_med": -1.6797312165331033
+ },
+ {
+  "pair": "cosmic ray / IMF |B|",
+  "form": "resid-product",
+  "obs": -1.7496248527576317,
+  "p": 0.9943334277762037,
+  "nnull": 60000,
+  "null_med": -1.7135207461914075
+ },
+ {
+  "pair": "cme_speed / swics_avqsi",
+  "form": "ratio",
+  "obs": -1.8279223218964802,
+  "p": 0.9948334194430093,
+  "nnull": 60000,
+  "null_med": -1.7800807391522984
+ },
+ {
+  "pair": "wind speed / alpha/proton",
+  "form": "resid-product",
+  "obs": -1.7140566291742927,
+  "p": 0.9948667522207963,
+  "nnull": 60000,
+  "null_med": -1.6790856633873343
+ },
+ {
+  "pair": "cosmic ray / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.7467577235823848,
+  "p": 0.9950000833319445,
+  "nnull": 60000,
+  "null_med": -1.68580470469342
+ },
+ {
+  "pair": "spot_asym / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.7154035857072611,
+  "p": 0.995050082498625,
+  "nnull": 60000,
+  "null_med": -1.6605047163330742
+ },
+ {
+  "pair": "cme_rate / swics_fetoo",
+  "form": "ratio",
+  "obs": -2.070534666815072,
+  "p": 0.9952334127764537,
+  "nnull": 60000,
+  "null_med": -1.9258905411886347
+ },
+ {
+  "pair": "swics_c6to5 / swics_avqsi",
+  "form": "ratio",
+  "obs": -1.8874639399433408,
+  "p": 0.9959667338877686,
+  "nnull": 60000,
+  "null_med": -1.8232789097567723
+ },
+ {
+  "pair": "F10.7 / spot_area",
+  "form": "resid-product",
+  "obs": -1.9125313736555343,
+  "p": 0.9962167297211714,
+  "nnull": 60000,
+  "null_med": -1.8477305106340722
+ },
+ {
+  "pair": "cosmic ray / proton temp",
+  "form": "resid-product",
+  "obs": -1.9378825327412117,
+  "p": 0.9962833952767454,
+  "nnull": 60000,
+  "null_med": -1.910230939546256
+ },
+ {
+  "pair": "swics_o7to6 / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.7958703686183823,
+  "p": 0.9962833952767454,
+  "nnull": 60000,
+  "null_med": -1.722728001435002
+ },
+ {
+  "pair": "cosmic ray / spot_area",
+  "form": "resid-product",
+  "obs": -1.8425235780806661,
+  "p": 0.9968000533324445,
+  "nnull": 60000,
+  "null_med": -1.78316854133268
+ },
+ {
+  "pair": "wind speed / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -2.1709827895359,
+  "p": 0.9968500524991251,
+  "nnull": 60000,
+  "null_med": -2.0931610995188716
+ },
+ {
+  "pair": "F10.7 / cme_speed",
+  "form": "ratio",
+  "obs": -1.753854654885119,
+  "p": 0.9969000516658055,
+  "nnull": 60000,
+  "null_med": -1.658648366319028
+ },
+ {
+  "pair": "F10.7 / IMF |B|",
+  "form": "resid-product",
+  "obs": -1.85452469273185,
+  "p": 0.9971167147214213,
+  "nnull": 60000,
+  "null_med": -1.811693947013505
+ },
+ {
+  "pair": "swics_avqo / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.7920683481971171,
+  "p": 0.9972167130547824,
+  "nnull": 60000,
+  "null_med": -1.7194566260766413
+ },
+ {
+  "pair": "X-ray bg / cme_rate",
+  "form": "resid-product",
+  "obs": -1.943577903851307,
+  "p": 0.9977000383326945,
+  "nnull": 60000,
+  "null_med": -1.8964498220084969
+ },
+ {
+  "pair": "TSI / spot_area",
+  "form": "resid-product",
+  "obs": -1.9020526002627982,
+  "p": 0.9977333711104814,
+  "nnull": 60000,
+  "null_med": -1.8270694882662413
+ },
+ {
+  "pair": "TSI / cosmic ray",
+  "form": "resid-product",
+  "obs": -1.840116560627602,
+  "p": 0.9979000349994167,
+  "nnull": 60000,
+  "null_med": -1.757158572101505
+ },
+ {
+  "pair": "proton temp / wind speed",
+  "form": "log-ratio",
+  "obs": -1.6834121818214398,
+  "p": 0.9984166930551157,
+  "nnull": 60000,
+  "null_med": -1.624154566480568
+ },
+ {
+  "pair": "proton >10MeV / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.878269551020926,
+  "p": 0.9986000233329444,
+  "nnull": 60000,
+  "null_med": -1.824357975433832
+ },
+ {
+  "pair": "cosmic ray / proton >10MeV",
+  "form": "resid-product",
+  "obs": -1.8614939935718737,
+  "p": 0.9987000216663056,
+  "nnull": 60000,
+  "null_med": -1.8188953622340147
+ },
+ {
+  "pair": "wind density / swics_hetoo",
+  "form": "resid-product",
+  "obs": -1.746983715550992,
+  "p": 0.9987833536107732,
+  "nnull": 60000,
+  "null_med": -1.680835435375513
+ },
+ {
+  "pair": "wind speed / swics_avqsi",
+  "form": "ratio",
+  "obs": -2.148210246455801,
+  "p": 0.9988500191663472,
+  "nnull": 60000,
+  "null_med": -2.0330902849580945
+ },
+ {
+  "pair": "alpha/proton / swics_c6to5",
+  "form": "log-ratio",
+  "obs": -2.4097423434002154,
+  "p": 0.9988500191663472,
+  "nnull": 60000,
+  "null_med": -2.2444613168416327
+ },
+ {
+  "pair": "spot_asym / swics_ctoo",
+  "form": "log-ratio",
+  "obs": -1.8480938262616238,
+  "p": 0.9988500191663472,
+  "nnull": 60000,
+  "null_med": -1.7916874855972307
+ },
+ {
+  "pair": "MgII / cak_emdx",
+  "form": "resid-product",
+  "obs": -1.7946534738411006,
+  "p": 0.9989166847219213,
+  "nnull": 60000,
+  "null_med": -1.7150903388835554
+ },
+ {
+  "pair": "swics_c6to5 / swics_avqfe",
+  "form": "ratio",
+  "obs": -1.901158179963843,
+  "p": 0.9992833452775787,
+  "nnull": 60000,
+  "null_med": -1.8240248221513058
+ },
+ {
+  "pair": "sunspot / MgII",
+  "form": "ratio",
+  "obs": -1.7376033029139717,
+  "p": 0.9994333427776204,
+  "nnull": 60000,
+  "null_med": -1.7289909569599498
+ },
+ {
+  "pair": "cosmic ray / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.7847770747436948,
+  "p": 0.9994500091665139,
+  "nnull": 60000,
+  "null_med": -1.7004052191314785
+ },
+ {
+  "pair": "swics_hetoo / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.7756760014620692,
+  "p": 0.999550007499875,
+  "nnull": 60000,
+  "null_med": -1.7046131400312625
+ },
+ {
+  "pair": "spot_area / cak_delk1",
+  "form": "resid-product",
+  "obs": -1.839510507464923,
+  "p": 0.999583340277662,
+  "nnull": 60000,
+  "null_med": -1.7685934432464574
+ },
+ {
+  "pair": "swics_hetoo / swics_avqo",
+  "form": "ratio",
+  "obs": -1.7830225874160188,
+  "p": 0.9997666705554907,
+  "nnull": 60000,
+  "null_med": -1.7372167312281128
+ },
+ {
+  "pair": "wind density / wind speed",
+  "form": "resid-product",
+  "obs": -1.729046313692848,
+  "p": 0.9998333361110648,
+  "nnull": 60000,
+  "null_med": -1.6829712824940135
+ },
+ {
+  "pair": "IMF |B| / proton temp",
+  "form": "resid-product",
+  "obs": -1.8676841293214983,
+  "p": 1.0,
+  "nnull": 60000,
+  "null_med": -1.7968353066514602
+ },
+ {
+  "pair": "IMF |B| / wind density",
+  "form": "resid-product",
+  "obs": -1.7476621988764303,
+  "p": 1.0,
+  "nnull": 60000,
+  "null_med": -1.687650737790674
+ },
+ {
+  "pair": "IMF |B| / wind speed",
+  "form": "resid-product",
+  "obs": -1.7450344766330876,
+  "p": 1.0,
+  "nnull": 60000,
+  "null_med": -1.6817807262396305
+ },
+ {
+  "pair": "proton temp / wind density",
+  "form": "log-ratio",
+  "obs": -1.6282781055952076,
+  "p": 1.0,
+  "nnull": 60000,
+  "null_med": -1.5170938459313004
+ },
+ {
+  "pair": "proton temp / wind speed",
+  "form": "resid-product",
+  "obs": -1.8868468644098466,
+  "p": 1.0,
+  "nnull": 60000,
+  "null_med": -1.7708525074684758
+ },
+ {
+  "pair": "wind density / alpha/proton",
+  "form": "ratio",
+  "obs": -1.7768240359814957,
+  "p": 1.0,
+  "nnull": 60000,
+  "null_med": -1.6920202749791997
+ },
+ {
+  "pair": "wind density / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.790530068830049,
+  "p": 1.0,
+  "nnull": 60000,
+  "null_med": -1.7167905372990182
+ },
+ {
+  "pair": "alpha/proton / swics_o7to6",
+  "form": "log-ratio",
+  "obs": -2.5204594693741598,
+  "p": 1.0,
+  "nnull": 60000,
+  "null_med": -2.2501868298695724
+ },
+ {
+  "pair": "proton >10MeV / cak_k2vk3",
+  "form": "ratio",
+  "obs": -1.8684974460762769,
+  "p": 1.0,
+  "nnull": 60000,
+  "null_med": -1.8019921019206013
+ },
+ {
+  "pair": "cme_rate / cme_speed",
+  "form": "ratio",
+  "obs": -2.1112079617413864,
+  "p": 1.0,
+  "nnull": 60000,
+  "null_med": -1.714487791210949
+ },
+ {
+  "pair": "swics_o7to6 / swics_c6to5",
+  "form": "resid-product",
+  "obs": -1.7867703901362286,
+  "p": 1.0,
+  "nnull": 60000,
+  "null_med": -1.6870482943737333
+ },
+ {
+  "pair": "swics_o7to6 / swics_avqo",
+  "form": "resid-product",
+  "obs": -1.8316131642230766,
+  "p": 1.0,
+  "nnull": 60000,
+  "null_med": -1.710468377181035
+ },
+ {
+  "pair": "swics_c6to5 / swics_ctoo",
+  "form": "ratio",
+  "obs": -1.9230965511237672,
+  "p": 1.0,
+  "nnull": 60000,
+  "null_med": -1.7804492218516765
+ },
+ {
+  "pair": "swics_fetoo / swics_ctoo",
+  "form": "resid-product",
+  "obs": -1.7737073043222478,
+  "p": 1.0,
+  "nnull": 60000,
+  "null_med": -1.704719894126927
+ }
+]
