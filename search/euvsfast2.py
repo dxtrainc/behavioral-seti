@@ -30,6 +30,17 @@ FOLD AT ONE DAY, SUBTRACT THE MEAN DAILY PROFILE. Every k/86400 component dies a
 once, including the ones too weak to have been listed. What survives is anything not
 locked to the spacecraft's day -- which is the only thing that could be solar.
 """
+import os as _os
+def _p(name):
+    """Resolve a data or result path: as given, then ./results, then $HOME.
+    These scripts were written to run from a home directory; this lets the
+    repository be cloned anywhere without editing them."""
+    for c in (name, _os.path.join("results", _os.path.basename(name)),
+              _os.path.join(_os.path.dirname(__file__), "..", "results", _os.path.basename(name)),
+              _os.path.join(_os.path.expanduser("~"), _os.path.basename(name))):
+        if _os.path.exists(c): return c
+    return _os.path.expanduser(name)
+
 
 import os, sys
 import numpy as np
@@ -41,7 +52,7 @@ NICE={"irr_256":"25.6nm","irr_284":"28.4nm","irr_304":"30.4nm","irr_1175":"117.5
       "irr_1216":"Ly-alpha","irr_1335":"133.5nm","irr_1405":"140.5nm","MgII_EXIS":"MgII"}
 
 def load(tok):
-    z=np.load(D+"/euvs1m_%s.npz"%tok)
+    z=np.load(_p("euvs1m_%s.npz")%tok)
     return {c:z[c] for c in CH}
 
 def daily_profile(r, ok, day=1440):

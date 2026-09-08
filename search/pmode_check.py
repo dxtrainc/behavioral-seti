@@ -16,13 +16,24 @@ keeps the power spectrum's envelope but destroys the comb. The filter is applied
 identically, so anything the filter imprints survives into the surrogate and
 anything real does not.
 """
+import os as _os
+def _p(name):
+    """Resolve a data or result path: as given, then ./results, then $HOME.
+    These scripts were written to run from a home directory; this lets the
+    repository be cloned anywhere without editing them."""
+    for c in (name, _os.path.join("results", _os.path.basename(name)),
+              _os.path.join(_os.path.dirname(__file__), "..", "results", _os.path.basename(name)),
+              _os.path.join(_os.path.expanduser("~"), _os.path.basename(name))):
+        if _os.path.exists(c): return c
+    return _os.path.expanduser(name)
+
 import os
 import numpy as np
 from scipy.ndimage import median_filter
 
 D=os.path.expanduser("~")
 def load(tok,c="MgII_EXIS"):
-    z=np.load(D+"/euvs1m_%s.npz"%tok); return z[c]
+    z=np.load(_p("euvs1m_%s.npz")%tok); return z[c]
 
 def prep(x, wmin=60):
     ok=np.isfinite(x)&(x>0)

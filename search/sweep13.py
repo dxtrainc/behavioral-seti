@@ -26,6 +26,17 @@ MAD-based clipping (std-based fails because the std is set by the outliers being
 clipped), then excess kurtosis of increments minus a scaled median absolute
 increment. It is the one instrument here with a measured ROC.
 """
+import os as _os
+def _p(name):
+    """Resolve a data or result path: as given, then ./results, then $HOME.
+    These scripts were written to run from a home directory; this lets the
+    repository be cloned anywhere without editing them."""
+    for c in (name, _os.path.join("results", _os.path.basename(name)),
+              _os.path.join(_os.path.dirname(__file__), "..", "results", _os.path.basename(name)),
+              _os.path.join(_os.path.expanduser("~"), _os.path.basename(name))):
+        if _os.path.exists(c): return c
+    return _os.path.expanduser(name)
+
 import os, json, itertools
 from multiprocessing import Pool
 import numpy as np
@@ -69,22 +80,22 @@ LO,HI = 2444240.5, 2461041.5     # 1980-01-01 .. 2025-12-31
 grid = np.arange(np.floor(LO), np.ceil(HI)+1, 1.0)
 CH = {}
 
-d=np.loadtxt(D+"/tsi.csv",delimiter=",",skiprows=1)
+d=np.loadtxt(_p("tsi.csv"),delimiter=",",skiprows=1)
 ok=np.isfinite(d[:,1])&(d[:,1]>1000); CH["TSI"]=daily(d[ok,0]+2309100.5,d[ok,1],grid)
 
-d=np.loadtxt(D+"/f107.csv",delimiter=",",skiprows=1)
+d=np.loadtxt(_p("f107.csv"),delimiter=",",skiprows=1)
 ok=np.isfinite(d[:,1])&(d[:,1]>0); CH["F10.7"]=daily(d[ok,0],d[ok,1],grid)
 
-sn=np.genfromtxt(D+"/sunspot.csv",delimiter=";")
+sn=np.genfromtxt(_p("sunspot.csv"),delimiter=";")
 m=sn[:,5]>=0; CH["sunspot"]=daily((sn[m,3]-2000.0)*365.25+2451545.0,sn[m,5],grid)
 
-mg=np.loadtxt(D+"/mgii.csv",delimiter=",",skiprows=1)
+mg=np.loadtxt(_p("mgii.csv"),delimiter=",",skiprows=1)
 ok=np.isfinite(mg[:,1])&(mg[:,1]>0); CH["MgII"]=daily(mg[ok,0],mg[ok,1],grid)
 
 # neutron monitor: "YYYY-MM-DD HH:MM:SS; value"
 import datetime as dt
 T,V=[],[]
-for line in open(D+"/nm_oulu.txt",errors="ignore"):
+for line in open(_p("nm_oulu.txt"),errors="ignore"):
     if not line[:4].isdigit(): continue
     try:
         a,b=line.split(";")
@@ -157,7 +168,7 @@ def csvcol(path, col, lo_, hi_):
 # X-ray background 1-8 A. 1983-2019 reduced from the 1-minute archive as the daily
 # 10th percentile (the standard definition -- immune to flares); 2017-2025 from the
 # GOES-16 bkd1d product, which is NOAA's own version of the same quantity.
-jx1,vx1 = csvcol(D+"/goes_xray_bg.csv",1,1e-10,1e-4)
+jx1,vx1 = csvcol(_p("goes_xray_bg.csv"),1,1e-10,1e-4)
 jx2,vx2 = csvcol(D+"/goesr/g16_xray_bg.csv",1,1e-10,1e-4)
 SPLIT   = 2457791.5                                    # 2017-02-07, GOES-16 start
 keep1   = jx1 < SPLIT
@@ -166,7 +177,7 @@ CH["X-ray bg"]=daily(jx,vx*au2(jx),grid)
 
 # Integral proton flux >10 MeV. EPS p3_flux_ic to 2009, EPEAD ZPGT10 E/W after --
 # NOAA designed the channels to correspond, so the join is by construction.
-jp,vp = csvcol(D+"/goes_proton10.csv",1,1e-4,1e5)
+jp,vp = csvcol(_p("goes_proton10.csv"),1,1e-4,1e5)
 CH["proton >10MeV"]=daily(jp,vp*au2(jp),grid)
 
 # Lyman-alpha 121.6 nm. GOES 13/14/15 EUVE daily 2006-2016, GOES-16 EUVS 2019-2025.
@@ -288,5 +299,5 @@ for r in R:
     if r["p"]<alpha: sur[k]=sur.get(k,0)+1
 print("\n  %-22s %6s %10s"%("category","tests","survivors"))
 for k in sorted(tot): print("  %-22s %6d %10d"%(k,tot[k],sur.get(k,0)),flush=True)
-json.dump(R,open(D+"/sweep13.json","w"),indent=1)
+json.dump(R,open(_p("sweep13.json"),"w"),indent=1)
 print("\nsaved ~/sweep13.json",flush=True)

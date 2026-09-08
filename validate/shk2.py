@@ -1,5 +1,16 @@
 """Shklovskii + Galactic-acceleration correction. psrcat stores no GL/GB, so
 galactic coordinates are computed from RAJ/DECJ (J2000 -> galactic rotation)."""
+import os as _os
+def _p(name):
+    """Resolve a data or result path: as given, then ./results, then $HOME.
+    These scripts were written to run from a home directory; this lets the
+    repository be cloned anywhere without editing them."""
+    for c in (name, _os.path.join("results", _os.path.basename(name)),
+              _os.path.join(_os.path.dirname(__file__), "..", "results", _os.path.basename(name)),
+              _os.path.join(_os.path.expanduser("~"), _os.path.basename(name))):
+        if _os.path.exists(c): return c
+    return _os.path.expanduser(name)
+
 import tarfile, os, json, math, numpy as np
 R0=8.178; TH0=236.0e3; c=2.99792458e8
 kpc=3.0856775814913673e19; yr=3.155693e7
@@ -24,7 +35,7 @@ def galactic(ra,dec):
     l=LNCP-math.atan2(y,x)
     return (math.degrees(l)%360.0), math.degrees(b)
 
-with tarfile.open(os.path.expanduser("~/psrcat_pkg.tar.gz")) as t:
+with tarfile.open(_p("psrcat_pkg.tar.gz")) as t:
     for m in t.getmembers():
         if m.name.endswith("psrcat.db"):
             db=t.extractfile(m).read().decode("utf8","replace"); break
@@ -95,5 +106,5 @@ if lo_obs:
 tau=[r["P"]/(2*r["intr"])/(1e9*yr) for r in msp if r["intr"]>0]
 print("\n   corrected characteristic ages: %d with tau>6 Gyr (was 155 uncorrected)"
       %sum(1 for t_ in tau if t_>6))
-json.dump(rows,open(os.path.expanduser("~/psrcat_shk.json"),"w"))
+json.dump(rows,open(_p("psrcat_shk.json"),"w"))
 print("\nsaved ~/psrcat_shk.json (%d rows)"%len(rows))

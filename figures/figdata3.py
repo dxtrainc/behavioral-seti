@@ -3,6 +3,17 @@
 output varies only on the scale of its own window, so sampling it every 400 bins
 oversamples its smoothness by 50x while turning an O(n*w)=1e10 operation into
 seconds. Validated by whether it reproduces the published 135 uHz peak."""
+import os as _os
+def _p(name):
+    """Resolve a data or result path: as given, then ./results, then $HOME.
+    These scripts were written to run from a home directory; this lets the
+    repository be cloned anywhere without editing them."""
+    for c in (name, _os.path.join("results", _os.path.basename(name)),
+              _os.path.join(_os.path.dirname(__file__), "..", "results", _os.path.basename(name)),
+              _os.path.join(_os.path.expanduser("~"), _os.path.basename(name))):
+        if _os.path.exists(c): return c
+    return _os.path.expanduser(name)
+
 import os, json, time, numpy as np
 D=os.path.expanduser("~")
 
@@ -17,7 +28,7 @@ def logmedian_fast(y, size=20001, stride=400):
     return np.interp(np.arange(n), idx, vals)
 
 def load(tok,c="MgII_EXIS"):
-    z=np.load(D+"/euvs1m_%s.npz"%tok); return z[c]
+    z=np.load(_p("euvs1m_%s.npz")%tok); return z[c]
 
 def prep(x, wmin=60):                      # verbatim from pmode_cutoff.py
     ok=np.isfinite(x)&(x>0)
@@ -60,5 +71,5 @@ for tok in ("g16","g17"):
                                     peak=round(pk,1), val=round(val,4), sigma=round(sig,1))
         print("%-4s %-7s peak %7.1f uHz  A=%.3f  %.1f sigma   [%.0fs]"
               %(tok,tag,pk,val,sig,time.time()-t0),flush=True)
-json.dump(OUT,open(D+"/figdata_comb.json","w"))
+json.dump(OUT,open(_p("figdata_comb.json"),"w"))
 print("saved ~/figdata_comb.json")

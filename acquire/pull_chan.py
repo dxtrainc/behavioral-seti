@@ -1,10 +1,21 @@
+import os as _os
+def _p(name):
+    """Resolve a data or result path: as given, then ./results, then $HOME.
+    These scripts were written to run from a home directory; this lets the
+    repository be cloned anywhere without editing them."""
+    for c in (name, _os.path.join("results", _os.path.basename(name)),
+              _os.path.join(_os.path.dirname(__file__), "..", "results", _os.path.basename(name)),
+              _os.path.join(_os.path.expanduser("~"), _os.path.basename(name))):
+        if _os.path.exists(c): return c
+    return _os.path.expanduser(name)
+
 #!/usr/bin/env python3
 """Acquire additional dimensionless-eligible solar/heliospheric channels.
 Every channel is saved as a 2-col npz: jd (float days) + value. Reports coverage."""
 import urllib.request, ssl, os, sys, re, io
 import numpy as np
 ctx=ssl.create_default_context(); ctx.check_hostname=False; ctx.verify_mode=ssl.CERT_NONE
-D=os.path.expanduser("~/chan"); os.makedirs(D,exist_ok=True)
+D=_p("chan"); os.makedirs(D,exist_ok=True)
 UA={"User-Agent":"Mozilla/5.0"}
 def fetch(u,fn=None,timeout=300):
     fn=fn or os.path.join(D,u.split("/")[-1].split("?")[0])

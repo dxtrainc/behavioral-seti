@@ -26,12 +26,23 @@ shape of the elbow room.
           cannot find the known instrumental lines is not calibrated.
   gate 2  any candidate must appear at the same frequency on GOES-16 AND GOES-17.
 """
+import os as _os
+def _p(name):
+    """Resolve a data or result path: as given, then ./results, then $HOME.
+    These scripts were written to run from a home directory; this lets the
+    repository be cloned anywhere without editing them."""
+    for c in (name, _os.path.join("results", _os.path.basename(name)),
+              _os.path.join(_os.path.dirname(__file__), "..", "results", _os.path.basename(name)),
+              _os.path.join(_os.path.expanduser("~"), _os.path.basename(name))):
+        if _os.path.exists(c): return c
+    return _os.path.expanduser(name)
+
 import os, sys
 import numpy as np
 
 D=os.path.expanduser("~")
 def load(tok):
-    z=np.load(D+"/xrs1m_%s.npz"%tok)
+    z=np.load(_p("xrs1m_%s.npz")%tok)
     return z["a"],z["b"],int(z["start"])
 
 def prep(x, wmin=1440):

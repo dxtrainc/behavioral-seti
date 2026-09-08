@@ -16,10 +16,21 @@ NULL       the identical maximisation on surrogates with Pdot resampled from the
 GATE       an injection carrying only k of N pulsars must be recovered, at the
            right epoch, before any null is believed.
 """
+import os as _os
+def _p(name):
+    """Resolve a data or result path: as given, then ./results, then $HOME.
+    These scripts were written to run from a home directory; this lets the
+    repository be cloned anywhere without editing them."""
+    for c in (name, _os.path.join("results", _os.path.basename(name)),
+              _os.path.join(_os.path.dirname(__file__), "..", "results", _os.path.basename(name)),
+              _os.path.join(_os.path.expanduser("~"), _os.path.basename(name))):
+        if _os.path.exists(c): return c
+    return _os.path.expanduser(name)
+
 import json, os, sys, numpy as np
 from multiprocessing import Pool
 yr=3.155693e7; Gyr=1e9*yr
-d=json.load(open(os.path.expanduser("~/psrcat.json")))
+d=json.load(open(_p("psrcat.json")))
 
 EPS=0.002                      # tolerance in log10(P0): ~0.5% in period
 NB=400                         # phase bins

@@ -26,6 +26,17 @@ therefore a FILTER -- it rejects natural modulations whose phase drifts and keep
 signals whose phase holds. For a search after an engineered beacon that is not a
 limitation, it is the point.
 """
+import os as _os
+def _p(name):
+    """Resolve a data or result path: as given, then ./results, then $HOME.
+    These scripts were written to run from a home directory; this lets the
+    repository be cloned anywhere without editing them."""
+    for c in (name, _os.path.join("results", _os.path.basename(name)),
+              _os.path.join(_os.path.dirname(__file__), "..", "results", _os.path.basename(name)),
+              _os.path.join(_os.path.expanduser("~"), _os.path.basename(name))):
+        if _os.path.exists(c): return c
+    return _os.path.expanduser(name)
+
 
 import os
 import numpy as np
@@ -33,7 +44,7 @@ from scipy.ndimage import median_filter
 
 D=os.path.expanduser("~")
 def load(st):
-    z=np.load(D+"/nm_%s_60s.npz"%st); return z["v"],int(z["y0"]),int(z["step"])
+    z=np.load(_p("nm_%s_60s.npz")%st); return z["v"],int(z["y0"]),int(z["step"])
 
 def prep(v,step,wsec=86400):
     ok=np.isfinite(v)&(v>0)

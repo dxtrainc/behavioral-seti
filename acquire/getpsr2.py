@@ -1,5 +1,16 @@
+import os as _os
+def _p(name):
+    """Resolve a data or result path: as given, then ./results, then $HOME.
+    These scripts were written to run from a home directory; this lets the
+    repository be cloned anywhere without editing them."""
+    for c in (name, _os.path.join("results", _os.path.basename(name)),
+              _os.path.join(_os.path.dirname(__file__), "..", "results", _os.path.basename(name)),
+              _os.path.join(_os.path.expanduser("~"), _os.path.basename(name))):
+        if _os.path.exists(c): return c
+    return _os.path.expanduser(name)
+
 import tarfile, os, json, math
-tgz=os.path.expanduser("~/psrcat_pkg.tar.gz")
+tgz=_p("psrcat_pkg.tar.gz")
 with tarfile.open(tgz) as t:
     for m in t.getmembers():
         if m.name.endswith("psrcat.db"):
@@ -28,7 +39,7 @@ for r in recs:
     out.append(dict(name=r.get("PSRJ") or r.get("PSRB") or "?", P=P, Pd=Pd,
                     pmra=f(r,"PMRA"), pmdec=f(r,"PMDEC"), px=f(r,"PX"), dist=dist,
                     assoc=r.get("ASSOC",""), binary=r.get("BINARY","")))
-json.dump(out,open(os.path.expanduser("~/psrcat.json"),"w"))
+json.dump(out,open(_p("psrcat.json"),"w"))
 msp=[x for x in out if x["P"]<0.03 and x["Pd"]>0]
 field=[x for x in msp if "GC" not in (x["assoc"] or "")]
 lo=[x for x in field if x["Pd"]<1e-20]

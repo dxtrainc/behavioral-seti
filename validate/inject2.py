@@ -8,6 +8,17 @@ for continuum-normalised power that is exponential under the null, a family-wise
 false-alarm probability alpha over n_bins needs z > ln(n_bins/alpha) -- and the
 exponential assumption is CHECKED against the data rather than assumed.
 """
+import os as _os
+def _p(name):
+    """Resolve a data or result path: as given, then ./results, then $HOME.
+    These scripts were written to run from a home directory; this lets the
+    repository be cloned anywhere without editing them."""
+    for c in (name, _os.path.join("results", _os.path.basename(name)),
+              _os.path.join(_os.path.dirname(__file__), "..", "results", _os.path.basename(name)),
+              _os.path.join(_os.path.expanduser("~"), _os.path.basename(name))):
+        if _os.path.exists(c): return c
+    return _os.path.expanduser(name)
+
 import numpy as np, os, json
 from scipy.ndimage import median_filter
 D=os.path.expanduser("~")
@@ -48,13 +59,13 @@ def run(x, dt, band, name, amps, ntrial=600, alpha=0.01, seed=7):
                 nbins=ns,null_mean=mean,tail_obs=frac,tail_exp=expect)
 
 JOBS=[]
-z=np.load(D+"/euvs1m_g16.npz")
+z=np.load(_p("euvs1m_g16.npz"))
 JOBS.append(("Lyman-alpha, 2 min",z["irr_1216"],60.0,(1/180.,1/90.),
              [1e-7,2e-7,4e-7,6e-7,1e-6,2e-6]))
-z2=np.load(D+"/xrs1m_g16.npz"); k2=[k for k in z2.files if "b" in k.lower()] or list(z2.files)
+z2=np.load(_p("xrs1m_g16.npz")); k2=[k for k in z2.files if "b" in k.lower()] or list(z2.files)
 JOBS.append(("soft X-ray, 2 min",z2[k2[0]],60.0,(1/180.,1/90.),
              [5e-5,1e-4,2e-4,2.6e-4,4e-4,8e-4]))
-z3=np.load(D+"/nm_OULU_60s.npz")
+z3=np.load(_p("nm_OULU_60s.npz"))
 JOBS.append(("cosmic ray, 5 min - 3 h",z3["v"],60.0,(1/10800.,1/300.),
              [1e-5,3e-5,6.3e-5,1e-4,2e-4,4e-4]))
 
@@ -64,5 +75,5 @@ for name,arr,dt,band,amps in JOBS:
     print("%-24s bins %8d  thr %.1f   null mean %.3f (want 1.0)   tail obs %.2e vs exp %.2e"
           %(name,c["nbins"],c["thr"],c["null_mean"],c["tail_obs"],c["tail_exp"]),flush=True)
     for a,r in zip(c["amps"],c["rec"]): print("      %9.2e -> %5.1f%%"%(a,100*r),flush=True)
-json.dump(OUT,open(D+"/injection.json","w"))
+json.dump(OUT,open(_p("injection.json"),"w"))
 print("saved ~/injection.json")
