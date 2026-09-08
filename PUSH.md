@@ -1,30 +1,30 @@
 # Pushing this repository
 
-Prepared and committed locally; it has no remote. Two routes.
+gh 2.100.0 is installed on zeus. The repository is committed on branch `main`
+with no remote. Authentication is the one step that needs you.
 
-## With the GitHub CLI
+## 1. Authenticate
 
-    sudo apt install gh          # not currently installed on zeus
     gh auth login
-    cd ~/beacon-repo
-    gh repo create beacon-seti --private  --source=. --remote=origin --push
-    #                          ^^^^^^^^^ or --public
 
-## Without it
+Choose GitHub.com, then HTTPS, then "Login with a web browser". gh prints a
+one-time code; open the URL it gives on any machine and enter it. Nothing is
+stored anywhere but zeus.
 
-Create an empty repository on github.com (do not add a README, licence or
-.gitignore -- this repo has its own), then:
+## 2. Create and push
 
     cd ~/beacon-repo
-    git remote add origin git@github.com:<user>/beacon-seti.git
-    git push -u origin main
+    gh repo create beacon-seti --private --source=. --remote=origin --push
+
+Use `--public` instead of `--private` only when you intend it to stay public.
 
 ## Before making it public
 
 - The paper says the repository becomes public **on submission**. If that is
-  still the plan, create it private and flip it later.
-- No data is committed and no credentials appear in tracked files (checked).
-- Add a LICENSE. For code accompanying a paper, MIT or BSD-3 is usual; for the
-  result JSONs, CC-BY-4.0 is the common choice.
-- Once public, assume it is cached and forked immediately; treat it as
-  irreversible.
+  still the plan, create it private and flip it later:
+  `gh repo edit --visibility public --accept-visibility-change-consequences`
+- No data is committed; no credentials appear in any tracked file (checked).
+- Add a LICENSE. MIT or BSD-3 for the code, CC-BY-4.0 for the result JSONs is
+  the usual pairing for a paper repository.
+- Replace the data-availability line in the paper with the real URL.
+- Once public, assume it is cached and forked at once. Treat it as irreversible.
