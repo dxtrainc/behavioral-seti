@@ -1,0 +1,36 @@
+Results in results/ — Creative Commons Attribution 4.0 International
+====================================================================
+
+Copyright (c) 2026 Robert Griffin, Dxtra Inc.
+
+The derived results in results/ (sweep outputs, injection curves, corrected
+spin-down values, reachability tables) are licensed CC BY 4.0. You may share
+and adapt them for any purpose, including commercially, provided you give
+appropriate credit and indicate whether changes were made.
+
+Full text:  https://creativecommons.org/licenses/by/4.0/legalcode
+Summary:    https://creativecommons.org/licenses/by/4.0/
+
+WHAT THIS DOES NOT COVER
+------------------------
+These are DERIVED products. The underlying observations are not ours and are
+not relicensed here. They remain the property of, and should be cited to,
+their providers:
+
+  NOAA / NCEI                GOES-R EXIS (XRS, EUVS), GOES 13/14/15 EUVE
+  NASA GSFC / SPDF           OMNI2
+  NASA MSFC                  RGO + USAF sunspot areas
+  NASA / JPL                 Voyager
+  ACE Science Center         SWICS level-2 (Gloeckler, U. Maryland)
+  LASP / LISIRD              TSI composite, Mg II index, Sac Peak Ca II K
+  SILSO, Royal Obs. Belgium  international sunspot number
+  NRCan                      Penticton F10.7
+  NMDB                       Oulu and Kiel neutron monitors
+  Wilcox Solar Observatory   mean solar magnetic field
+  CDAW Data Center           SOHO/LASCO CME catalogue
+  ATNF                       pulsar catalogue (Manchester et al. 2005)
+  CDS / VizieR               Usoskin et al. 2021
+
+Anyone reusing results/ should cite both this repository and the archive the
+measurements came from. Several of the above request specific acknowledgement
+wording; check each before publishing.

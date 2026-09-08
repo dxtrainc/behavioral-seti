@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "Behavioural SETI — analysis code"
+message: "If you use this software or its derived results, please cite the paper."
+type: software
+authors:
+  - family-names: Griffin
+    given-names: Robert
+    affiliation: "Dxtra Inc."
+license: MIT
+repository-code: "https://github.com/REPLACE-ME/beacon-seti"

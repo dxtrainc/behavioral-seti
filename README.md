@@ -75,6 +75,15 @@ Recorded because they are load-bearing, and because the papers report them rathe
 - Mesh numerics in an early draft did not cohere; they are now derived from the link budget.
 - A cost estimate was wrong by eight orders of magnitude by costing probe buses rather than modulators.
 
+## Licence
+
+Code (`acquire/`, `search/`, `validate/`, `figures/`) — **MIT**, see `LICENSE`.
+Derived results (`results/`) — **CC BY 4.0**, see `LICENSE-DATA`.
+
+The underlying observations are not relicensed: they belong to NOAA, NASA, LASP,
+SILSO, NMDB, ATNF and the other archives listed in `LICENSE-DATA`, and should be
+cited to them. No observational data is committed to this repository.
+
 ## Software
 
 Written and run with Claude Code (Anthropic). Scope and documented failures are set out in the paper's
