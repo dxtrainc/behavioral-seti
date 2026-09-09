@@ -88,3 +88,29 @@ cited to them. No observational data is committed to this repository.
 
 Written and run with Claude Code (Anthropic). Scope and documented failures are set out in the paper's
 Software section. Responsibility for every number rests with the author.
+
+## Manuscript changelog
+
+Moved here from the manuscript at the reviewer's request: a changelog belongs with the
+repository, not in a paper submitted to a journal.
+
+### Round 4
+
+Changed since the last review. §3.6 is new and is the largest addition: a designer-priority 
+table ranking fifteen channels by what a sender would choose, against what we can resolve and 
+whether we have searched there. It sits before the Results deliberately, so its ordering is a 
+prediction rather than a description of what was found, and §1.4 now carries its uncomfortable 
+consequence — that rows 2&ndash;7 are capable and unsearched, so this paper has not yet 
+tested the framework's own best guess. §4.12 gained the cross-viewpoint test as the 24th 
+search and has since been extended to the fast band on 1,879 days of MAVEN L2: null, with the 
+binding limit set by MAVEN rather than GOES and 580× weaker, and with the band capped at 6 h 
+because Earth and Mars see solar rotation at different synodic periods. §4.13 reports lunar 
+laser ranging outside the tally, with the reason — that no dynamical method can reach a 
+2.1×109 kg modulator — stated before the nulls. §2.4 gained the neutrino gate as content 
+behind a later gate and §2.5 the coupling calculation behind §4.13. §5.5 proposes an untried 
+neutrino-line search. Five references added, all verified against ADS and the publishers; the 
+existing Learned et al. 2008 entry is a different paper from Learned, Pakvasa & Zee 2009. 
+Earlier in this round: §4.10 replaced the note that dismissed the self-keyed excess on the 
+sign of its correlation, §4.11 answered the annual-geometric-term objection, the stale 3.7% 
+false alarm became the measured 6.3%, and the outcome table gained the false-alarm-and-power 
+row it had been missing.
