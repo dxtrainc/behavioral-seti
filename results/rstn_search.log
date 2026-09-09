@@ -1,0 +1,42 @@
+stations: {'learmonth': 91, 'palehua': 91, 'san-vito': 91}
+detrend 601 s -> pass-band 2 s to 300 s
+
+  learmonth       84 days read, 28 pairs, 84 days accumulated per pair
+  palehua         89 days read, 28 pairs, 82 days accumulated per pair
+  san-vito        90 days read, 28 pairs, 89 days accumulated per pair
+
+=== candidates per station (pass-band only) ===
+  learmonth      44 peaks above threshold
+      P=   2.006 s  610/2695     R=  3.706 (thr 2.315)
+      P=   2.007 s  610/2695     R=  3.701 (thr 2.315)
+      P=   2.721 s  610/2695     R=  3.616 (thr 2.315)
+      P=   2.721 s  610/2695     R=  3.577 (thr 2.315)
+      P=   2.721 s  610/2695     R=  3.543 (thr 2.315)
+      P=   2.772 s  410/2695     R=  3.434 (thr 2.302)
+      P=   2.772 s  410/2695     R=  3.423 (thr 2.302)
+      P=   2.771 s  410/2695     R=  3.389 (thr 2.302)
+  palehua        64 peaks above threshold
+      P=   5.555 s  4995/15400   R=  9.264 (thr 2.296)
+      P=   5.556 s  4995/15400   R=  9.224 (thr 2.296)
+      P=   5.554 s  4995/15400   R=  9.145 (thr 2.296)
+      P=   5.556 s  4995/15400   R=  9.145 (thr 2.296)
+      P=   5.553 s  4995/15400   R=  8.979 (thr 2.296)
+      P=   5.917 s  410/2695     R=  7.663 (thr 2.349)
+      P=   5.920 s  410/2695     R=  7.322 (thr 2.349)
+      P=   4.098 s  410/2695     R=  7.181 (thr 2.349)
+  san-vito       43 peaks above threshold
+      P=   2.975 s  1415/15400   R=  5.006 (thr 2.241)
+      P=   6.242 s  1415/15400   R=  4.984 (thr 2.241)
+      P=   2.975 s  1415/15400   R=  4.960 (thr 2.241)
+      P=   2.975 s  1415/15400   R=  4.947 (thr 2.241)
+      P=   2.974 s  1415/15400   R=  4.919 (thr 2.241)
+      P=   5.902 s  2695/8800    R=  3.684 (thr 2.251)
+      P=   5.903 s  2695/8800    R=  3.666 (thr 2.251)
+      P=   5.905 s  2695/8800    R=  3.655 (thr 2.251)
+
+=== TWIN GATE: which periods appear at more than one station? ===
+  distinct periods: 37;  at >1 station: 2
+    P=   5.900 s  at learmonth, san-vito
+    P=   5.910 s  at palehua, san-vito
+
+saved ~/rstn_search.json
