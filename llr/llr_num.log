@@ -1,0 +1,5 @@
+epochs 17648   chance concentration 0.0075   max 0.6310
+strongest        2000.000 Hz = 0.000500 s
+lowest in-band   2000.000 Hz = 0.000500 s   <- the grid the hardware fires on
+pooled residual  5121540476.2 ps = 767718917.4 mm one-way   n=17648
+robust (MAD)        781.1 ps =  117.1 mm
