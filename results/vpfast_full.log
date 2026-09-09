@@ -1,0 +1,17 @@
+MAVEN days with data: 1879
+Mars distance 1.381-1.666 AU -> light travel swing 142 s
+common grid: 2800794 minutes (1945.0 d)
+coverage: Earth 72.6%  Mars 75.9%  both 54.7%
+MAVEN orbital comb: 3.6060 h  (peak R=263)
+removing the Mars orbital comb, segment by segment:
+  segment orbital periods: 3.0769-7.9121 h (median 3.6364)
+band 120.0 s to 46679.9 h   Earth thr 24.7  Mars thr 24.8
+judged band: 125 s to 6 h (1336602 bins of 1400397)
+
+peaks: Earth 0   Mars 561   both 0
+
+depth-0 control at a fixed bin: 0.0% (family-wise threshold, so ~0% is correct)
+
+=== Earth-only candidates ===
+
+saved ~/viewpoint_fast.json
