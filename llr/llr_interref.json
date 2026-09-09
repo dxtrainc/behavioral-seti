@@ -1,0 +1,224 @@
+{
+ "window_days": 40.0,
+ "n_pairings": 15329,
+ "n_trials": 24,
+ "bonferroni": 0.0020833333333333333,
+ "results": [
+  {
+   "pair": "apollo11/apollo15",
+   "station": "GRSM",
+   "n": 2048,
+   "best_period_d": 2.78168533510571,
+   "power": 0.012213871509283453,
+   "p": 0.0024937655860349127,
+   "control": "anomalistic/10 = 2.7555 d"
+  },
+  {
+   "pair": "apollo15/luna17",
+   "station": "GRSM",
+   "n": 1602,
+   "best_period_d": 9.52224476239036,
+   "power": 0.0057636540207889305,
+   "p": 0.970074812967581,
+   "control": null
+  },
+  {
+   "pair": "apollo14/apollo15",
+   "station": "GRSM",
+   "n": 1584,
+   "best_period_d": 2.8611912391345244,
+   "power": 0.009949975249832071,
+   "p": 0.15211970074812967,
+   "control": null
+  },
+  {
+   "pair": "apollo15/luna21",
+   "station": "GRSM",
+   "n": 1463,
+   "best_period_d": 3.099015363113522,
+   "power": 0.0062556231327010525,
+   "p": 0.972568578553616,
+   "control": "anomalistic/9 = 3.0616 d"
+  },
+  {
+   "pair": "luna17/luna21",
+   "station": "GRSM",
+   "n": 1019,
+   "best_period_d": 4.185736090366326,
+   "power": 0.01522339393396072,
+   "p": 0.18952618453865336,
+   "control": "synodic/7 = 4.2187 d"
+  },
+  {
+   "pair": "apollo11/apollo14",
+   "station": "GRSM",
+   "n": 989,
+   "best_period_d": 4.10783116647311,
+   "power": 0.0036351297590665843,
+   "p": 1.0,
+   "control": null
+  },
+  {
+   "pair": "apollo11/luna21",
+   "station": "GRSM",
+   "n": 827,
+   "best_period_d": 4.619637971846632,
+   "power": 0.009329760960212253,
+   "p": 0.9850374064837906,
+   "control": "anomalistic/6 = 4.5924 d"
+  },
+  {
+   "pair": "apollo11/luna17",
+   "station": "GRSM",
+   "n": 718,
+   "best_period_d": 4.185736090366326,
+   "power": 0.017743039862993602,
+   "p": 0.513715710723192,
+   "control": "synodic/7 = 4.2187 d"
+  },
+  {
+   "pair": "apollo14/luna17",
+   "station": "GRSM",
+   "n": 712,
+   "best_period_d": 3.5180233252672997,
+   "power": 0.013928141194929222,
+   "p": 0.8678304239401496,
+   "control": null
+  },
+  {
+   "pair": "apollo11/apollo15",
+   "station": "APOL",
+   "n": 678,
+   "best_period_d": 1.5105397053783614,
+   "power": 0.028297856390950747,
+   "p": 0.007481296758104738,
+   "control": "half-anomalistic/9 = 1.5308 d"
+  },
+  {
+   "pair": "apollo14/apollo15",
+   "station": "APOL",
+   "n": 666,
+   "best_period_d": 3.3566075868870255,
+   "power": 0.032941044173273544,
+   "p": 0.004987531172069825,
+   "control": "draconic/8 = 3.4015 d"
+  },
+  {
+   "pair": "apollo14/luna21",
+   "station": "GRSM",
+   "n": 632,
+   "best_period_d": 4.069424140525715,
+   "power": 0.024628394898827958,
+   "p": 0.18703241895261846,
+   "control": null
+  },
+  {
+   "pair": "apollo11/apollo14",
+   "station": "APOL",
+   "n": 425,
+   "best_period_d": 1.6207997444043636,
+   "power": 0.0028058833489506764,
+   "p": 0.9950124688279302,
+   "control": "half-synodic/9 = 1.6406 d"
+  },
+  {
+   "pair": "apollo15/luna17",
+   "station": "APOL",
+   "n": 340,
+   "best_period_d": 2.1283281410423314,
+   "power": 0.025489207049702752,
+   "p": 0.5586034912718204,
+   "control": "anomalistic/13 = 2.1196 d"
+  },
+  {
+   "pair": "apollo11/luna17",
+   "station": "APOL",
+   "n": 240,
+   "best_period_d": 1.5831799755275742,
+   "power": 0.00297914124789616,
+   "p": 1.0,
+   "control": null
+  },
+  {
+   "pair": "apollo14/luna17",
+   "station": "APOL",
+   "n": 231,
+   "best_period_d": 1.5831799755275742,
+   "power": 0.008151374415795686,
+   "p": 1.0,
+   "control": null
+  },
+  {
+   "pair": "apollo15/luna21",
+   "station": "APOL",
+   "n": 204,
+   "best_period_d": 2.1383480830676653,
+   "power": 0.013874351746751463,
+   "p": 1.0,
+   "control": "anomalistic/13 = 2.1196 d"
+  },
+  {
+   "pair": "apollo11/luna21",
+   "station": "APOL",
+   "n": 154,
+   "best_period_d": 1.5831799755275742,
+   "power": 0.045519206187536444,
+   "p": 0.1571072319201995,
+   "control": null
+  },
+  {
+   "pair": "luna17/luna21",
+   "station": "APOL",
+   "n": 135,
+   "best_period_d": 1.7147749509458647,
+   "power": 0.027762243720318294,
+   "p": 0.9177057356608479,
+   "control": "half-anomalistic/8 = 1.7222 d"
+  },
+  {
+   "pair": "apollo14/luna21",
+   "station": "APOL",
+   "n": 140,
+   "best_period_d": 1.5831799755275742,
+   "power": 0.056001346091595926,
+   "p": 0.18204488778054864,
+   "control": null
+  },
+  {
+   "pair": "apollo11/apollo15",
+   "station": "MATM",
+   "n": 105,
+   "best_period_d": 1.5981219506817361,
+   "power": 0.05768805288782975,
+   "p": 0.14214463840399003,
+   "control": null
+  },
+  {
+   "pair": "apollo15/luna21",
+   "station": "MATM",
+   "n": 82,
+   "best_period_d": 1.7309589130399243,
+   "power": 0.00470444255276557,
+   "p": 1.0,
+   "control": "half-anomalistic/8 = 1.7222 d"
+  },
+  {
+   "pair": "apollo14/apollo15",
+   "station": "MATM",
+   "n": 63,
+   "best_period_d": 1.6207997444043636,
+   "power": 0.03228469462730287,
+   "p": 0.9027431421446384,
+   "control": "half-synodic/9 = 1.6406 d"
+  },
+  {
+   "pair": "apollo11/luna21",
+   "station": "MATM",
+   "n": 63,
+   "best_period_d": 1.7309589130399243,
+   "power": 0.0013106929461301096,
+   "p": 1.0,
+   "control": "half-anomalistic/8 = 1.7222 d"
+  }
+ ]
+}
