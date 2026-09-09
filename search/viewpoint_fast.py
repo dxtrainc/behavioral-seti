@@ -59,7 +59,7 @@ def fold_out(r, ok, period_min):
     out = r.copy(); out[:n] = (v-prof).ravel(); out[~ok] = 0.0
     return out
 
-def fold_drifting(r, ok, seg_days=30, lo_h=3.0, hi_h=8.0):
+def fold_drifting(r, ok, seg_days=30, lo_h=3.0, hi_h=8.0, periods_in=None):
     """MAVEN's orbit is not a metronome -- its period evolves over the mission,
     so folding the whole record at ONE period leaves most of the comb standing.
     A single fold left 1,076 peaks above threshold in the Mars line against 15
@@ -68,31 +68,51 @@ def fold_drifting(r, ok, seg_days=30, lo_h=3.0, hi_h=8.0):
     out = r.copy()
     W = seg_days*1440
     periods = []
-    for s0 in range(0, len(r), W):
+    # Determining each segment's period costs a spectrum and a continuum, and
+    # in an injection loop that is 65 segments times hundreds of trials. The
+    # periods are a property of the ORBIT, not of the injection, so they are
+    # measured once on the real series and passed back in.
+    for i0, s0 in enumerate(range(0, len(r), W)):
         sl = slice(s0, min(s0+W, len(r)))
         seg, segok = out[sl].copy(), ok[sl]
-        if segok.sum() < W//4: continue
-        f, P, _ = spec(seg)
-        if len(f) < 10: continue
-        R = P/cont(P, w=201)
-        b = (f > 1/(hi_h*3600.)) & (f < 1/(lo_h*3600.))
-        if b.sum() < 5: continue
-        fo = float(f[b][np.argmax(R[b])])
-        Pm = 1.0/fo/60.0
+        if segok.sum() < W//4:
+            periods.append(None); continue
+        if periods_in is not None:
+            Pm = periods_in[i0] if i0 < len(periods_in) else None
+            if Pm is None: continue
+        else:
+            f, P, _ = spec(seg)
+            if len(f) < 10:
+                periods.append(None); continue
+            R = P/cont(P, w=201)
+            b = (f > 1/(hi_h*3600.)) & (f < 1/(lo_h*3600.))
+            if b.sum() < 5:
+                periods.append(None); continue
+            Pm = 1.0/float(f[b][np.argmax(R[b])])/60.0
         periods.append(Pm)
         seg = fold_out(seg, segok, Pm)
         seg = fold_out(seg, segok, Pm/2.0)     # first harmonic
         out[sl] = seg
-    if periods:
+    got = [p0 for p0 in periods if p0]
+    if got and periods_in is None:
         print("  segment orbital periods: %.4f-%.4f h (median %.4f)"
-              % (min(periods)/60, max(periods)/60, float(np.median(periods))/60), flush=True)
+              % (min(got)/60, max(got)/60, float(np.median(got))/60), flush=True)
     out[~ok] = 0.0
-    return out
+    return (out, periods) if periods_in is None else out
 
+_WCACHE = {}
 def spec(r):
-    n = len(r)//2*2; w = np.blackman(n)
+    """the window and frequency grid depend only on the length, and this is
+    called thousands of times on a 2.8M-point series, so both are cached"""
+    n = len(r)//2*2
+    got = _WCACHE.get(n)
+    if got is None:
+        w = np.blackman(n)
+        got = (w, np.fft.rfftfreq(n, d=STEP)[1:], w.sum())
+        _WCACHE[n] = got
+    w, f, ws = got
     P = np.abs(np.fft.rfft(r[:n]*w))**2
-    return np.fft.rfftfreq(n, d=STEP)[1:], P[1:], w.sum()
+    return f, P[1:], ws
 
 def cont(P, w=801):
     return np.exp(median_filter(np.log(np.maximum(P, 1e-300)), size=w, mode="nearest"))
@@ -176,7 +196,7 @@ def main():
 
     rE = fold_out(rE, okE, 1440)                 # spacecraft day, per section 4.4
     print("removing the Mars orbital comb, segment by segment:", flush=True)
-    rM = fold_drifting(rM, okM)                  # tracks the orbit's drift
+    rM, _segP = fold_drifting(rM, okM)           # tracks the orbit's drift
     rM = fold_out(rM, okM, 1440)
 
     fE, PE, W = spec(rE); fM, PM, _ = spec(rM)
@@ -275,6 +295,7 @@ def main():
                "cov_earth": float(okE.mean()), "cov_mars": float(okM.mean())},
               open(os.path.join(D, "viewpoint_fast.json"), "w"), indent=1)
     print("\nsaved ~/viewpoint_fast.json", flush=True)
+
 
 if __name__ == "__main__":
     main()

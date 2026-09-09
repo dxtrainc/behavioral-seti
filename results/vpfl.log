@@ -1,0 +1,14 @@
+MAVEN days with data: 1879
+Mars distance 1.381-1.666 AU -> light travel swing 142 s
+common grid: 2800794 minutes (1945.0 d)
+  segment orbital periods: 3.0769-7.9121 h (median 3.6364)
+
+Earth (GOES EUVS)   threshold 24.7   sigma 3.625e-03
+  P=307 s                    0e+00:  0% 2e-04:  0% 5e-04:  0% 1e-03: 53% 2e-03:100% 5e-03:100%  95% at 2.0e-03 sigma = 7.2e-06 fractional
+  P=911 s                    0e+00:  0% 2e-04:  0% 5e-04:  0% 1e-03:  0% 2e-03:  0% 5e-03:100%  95% at 5.0e-03 sigma = 1.8e-05 fractional
+  P=3671 s                   0e+00:  0% 2e-04:  0% 5e-04:  0% 1e-03:  0% 2e-03:  0% 5e-03:  0%  95% at >5e-3 sigma
+  P=3600 s (daily harmonic)  0e+00:  0% 2e-04:  0% 5e-04:  0% 1e-03:  0% 2e-03:  0% 5e-03:  0%  95% at >5e-3 sigma
+
+Mars (MAVEN EUVM)   threshold 24.8   sigma 8.366e-01
+  P=307 s                    0e+00:  0% 2e-04:  0% 5e-04:  0% 1e-03:  0% 2e-03:  0% 5e-03:100%  95% at 5.0e-03 sigma = 4.2e-03 fractional
+  P=911 s                    0e+00:  0% 2e-04:  0% 5e-04:  0% 1e-03:  0% 2e-03:  0% 5e-03: 10%  95% at >5e-3 sigma
