@@ -1,0 +1,51 @@
+MULTI-SCALE SEARCH -- Oulu neutron monitor, 1-min, 26 yr
+  13675680 samples, 100.0% present, L = 174 symbols, 300 surrogates per ladder
+  6 ladders x 2 designs = 12 tests, Bonferroni p < 4.17e-03
+
+  21cm-binary   11 scales, 1.61 min .. 27.52 h
+     A REPEATED  maxcorr 0.2923  null 0.3082  p = 0.70100  null
+     B SPLICED   var  3.5860e-05  null 3.9320e-05  p = 0.95017  null
+     fold variance by scale: 1.6m:1.12e-05  3.2m:1.04e-05  6.5m:1.55e-05  12.9m:1.48e-05  25.8m:1.90e-05  51.6m:3.44e-05  103.2m:5.30e-05  206.4m:6.42e-05  412.8m:8.65e-05  825.7m:5.64e-05  1651.4m:2.92e-05
+  21cm-prime    10 scales, 12.90 min .. 4.95 h
+     A REPEATED  maxcorr 0.3239  null 0.3704  p = 0.95349  null
+     B SPLICED   var  5.9909e-05  null 5.8893e-05  p = 0.32558  null
+     fold variance by scale: 12.9m:1.48e-05  25.8m:1.90e-05  38.7m:3.10e-05  64.5m:3.51e-05  90.3m:5.97e-05  141.9m:8.17e-05  167.7m:7.12e-05  219.3m:8.07e-05  245.1m:8.74e-05  296.7m:1.19e-04
+  stellar       12 scales, 5.40 min .. 22.65 h
+     A REPEATED  maxcorr 0.3389  null 0.3578  p = 0.72425  null
+     B SPLICED   var  5.5906e-05  null 5.4605e-05  p = 0.30565  null
+     fold variance by scale: 5.4m:1.48e-05  10.8m:1.69e-05  16.2m:2.54e-05  27.0m:2.65e-05  37.8m:3.20e-05  59.4m:3.62e-05  123.5m:6.77e-05  247.1m:9.62e-05  370.6m:1.12e-04  617.8m:1.06e-04  864.9m:9.15e-05  1359.0m:4.55e-05
+  21cm-phi      8 scales, 12.90 min .. 6.24 h
+     A REPEATED  maxcorr 0.3208  null 0.3410  p = 0.71761  null
+     B SPLICED   var  5.6133e-05  null 5.6288e-05  p = 0.53821  null
+     fold variance by scale: 12.9m:1.48e-05  20.9m:2.03e-05  33.8m:2.70e-05  54.7m:4.19e-05  88.4m:4.52e-05  143.1m:7.81e-05  231.5m:1.09e-04  374.6m:1.13e-04
+  21cm-pi       6 scales, 3.23 min .. 16.45 h
+     A REPEATED  maxcorr 0.2624  null 0.2694  p = 0.56478  null
+     B SPLICED   var  4.3344e-05  null 4.4782e-05  p = 0.74086  null
+     fold variance by scale: 3.2m:1.04e-05  10.1m:1.45e-05  31.8m:2.57e-05  100.0m:5.21e-05  314.2m:9.32e-05  987.0m:6.42e-05
+  21cm-e        6 scales, 3.23 min .. 7.98 h
+     A REPEATED  maxcorr 0.2488  null 0.2836  p = 0.91362  null
+     B SPLICED   var  4.7926e-05  null 4.9782e-05  p = 0.73754  null
+     fold variance by scale: 3.2m:1.04e-05  8.8m:1.71e-05  23.8m:1.69e-05  64.8m:3.47e-05  176.1m:7.05e-05  478.7m:1.38e-04
+
+  CONTROL AND POWER CURVE
+  design A: the SAME 174-symbol pattern at 2^39, 2^40, 2^41 (adjacent)
+  design B: DIFFERENT patterns at the same three scales
+  A is now max-over-all-pairs, not mean-over-adjacent
+
+     A repeated   eps        stat A     stat B     p (A / B)
+                  0.000      0.2923     3.586e-05  0.68212 / 0.96026  <-- CONTROL
+                  0.005      0.6066     5.398e-05  0.00662 / 0.01325  <-- detected
+                  0.010      0.7461     1.118e-04  0.00662 / 0.00662  <-- detected
+                  0.020      0.7875     3.468e-04  0.00662 / 0.00662  <-- detected
+                  0.050      0.7984     2.005e-03  0.00662 / 0.00662  <-- detected
+                  0.100      0.7995     7.949e-03  0.00662 / 0.00662  <-- detected
+                  0.200      0.7996     3.176e-02  0.00662 / 0.00662  <-- detected
+
+     B spliced    eps        stat A     stat B     p (A / B)
+                  0.000      0.2923     3.586e-05  0.68212 / 0.96026  <-- CONTROL
+                  0.005      0.3105     5.438e-05  0.47020 / 0.00662  <-- detected
+                  0.010      0.2950     1.150e-04  0.90728 / 0.00662  <-- detected
+                  0.020      0.3042     3.623e-04  0.95364 / 0.00662  <-- detected
+                  0.050      0.4064     2.114e-03  0.64901 / 0.00662  <-- detected
+                  0.100      0.4564     8.397e-03  0.70199 / 0.00662  <-- detected
+                  0.200      0.4646     3.358e-02  0.83444 / 0.00662  <-- detected
