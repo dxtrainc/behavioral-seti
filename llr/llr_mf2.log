@@ -1,0 +1,26 @@
+sessions 236   returns 17062   median per session 55
+
+=== 1. fire-epoch grid ===
+   comb frequencies in the fire epochs (concentration 0 = uniform):
+     7500.000 Hz  =  0.0001 s   concentration 0.3751
+     8000.000 Hz  =  0.0001 s   concentration 0.3585
+     9500.000 Hz  =  0.0001 s   concentration 0.4924
+     10000.000 Hz  =  0.0001 s   concentration 0.5057
+     10500.000 Hz  =  0.0001 s   concentration 0.4401
+     11000.000 Hz  =  0.0001 s   concentration 0.3440
+     11500.000 Hz  =  0.0001 s   concentration 0.4250
+     12000.000 Hz  =  0.0001 s   concentration 0.5237
+   -> strongest comb 12000.000 Hz = 0.000083 s
+   chance level for 17062 epochs: 0.0077
+
+=== 2. residual periodicity, model-free ===
+   usable sessions 236, residuals 17050
+   pooled residual: 243.8 ps  =  36.5 mm one-way
+   (LLR single-shot residuals are tens to hundreds of ps; if this is far outside that, the detrend is wrong, not the Moon)
+   frequencies above the 99.9th percentile of the shuffled null: 3 of 400
+   strongest: P = 18.76 s, power 0.04974, null 99.9% 0.04697
+   global p (max over band vs null max): 0.1144  -> no structure
+
+=== 3. occupancy of the fire grid ===
+   20 phase bins, chi2 = 111862.3 on 19 dof
+   occupancy: 10288 217 247 273 368 273 215 1448 514 243 180 174 199 669 193 704 219 320 163 155

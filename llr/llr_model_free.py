@@ -39,10 +39,12 @@ def sessions():
         for line in open(path, errors="ignore"):
             f = line.split()
             if not f: continue
-            if f[0] == "h4":
+            tag = f[0].lower()      # this archive mixes "h4" and "H4"; matching
+                                    # one case merges sessions across nights
+            if tag == "h4":
                 if len(cur_t) >= 25: out.append((np.array(cur_t), np.array(cur_v)))
                 cur_t, cur_v = [], []
-            elif f[0] == "10" and len(f) >= 3:
+            elif tag == "10" and len(f) >= 3:
                 try:
                     t = float(f[1]); v = float(f[2])
                 except ValueError:
@@ -59,24 +61,28 @@ def unwrap_day(t):
     for k in j: t[k+1:] += 86400.0
     return t
 
-def detrend(t, v, half=12, deg=2):
-    """LOCAL quadratic over a sliding window of neighbours. A single global
-    polynomial was wrong: over a long session the range change is far from
-    polynomial and the first version left 876 km of 'residual', which is the
-    lunar orbit, not noise. Local fitting makes no model assumption at all
-    beyond smoothness over a few tens of seconds."""
+def detrend(t, v, deg=6, clip=5.0):
+    """PER-SESSION polynomial in time, with a 5-MAD clip.
+
+    Two earlier versions were worse and both for instructive reasons. A single
+    polynomial over what the parser thought was a session left 876 km, because
+    the parser was merging sessions across nights (the archive mixes "h4" and
+    "H4"). A local quadratic over 12 neighbours fixed that but left 5,068 ps,
+    because a 25-point quadratic mostly fits noise. With sessions split
+    correctly a degree-6 polynomial over the session reaches 165 ps = 25 mm,
+    which is ordinary LLR single-shot precision, and raising the degree further
+    changes nothing. A polynomial in time is not an ephemeris: still model-free.
+
+    The high-pass corner is about span/deg, so with a median session of 973 s
+    this search sees roughly 0.5 s to 160 s and nothing slower."""
     o = np.argsort(t); t, v = t[o], v[o]
-    n = len(t); out = np.full(n, np.nan)
-    for i in range(n):
-        lo, hi = max(0, i-half), min(n, i+half+1)
-        if hi-lo < deg+2: continue
-        tt = t[lo:hi]-t[i]
-        try:
-            c = np.polyfit(tt, v[lo:hi], deg)
-        except Exception:
-            continue
-        out[i] = v[i] - np.polyval(c, 0.0)
-    return out
+    if len(t) < deg+8: return t[:0], np.zeros(0)
+    c = np.polyfit(t-t.mean(), v, deg)
+    r = v-np.polyval(c, t-t.mean())
+    mad = 1.4826*np.median(np.abs(r-np.median(r)))
+    if not np.isfinite(mad) or mad <= 0: return t[:0], np.zeros(0)
+    k = np.abs(r-np.median(r)) < clip*mad
+    return t[k], r[k]
 
 def main():
     S = sessions()
@@ -91,7 +97,7 @@ def main():
     # grid then 0.1, 0.01 and 0.001 all score too, because each is commensurate.
     # The unambiguous question is which FREQUENCY the epoch series is combed at,
     # so scan the comb frequency continuously and read off the fundamental.
-    fs = np.linspace(1.0, 2000.0, 200000)         # Hz -- the first scan
+    fs = np.linspace(1.0, 12000.0, 300000)        # Hz -- earlier scans
                                                   # stopped at 400 Hz and the
                                                   # peak sat on that ceiling
     z = np.array([np.abs(np.mean(np.exp(2j*np.pi*f*allt))) for f in fs]) \
@@ -125,10 +131,8 @@ def main():
     for t, v in S:
         t = unwrap_day(t)
         if np.ptp(t) < 60: continue
-        r = detrend(t, v)
-        ok = np.isfinite(r)
-        if ok.sum() < 25: continue
-        t, r = t[ok], r[ok]
+        t, r = detrend(t, v)
+        if len(r) < 25: continue
         s = r.std()
         if not np.isfinite(s) or s <= 0: continue
         keep = np.abs(r) < 5*s              # drop obvious outliers
@@ -140,7 +144,7 @@ def main():
     for t, v in S:
         t = unwrap_day(t)
         if np.ptp(t) < 60: continue
-        r = detrend(t, v); r = r[np.isfinite(r)]
+        _, r = detrend(t, v)
         if len(r): pooled.append(r)
     pooled = np.concatenate(pooled) if pooled else np.array([0.0])
     rms_s = float(np.std(pooled))
@@ -184,5 +188,4 @@ def main():
     print("   20 phase bins, chi2 = %.1f on 19 dof" % chi, flush=True)
     print("   occupancy: %s" % " ".join("%3.0f" % c for c in cnt), flush=True)
 
-if __name__ == "__main__":
-    main()
+main()

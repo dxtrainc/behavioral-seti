@@ -54,11 +54,12 @@ def read_npt(path, target):
     for line in open(path, errors="ignore"):
         f = line.split()
         if not f: continue
-        if f[0] == "h2": stn = f[1]
-        elif f[0] == "h4" and len(f) > 7:
+        tag = f[0].lower()          # the archive mixes header case
+        if tag == "h2": stn = f[1]
+        elif tag == "h4" and len(f) > 7:
             try: y, mo, dy = int(f[2]), int(f[3]), int(f[4])
             except ValueError: pass
-        elif f[0] == "11" and len(f) >= 3 and y:
+        elif tag == "11" and len(f) >= 3 and y:
             try: t, v = float(f[1]), float(f[2])
             except ValueError: continue
             if not (2.0 < v < 3.0): continue

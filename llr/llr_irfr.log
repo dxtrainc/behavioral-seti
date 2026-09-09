@@ -1,0 +1,12 @@
+full-rate runs: 358
+session span: median 973 s, max 8256 s
+returns 24212 -> 20112 after per-session polynomial (83.1% kept)
+  session residual: RMS 226 ps, MAD 165 ps = 24.7 mm one-way
+
+station-nights with >1 reflector after gating: 6
+pair series: 3
+
+  pair                         n   best P (s)    power         p  verdict
+
+  1 series, Bonferroni p < 0.05000;  pass-band 2.5-24 min
+saved ~/llr_interref_fr.json
