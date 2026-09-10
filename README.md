@@ -40,10 +40,50 @@ availability statement and were retrieved from the archives named there.
 | §4.6, Fig 3 — p-mode comb, 135.1 / 135.0 µHz | `search/pmode.py`, `search/pmode_cutoff.py` | — |
 | Fig 3 — comb curves for plotting | `figures/figdata3.py` | `results/figdata_comb.json` |
 | §5.7 — 53 unreachable pairs, all permanently blocked | `validate/span30.py` | `results/reach30.json` |
+| §4.10 — self-keyed excess, ACE ρ = −3.52, Wind ρ = −3.07, rotation-matched null | `validate/selfkey_replicate.py` | `results/selfkey_replicate.json` |
+| §4.10 — power by half, 100% / 94% at 0.10σ | `validate/selfkey_power.py` | `results/selfkey_power.json` |
+| §4.11 — annual term, decoy-offset null, 8 channels | `search/geoterm.py` | `results/geoterm.json` |
+| §4.12 — viewpoint control, lag RMS 1.97 d vs null 7.65 d, *p* = 5×10⁻⁴ | `search/viewpoint_l2b.py` | `results/viewpoint_l2b.json` |
+| §4.12 — slow-band limits, 0.02σ at 3 d | `validate/viewpoint_limit.py` | `results/viewpoint_limit.json` |
+| §4.12 — fast band, **0 Earth peaks, 561 Mars** | `search/viewpoint_fast.py` | `results/viewpoint_fast.json` |
+| §4.12 — fast-band limits, Earth 7.2×10⁻⁶ / Mars 4.2×10⁻³ at 307 s | `validate/viewpoint_fast_limit.py` | `results/vpfl.log` |
+| §4.13 — LLR inter-reflector, 24 of 29 series, all near-survivors lunar harmonics | `llr/llr_interref.py` | `llr/llr_interref.json` |
+| §4.13 — LLR within-session, *p* = 0.114, residual 244 ps | `llr/llr_model_free.py` | `llr/llr_mf2.log` |
+| §4.13, §2.5 — LLR cannot reach the modulator: 2.2×10¹¹ short | `llr/llr_reach.py` | printed |
+| §4.14 — RSTN, 44 / 64 / 43 peaks, twin gate | `search/rstn_search.py` | `results/rstn_search.json` |
+| §4.14 — the 5.9 s power is per-channel, not in the ratio | `validate/rstn_5s.py` | `results/rstn_5s.log` |
 | Companion §3.1 — population back-extrapolation | `search/backex2.py` | printed |
 | Companion §3.2 — subset ladder search | `search/subset.py` | printed |
 | Companion §3.3 — Shklovskii + Galactic correction | `validate/shk2.py` | `results/psrcat_shk.json` |
 | Companion §3.3 — subset search on corrected Ṗ | `search/subset_c.py` | printed |
+
+## Audit, run against this commit
+
+`validate/audit.py` checks every number the manuscript quotes against the result file that
+produced it. A claim passes only if the value is found in the repository **and** matches the
+manuscript; "not regenerable" is a failure, not a note.
+
+**20 claims checked, 20 reconcile.** Three needed investigation and all three resolved:
+
+- `sweep30.json` is a JSON **list** of 1,074 entries, not a dict — the count is right, the first
+  audit script read it wrongly.
+- `reach30.json` carries `perm` (53 permanently blocked) and `ok` (382 reachable), which is what
+  §5.7 and §4.8 quote.
+- **The triple count was genuinely wrong in the manuscript.** `sweepT_triples.json` holds 2,749
+  unordered triples at exactly 4 tests each = 10,996. The paper said 2,934 triples were
+  *attempted*; 2,934 is the number **reachable** (2,934 × 4 = 11,736, also quoted). Only 2,749
+  completed. The manuscript now distinguishes the two.
+
+### The two checks that run from a clean clone
+
+    git clone <repo> && cd <clone>
+    python3 search/confirm.py --shifts 500
+      -> REFUSING: floor is not below the threshold; raise --shifts     (expected)
+    python3 validate/validate.py results/sweep30.json results/sweepT_pairs_zeus.json
+      -> === PASS - tail fit validated, proceed to triples ===          (exit 0)
+
+Both pass. Note the second takes two arguments, counted then tail-fitted; an earlier version of
+this README implied it ran bare, and it does not.
 
 ## Two things a reader should check first
 
