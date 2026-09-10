@@ -1,0 +1,10 @@
+95% recovery in fractional frequency step, dnu/nu
+
+  pulsar          rms/us    thr  recovery ladder
+libstempo not installed. PINT or libstempo are required to use par and tim files.
+  J1909-3744       1.178    266  1e-15:  5% 3e-15: 32% 1e-14: 75% 3e-14:100% 1e-13:100% 3e-13:100%  ->  95% at 3.0e-14
+  J1909-3744gbt    1.184    295  1e-15:  5% 3e-15: 22% 1e-14: 78% 3e-14:100% 1e-13:100% 3e-13:100%  ->  95% at 3.0e-14
+  J1713+0747ao     1.289    216  1e-15: 18% 3e-15: 52% 1e-14:100% 3e-14:100% 1e-13:100% 3e-13:100%  ->  95% at 1.0e-14
+  J2043+1711       1.593     20  1e-15:  2% 3e-15: 25% 1e-14: 95% 3e-14:100% 1e-13:100% 3e-13:100%  ->  95% at 1.0e-14
+
+saved ~/ng_sens.json
