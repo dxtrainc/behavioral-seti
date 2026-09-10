@@ -29,17 +29,20 @@ def check(sec, claim, got, want, tol=None, instr=None):
 
 # ---- 4.8 pair sweep
 d = R("sweep30.json")
-if isinstance(d, dict):
-    n = d.get("n_tests") or d.get("tests") or len(d.get("results", []) or [])
-    check("4.8", "pair-sweep tests", n, 1074, instr="1,074")
-else:
-    rows.append(("4.8", "pair-sweep tests", "unreadable", "1,074", "FAIL"))
+# sweep30.json is a JSON LIST of one record per test, not a dict. An earlier
+# version of this script assumed a dict and reported the file unreadable.
+n = len(d) if isinstance(d, list) else (d or {}).get("n_tests")
+check("4.8", "pair-sweep tests", n, 1074, instr="1,074")
 
 # ---- 4.9 triples
 d = R("sweepT_triples.json")
 if isinstance(d, dict):
-    n = d.get("n_tests") or d.get("attempted") or len(d.get("results", []) or [])
-    check("4.9", "triples attempted", n, 2934, tol=0, instr="2,934")
+    # ntests counts TESTS; the paper also quotes the number of TRIPLES, which is
+    # tests/4 because each unordered triple is run in 4 configurations. Both are
+    # checked, because conflating them is exactly the error this audit found.
+    check("4.9", "triple tests completed", d.get("ntests"), 10996, tol=0, instr="10,996")
+    combos = {tuple(sorted(x.strip() for x in r["combo"].split("/"))) for r in d.get("results", [])}
+    check("4.9", "triples completed", len(combos), 2749, tol=0, instr="2,749")
 
 # ---- 4.10 self-keyed replication
 d = R("selfkey_replicate.json")
@@ -91,8 +94,9 @@ if isinstance(d, dict):
 # ---- 5.7 reachability
 d = R("reach30.json")
 if isinstance(d, dict):
-    u = d.get("unreachable") or d.get("n_unreachable")
-    check("5.7", "unreachable pairs", u, 53, tol=0)
+    # keys are perm (permanently blocked) and ok (reachable), not "unreachable"
+    check("5.7", "permanently blocked pairs", len(d.get("perm", [])), 53, tol=0, instr="53")
+    check("4.8", "reachable pairs", d.get("ok"), 382, tol=0, instr="382")
 
 w = max(len(r[1]) for r in rows)
 print("%-6s %-*s %-22s %-14s %s" % ("sec", w, "claim", "repository", "paper", "verdict"))

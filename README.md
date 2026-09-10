@@ -63,10 +63,11 @@ availability statement and were retrieved from the archives named there.
 produced it. A claim passes only if the value is found in the repository **and** matches the
 manuscript; "not regenerable" is a failure, not a note.
 
-**20 claims checked, 20 reconcile.** Three needed investigation and all three resolved:
+**22 claims checked, 22 reconcile.** Three needed investigation and all three resolved:
 
 - `sweep30.json` is a JSON **list** of 1,074 entries, not a dict — the count is right, the first
-  audit script read it wrongly.
+  audit script read it wrongly. The extractor is fixed, so the audit now reports 22 of 22 rather
+  than three false failures; an audit that cries wolf is not an audit.
 - `reach30.json` carries `perm` (53 permanently blocked) and `ok` (382 reachable), which is what
   §5.7 and §4.8 quote.
 - **The triple count was genuinely wrong in the manuscript.** `sweepT_triples.json` holds 2,749
