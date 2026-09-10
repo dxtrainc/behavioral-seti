@@ -1,0 +1,13 @@
+surrogate: phase rotation in the Fourier basis, on real TOA epochs
+
+  pulsar           nTOA max|S/N|  null 95%        p
+libstempo not installed. PINT or libstempo are required to use par and tim files.
+  B1855+09         7758    73.61      2.34   0.0050 <-- excess
+  B1937+21        23023  8391.59      2.47   0.0050 <-- excess
+  B1937+21ao       7241  4940.87      2.55   0.0050 <-- excess
+  B1937+21gbt     16048  4883.61      2.42   0.0050 <-- excess
+  B1953+29         5126     9.02      2.68   0.0050 <-- excess
+  J0023+0923      15896     0.31      2.36   0.9851 
+  J0030+0451      19571    50.55      2.58   0.0050 <-- excess
+  J0340+4130      11093     0.49      2.32   0.9652 
+  J0613-0200      17124    73.30      2.64   0.0050 <-- excess
