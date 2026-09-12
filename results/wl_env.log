@@ -1,0 +1,46 @@
+channels: TSI, F10.7, sunspot, MgII, cosmic ray, IMF |B|, proton temp, wind density, wind speed, alpha/proton, X-ray bg, proton >10MeV, Lyman-alpha, spot_area, spot_asym, wso_meanfield, cak_emdx, cak_k2vk3, cak_k3, cak_delk1, cme_rate, cme_speed, swics_o7to6, swics_c6to5, swics_avqfe, swics_avqsi, swics_fetoo, swics_hetoo, swics_avqo, swics_ctoo
+  TSI            finite  16070 / 16802
+  F10.7          finite  16050 / 16802
+  sunspot        finite  15209 / 16802
+  MgII           finite  12109 / 16802
+  cosmic ray     finite  16048 / 16802
+  IMF |B|        finite  14321 / 16802
+  proton temp    finite  16070 / 16802
+  wind density   finite  14044 / 16802
+  wind speed     finite  14146 / 16802
+  alpha/proton   finite  12541 / 16802
+  X-ray bg       finite  15185 / 16802
+  proton >10MeV  finite  12401 / 16802
+  Lyman-alpha    finite   4866 / 16802
+  spot_area      finite  13454 / 16802
+  spot_asym      finite  11860 / 16802
+  wso_meanfield  finite  13065 / 16802
+  cak_emdx       finite   4042 / 16802
+  cak_k2vk3      finite   4042 / 16802
+  cak_k3         finite   4042 / 16802
+  cak_delk1      finite   4042 / 16802
+  cme_rate       finite   9951 / 16802
+  cme_speed      finite   9943 / 16802
+  swics_o7to6    finite   4783 / 16802
+  swics_c6to5    finite   4783 / 16802
+  swics_avqfe    finite   4782 / 16802
+  swics_avqsi    finite   4799 / 16802
+  swics_fetoo    finite   4782 / 16802
+  swics_hetoo    finite   4783 / 16802
+  swics_avqo     finite   4783 / 16802
+  swics_ctoo     finite   4783 / 16802
+days with ALL channels: 137  (using PER-PAIR overlap instead)
+envelope-preserving surrogate; blind to modulation slower than the window
+
+=== 1. does real data still reject the null? ===
+  window median z     max z    |z|>20  3rd-diff quad-prod
+     91d      0.8      97.7         2       5.7       2.7
+    365d     16.6     184.9        18      20.7       2.6
+   1461d      1.5     300.5        12      16.5       1.1
+
+  (common-phase, no envelope, for comparison: median z 45.3, max 426.9, 30/45)
+
+=== 2. is the envelope null itself calibrated? ===
+     91d  mean p 0.4089  frac<0.05 0.2124  ratio 4.25x  failing 32/45  (43s)
+    365d  mean p 0.4218  frac<0.05 0.2204  ratio 4.41x  failing 22/45  (46s)
+   1461d  mean p 0.0869  frac<0.05 0.7123  ratio 14.25x  failing 45/45  (59s)
