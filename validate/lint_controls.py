@@ -27,7 +27,7 @@ With beacon/ in place the rules can be structural instead:
 
   Z/T/V unchanged.
 """
-import os, re, sys, glob
+import os, re, sys, glob, ast
 
 ROOT = os.path.expanduser("~/beacon-repo")
 LIB = os.path.join(ROOT, "beacon")
@@ -58,42 +58,47 @@ def scan(path):
                and not L.strip().startswith("#") and "checked" not in L and "windows." not in L:
                 flag("W'", path, i, "window not passed through windows.checked(op, f_signal, f_nuisance)")
 
-    # I -- injection downstream of a filter
-    if not in_lib:
-        first_filt = next((i for i, L in enumerate(lines, 1)
-                           if re.search(r"median_filter|spectra\.cont|\bcont\(", L)
-                           and not L.strip().startswith("#")), None)
-        if first_filt:
-            for i, L in enumerate(lines, 1):
-                if i > first_filt and re.search(r"\binject\w*\(|recovery_curve\(", L) \
-                   and not L.strip().startswith("#") and "pre=" not in L:
-                    flag("I", path, i, "injection after a filter with no pre= -- signal exempted from it")
-                    break
-
-    # D -- a relative residual or ratio with no denominator check.
+    # I -- injection downstream of a filter, BY DATAFLOW rather than by line number.
     #
-    # THE FIRST VERSION OF THIS RULE WAS TWO-THIRDS FALSE POSITIVE, and it failed in the
-    # way it was written to prevent. Its regex matched np.log(N/alpha) in five threshold
-    # formulas and one docstring line -- text that RESEMBLES a data ratio without being
-    # one. That is the defect of the original S rule, which matched an injected tone's
-    # random phase and was then reported as a finding against a published result. A rule
-    # induced from one instance reproduces the error it was induced from.
+    # The first version compared LINE NUMBERS: it flagged any inject( appearing below
+    # the first median_filter in the file. That is definition order, not execution
+    # order, and it fired on search/backex2.py -- where inject() is defined after
+    # stat() but CALLED first, on the raw periods, before any filtering. backex2 is in
+    # fact one of the better scripts here; its own docstring records that v1 had a
+    # statistic which sat at 0.954 for data and surrogates alike.
     #
-    # It now matches only the RELATIVE RESIDUAL form -- something over a trend, baseline
-    # or median, offset by one -- and a log ratio whose denominator is not a known
-    # scalar. Docstring bodies are skipped.
+    # Fourth rule in this file to fire on text that resembles the pattern rather than
+    # instantiating it, after S, W and D. A regex cannot see dataflow, so this walks
+    # the AST: collect the names assigned from a filtering call, then flag an inject
+    # whose arguments include one of them.
     if not in_lib:
-        SCALARS = r"(?:alpha|al|N|n|ns|nb|len|size|count|total|norm|ws|W)"
-        in_doc = False
-        for i, L in enumerate(lines, 1):
-            if (L.count(chr(34)*3) + L.count(chr(39)*3)) % 2: in_doc = not in_doc
-            if in_doc or L.strip().startswith("#"): continue
-            rel = re.search(r"/\s*(trend|tr|base|med|median|mean|cont|baseline)\w*\s*[-+]\s*1", L)
-            lg  = re.search(r"np\.log\(\s*(\w+)\s*/\s*(\w+)\s*\)", L)
-            if lg and re.fullmatch(SCALARS, lg.group(2)): lg = None
-            if (rel or lg) and "denominator_safe" not in src:
-                flag("D", path, i, "relative residual or ratio with no denominator_safe check")
-                break
+        try:
+            tree = ast.parse(src)
+        except SyntaxError:
+            tree = None
+        if tree is not None:
+            FILTERS = {"median_filter", "uniform_filter", "cont", "continuum", "prep", "detrend"}
+            filtered = set()
+            for node in ast.walk(tree):
+                if isinstance(node, ast.Assign) and isinstance(node.value, ast.Call):
+                    fn = node.value.func
+                    nm = fn.attr if isinstance(fn, ast.Attribute) else getattr(fn, "id", "")
+                    if nm in FILTERS:
+                        for t in node.targets:
+                            for sub in ast.walk(t):
+                                if isinstance(sub, ast.Name): filtered.add(sub.id)
+            for node in ast.walk(tree):
+                if isinstance(node, ast.Call):
+                    fn = node.func
+                    nm = fn.attr if isinstance(fn, ast.Attribute) else getattr(fn, "id", "")
+                    if nm in ("inject", "recovery_curve") and not any(
+                            k.arg == "pre" for k in node.keywords):
+                        args = {a.id for a in node.args if isinstance(a, ast.Name)}
+                        hit = args & filtered
+                        if hit:
+                            flag("I", path, node.lineno,
+                                 "injects into %s, which was produced by a filter -- "
+                                 "the signal is exempted from it" % ", ".join(sorted(hit)))
 
     for i, L in enumerate(lines, 1):
         s = L.strip()
@@ -111,7 +116,14 @@ def scan(path):
 
     # C -- a control with no recorded negative arm
     if os.path.basename(path) == "controls.py": return
-    if re.search(r"def\s+\w*(control|gate)\w*\(", src) and "negative_arm" not in src:
+    # RULE C. The first version matched def \w*(control|gate)\w*( and fired on all five
+    # scripts that define a function called SURROGATE -- sur-ro-GATE. A substring where a
+    # word was meant. That is the fifth rule in this file to fire on resemblance rather
+    # than structure, after S, W, D and I, and several were written in direct reaction to
+    # the previous one failing the same way. The name must now be a whole word, delimited
+    # by underscores or the function-name boundary.
+    if re.search(r"def\s+(?:\w+_)?(?:control|gate|gates|checks)(?:_\w+)?\s*\(", src) \
+       and "negative_arm" not in src:
         flag("C", path, 0, "defines a control with no negative_arm; Rule C requires a failing demonstration")
 
 if __name__ == "__main__":
