@@ -1,0 +1,15 @@
+loading GOLF ...
+  40845600 samples at 20 s = 25.88 yr; duty cycle 98.4%
+
+GATE 1a -- the comb. dnu is PREDICTED at 135.0 uHz, never fitted.
+    MEAN  envelope 2.9753 mHz   ACF peak 135.00 uHz (r=0.896)   PASS
+    PM1   envelope 2.9753 mHz   ACF peak 135.00 uHz (r=0.901)   PASS
+    PM2   envelope 2.9753 mHz   ACF peak 135.00 uHz (r=0.899)   PASS
+  (expect envelope near 3.09 mHz, ACF peak at 135 uHz)
+
+GATE 1b -- the known solar-cycle frequency shift (~0.4 uHz p-p at 3 mHz)
+    105 segments of 90 d, 104 usable (duty>50%)
+    shift range -0.223 .. 0.362 uHz, peak-to-peak 0.584 uHz
+    fractional: 1.89e-04  (known solar-cycle term ~1.3e-4)
+
+  saved ~/golf_shift.npz   (29.4 s)

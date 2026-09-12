@@ -1,0 +1,15 @@
+permutation threshold (alpha=0.05): power 0.1457
+residual rms 0.0760 uHz
+
+   amp (uHz)   fractional   recovery
+        0.02     6.47e-06       0.0%
+        0.04     1.29e-05      25.0%
+        0.06     1.94e-05     100.0%
+        0.08     2.59e-05     100.0%
+        0.12     3.88e-05     100.0%
+        0.16     5.18e-05     100.0%
+        0.24     7.77e-05     100.0%
+        0.32     1.04e-04     100.0%
+
+  95% recovery at 0.06 uHz = 1.94e-05 fractional at nu_max
+  designer level for row 7 (section 3.6): 1e-6   ->  margin 0.05

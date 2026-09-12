@@ -1,0 +1,16 @@
+shift series: 105 segments of 90 d, 104 finite
+  MEAN  p-p 0.584 uHz
+  PM1   p-p 0.588 uHz
+  PM2   p-p 0.571 uHz
+
+GATE 2 -- do the two photomultipliers agree?
+    PM1 vs PM2 correlation over 104 segments: r = 0.982  PASS
+
+ACTIVITY REGRESSION -- how much of the series is the known term?
+    shift = -2.102e-07 + 2.071e-09 x F10.7      R^2 = 0.517
+    slope: 2.071 nHz per sfu; residual rms 0.0760 uHz
+
+SEARCH -- residual, after the activity term
+    200 independent frequencies, 20000 permutations
+    strongest peak: period 2455.4 d, power 0.1284, threshold 0.1454, p = 0.1255
+    -> NULL -- no structure beyond the activity term
