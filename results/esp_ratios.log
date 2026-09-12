@@ -1,0 +1,60 @@
+EVE ESP colour ratios: 120 days, 41472000 samples at 0.25 s, 97.7% present
+  CH_18  residual rms 1237.1 ppm
+  CH_26  residual rms 3032.3 ppm
+  CH_30  residual rms 2186.4 ppm
+  CH_36  residual rms 765522.1 ppm
+  CH_D   residual rms 13493.7 ppm
+
+  dark-channel veto threshold R > 28.6
+
+BLIND NARROWBAND SEARCH -- six dimensionless colour ratios
+  18/26     20736000 bins, threshold R > 28.6, 11 above
+      f = 1.999997e+00 Hz  period      0.500 s  R =     44.7  dark   112.9  VETOED (instrumental)
+      f = 1.999994e+00 Hz  period      0.500 s  R =     43.3  dark    58.5  VETOED (instrumental)
+      f = 1.999997e+00 Hz  period      0.500 s  R =     41.4  dark   112.9  VETOED (instrumental)
+      f = 1.999989e+00 Hz  period      0.500 s  R =     39.4  dark    30.4  VETOED (instrumental)
+      f = 2.000000e+00 Hz  period      0.500 s  R =     37.3  dark    46.0  VETOED (instrumental)
+      f = 1.999991e+00 Hz  period      0.500 s  R =     34.8  dark    20.0  clean
+      f = 1.999987e+00 Hz  period      0.500 s  R =     31.7  dark    16.8  clean
+      f = 1.999993e+00 Hz  period      0.500 s  R =     30.3  dark    52.7  VETOED (instrumental)
+  18/30     20736000 bins, threshold R > 28.6, 2 above
+      f = 1.999990e+00 Hz  period      0.500 s  R =     35.6  dark    30.4  VETOED (instrumental)
+      f = 1.999990e+00 Hz  period      0.500 s  R =     28.9  dark     6.8  clean
+  18/36     20736000 bins, threshold R > 28.6, 0 above
+      no bins above threshold
+  26/30     20736000 bins, threshold R > 28.6, 31 above
+      f = 1.999999e+00 Hz  period      0.500 s  R =    196.5  dark    67.4  VETOED (instrumental)
+      f = 1.999999e+00 Hz  period      0.500 s  R =    161.8  dark    67.4  VETOED (instrumental)
+      f = 1.999999e+00 Hz  period      0.500 s  R =    160.7  dark    40.1  VETOED (instrumental)
+      f = 1.999997e+00 Hz  period      0.500 s  R =    159.8  dark   112.9  VETOED (instrumental)
+      f = 2.000000e+00 Hz  period      0.500 s  R =    157.1  dark    46.0  VETOED (instrumental)
+      f = 2.000000e+00 Hz  period      0.500 s  R =    145.1  dark    46.0  VETOED (instrumental)
+      f = 2.000000e+00 Hz  period      0.500 s  R =    110.5  dark    46.0  VETOED (instrumental)
+      f = 1.999998e+00 Hz  period      0.500 s  R =     83.9  dark    40.1  VETOED (instrumental)
+  26/36     20736000 bins, threshold R > 28.6, 0 above
+      no bins above threshold
+  30/36     20736000 bins, threshold R > 28.6, 0 above
+      no bins above threshold
+
+  candidates surviving the dark-channel veto: 3
+      18/26     1.999991e+00 Hz       0.500 s  R = 34.8
+      18/26     1.999987e+00 Hz       0.500 s  R = 31.7
+      18/30     1.999990e+00 Hz       0.500 s  R = 28.9
+Traceback (most recent call last):
+  File "/home/dxtra/beacon-repo/search/esp_ratios.py", line 77, in <module>
+    % (fr, tag, Rr[i], dark, "VETOED (instrumental)" if vetoed else "clean"))
+  File "/usr/lib/python3.10/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/usr/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/usr/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool is not JSON serializable

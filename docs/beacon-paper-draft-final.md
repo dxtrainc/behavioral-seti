@@ -727,7 +727,7 @@ Every search above reads the Sun from one place, and §2.6 proposes a modulator 
 
 ***The geometry is recovered** — the license for everything that follows: a viewpoint null means nothing unless the viewpoint machinery can be shown to find something.*
 
-**The search.** Nine peaks above threshold in the Earth line, seven in the Mars line, six in both. The three Earth-only peaks are reported as unresolved, not detections: MAVEN had only 40%, 32% and 88% power to see a signal of the amplitude observed at Earth, short of the 95% bar — **"absent at the other viewpoint" is worthless unless the other viewpoint could have seen it.**
+**The search.** Nine peaks above threshold in the Earth line, seven in the Mars line, six in both. The three Earth-only peaks are reported as unresolved, not detections: MAVEN had only 66%, 20% and 93% power to see a signal of the amplitude observed at Earth, short of the 95% bar — **"absent at the other viewpoint" is worthless unless the other viewpoint could have seen it.**
 
 | period | 95% recovery | fractional Ly-α | false alarm | status |
 |---|---|---|---|---|
@@ -753,6 +753,10 @@ In the judged band, 125 s to 6 h, **the Earth line has no peak above threshold a
 | 911 s | 1.8×10⁻⁵ | — | Mars has no sensitivity at ≤5×10⁻³σ |
 | 3,671 s | — | — | neither line sensitive |
 | 3,600 s | — | — | **blind by construction** — an exact harmonic of the day |
+
+> **The fast-band threshold does not hold its nominal false-alarm rate, and the limits below are quoted against it.** A band-wide control — the count of exceedances over all 1,336,602 judged bins per surrogate, whose expectation is α = 0.05 if the threshold is calibrated — returns **197 per surrogate**, some four thousand times the nominal rate. The threshold is the analytic μ·ln(N/α) with μ estimated empirically as median(_R_)/ln 2; **estimating the scale does not rescue an exponential formula applied to a tail that is not exponential**, and §4.2 independently measures that tail excess at ~4×10³. The limits in this table are therefore real amplitudes at 95% recovery but are **not family-wise 0.05**, and requoting them against an empirical threshold — the 95th percentile of the maximum of _R_ across surrogates, as used for the triple and quadruple sweeps — will loosen them. That correction is in progress and is not folded here.
+>
+> **The control this replaced could not have found it.** The previous version injected nothing and tested a *single fixed bin* against a threshold set for half a million, returning ~0% whether the pipeline was sound or not — and the cached-continuum shortcut, justified in the source by appeal to that control, is separately measured here at **375** false alarms against 197 for a continuum recomputed on each surrogate.
 
 *Fractional amplitude at 95% recovery. The Earth-line figure at 307 s is 2.2× the §4.2 limit at the same period, which is the expected cost of the daily fold and the common-grid interpolation and is the check that this pipeline is calibrated against the paper's main one.*
 
@@ -871,8 +875,24 @@ SDO/EVE ESP gives four EUV bands at **0.25 s over 120 consecutive days** — 41,
 
 **Null.** Of 20,736,000 bins, CH_18 and CH_36 return nothing above threshold; CH_26 and CH_30 return 31 and 30 candidates, **every one of them at exactly 2.000000 Hz — the Nyquist frequency**. Nothing physical sits precisely at Nyquist. The dark channel vetoes nine of the twelve strongest as instrumental; the three it passes are at Nyquist as well, which is a reminder that a control discriminates only against the failures it was built for.
 
-> **CH_36 is excluded from any limit.** Its values cross zero, so the relative residual _x_/trend − 1 diverges and its residual rms is 76%. The channel is reported as searched and returning nothing, not as constraining anything.
+> **CH_36 is excluded from any limit.** Its values cross zero (median 2.6×10⁻⁴, minimum −5.2×10⁻⁴), so the relative residual _x_/trend − 1 diverges and its residual rms is 76%. The channel is reported as searched and returning nothing, not as constraining anything, and it is excluded from the ratios below — a ratio against a divergent denominator is a division by something near zero, not a dimensionless carrier.
 
+**The dimensionless carriers.** §3.1 restricts a sender to dimensionless quantities, so the single channels above are the wrong object and the colour ratios are the right one. Because each channel is prepared as a relative residual, the difference of two prepared channels *is* their log ratio to first order, and the three ratios among CH_18, CH_26 and CH_30 cost nothing extra to form. **All three are null, and every candidate is again at exactly 2.000000 Hz** — 11, 2 and 31 bins above threshold across the three, all at Nyquist. Three of those pass the dark-channel veto, which records only that the dark diode happened to carry less power in those particular bins: **a control discriminates against the failures it was built for, and this one was not built against a sampling edge.** With Nyquist excluded a priori, as it can be from the cadence alone, no candidate survives in any ratio.
+
+
+### 4.19 The one spatially resolved channel, and why it is void
+
+Every other search in this paper is disc-integrated. SOHO/VIRGO's Luminosity Oscillation Imager gives **twelve science pixels across the solar disc**, plus four guiding references, at 60 s over **29.0 years with a 97.19% duty cycle** — the best-sampled record used anywhere here.
+
+It was acquired because a bound computed **before** acquisition said it should reach further than any disc-integrated channel for a *localised* source. A feature covering fraction _f_ of the disc at depth _d_ contributes _f·d_ to a disc-integrated series and _d_ to the pixel containing it: for a feature one pixel across that is a signal gain of 12 against a noise cost of √12, a net 3.46×, putting the projected limit at 5.8×10⁻⁸ against the 2.0×10⁻⁷ measured on SPM. The same arithmetic makes LOI **3.46× worse** than SPM for a global modulation, because the photons have been divided for nothing.
+
+**Gate 1 passes on every pixel.** LOI is a helioseismology imager, so the five-minute oscillation must be present: all twelve return an envelope between 3.025 and 3.175 mHz. The instrument, the data and the pipeline are all behaving.
+
+**The rotation control fails, and it takes the test with it.** A localised feature crosses the disc in about thirteen days, entering and leaving pixels in a sequence fixed by geometry — so every pixel pair has a predicted lag, and solar rotation supplies the positive control for free, because active regions do exactly this. **One of sixty-six pixel pairs correlates above _r_ = 0.3.** The rotational coupling that must be there is not.
+
+> **The probable cause is in the product, and it was named in the header before the data was downloaded.** L2 states correction for orbit, outliers, attractors **and roll sensitivity changes**. SOHO rolls; LOI's pixels are fixed in the instrument frame; removing roll sensitivity plausibly removes the inter-pixel spatial structure with it, leaving twelve near-independent photometers rather than twelve pixels on a rotating disc. **Void**: not for want of sensitivity, but because the observable the test needs appears to have been processed out upstream. Settling it requires L1, which the mission bundles do not carry.
+
+**This is the third search in this paper stopped at the same boundary** — the others being the outlier-correction question for VIRGO SPM (§4.15) and for EVE ESP (§4.18). In all three the limiting factor is not the instrument or the analysis but a level-2 product having already decided what to remove, and §5.7 should read that as a structural constraint on archival work rather than as three unrelated caveats.
 
 ## 5. Discussion
 

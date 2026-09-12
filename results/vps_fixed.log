@@ -1,0 +1,11 @@
+band: 2.0 to 194.6 day periods, 964 bins  (capped at detrend/2)
+Earth thr 14.37 (mu 1.457)   Mars thr 13.92 (mu 1.410)
+
+peaks above threshold:  Earth 9   Mars 7   both 6
+
+=== Earth-only candidates, and whether Mars could have seen them ===
+  P=   25.27 d  R_E=  16.4  R_M=  6.00  ampl 1.07e-04  Mars power  66.0%  unresolved (Mars power 66%)
+  P=    2.01 d  R_E=  15.4  R_M=  0.39  ampl 1.28e-06  Mars power  19.5%  unresolved (Mars power 20%)
+  P=   24.32 d  R_E=  15.2  R_M= 10.14  ampl 1.03e-04  Mars power  93.0%  unresolved (Mars power 93%)
+
+saved ~/viewpoint_search.json
