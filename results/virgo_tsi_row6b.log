@@ -1,0 +1,40 @@
+VIRGO TSI minute: 14199837 samples, 92.8% present, 27.00 yr
+  NO highpass in this product -- reaches the band SPM cannot
+  residual rms 62.4 ppm per minute
+
+GATE 1 -- the five-minute oscillation must be recovered
+    envelope peak 2.8753 mHz (R=4.23)   PASS
+
+BLIND NARROWBAND SEARCH -- 6247928 bins (12.000% of band vetoed), threshold R > 26.9
+    f = 2.347445e-09 Hz   period      4930.50 d   R =   1037.9
+    f = 3.521167e-09 Hz   period      3287.00 d   R =    889.9
+    f = 3.472223e-05 Hz   period     480.00 min   R =    185.3
+    f = 1.042477e-04 Hz   period     159.88 min   R =    146.8
+    f = 1.157408e-05 Hz   period    1440.00 min   R =    126.8
+    f = 2.314815e-05 Hz   period     720.00 min   R =     92.7
+    f = 1.042489e-04 Hz   period     159.87 min   R =     83.2
+    f = 4.694890e-09 Hz   period      2465.25 d   R =     83.0
+    f = 3.469054e-05 Hz   period     480.44 min   R =     71.7
+    f = 1.563727e-04 Hz   period     106.58 min   R =     64.1
+    f = 3.472106e-05 Hz   period     480.02 min   R =     56.9
+    f = 1.157290e-05 Hz   period         1.00 d   R =     54.5
+    f = 3.475392e-05 Hz   period     479.56 min   R =     51.7
+    f = 1.563739e-04 Hz   period     106.58 min   R =     49.8
+    f = 7.881944e-03 Hz   period       2.11 min   R =     44.9
+    f = 1.157525e-05 Hz   period    1439.85 min   R =     42.8
+    f = 3.169051e-08 Hz   period       365.22 d   R =     40.4
+    f = 2.316928e-06 Hz   period         5.00 d   R =     40.3
+    f = 2.314933e-05 Hz   period     719.96 min   R =     39.5
+    f = 3.472341e-05 Hz   period     479.98 min   R =     37.8
+
+GATE 2 -- cross-product: does a candidate appear in the SPM photometers?
+    2.347445e-09 Hz  TSI R=  1037.9   B     3.3  G     2.0  R     1.4  
+    3.521167e-09 Hz  TSI R=   889.9   B     3.3  G     2.0  R     1.4  
+    3.472223e-05 Hz  TSI R=   185.3   B     3.5  G     5.2  R     3.6  
+    1.042477e-04 Hz  TSI R=   146.8   B     3.1  G     6.1  R     4.9  
+    1.157408e-05 Hz  TSI R=   126.8   B     4.5  G     6.0  R     1.8  
+    2.314815e-05 Hz  TSI R=    92.7   B     0.9  G     8.2  R     4.0  
+    1.042489e-04 Hz  TSI R=    83.2   B     3.1  G     6.1  R     4.9  
+    4.694890e-09 Hz  TSI R=    83.0   B     3.9  G     2.0  R     1.4  
+
+  467 s

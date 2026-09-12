@@ -1,0 +1,56 @@
+[
+ {
+  "body": "Venus",
+  "date": "2004-06-08",
+  "expected_ppm": 75.61002113885584,
+  "measured_ppm": 90.36906333546591,
+  "ctrl_median_ppm": 59.32722258263634,
+  "ctrl_99_ppm": 153.01265437077134,
+  "pass": false
+ },
+ {
+  "body": "Venus",
+  "date": "2012-06-06",
+  "expected_ppm": 75.61002113885584,
+  "measured_ppm": 53.99293182801189,
+  "ctrl_median_ppm": 58.268508188684855,
+  "ctrl_99_ppm": 149.46032014360426,
+  "pass": false
+ },
+ {
+  "body": "Mercury",
+  "date": "2003-05-07",
+  "expected_ppm": 12.29026291451975,
+  "measured_ppm": 53.009331526450886,
+  "ctrl_median_ppm": 58.15142871512802,
+  "ctrl_99_ppm": 110.12976380820896,
+  "pass": false
+ },
+ {
+  "body": "Mercury",
+  "date": "2006-11-08",
+  "expected_ppm": 12.29026291451975,
+  "measured_ppm": 49.5983144423821,
+  "ctrl_median_ppm": 55.66478451137317,
+  "ctrl_99_ppm": 303.67763007852903,
+  "pass": false
+ },
+ {
+  "body": "Mercury",
+  "date": "2016-05-09",
+  "expected_ppm": 12.29026291451975,
+  "measured_ppm": 70.22116246627002,
+  "ctrl_median_ppm": 59.47489094986306,
+  "ctrl_99_ppm": 197.79432198457425,
+  "pass": false
+ },
+ {
+  "body": "Mercury",
+  "date": "2019-11-11",
+  "expected_ppm": 12.29026291451975,
+  "measured_ppm": 55.88402312310393,
+  "ctrl_median_ppm": 52.735948109033004,
+  "ctrl_99_ppm": 120.34060168059669,
+  "pass": false
+ }
+]

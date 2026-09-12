@@ -1,0 +1,50 @@
+EVE ESP: 120 days, 41472000 samples at 0.25 s, 97.7% present
+  Nyquist 2.00 Hz, resolution 9.645e-08 Hz
+
+  prepped CH_18  rms 1237.1 ppm
+  prepped CH_26  rms 3032.3 ppm
+  prepped CH_30  rms 2186.4 ppm
+  prepped CH_36  rms 765522.1 ppm
+  prepped CH_D   rms 13493.7 ppm
+
+GATE 1 -- the five-minute oscillation in the LIGHT channels
+    CH_18  envelope 3.0251 mHz (R=2.54)   PASS
+    CH_26  envelope 3.0251 mHz (R=2.82)   PASS
+    CH_30  envelope 3.2251 mHz (R=1.76)   PASS
+    CH_36  envelope 3.2251 mHz (R=1.71)   PASS
+    CH_D   envelope 4.0251 mHz (R=1.72)   dark
+
+BLIND NARROWBAND SEARCH
+  CH_18  20736000 bins, threshold R > 28.6, 0 above
+  CH_26  20736000 bins, threshold R > 28.6, 31 above
+       f = 2.000000e+00 Hz   period       0.5000 s   R =    414.7
+       f = 2.000000e+00 Hz   period       0.5000 s   R =    166.7
+       f = 1.999999e+00 Hz   period       0.5000 s   R =    138.4
+       f = 1.999999e+00 Hz   period       0.5000 s   R =    137.6
+       f = 1.999999e+00 Hz   period       0.5000 s   R =    125.7
+       f = 1.999997e+00 Hz   period       0.5000 s   R =    119.8
+  CH_30  20736000 bins, threshold R > 28.6, 30 above
+       f = 1.999998e+00 Hz   period       0.5000 s   R =     85.9
+       f = 1.999997e+00 Hz   period       0.5000 s   R =     68.9
+       f = 1.999988e+00 Hz   period       0.5000 s   R =     56.4
+       f = 1.999990e+00 Hz   period       0.5000 s   R =     56.4
+       f = 1.999997e+00 Hz   period       0.5000 s   R =     56.0
+       f = 1.999995e+00 Hz   period       0.5000 s   R =     49.6
+  CH_36  20736000 bins, threshold R > 28.6, 0 above
+
+GATE 2 -- the DARK channel. Anything here is instrumental.
+    CH_26  2.000000e+00 Hz  light R=   414.7  dark R=    46.0  IN DARK -> instrumental
+    CH_26  2.000000e+00 Hz  light R=   166.7  dark R=    46.0  IN DARK -> instrumental
+    CH_26  1.999999e+00 Hz  light R=   138.4  dark R=    24.7  clean
+    CH_26  1.999999e+00 Hz  light R=   137.6  dark R=    67.4  IN DARK -> instrumental
+    CH_26  1.999999e+00 Hz  light R=   125.7  dark R=    24.7  clean
+    CH_26  1.999997e+00 Hz  light R=   119.8  dark R=   112.9  IN DARK -> instrumental
+    CH_30  1.999998e+00 Hz  light R=    85.9  dark R=   112.9  IN DARK -> instrumental
+    CH_30  1.999997e+00 Hz  light R=    68.9  dark R=   112.9  IN DARK -> instrumental
+    CH_30  1.999988e+00 Hz  light R=    56.4  dark R=    10.1  clean
+    CH_30  1.999990e+00 Hz  light R=    56.4  dark R=    30.4  IN DARK -> instrumental
+    CH_30  1.999997e+00 Hz  light R=    56.0  dark R=   112.9  IN DARK -> instrumental
+    CH_30  1.999995e+00 Hz  light R=    49.6  dark R=    49.4  IN DARK -> instrumental
+
+  candidates absent from the dark channel: 3
+  6941 s

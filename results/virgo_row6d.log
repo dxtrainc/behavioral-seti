@@ -1,0 +1,36 @@
+BLUE   14342400 samples, 90.5% finite, 27.27 yr
+GREEN  14342400 samples, 94.3% finite, 27.27 yr
+RED    14342400 samples, 95.4% finite, 27.27 yr
+
+prepared in 8.8 s
+
+GATE 1 -- the five-minute oscillation MUST be recovered
+  expect an envelope near 3.09 mHz (period 5.4 min)
+    BLUE   band peak 2.9638 mHz (R=39.8)   envelope peak 2.8753 mHz (R=5.48)  PASS
+    GREEN  band peak 2.9638 mHz (R=40.7)   envelope peak 2.8753 mHz (R=6.03)  PASS
+    RED    band peak 2.9638 mHz (R=40.8)   envelope peak 2.8753 mHz (R=5.98)  PASS
+
+BLIND NARROWBAND SEARCH -- single channels (row 6)
+  BLUE           6310655 bins, threshold R > 26.9, 0 above
+       no bins above threshold
+  GREEN          6310655 bins, threshold R > 26.9, 0 above
+       no bins above threshold
+  RED            6310655 bins, threshold R > 26.9, 0 above
+       no bins above threshold
+
+DIMENSIONLESS COLOUR RATIOS -- ppm differences are log ratios
+  BLUE-GREEN     6310655 bins, threshold R > 26.9, 2 above
+       f = 1.992271e-03 Hz   period      8.3657 min   R =     27.6
+       f = 6.507512e-08 Hz   period 256114.2857 min   R =     27.3
+  BLUE-RED       6310655 bins, threshold R > 26.9, 2 above
+       f = 3.486167e-09 Hz   period 4780800.0000 min   R =     40.6
+       f = 5.461661e-08 Hz   period 305157.4468 min   R =     30.8
+  GREEN-RED      6310655 bins, threshold R > 26.9, 2 above
+       f = 2.314815e-05 Hz   period    720.0000 min   R =     33.9
+       f = 2.546296e-05 Hz   period    654.5455 min   R =     28.0
+
+GATE 2 -- does any single-channel candidate appear in all three?
+
+  candidates passing gate 2: 0
+
+total 406.0 s

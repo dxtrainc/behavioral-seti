@@ -1,0 +1,23 @@
+/home/dxtra/beacon-repo/validate/golf_inject2.py:30: RuntimeWarning: Mean of empty slice
+  sh = np.nanmean(np.vstack([s1, s2]), axis=0)
+selected estimator: PM1+PM2 mean, 180 d segments, +/-4 uHz
+  51 usable segments of 52
+
+  permutation threshold 0.2612; residual rms 0.0411 uHz
+
+   amp (uHz)    fractional   recovery
+       0.005      1.62e-06     100.0%
+       0.010      3.24e-06     100.0%
+       0.015      4.85e-06     100.0%
+       0.020      6.47e-06     100.0%
+       0.030      9.71e-06      69.5%
+       0.045      1.46e-05      83.5%
+       0.070      2.27e-05     100.0%
+       0.100      3.24e-05     100.0%
+
+  95% recovery at 0.005 uHz = 1.62e-06 fractional at nu_max
+  previous (band estimator, injected):     1.94e-05
+  improvement: 11.99x
+  designer level 1e-6  ->  margin 0.618 (was 0.05)
+
+  13 s

@@ -1,0 +1,22 @@
+/home/dxtra/beacon-repo/validate/golf_inject3.py:35: RuntimeWarning: Mean of empty slice
+  sh = np.nanmean(np.vstack([s1, s2]), axis=0)
+estimator: PM1+PM2, 180 d, +/-4 uHz; activity model quadratic + dA/dt
+  51 usable segments; residual rms 0.0353 uHz
+  threshold 0.2545; observed residual max 0.1548 (30.6 pctile)  OK
+
+   amp (uHz)    fractional   recovery
+       0.000      0.00e+00       0.0%  <-- CONTROL, must be ~5%
+       0.010      3.24e-06       0.0%
+       0.020      6.47e-06      34.3%
+       0.030      9.71e-06      60.3%
+       0.045      1.46e-05     100.0%
+       0.065      2.10e-05     100.0%
+       0.090      2.91e-05     100.0%
+       0.130      4.21e-05     100.0%
+
+  monotonic in amplitude: yes
+  95% recovery at 0.045 uHz = 1.46e-05 fractional at nu_max
+  band estimator, injected: 1.94e-05   ->  improvement 1.33x
+  designer level 1e-6  ->  margin 0.069 (was 0.05)
+
+  15 s

@@ -49,7 +49,18 @@ def load(name):
     d = fits.open(os.path.join(VDIR, CH[name]))[0].data
     return d[:, 0].astype(float), d[:, 1].astype(float)      # seconds TAI, ppm
 
-def prep(v, wmin=1440):
+DETREND_MIN = int(os.environ.get("VIRGO_DETREND_MIN", "1440"))
+
+def prep(v, wmin=None):
+    """THE DETREND WINDOW IS A BLIND BAND, AND IT IS OURS, NOT THE ARCHIVE'S.
+    The injection in validate/virgo_inject.py recovered nothing at 10 d or slower at
+    any amplitude, and that was first attributed to the L2 two-month highpass. It is
+    not: a one-day running median removes everything slower than ~1 day before the L2
+    filter is ever reached. The archive's restriction sits further out and is never
+    approached. So the window is a parameter, and the search is run at two scales --
+    short for the fast band, long to open the 1 d to ~2 month band that no pass has
+    yet examined."""
+    if wmin is None: wmin = DETREND_MIN
     """gaps zeroed (adds no power at any frequency; interpolating would add some),
     outliers clipped at the robust level, residual slow trend removed."""
     ok = np.isfinite(v)
@@ -81,14 +92,26 @@ def spectrum(r, dt=60.0):
 # They are identified A PRIORI -- exact multiples of the sample interval -- and not
 # chosen after seeing which bins came out large, and they are EXCLUDED rather than
 # subtracted: the search does not run there and the blind band is reported.
-LINES = [1.0/180.0, 1.0/360.0]
-def line_mask(f, halfwidth_rel=3e-4):
+# WIDENED AFTER THE TSI RUN. The first notch excluded exactly 180.0000 s and
+# 360.0000 s at a half-width of 3e-4 relative -- 0.03%. The TSI search then returned
+# twenty candidates spanning 2.92-3.09 min and 2.01 min: SIDEBANDS of the 180 s line
+# reaching +/-2%, sixty times wider than the notch, plus a 120 s line never identified
+# at all. The frequency veto reasoned out in advance was wrong about the width and
+# incomplete about the set; the cross-product gate caught every one of them regardless
+# (R ~ 2000 in TSI, R < 5.1 in all three photometers). Widened to cover the observed
+# structure, with the excluded fraction of the band reported rather than hidden.
+LINES = [1.0/120.0, 1.0/180.0, 1.0/360.0]
+def line_mask(f, halfwidth_rel=4e-2):
     """True where the search is allowed to look"""
     m = np.ones(len(f), bool)
     for L in LINES:
         for h in (1, 2, 3):
             m &= np.abs(f - L*h) > L*h*halfwidth_rel
     return m
+
+def masked_fraction(f):
+    """how much of the band the veto costs -- reported with any limit"""
+    return 1.0 - float(line_mask(f).mean())
 
 
 

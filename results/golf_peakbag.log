@@ -1,0 +1,13 @@
+GOLF peak-bagging: 105 segments of 90 d, 104 usable
+  bin width 0.1286 uHz; 52 modes located; window +/-8.0 uHz
+
+  usable segments 104; per-segment uncertainty median 0.1036 uHz
+  shift p-p 0.4736 uHz (band method gave 0.584)
+
+  activity regression R^2 = 0.249; slope 1.319 nHz/sfu
+  RESIDUAL RMS 0.0870 uHz   (band method: 0.0760 uHz)
+  improvement factor 0.87x
+
+  implied limit ~ 2.22e-05 fractional at nu_max (band method 1.94e-5)
+
+  3 s

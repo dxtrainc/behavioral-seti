@@ -1,0 +1,26 @@
+/home/dxtra/beacon-repo/validate/golf_bench.py:90: RuntimeWarning: Mean of empty slice
+  sh = np.nanmean(np.vstack([s1, s2]), axis=0)
+CANDIDATES -- selected on the KNOWN solar-cycle term, not on sensitivity
+
+  estimator                        n     R2   amp p-p    vs lit  resid rms
+  PM1+PM2 mean 180d +/-4uHz       51  0.874    0.433      1.08     0.0411
+  centroid 180d +/-4uHz           51  0.863    0.434      1.08     0.0433
+  centroid 180d +/-6uHz           51  0.818    0.400      1.00     0.0471
+  centroid 180d +/-2uHz           51  0.815    0.347      0.87     0.0414
+  centroid 90d +/-4uHz           104  0.775    0.430      1.08     0.0573
+  centroid 90d +/-6uHz           104  0.751    0.405      1.01     0.0576
+  centroid 90d +/-2uHz           104  0.724    0.386      0.97     0.0589
+  centroid 45d +/-4uHz           207  0.589    0.359      0.90     0.0692
+  centroid 45d +/-2uHz           207  0.580    0.359      0.90     0.0704
+  centroid 45d +/-6uHz           207  0.539    0.336      0.84     0.0717
+
+  baseline (band cross-correlation, 90 d): R2 = 0.517, resid rms 0.0760 uHz
+
+  SELECTED on activity R^2: PM1+PM2 mean 180d +/-4uHz
+    R^2 0.874, recovered amplitude 0.433 uHz = 1.08x the literature 0.4 uHz
+    residual rms 0.0411 uHz -> implied limit 1.05e-05 fractional at nu_max
+
+  NOTE: the implied limit is an extrapolation from the baseline's injected
+  figure. It is NOT a limit until injected directly -- that is step 3.
+
+  28 s

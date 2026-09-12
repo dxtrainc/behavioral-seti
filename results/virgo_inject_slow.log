@@ -1,0 +1,24 @@
+VIRGO BLUE, 14342400 samples, 27.27 yr
+L2 highpass corner ~2 months = 1.929e-07 Hz
+504 jobs (6 periods x 7 amplitudes x 12 reps)
+
+2107 s
+
+recovery fraction (R above the search's own threshold)
+  period           0.10   0.20   0.40   0.80   1.60   3.20   6.40   ppm
+  1.0 d              0%     0%     0%     0%     0%    67%   100%
+  3.0 d              0%     0%     0%     0%     0%     0%    42%
+  10.0 d             0%     0%     0%     0%     0%     0%     0%
+  30.0 d             0%     0%     0%     0%     0%     0%     0%
+  60.0 d             0%     0%     0%     0%     0%     0%     0%
+  120.0 d            0%     0%     0%     0%     0%     0%     0%
+
+95%% recovery amplitude by period:
+  1.0 d        6.40 ppm
+  3.0 d        NOT REACHED in 6.40 ppm
+  10.0 d       NOT REACHED in 6.40 ppm
+  30.0 d       NOT REACHED in 6.40 ppm
+  60.0 d       NOT REACHED in 6.40 ppm
+  120.0 d      NOT REACHED in 6.40 ppm
+
+  best recovered amplitude across the scanned band: 6.40 ppm = 6.40e-06 fractional

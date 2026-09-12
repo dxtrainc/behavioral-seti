@@ -1,0 +1,88 @@
+BLUE   14342400 samples, 90.5% finite, 27.27 yr
+GREEN  14342400 samples, 94.3% finite, 27.27 yr
+RED    14342400 samples, 95.4% finite, 27.27 yr
+
+prepared in 8.7 s
+
+GATE 1 -- the five-minute oscillation MUST be recovered
+  expect an envelope near 3.09 mHz (period 5.4 min)
+    BLUE   band peak 2.9638 mHz (R=25.5)   envelope peak 2.9753 mHz (R=2.10)  PASS
+    GREEN  band peak 2.9638 mHz (R=36.0)   envelope peak 3.0753 mHz (R=2.58)  PASS
+    RED    band peak 3.0983 mHz (R=37.0)   envelope peak 3.0753 mHz (R=2.60)  PASS
+
+BLIND NARROWBAND SEARCH -- single channels (row 6)
+  BLUE           7164744 bins, threshold R > 27.1, 6 above
+       f = 3.369961e-07 Hz   period  49456.5517 min   R =     44.0
+       f = 3.509408e-07 Hz   period  47491.3907 min   R =     43.7
+       f = 3.346720e-07 Hz   period  49800.0000 min   R =     40.8
+       f = 3.335100e-07 Hz   period  49973.5192 min   R =     29.9
+       f = 3.381582e-07 Hz   period  49286.5979 min   R =     29.4
+       f = 3.521029e-07 Hz   period  47334.6535 min   R =     28.1
+  GREEN          7164744 bins, threshold R > 27.1, 5 above
+       f = 3.509408e-07 Hz   period  47491.3907 min   R =     47.5
+       f = 3.346720e-07 Hz   period  49800.0000 min   R =     44.7
+       f = 3.369961e-07 Hz   period  49456.5517 min   R =     35.7
+       f = 3.521029e-07 Hz   period  47334.6535 min   R =     27.6
+       f = 3.335100e-07 Hz   period  49973.5192 min   R =     27.4
+  RED            7164744 bins, threshold R > 27.1, 11 above
+       f = 3.509408e-07 Hz   period  47491.3907 min   R =     48.6
+       f = 2.614625e-07 Hz   period  63744.0000 min   R =     40.4
+       f = 4.311226e-07 Hz   period  38658.7601 min   R =     39.5
+       f = 3.346720e-07 Hz   period  49800.0000 min   R =     36.3
+       f = 2.347352e-07 Hz   period  71001.9802 min   R =     35.8
+       f = 4.241503e-07 Hz   period  39294.2466 min   R =     35.4
+       f = 3.404823e-07 Hz   period  48950.1706 min   R =     32.4
+       f = 3.765060e-07 Hz   period  44266.6667 min   R =     32.1
+       f = 3.521029e-07 Hz   period  47334.6535 min   R =     30.2
+       f = 3.369961e-07 Hz   period  49456.5517 min   R =     29.5
+       f = 3.753440e-07 Hz   period  44403.7152 min   R =     27.5
+
+DIMENSIONLESS COLOUR RATIOS -- ppm differences are log ratios
+  BLUE-GREEN     7164744 bins, threshold R > 27.1, 6 above
+       f = 4.229882e-07 Hz   period  39402.1978 min   R =     47.2
+       f = 3.369961e-07 Hz   period  49456.5517 min   R =     30.2
+       f = 3.416444e-07 Hz   period  48783.6735 min   R =     30.2
+       f = 3.288617e-07 Hz   period  50679.8587 min   R =     29.8
+       f = 4.241503e-07 Hz   period  39294.2466 min   R =     29.8
+       f = 3.253756e-07 Hz   period  51222.8571 min   R =     27.7
+  BLUE-RED       7164744 bins, threshold R > 27.1, 5 above
+       f = 2.324111e-09 Hz   period 7171200.0000 min   R =     60.9
+       f = 3.369961e-07 Hz   period  49456.5517 min   R =     45.8
+       f = 3.346720e-07 Hz   period  49800.0000 min   R =     36.5
+       f = 3.335100e-07 Hz   period  49973.5192 min   R =     32.0
+       f = 3.509408e-07 Hz   period  47491.3907 min   R =     31.2
+  GREEN-RED      7164744 bins, threshold R > 27.1, 9 above
+       f = 3.346720e-07 Hz   period  49800.0000 min   R =     42.2
+       f = 4.415811e-07 Hz   period  37743.1579 min   R =     36.6
+       f = 4.694705e-07 Hz   period  35500.9901 min   R =     32.2
+       f = 3.509408e-07 Hz   period  47491.3907 min   R =     30.9
+       f = 3.369961e-07 Hz   period  49456.5517 min   R =     30.5
+       f = 4.322847e-07 Hz   period  38554.8387 min   R =     29.7
+       f = 3.916127e-07 Hz   period  42559.0504 min   R =     28.1
+       f = 3.335100e-07 Hz   period  49973.5192 min   R =     28.0
+       f = 3.950989e-07 Hz   period  42183.5294 min   R =     27.3
+
+GATE 2 -- does any single-channel candidate appear in all three?
+    BLUE   3.369961e-07 Hz (49456.552 min)  B     44.0  G     35.7  R     29.5  ALL THREE
+    BLUE   3.509408e-07 Hz (47491.391 min)  B     43.7  G     47.5  R     48.6  ALL THREE
+    BLUE   3.346720e-07 Hz (49800.000 min)  B     40.8  G     44.7  R     36.3  ALL THREE
+    BLUE   3.335100e-07 Hz (49973.519 min)  B     29.9  G     27.4  R     19.3  ALL THREE
+    BLUE   3.381582e-07 Hz (49286.598 min)  B     29.4  G     26.9  R     26.4  ALL THREE
+    BLUE   3.521029e-07 Hz (47334.653 min)  B     28.1  G     27.6  R     30.2  ALL THREE
+    GREEN  3.509408e-07 Hz (47491.391 min)  B     43.7  G     47.5  R     48.6  ALL THREE
+    GREEN  3.346720e-07 Hz (49800.000 min)  B     40.8  G     44.7  R     36.3  ALL THREE
+    GREEN  3.369961e-07 Hz (49456.552 min)  B     44.0  G     35.7  R     29.5  ALL THREE
+    GREEN  3.521029e-07 Hz (47334.653 min)  B     28.1  G     27.6  R     30.2  ALL THREE
+    GREEN  3.335100e-07 Hz (49973.519 min)  B     29.9  G     27.4  R     19.3  ALL THREE
+    RED    3.509408e-07 Hz (47491.391 min)  B     43.7  G     47.5  R     48.6  ALL THREE
+    RED    2.614625e-07 Hz (63744.000 min)  B     14.2  G      8.0  R     40.4  
+    RED    4.311226e-07 Hz (38658.760 min)  B     12.6  G     13.9  R     39.5  ALL THREE
+    RED    3.346720e-07 Hz (49800.000 min)  B     40.8  G     44.7  R     36.3  ALL THREE
+    RED    2.347352e-07 Hz (71001.980 min)  B     24.4  G     23.9  R     35.8  ALL THREE
+    RED    4.241503e-07 Hz (39294.247 min)  B     16.3  G      9.5  R     35.4  
+    RED    3.404823e-07 Hz (48950.171 min)  B     20.4  G     12.9  R     32.4  ALL THREE
+    RED    3.765060e-07 Hz (44266.667 min)  B     15.7  G     11.4  R     32.1  ALL THREE
+
+  candidates passing gate 2: 17
+
+total 413.1 s
