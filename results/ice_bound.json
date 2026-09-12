@@ -1,0 +1,18 @@
+{
+ "Dome Fuji 10Be conc (Antarctica)": {
+  "staircase": null,
+  "impulses": 0.4,
+  "n": 121,
+  "span_yr": 1177.0,
+  "cadence_yr": 10.0,
+  "frac_scatter": 0.16002098236812615
+ },
+ "Antarctic 10Be stack (Delaygue)": {
+  "staircase": null,
+  "impulses": 0.4,
+  "n": 135,
+  "span_yr": 1287.0,
+  "cadence_yr": 10.0,
+  "frac_scatter": 0.14894434750803767
+ }
+}
