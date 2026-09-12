@@ -91,6 +91,17 @@ def line_mask(f, halfwidth_rel=3e-4):
     return m
 
 
+
+def rebin(f, P, width):
+    """rebin a power spectrum to `width` Hz per bin, by mean"""
+    idx = ((f - f[0])/width).astype(np.int64)
+    nb = int(idx.max())+1
+    cnt = np.bincount(idx, minlength=nb).astype(float)
+    val = np.bincount(idx, weights=P, minlength=nb)
+    ok = cnt > 0
+    return f[0] + (np.arange(nb)[ok]+0.5)*width, val[ok]/cnt[ok]
+
+
 def continuum(P, w=801):
     return np.exp(median_filter(np.log(np.maximum(P, 1e-300)), size=w, mode="nearest"))
 
@@ -127,16 +138,21 @@ if __name__ == "__main__":
     print("  expect an envelope near 3.09 mHz (period 5.4 min)")
     for c in CH:
         f, P = spectrum(R_[c])
+        # THE FIRST TWO RUNS FAILED THIS GATE ON A WINDOW SIZE. VIRGO runs 14,342,400
+        # samples at 60 s, so df = 1.16 nHz and a median_filter of 2001 bins is
+        # 2.3 uHz -- against a p-mode envelope roughly 1000 uHz wide. It was
+        # measuring noise, and it railed at the band edge on RED. The envelope is a
+        # BROAD feature: flatten against a continuum wide compared with a mode, then
+        # rebin to 50 uHz and take the peak of that.
         band = (f > 2.0e-3) & (f < 4.5e-3) & line_mask(f)
-        C = continuum(P)
-        Rb = (P/C)[band]; fb = f[band]
-        i = np.argmax(Rb)
-        # envelope: smooth the ratio across the band and find its peak
-        sm = median_filter(Rb, size=201, mode="nearest")
-        j = np.argmax(sm)
-        print("    %-6s band peak %.4f mHz (R=%.1f)   envelope peak %.4f mHz  %s"
-              % (c, fb[i]*1e3, Rb[i], fb[j]*1e3,
-                 "PASS" if 2.7e-3 < fb[j] < 3.6e-3 else "*** FAIL ***"))
+        fb_, Pb_ = rebin(f[band], P[band], 0.5e-6)
+        Cb = median_filter(Pb_, size=61, mode="nearest")
+        fe, Re = rebin(fb_, Pb_/Cb, 50e-6)
+        j = int(np.argmax(Re))
+        i = int(np.argmax(Pb_/Cb))
+        print("    %-6s band peak %.4f mHz (R=%.1f)   envelope peak %.4f mHz (R=%.2f)  %s"
+              % (c, fb_[i]*1e3, (Pb_/Cb)[i], fe[j]*1e3, Re[j],
+                 "PASS" if 2.7e-3 < fe[j] < 3.6e-3 else "*** FAIL ***"))
 
     print("\nBLIND NARROWBAND SEARCH -- single channels (row 6)")
     CAND = {}

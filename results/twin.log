@@ -1,0 +1,47 @@
+channels: TSI, F10.7, sunspot, MgII, cosmic ray, IMF |B|, proton temp, wind density, wind speed, alpha/proton, X-ray bg, proton >10MeV, Lyman-alpha, spot_area, spot_asym, wso_meanfield, cak_emdx, cak_k2vk3, cak_k3, cak_delk1, cme_rate, cme_speed, swics_o7to6, swics_c6to5, swics_avqfe, swics_avqsi, swics_fetoo, swics_hetoo, swics_avqo, swics_ctoo
+  TSI            finite  16070 / 16802
+  F10.7          finite  16050 / 16802
+  sunspot        finite  15209 / 16802
+  MgII           finite  12109 / 16802
+  cosmic ray     finite  16048 / 16802
+  IMF |B|        finite  14321 / 16802
+  proton temp    finite  16070 / 16802
+  wind density   finite  14044 / 16802
+  wind speed     finite  14146 / 16802
+  alpha/proton   finite  12541 / 16802
+  X-ray bg       finite  15185 / 16802
+  proton >10MeV  finite  12401 / 16802
+  Lyman-alpha    finite   4866 / 16802
+  spot_area      finite  13454 / 16802
+  spot_asym      finite  11860 / 16802
+  wso_meanfield  finite  13065 / 16802
+  cak_emdx       finite   4042 / 16802
+  cak_k2vk3      finite   4042 / 16802
+  cak_k3         finite   4042 / 16802
+  cak_delk1      finite   4042 / 16802
+  cme_rate       finite   9951 / 16802
+  cme_speed      finite   9943 / 16802
+  swics_o7to6    finite   4783 / 16802
+  swics_c6to5    finite   4783 / 16802
+  swics_avqfe    finite   4782 / 16802
+  swics_avqsi    finite   4799 / 16802
+  swics_fetoo    finite   4782 / 16802
+  swics_hetoo    finite   4783 / 16802
+  swics_avqo     finite   4783 / 16802
+  swics_ctoo     finite   4783 / 16802
+days with ALL channels: 137  (using PER-PAIR overlap instead)
+GOES-16 / GOES-17 EUVS, 7 bands, 1-min cadence
+common finite samples: 854634 of 1614240 (52.9%), 593.5 days
+gap breaks: 12762 (1.49% of steps)
+
+tests: 35 quadruples x 3 forms = 105, 300 surrogates
+
+  arm A  G16 (solar)           median z   2929.6   max z 130869.8   |z|>20  99/105   quad-prod med   40.1
+  arm B  G17 (solar)           median z   1061.8   max z  87988.4   |z|>20 105/105   quad-prod med  316.2
+  arm C  log G16 - log G17     median z    613.9   max z   8674.2   |z|>20  96/105   quad-prod med   48.6
+
+  (daily six-channel sweep, for comparison: median z 45.3)
+  3325.3 s
+
+  VERDICT:
+    arm C also large -> pipeline MANUFACTURES structure; void is an artefact
