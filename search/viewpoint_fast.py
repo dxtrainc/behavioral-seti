@@ -231,21 +231,26 @@ def main():
 
     sdM = rM[okM].std(); n = len(rM)
 
-    # control: with no injection the recovery must sit near the nominal 5%
-    t0 = np.arange(n, dtype=float)*STEP
-    fc = float(fE[len(fE)//3]); kc = int(np.argmin(np.abs(fM-fc)))
-    slc = slice(max(0, kc-2), kc+3); fp = 0
-    for _ in range(120):
-        sur = np.roll(rM, int(rng.integers(1000, n-1000)))
-        sur[~okM] = 0.0
+    # BAND-WIDE FALSE-ALARM RATE. The previous control injected nothing and tested a
+    # SINGLE fixed bin against a threshold set for ~5e5 bins, so it returned ~0%
+    # whether the pipeline was sound or not -- a control that cannot return "no". It
+    # is replaced by the count of exceedances over ALL judged bins per surrogate, whose
+    # expectation is alpha = 0.05 if thr_of is calibrated on this R distribution. The
+    # surrogate is the same masked roll the injection loop uses, and the continuum is
+    # RECOMPUTED on each one so that the cached-continuum shortcut is tested too.
+    fp_recomp, fp_cached = [], []
+    for _ in range(40):
+        sur = np.roll(rM, int(rng.integers(1000, n-1000))).copy(); sur[~okM] = 0.0
         _, P2, _ = spec(sur)
-        if (P2[slc]/CM[slc]).max() > tM: fp += 1
-    # The threshold is family-wise over ~5e5 bins, so the chance that any ONE
-    # named bin exceeds it is alpha/N, not alpha. A near-zero rate here is the
-    # correct result and confirms the cached continuum invents nothing; an
-    # earlier label called for "~5%", which was simply the wrong statistic.
-    print("\ndepth-0 control at a fixed bin: %.1f%% (family-wise threshold, so ~0%% is correct)"
-          % (100.0*fp/120), flush=True)
+        fp_recomp.append(int(((P2/cont(P2) > tM) & inband).sum()))
+        fp_cached.append(int(((P2/CM      > tM) & inband).sum()))
+    print("\nband-wide false alarms per surrogate over %d judged bins:" % inband.sum(), flush=True)
+    print("    recomputed continuum %.2f   cached continuum %.2f   expected %.2f"
+          % (np.mean(fp_recomp), np.mean(fp_cached), 0.05), flush=True)
+    print("  expectation if the threshold is calibrated: %.2f" % 0.05, flush=True)
+    if np.mean(fp_recomp) > 0.5:
+        print("  *** THRESHOLD IS TOO LOW -- limits from this band are not family-wise 0.05 ***",
+              flush=True)
 
     print("\n=== Earth-only candidates ===", flush=True)
     rows = []
@@ -266,19 +271,25 @@ def main():
         if near(f0, harm, 3*df):
             print("  P=%9.2f s  R_E=%7.1f   REJECTED: harmonic of the MAVEN orbit" % (P, RE[i]), flush=True)
             continue
-        aE = 2.0*np.sqrt(PE[i])/W/rE[okE].std()
+        # UNITS: fractional, in the units the series is in. Both series are log
+        # residuals and so already fractional; dividing by Earth's scatter here and
+        # multiplying by Mars's below inflated the injected tone by sdM/sdE, which the
+        # paper gives as 0.84 / 3.6e-3 -- a factor of about 230 -- and so overstated
+        # Mars power in the direction of declaring Earth-only detections.
+        aE = 2.0*np.sqrt(PE[i])/W
         # The continuum is a running median over 801 bins of a 576k-bin
         # spectrum: recomputing it inside every injection costs seconds per
         # trial and put this loop at over an hour. An injected tone moves one
         # bin, not the running median around it, so the continuum of the
-        # unmodified series is reused. Verified below by the depth-0 control.
+        # unmodified series is reused. The band-wide false-alarm count above
+        # compares cached against recomputed and reports both.
         hits = 0; N = 120
         t = np.arange(n, dtype=float)*STEP
         k = int(np.argmin(np.abs(fM-f0)))
         sl = slice(max(0, k-2), k+3)
         for _ in range(N):
             sur = np.roll(rM, int(rng.integers(1000, n-1000)))
-            y = sur + aE*sdM*np.cos(2*np.pi*f0*t + rng.uniform(0, 2*np.pi))
+            y = sur + aE*np.cos(2*np.pi*f0*t + rng.uniform(0, 2*np.pi))
             y[~okM] = 0.0
             _, P2, _ = spec(y)
             if (P2[sl]/CM[sl]).max() > tM: hits += 1

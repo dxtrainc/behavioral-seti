@@ -67,6 +67,11 @@ def main():
 
     # Mars onto Earth-equivalent time
     Mal = np.interp(grid+tau, grid, M)
+    # okM marks days MAVEN actually observed. They were computed and never used: the
+    # 5.7% missing days were linearly interpolated and then treated as data, in the
+    # spectrum, the continuum, the threshold and the injections. Interpolated stretches
+    # are smoother than data, which lowers Mars's apparent noise and raises Mars power.
+    okAl = np.interp(grid+tau, grid, okM.astype(float)) > 0.999
     # A median filter of width W flattens everything slower than about W/2, so
     # the detrend scale sets the longest period the search can honestly claim.
     DETREND = 401
@@ -91,7 +96,9 @@ def main():
 
     print("\n=== Earth-only candidates, and whether Mars could have seen them ===",
           flush=True)
-    sdM = Mal.std(); n = len(grid)
+    Mal = np.where(okAl, Mal, 0.0)
+    okM = okAl
+    sdM = Mal[okM].std(); n = len(grid)
     rows = []
     for i in iE[np.argsort(-RE[iE])][:25]:
         if i in both: continue
@@ -102,13 +109,21 @@ def main():
         # by sqrt(sum(w^2)) instead, which inflated every amplitude by 33.6x and
         # made "could Mars have seen it?" trivially yes for everything.
         WSUM = np.blackman(len(E)//2*2).sum()
-        aE = 2.0*np.sqrt(PE[i])/WSUM/E.std()
+        # UNITS. A line-of-sight modulator imposes the same FRACTIONAL amplitude at
+        # both viewpoints, so the Earth amplitude must be injected into Mars in the
+        # units the series is in -- not rescaled from Earth's scatter to Mars's. The
+        # previous form divided by E.std() here and multiplied by sdM below, inflating
+        # the injected tone by sdM/sdE and so overstating Mars power, in the direction
+        # of declaring Earth-only detections.
+        aE = 2.0*np.sqrt(PE[i])/WSUM
         # can Mars see a signal of that fractional amplitude?
         hits = 0; N = 200
         t = np.arange(n, dtype=float)
         for _ in range(N):
             sur = np.roll(Mal, int(rng.integers(50, n-50)))
-            y = sur + aE*sdM*np.cos(2*np.pi*t/P + rng.uniform(0, 2*np.pi))
+            sur = sur.copy(); sur[~okM] = 0.0
+            y = sur + aE*np.cos(2*np.pi*t/P + rng.uniform(0, 2*np.pi))
+            y[~okM] = 0.0
             f2, P2 = spec(y); R2 = P2/cont(P2)
             k = int(np.argmin(np.abs(f2-fE[i])))
             if R2[max(0,k-2):k+3].max() > tM: hits += 1
