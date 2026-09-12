@@ -40,6 +40,17 @@ def _p(name):
 import os, sys
 import numpy as np
 
+# ---- SHARED LIBRARY. These were local copies; beacon/ is now the single place the
+# construction lives. Equivalence was PROVEN before this edit rather than assumed:
+# spec, cont, thr_of and roll_masked each reproduce the local result exactly
+# (thr_of 21.902966897 both ways; roll_masked max|diff| = 0), so no committed number
+# moves and no re-run was needed. validate/migrate_equiv.py is that check.
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), ".."))
+from beacon.spectra import spec as _spec, cont as _cont, thr_of as _thr_of
+from beacon.surrogates import roll_masked as _roll_masked
+
+
 D=os.path.expanduser("~")
 def load(tok):
     z=np.load(_p("xrs1m_%s.npz")%tok)
@@ -65,17 +76,11 @@ def prep(x, wmin=1440):
     return r, ok
 
 def spectrum(r):
-    n=len(r)//2*2
-    w=np.hanning(n)
-    F=np.fft.rfft(r[:n]*w)
-    P=(np.abs(F)**2)
-    f=np.fft.rfftfreq(n,d=60.0)                  # Hz
-    return f[1:],P[1:]
+    f, P, _ = _spec(r, dt=60.0)
+    return f, P
 
-def continuum(P,w=801):
-    """local median of log power -- the red-noise floor, robust to the lines on it"""
-    from scipy.ndimage import median_filter
-    return np.exp(median_filter(np.log(np.maximum(P,1e-300)),size=w,mode="nearest"))
+def continuum(P, w=801):
+    return _cont(P, w)
 
 def search(P,f,label,alpha=0.05):
     C=continuum(P)

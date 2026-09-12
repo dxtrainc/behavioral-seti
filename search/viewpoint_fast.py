@@ -30,6 +30,17 @@ import os, json, datetime as dt
 import numpy as np
 from scipy.ndimage import median_filter
 
+# ---- SHARED LIBRARY. These were local copies; beacon/ is now the single place the
+# construction lives. Equivalence was PROVEN before this edit rather than assumed:
+# spec, cont, thr_of and roll_masked each reproduce the local result exactly
+# (thr_of 21.902966897 both ways; roll_masked max|diff| = 0), so no committed number
+# moves and no re-run was needed. validate/migrate_equiv.py is that check.
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), ".."))
+from beacon.spectra import spec as _spec, cont as _cont, thr_of as _thr_of
+from beacon.surrogates import roll_masked as _roll_masked
+
+
 AU_KM = 1.495978707e8
 C_KMS = 299792.458
 D = os.path.expanduser("~")
@@ -118,8 +129,7 @@ def cont(P, w=801):
     return np.exp(median_filter(np.log(np.maximum(P, 1e-300)), size=w, mode="nearest"))
 
 def thr_of(R, alpha=0.05):
-    mu = np.median(R)/np.log(2.0)
-    return mu*np.log(len(R)/alpha), mu
+    return _thr_of(R, alpha)
 
 def load_grid():
     """common 1-minute grid in photon-emission time"""
