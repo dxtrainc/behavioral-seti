@@ -1,0 +1,25 @@
+MAVEN days with data: 1879
+Mars distance 1.381-1.666 AU -> light travel swing 142 s
+common grid: 2800794 minutes (1945.0 d)
+  segment orbital periods: 3.0769-7.9121 h (median 3.6364)
+judged band: 1336602 bins
+
+  Earth
+    analytic threshold  mu*ln(N/alpha)         24.7
+    EMPIRICAL threshold 95th pct of max-R      26.2
+    ratio 1.1x -- the analytic value is that much too permissive
+    limits scale as sqrt(threshold): 1.03x looser
+
+  Mars
+    analytic threshold  mu*ln(N/alpha)         24.8
+    EMPIRICAL threshold 95th pct of max-R     377.3
+    ratio 15.2x -- the analytic value is that much too permissive
+    limits scale as sqrt(threshold): 3.90x looser
+
+  SECTION 4.12 FAST-BAND LIMITS, REQUOTED
+    Earth  7.2e-06  ->  7.4e-06   (x1.03)
+    Mars   4.2e-03  ->  1.6e-02   (x3.90)
+
+  The binding number is Mars: a viewpoint claim needs both lines to see it.
+
+  7880 s

@@ -1,1 +1,0 @@
-../search/viewpoint_fast.py
