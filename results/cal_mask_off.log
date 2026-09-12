@@ -1,0 +1,52 @@
+gap masking: OFF (deliberate control)   200 trials x 300 surrogates x 45 tests
+65.9 s
+
+  quadruple                                      form         mean p      KS p  frac<.05
+  TSI / F10.7 / cosmic ray / sunspot             3rd-diff     0.4906  6.13e-01    0.0500
+  TSI / F10.7 / cosmic ray / sunspot             cross        0.4687  2.25e-01    0.0650
+  TSI / F10.7 / cosmic ray / sunspot             quad-prod    0.5167  6.56e-01    0.0450
+  TSI / F10.7 / cosmic ray / X-ray bg            3rd-diff     0.5358  3.15e-01    0.0300
+  TSI / F10.7 / cosmic ray / X-ray bg            cross        0.4845  8.34e-01    0.0700
+  TSI / F10.7 / cosmic ray / X-ray bg            quad-prod    0.5275  2.61e-01    0.0300
+  TSI / F10.7 / cosmic ray / MgII                3rd-diff     0.5385  1.46e-01    0.0400
+  TSI / F10.7 / cosmic ray / MgII                cross        0.4903  4.65e-01    0.0700
+  TSI / F10.7 / cosmic ray / MgII                quad-prod    0.5136  3.88e-01    0.0600
+  TSI / F10.7 / sunspot / X-ray bg               3rd-diff     0.4597  2.29e-02    0.0400
+  TSI / F10.7 / sunspot / X-ray bg               cross        0.4643  4.11e-02    0.0700
+  TSI / F10.7 / sunspot / X-ray bg               quad-prod    0.5235  3.93e-01    0.0450
+  TSI / F10.7 / sunspot / MgII                   3rd-diff     0.4729  2.96e-01    0.0500
+  TSI / F10.7 / sunspot / MgII                   cross        0.4965  4.58e-01    0.0500
+  TSI / F10.7 / sunspot / MgII                   quad-prod    0.5127  9.21e-01    0.0500
+  TSI / F10.7 / X-ray bg / MgII                  3rd-diff     0.4854  5.46e-01    0.0750
+  TSI / F10.7 / X-ray bg / MgII                  cross        0.5033  9.54e-01    0.0450
+  TSI / F10.7 / X-ray bg / MgII                  quad-prod    0.5307  2.87e-01    0.0400
+  TSI / cosmic ray / sunspot / X-ray bg          3rd-diff     0.4474  8.48e-03    0.0600
+  TSI / cosmic ray / sunspot / X-ray bg          cross        0.4796  6.73e-01    0.0850
+  TSI / cosmic ray / sunspot / X-ray bg          quad-prod    0.5127  6.50e-01    0.0300
+  TSI / cosmic ray / sunspot / MgII              3rd-diff     0.4572  8.46e-02    0.0550
+  TSI / cosmic ray / sunspot / MgII              cross        0.5071  4.96e-01    0.0700
+  TSI / cosmic ray / sunspot / MgII              quad-prod    0.5196  2.72e-01    0.0500
+  TSI / cosmic ray / X-ray bg / MgII             3rd-diff     0.4424  4.12e-03    0.0600
+  TSI / cosmic ray / X-ray bg / MgII             cross        0.4911  9.23e-01    0.0600
+  TSI / cosmic ray / X-ray bg / MgII             quad-prod    0.5280  1.92e-01    0.0600
+  TSI / sunspot / X-ray bg / MgII                3rd-diff     0.4596  5.26e-02    0.0650
+  TSI / sunspot / X-ray bg / MgII                cross        0.5069  6.66e-01    0.0450
+  TSI / sunspot / X-ray bg / MgII                quad-prod    0.5261  3.38e-01    0.0600
+  F10.7 / cosmic ray / sunspot / X-ray bg        3rd-diff     0.4507  1.31e-02    0.0650
+  F10.7 / cosmic ray / sunspot / X-ray bg        cross        0.4688  1.63e-01    0.0750
+  F10.7 / cosmic ray / sunspot / X-ray bg        quad-prod    0.5180  8.08e-01    0.0250
+  F10.7 / cosmic ray / sunspot / MgII            3rd-diff     0.4590  1.53e-01    0.0650
+  F10.7 / cosmic ray / sunspot / MgII            cross        0.4962  9.60e-01    0.0450
+  F10.7 / cosmic ray / sunspot / MgII            quad-prod    0.5304  1.84e-01    0.0500
+  F10.7 / cosmic ray / X-ray bg / MgII           3rd-diff     0.4673  1.59e-01    0.0550
+  F10.7 / cosmic ray / X-ray bg / MgII           cross        0.5006  8.46e-01    0.0450
+  F10.7 / cosmic ray / X-ray bg / MgII           quad-prod    0.5277  4.38e-01    0.0350
+  F10.7 / sunspot / X-ray bg / MgII              3rd-diff     0.4589  6.64e-02    0.0750
+  F10.7 / sunspot / X-ray bg / MgII              cross        0.4985  5.36e-01    0.0250
+  F10.7 / sunspot / X-ray bg / MgII              quad-prod    0.5210  4.25e-01    0.0400
+  cosmic ray / sunspot / X-ray bg / MgII         3rd-diff     0.4474  1.75e-02    0.0750
+  cosmic ray / sunspot / X-ray bg / MgII         cross        0.4772  1.82e-01    0.0500
+  cosmic ray / sunspot / X-ray bg / MgII         quad-prod    0.5230  3.02e-01    0.0500
+
+  POOLED: mean p 0.4942 (expect 0.5), frac<0.05 = 0.0533 (expect 0.05), KS p = 1.49e-04
+  tests failing uniformity at Bonferroni: 0 of 45

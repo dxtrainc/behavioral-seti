@@ -1,0 +1,12 @@
+GAP-REALISTIC control. masking: OFF  200 trials x 300 sur x 45 tests
+increment size at breaks vs non-breaks, real data:
+   TSI          break 0.3507   non-break 0.2307   ratio 1.52
+   F10.7        break 0.1574   non-break 0.0936   ratio 1.68
+   cosmic ray   break 0.1245   non-break 0.0747   ratio 1.67
+   sunspot      break 0.4489   non-break 0.4475   ratio 1.00
+   X-ray bg     break 0.1869   non-break 0.1278   ratio 1.46
+   MgII         break 0.1729   non-break 0.1136   ratio 1.52
+
+70.8 s
+  POOLED mean p 0.2521 (expect 0.5)   frac<0.05 = 0.4693 (expect 0.05)   ratio 9.39x
+  tests failing uniformity at Bonferroni: 34 of 45

@@ -1,0 +1,4 @@
+calendar-symmetric surrogates: 200 trials x 300 sur x 45 tests
+82.4 s
+  POOLED mean p 0.4921 (expect 0.5)  frac<0.05 0.0509 (expect 0.05)  ratio 1.02x
+  tests failing uniformity at Bonferroni: 0 of 45
