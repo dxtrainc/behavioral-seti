@@ -71,3 +71,34 @@ def independent_of(param_name, values, run_fn, tol=0.25):
     return ControlResult(name="independent_of_"+param_name, results=out, spread=spread,
                          passed=bool(spread <= tol),
                          note=("feature varies by %.0f%% across %s" % (100*spread, param_name)))
+
+
+def denominator_safe(x, name="channel", margin=5.0):
+    """RULE D: a relative residual or ratio is only dimensionless if its denominator
+    stays away from zero.
+
+    EVE ESP CH_36 passed every structural test -- right instrument, right cadence, right
+    length, correct dimensionless construction -- and failed on the one property nothing
+    checked: its values cross zero (median 2.6e-4, minimum -5.2e-4), so x/trend - 1
+    diverges and its residual rms came out at 765,522 ppm, i.e. 76%. A ratio formed
+    against it is not a carrier, it is a division by something near zero, and any
+    survivor in it would be that and nothing else.
+
+    The test is whether the distribution's distance from zero is large compared with its
+    own spread: |median| must exceed `margin` robust scatters. A channel that fails this
+    may still be searched on its own; it may not be used as a denominator.
+    """
+    x = np.asarray(x, float)
+    x = x[np.isfinite(x)]
+    if len(x) < 8:
+        return ControlResult(name="denominator_safe:"+name, passed=False,
+                             note="too few finite samples to judge")
+    med = float(np.median(x))
+    mad = float(1.4826*np.median(np.abs(x - med)))
+    ratio = abs(med)/mad if mad > 0 else np.inf
+    crosses = bool(np.nanmin(x) < 0 < np.nanmax(x))
+    ok = (ratio >= margin) and not crosses
+    return ControlResult(name="denominator_safe:"+name, median=med, mad=mad,
+                         median_over_mad=ratio, crosses_zero=crosses, passed=bool(ok),
+                         note=("median %.3g is %.1f robust scatters from zero%s"
+                               % (med, ratio, "; RANGE CROSSES ZERO" if crosses else "")))

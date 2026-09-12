@@ -32,6 +32,21 @@ import os, sys, json, datetime as dt
 import numpy as np
 from astropy.io import fits
 from scipy.ndimage import median_filter
+import sys as _s, os as _o
+_s.path.insert(0, _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), ".."))
+from beacon.controls import denominator_safe
+
+def _check_denominator(tr, name):
+    """RULE D. A relative residual x/trend - 1 is only dimensionless while the trend
+    stays away from zero. EVE ESP CH_36 crosses zero -- median 2.6e-4, minimum -5.2e-4 --
+    so its residual rms came out at 765,522 ppm, 76%, and every ratio formed against it
+    was a division by something near zero rather than a carrier. The check is cheap and
+    the failure is silent without it."""
+    res = denominator_safe(tr, name)
+    if not res:
+        print("  *** DENOMINATOR UNSAFE: %s -- %s" % (name, res["note"]), flush=True)
+    return bool(res)
+
 
 VD = os.path.expanduser("~/virgo")
 TAI0 = dt.datetime(1958, 1, 1)          # TAI epoch
@@ -57,6 +72,7 @@ def detrend(v, win=1441):
     ok = np.isfinite(v)
     f = np.where(ok, v, np.nan)
     med = median_filter(np.nan_to_num(f, nan=np.nanmedian(f)), size=win, mode="nearest")
+    _check_denominator(med, "daily median TSI")
     return np.where(ok, f/med - 1.0, np.nan), med
 
 if __name__ == "__main__":

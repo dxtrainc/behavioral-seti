@@ -25,6 +25,21 @@ from astropy.io import fits
 from scipy.ndimage import median_filter
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import virgo_fast as V
+import sys as _s, os as _o
+_s.path.insert(0, _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), ".."))
+from beacon.controls import denominator_safe
+
+def _check_denominator(tr, name):
+    """RULE D. A relative residual x/trend - 1 is only dimensionless while the trend
+    stays away from zero. EVE ESP CH_36 crosses zero -- median 2.6e-4, minimum -5.2e-4 --
+    so its residual rms came out at 765,522 ppm, 76%, and every ratio formed against it
+    was a division by something near zero rather than a carrier. The check is cheap and
+    the failure is silent without it."""
+    res = denominator_safe(tr, name)
+    if not res:
+        print("  *** DENOMINATOR UNSAFE: %s -- %s" % (name, res["note"]), flush=True)
+    return bool(res)
+
 
 VD = os.path.expanduser("~/virgo")
 
@@ -42,6 +57,7 @@ def prep_tsi(v, wmin=None):
     s = 1.4826*np.nanmedian(np.abs(y-med))
     y = np.clip(np.nan_to_num(y, nan=med), med-6*s, med+6*s)
     tr = median_filter(y, size=wmin, mode="nearest")
+    _check_denominator(tr, "TSI trend")
     return np.where(ok, y/tr - 1.0, 0.0), ok
 
 if __name__ == "__main__":

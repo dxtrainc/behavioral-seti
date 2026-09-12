@@ -65,6 +65,15 @@ def test_recovers_known_catches_the_row5_gate():
     assert not C.recovers_known(measured=53.0, predicted=12.3)
     assert C.recovers_known(measured=90.4, predicted=75.6)
 
+def test_denominator_safe_catches_ch36():
+    """CH_36 crosses zero: median 2.6e-4, min -5.2e-4. x/trend - 1 gave rms 76%."""
+    rng = np.random.default_rng(3)
+    ch36 = rng.normal(2.6e-4, 3.0e-4, 4000)      # crosses zero, as the real channel does
+    ch18 = rng.normal(1.23e-3, 2.0e-5, 4000)     # well away from zero
+    assert not C.denominator_safe(ch36, "CH_36")
+    assert C.denominator_safe(ch18, "CH_18")
+
+
 if __name__ == "__main__":
     fns = [(k, v) for k, v in sorted(globals().items()) if k.startswith("test_")]
     bad = 0

@@ -27,6 +27,21 @@ frequency; interpolating would add some.
 import os, sys, glob, json, time
 import numpy as np
 from scipy.ndimage import median_filter
+import sys as _s, os as _o
+_s.path.insert(0, _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), ".."))
+from beacon.controls import denominator_safe
+
+def _check_denominator(tr, name):
+    """RULE D. A relative residual x/trend - 1 is only dimensionless while the trend
+    stays away from zero. EVE ESP CH_36 crosses zero -- median 2.6e-4, minimum -5.2e-4 --
+    so its residual rms came out at 765,522 ppm, 76%, and every ratio formed against it
+    was a division by something near zero rather than a carrier. The check is cheap and
+    the failure is silent without it."""
+    res = denominator_safe(tr, name)
+    if not res:
+        print("  *** DENOMINATOR UNSAFE: %s -- %s" % (name, res["note"]), flush=True)
+    return bool(res)
+
 
 ESP = os.path.expanduser("~/esp")
 DT = 0.25
@@ -56,6 +71,8 @@ def prep(x, ok, win=2401):
     y = np.where(ok, x, med)
     tr = median_filter(y, size=win, mode="nearest")
     tr = np.where(np.abs(tr) < 1e-12, med if abs(med) > 1e-12 else 1.0, tr)
+    if not _check_denominator(tr, "trend"):
+        print("      channel excluded from any ratio (see section 4.18)", flush=True)
     r = np.where(ok, y/tr - 1.0, 0.0)
     s = 1.4826*np.median(np.abs(r[ok])) if ok.any() else 0.0
     if s > 0: r = np.clip(r, -8*s, 8*s)

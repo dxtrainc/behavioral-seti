@@ -36,6 +36,7 @@ if __name__ == "__main__":
     R = {}
     for c in E.LIGHT + [E.DARK]:
         R[c] = E.prep(C[c], ok)
+        # reported for every channel so the exclusion below is visible, not silent
         print("  %-6s residual rms %.1f ppm" % (c, np.std(R[c][ok])*1e6), flush=True)
 
     # dark channel spectrum, for the veto
@@ -46,7 +47,16 @@ if __name__ == "__main__":
 
     print("\nBLIND NARROWBAND SEARCH -- six dimensionless colour ratios")
     allc = {}
-    for a, b in itertools.combinations(E.LIGHT, 2):
+    # CH_36 IS EXCLUDED. Its values cross zero (median 2.6e-4, minimum -5.2e-4), so the
+    # relative residual x/trend - 1 diverges and its residual rms is 765,522 ppm -- 76%.
+    # A ratio formed against a divergent channel is not a dimensionless carrier, it is a
+    # division by something near zero, and any survivor in it would be that and nothing
+    # else. Section 4.18 already excludes CH_36 from any limit; the ratios inherit the
+    # exclusion. This removes three of the six pairs and leaves 18/26, 18/30 and 26/30.
+    USABLE = [c for c in E.LIGHT if c != "CH_36"]
+    print("\n  excluded CH_36 (residual rms 76%%, values cross zero); %d ratios from %s"
+          % (len(list(itertools.combinations(USABLE, 2))), ", ".join(USABLE)), flush=True)
+    for a, b in itertools.combinations(USABLE, 2):
         d = R[a] - R[b]                       # = log colour ratio, to first order
         f, P = E.spectrum(d)
         Rr = P/E.continuum(P)

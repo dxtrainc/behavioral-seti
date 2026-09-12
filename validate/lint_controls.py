@@ -20,6 +20,11 @@ With beacon/ in place the rules can be structural instead:
   C   a control with no recorded negative_arm result.
   I   an inject() after the first windows./spectra.cont call in the same script --
       injecting downstream of the step that attenuates the signal.
+  D   a relative residual or ratio formed without checking that the denominator stays
+      away from zero. EVE ESP CH_36 passed every structural test and failed on this one:
+      its values cross zero, so x/trend - 1 diverged and its residual rms was 76%. A
+      ratio against it is a division by something near zero, not a carrier.
+
   Z/T/V unchanged.
 """
 import os, re, sys, glob
@@ -65,6 +70,31 @@ def scan(path):
                     flag("I", path, i, "injection after a filter with no pre= -- signal exempted from it")
                     break
 
+    # D -- a relative residual or ratio with no denominator check.
+    #
+    # THE FIRST VERSION OF THIS RULE WAS TWO-THIRDS FALSE POSITIVE, and it failed in the
+    # way it was written to prevent. Its regex matched np.log(N/alpha) in five threshold
+    # formulas and one docstring line -- text that RESEMBLES a data ratio without being
+    # one. That is the defect of the original S rule, which matched an injected tone's
+    # random phase and was then reported as a finding against a published result. A rule
+    # induced from one instance reproduces the error it was induced from.
+    #
+    # It now matches only the RELATIVE RESIDUAL form -- something over a trend, baseline
+    # or median, offset by one -- and a log ratio whose denominator is not a known
+    # scalar. Docstring bodies are skipped.
+    if not in_lib:
+        SCALARS = r"(?:alpha|al|N|n|ns|nb|len|size|count|total|norm|ws|W)"
+        in_doc = False
+        for i, L in enumerate(lines, 1):
+            if (L.count(chr(34)*3) + L.count(chr(39)*3)) % 2: in_doc = not in_doc
+            if in_doc or L.strip().startswith("#"): continue
+            rel = re.search(r"/\s*(trend|tr|base|med|median|mean|cont|baseline)\w*\s*[-+]\s*1", L)
+            lg  = re.search(r"np\.log\(\s*(\w+)\s*/\s*(\w+)\s*\)", L)
+            if lg and re.fullmatch(SCALARS, lg.group(2)): lg = None
+            if (rel or lg) and "denominator_safe" not in src:
+                flag("D", path, i, "relative residual or ratio with no denominator_safe check")
+                break
+
     for i, L in enumerate(lines, 1):
         s = L.strip()
         if s.startswith("#"): continue
@@ -92,12 +122,13 @@ if __name__ == "__main__":
     for f in files: scan(f)
     print("swept %d scripts (%d in beacon/)\n" % (len(files), len(glob.glob(os.path.join(LIB, "*.py")))))
     names = {"P": "local surrogate outside beacon/", "S'": "unsafe index-axis surrogate",
+             "D": "ratio with unchecked denominator",
              "W'": "window not transfer-checked", "C": "control with no negative arm",
              "I": "injection downstream of a filter", "Z": "no zero-amplitude arm",
              "T": "threshold as a fraction of expected", "V": "asserted veto width"}
     by = {}
     for c, p, l, m in FINDINGS: by.setdefault(c, []).append((p, l, m))
-    for c in ["P", "S'", "W'", "C", "I", "Z", "T", "V"]:
+    for c in ["P", "S'", "W'", "C", "I", "D", "Z", "T", "V"]:
         rows = by.get(c, [])
         print("[%-2s] %-36s %d" % (c, names[c], len(rows)))
         for p, l, m in rows[:8]:
