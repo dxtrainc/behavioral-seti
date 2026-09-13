@@ -1212,7 +1212,7 @@ We have asked what a technosignature search looks like when the channel is not k
 | 7 | **The first line-of-sight test is null.** Earth against Mars in Lyman-α: no viewpoint-specific modulation to 8.9×10⁻⁴ at 3 d and 4.2×10⁻³ at 307 s, the latter limited 580× by the MAVEN monitor and not by the geometry (§4.12). **The first result here that bounds the mechanism §2.6 proposes rather than modulation in general** |
 | 8 | **The framework's own best guess is now tested, and it does not reach.** Of §3.6's unsearched rows 3–7, **four are searched here**. Row 6 is null at an injection-verified **2.0×10⁻⁷, margin 0.5** — the closest this programme comes to a designer level. Row 7 is null at **1.46×10⁻⁵, margin 0.069**. Row 3 is null. Row 5 is **void**: the six-hour noise floor is 31–108 ppm and a 76 ppm Venus transit is not recoverable. **All three rows whose reach was estimated and has since been measured came in worse than the estimate**, and the §3.6 margin column should be read as an upper bound on capability rather than as capability |
 
-The one detection is a re-detection: solar p-modes in GOES EXIS Mg II irradiance, comb spacing 135.1 and 135.0 µHz on the two spacecraft against an accepted 134.9. Priority belongs to Eden et al. (2024), and we claim none. Its value is as a positive control whose answer was fixed in advance and corroborated by an independent group — a stronger check on the pipeline than any self-designed injection, and it correspondingly strengthens the twenty-one nulls.
+The one detection is a re-detection: solar p-modes in GOES EXIS Mg II irradiance, comb spacing 135.1 and 135.0 µHz on the two spacecraft against an accepted 134.9. Priority belongs to Eden et al. (2024), and we claim none. Its value is as a positive control whose answer was fixed in advance and corroborated by an independent group — a stronger check on the pipeline than any self-designed injection, and it correspondingly strengthens the twenty-five nulls.
 
 > **We do not claim that the framework of §§2–3 is supported by these results, and we do not invoke it to explain them.** A gating hypothesis that absorbs negative results has stopped being a hypothesis. The nulls are reported as nulls: each carrier was searched at a stated sensitivity and was not found. What the framework is credited with here is generating the searches, not surviving them.
 
@@ -1239,7 +1239,7 @@ Twenty-nine searches, one row each: **null** (no detection), **void** (the detec
 | **the archive removed the observable** | 1 | a level-2 product had already decided what to discard | §4.19 |
 | **detection** | 1 | a known signal recovered as a positive control | §4.6 |
 
-**Only the first is an astronomical statement.** The next three are statements about the analysis, and the last two about the data. That distinction matters more than the tally: twenty-two nulls sound like broad coverage, and the honest reading is that twenty-two channels were searched competently, three searches were too weak to count, three were defeated by their own machinery, and two were defeated by the archive.
+**Only the first is an astronomical statement.** The next three are statements about the analysis, and the last two about the data. That distinction matters more than the tally: twenty-five nulls sound like broad coverage, and the honest reading is that twenty-two channels were searched competently, three searches were too weak to count, three were defeated by their own machinery, and two were defeated by the archive.
 
 ### A.1 Solar, fast band (14)
 
@@ -1290,7 +1290,7 @@ Twenty-nine searches, one row each: **null** (no detection), **void** (the detec
 |---|---|---|---|---|---|---|
 | 26 | Radial coincidence, 20–160 AU | Voyager 1 + 2, 48 yr | 32k hourly samples | null | nothing above threshold | FP 3.0%, 100% power at 50% injection |
 
-*25 rows: 22 null, 2 void, 1 detection. Fifteen of the twenty-two nulls state a sensitivity — **11 injection-verified amplitude limits, 3 measured false-alarm-and-power pairs and 1 analytic sensitivity** (the sidereal fold) — and the other six are enumeration or control results that bound structure without quoting an amplitude. Per-search method, code and data provenance are in the supplementary material.*
+*29 rows: 25 null, 3 void, 1 detection. Seventeen of the twenty-five nulls state a sensitivity — **13 injection-verified amplitude limits, 3 measured false-alarm-and-power pairs and 1 analytic sensitivity** (the sidereal fold) — and the other eight are enumeration or control results that bound structure without quoting an amplitude. Per-search method, code and data provenance are in the supplementary material.*
 
 ## Appendix B. The datasets
 
