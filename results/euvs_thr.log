@@ -1,0 +1,16 @@
+GOES-16 EUVS Lyman-alpha (121.6 nm): 2800800 samples, 73.1% present
+  1400400 bins, mu = 1.4427, analytic threshold = 24.74
+
+  BAND-WIDE FALSE ALARMS per surrogate over 1400400 bins
+    measured  3404.72      expected  0.05      ratio 68094x
+
+  EMPIRICAL threshold, 95th pct of max-R   279227.96
+  analytic threshold                          24.74
+  analytic is 11286.80x too permissive; limits 106.24x looser
+
+  HEADLINE LIMIT
+    section 4.2 as printed   1.4e-06
+    requoted                 1.5e-04
+
+  --> the headline REQUOTES
+  1969 s

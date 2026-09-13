@@ -1,0 +1,19 @@
+MAVEN days with data: 1879
+Mars distance 1.381-1.666 AU -> light travel swing 142 s
+common grid: 2800794 minutes (1945.0 d)
+  segment orbital periods: 3.0769-7.9121 h (median 3.6364)
+judged band: 1336602 bins
+
+  Earth  zeros: data 27.4%  surrogate 27.4%
+         analytic 24.7   empirical 23.8   ratio 1.0x   limits 1.00x looser
+  Mars   zeros: data 24.1%  surrogate 24.1%
+         analytic 24.8   empirical 25.7   ratio 1.0x   limits 1.02x looser
+
+  SECTION 4.12 FAST BAND, RE-DERIVED
+    Earth  as printed 7.2e-06 -> 7.2e-06   (x1.00)
+    Mars   as printed 4.2e-03 -> 4.3e-03   (x1.02)
+
+    commit 265a064 claimed Mars 4.2e-3 -> 1.6e-2 (x3.90, broken surrogate)
+    corrected                     -> 4.3e-03 (x1.02)
+
+  2992 s

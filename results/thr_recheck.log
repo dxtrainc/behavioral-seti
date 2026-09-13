@@ -1,0 +1,76 @@
+loading ...
+  GOES-16 XRS-B: 5091840 minutes, 81.3% present, 9.68 yr span
+  frequency range 3.273e-09 .. 8.333e-03 Hz  (periods 2.0 min .. 9.68 yr)
+
+NOISE SPECTRUM -- how much elbow room is there, and where?
+     period       2 min   continuum power 4.4396e+03
+     period       5 min   continuum power 1.7205e+04
+     period      15 min   continuum power 6.9918e+04
+     period      60 min   continuum power 8.5826e+05
+     period     360 min   continuum power 1.3415e+07
+     period    1440 min   continuum power 6.2602e+07
+
+BLIND NARROWBAND SEARCH
+  GOES-16: 2545920 bins, threshold R > 25.6 (Bonferroni over 2545920)
+     f = 1.157080e-05 Hz   period  1440.4074 min =  24.0068 h   R =    65.2
+     f = 3.472222e-05 Hz   period   480.0000 min =   8.0000 h   R =    57.7
+     f = 1.157407e-05 Hz   period  1440.0000 min =  24.0000 h   R =    55.3
+     f = 2.311869e-05 Hz   period   720.9175 min =  12.0153 h   R =    51.1
+     f = 1.160681e-05 Hz   period  1435.9391 min =  23.9323 h   R =    50.4
+     f = 1.154134e-05 Hz   period  1444.0839 min =  24.0681 h   R =    50.0
+     f = 2.311542e-05 Hz   period   721.0195 min =  12.0170 h   R =    41.6
+     f = 3.471895e-05 Hz   period   480.0453 min =   8.0008 h   R =    39.3
+     f = 3.478769e-05 Hz   period   479.0967 min =   7.9849 h   R =    37.3
+     f = 2.317761e-05 Hz   period   719.0849 min =  11.9847 h   R =    36.5
+     f = 1.154462e-05 Hz   period  1443.6745 min =  24.0612 h   R =    35.9
+     f = 2.318088e-05 Hz   period   718.9833 min =  11.9831 h   R =    35.6
+     f = 1.153807e-05 Hz   period  1444.4936 min =  24.0749 h   R =    35.3
+     f = 1.160353e-05 Hz   period  1436.3441 min =  23.9391 h   R =    34.5
+     f = 3.472550e-05 Hz   period   479.9548 min =   7.9992 h   R =    31.8
+     f = 2.312196e-05 Hz   period   720.8154 min =  12.0136 h   R =    31.5
+     f = 3.478441e-05 Hz   period   479.1418 min =   7.9857 h   R =    31.4
+     f = 1.163627e-05 Hz   period  1432.3038 min =  23.8717 h   R =    30.2
+     f = 1.151188e-05 Hz   period  1447.7794 min =  24.1297 h   R =    29.1
+     f = 1.157735e-05 Hz   period  1439.5929 min =  23.9932 h   R =    28.6
+     f = 1.161008e-05 Hz   period  1435.5343 min =  23.9256 h   R =    28.0
+     f = 2.318415e-05 Hz   period   718.8818 min =  11.9814 h   R =    26.0
+     f = 2.314815e-05 Hz   period   720.0000 min =  12.0000 h   R =    25.8
+
+GATE 2 -- the same frequencies on GOES-17
+  GOES-17 XRS-B: 3155040 minutes, 65.9% present
+     1.157080e-05 Hz (  24.007 h)  g16 R=   65.2   g17 R=  120.3   BOTH
+     3.472222e-05 Hz (   8.000 h)  g16 R=   57.7   g17 R=   17.9   BOTH
+     1.157407e-05 Hz (  24.000 h)  g16 R=   55.3   g17 R=  244.8   BOTH
+     2.311869e-05 Hz (  12.015 h)  g16 R=   51.1   g17 R=   44.8   BOTH
+     1.160681e-05 Hz (  23.932 h)  g16 R=   50.4   g17 R=    4.2   not present
+     1.154134e-05 Hz (  24.068 h)  g16 R=   50.0   g17 R=    5.5   not present
+     2.311542e-05 Hz (  12.017 h)  g16 R=   41.6   g17 R=   44.8   BOTH
+     3.471895e-05 Hz (   8.001 h)  g16 R=   39.3   g17 R=    9.8   not present
+     3.478769e-05 Hz (   7.985 h)  g16 R=   37.3   g17 R=    2.0   not present
+     2.317761e-05 Hz (  11.985 h)  g16 R=   36.5   g17 R=   29.3   BOTH
+     1.154462e-05 Hz (  24.061 h)  g16 R=   35.9   g17 R=    5.5   not present
+     2.318088e-05 Hz (  11.983 h)  g16 R=   35.6   g17 R=   29.3   BOTH
+
+SENSITIVITY -- smallest fractional amplitude detectable, by period
+     period       2 min   detectable at eps = 2.648e-04  (0.0265%)
+     period       5 min   detectable at eps = 5.214e-04  (0.0521%)
+     period      15 min   detectable at eps = 1.051e-03  (0.1051%)
+     period      60 min   detectable at eps = 3.682e-03  (0.3682%)
+     period     360 min   detectable at eps = 1.456e-02  (1.4558%)
+     period    1440 min   detectable at eps = 3.145e-02  (3.1449%)
+
+  GOES-16 XRS-B  (section 4.2 X-ray rows)
+    zeros: data 18.7%   surrogate 18.7%   (was inflated to ~1.5x)
+    analytic 25.60   empirical 104.50   ratio 4.1x   limits 2.02x looser
+
+  GOES-16 EUVS Lyman-alpha  (section 4.2 HEADLINE)
+    zeros: data 26.9%   surrogate 26.9%   (was inflated to ~1.5x)
+    analytic 24.74   empirical 139708.45   ratio 5647.2x   limits 75.15x looser
+
+  REQUOTED
+    section 4.2 headline   1.4e-06 -> 1.1e-04
+
+  NOTE: the MAVEN Mars line still needs the same treatment; the section 4.12
+  requote already committed used the broken surrogate and is not yet corrected.
+
+  1982 s
