@@ -265,6 +265,19 @@ import time
 # it selects is therefore re-tested here by counting exceedances, at a shift
 # budget whose floor 1/(M+1) sits below the sweep's own Bonferroni threshold.
 import argparse, time, json
+
+# ---- DETERMINISTIC SEEDS. Python hash() is salted per process, so the seed below was
+# different in every run and no p-value produced through it could be regenerated:
+# three consecutive processes gave 1689220225, 56146563 and 1311111642 for the same
+# key. Not a correctness fault -- an arbitrary seed is still a valid seed -- but a
+# reproducibility one, and for a paper whose claim is that a null is worth the
+# fraction of a space it excludes, an unreproducible null is worth less than it
+# looks. beacon.seeds.stable_seed is BLAKE2b over a canonical repr: fixed across
+# processes, interpreter versions and platforms.
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), ".."))
+from beacon.seeds import stable_seed as _stable_seed
+
 ap=argparse.ArgumentParser()
 ap.add_argument("--infile",default="sweepT_triples.json")
 ap.add_argument("--shifts",type=int,default=500000)
@@ -318,7 +331,7 @@ def confirm(arg):
     f=forms_tri(pa,pb,pc)
     if fname not in f: return None
     obs=stat(f[fname])
-    rng=np.random.default_rng(abs(hash(("confirm",i,j,k,fname)))%2**32)
+    rng=np.random.default_rng(_stable_seed("confirm",i,j,k,fname))
     ge=0; tot=0
     for s1,s2 in zip(rng.integers(1,n,size=A.shifts),rng.integers(1,n,size=A.shifts)):
         fb=forms_tri(pa,rollp(pb,int(s1)),rollp(pc,int(s2)))

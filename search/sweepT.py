@@ -267,6 +267,19 @@ import time
 import argparse
 from scipy.stats import genpareto, kstest
 
+# ---- DETERMINISTIC SEEDS. Python hash() is salted per process, so the seed below was
+# different in every run and no p-value produced through it could be regenerated:
+# three consecutive processes gave 1689220225, 56146563 and 1311111642 for the same
+# key. Not a correctness fault -- an arbitrary seed is still a valid seed -- but a
+# reproducibility one, and for a paper whose claim is that a null is worth the
+# fraction of a space it excludes, an unreproducible null is worth less than it
+# looks. beacon.seeds.stable_seed is BLAKE2b over a canonical repr: fixed across
+# processes, interpreter versions and platforms.
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), ".."))
+from beacon.seeds import stable_seed as _stable_seed
+
+
 ap=argparse.ArgumentParser()
 ap.add_argument("--mode",default="pairs",choices=["pairs","triples"])
 ap.add_argument("--shifts",type=int,default=10000)
@@ -324,7 +337,7 @@ def one_pair(arg):
     if fname not in f: return None
     obs=stat(f[fname])
     if not np.isfinite(obs): return None
-    rng=np.random.default_rng(abs(hash((i,j,fname)))%2**32)
+    rng=np.random.default_rng(_stable_seed(i,j,fname))
     null=[]
     for s in rng.integers(1,n,size=NSH):
         pb2=rollp(pb,int(s))
@@ -346,7 +359,7 @@ def one_tri(arg):
     if fname not in f: return None
     obs=stat(f[fname])
     if not np.isfinite(obs): return None
-    rng=np.random.default_rng(abs(hash((i,j,k,fname)))%2**32)
+    rng=np.random.default_rng(_stable_seed(i,j,k,fname))
     null=[]
     for s1,s2 in zip(rng.integers(1,n,size=NSH),rng.integers(1,n,size=NSH)):
         fb=forms_tri(pa,rollp(pb,int(s1)),rollp(pc,int(s2)))

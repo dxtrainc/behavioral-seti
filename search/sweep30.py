@@ -108,6 +108,19 @@ CH["cosmic ray"]=daily(T[ok],V[ok],grid)
 
 # OMNI: |B| col 8, density 23, speed 24
 import glob
+
+# ---- DETERMINISTIC SEEDS. Python hash() is salted per process, so the seed below was
+# different in every run and no p-value produced through it could be regenerated:
+# three consecutive processes gave 1689220225, 56146563 and 1311111642 for the same
+# key. Not a correctness fault -- an arbitrary seed is still a valid seed -- but a
+# reproducibility one, and for a paper whose claim is that a null is worth the
+# fraction of a space it excludes, an unreproducible null is worth less than it
+# looks. beacon.seeds.stable_seed is BLAKE2b over a canonical repr: fixed across
+# processes, interpreter versions and platforms.
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), ".."))
+from beacon.seeds import stable_seed as _stable_seed
+
 # OMNI2 carries 55 columns. Three of them are DIMENSIONLESS BY CONSTRUCTION --
 # alpha/proton ratio, plasma beta, Alfven Mach number -- which is exactly the class
 # a sender is restricted to, since they are invariant to our units and calibration.
@@ -263,7 +276,7 @@ def one_test(arg):
     if fname not in fp: return None
     obs=stat(fp[fname])
     if not np.isfinite(obs): return None
-    r=np.random.default_rng(hash((i,j,fname))%2**32)
+    r=np.random.default_rng(_stable_seed(i,j,fname))
     null=[]
     n=len(rb)
     for _ in range(NSH):

@@ -74,6 +74,23 @@ def test_denominator_safe_catches_ch36():
     assert C.denominator_safe(ch18, "CH_18")
 
 
+def test_stable_seed_is_process_invariant():
+    """hash() is salted per process: three runs gave 1689220225, 56146563, 1311111642
+    for the same key, so every p-value seeded that way was unreproducible."""
+    from beacon.seeds import stable_seed
+    import subprocess, sys as _s, os as _o
+    here = _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), "..")
+    got = set()
+    for _ in range(3):
+        out = subprocess.run([_s.executable, "-c",
+            "import sys; sys.path.insert(0, %r);"
+            "from beacon.seeds import stable_seed; print(stable_seed(0,1,'ratio'))" % here],
+            capture_output=True, text=True).stdout.strip()
+        got.add(out)
+    assert len(got) == 1, "seed varies across processes: %s" % got
+    assert stable_seed(0,1,"ratio") != stable_seed(0,1,"log-ratio")
+
+
 if __name__ == "__main__":
     fns = [(k, v) for k, v in sorted(globals().items()) if k.startswith("test_")]
     bad = 0
