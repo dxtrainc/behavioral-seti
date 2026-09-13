@@ -495,6 +495,20 @@ Twenty-nine searches were run, every one against a public archive collected for 
 | void | 3 | detector or null failed its own validation, or the channel proved unsearchable at the level required; §4.5, §4.9, §4.17 |
 | detection | 1 | a known signal, recovered as a positive control (§4.6) |
 
+**Why each search ended where it did, which is not the same question.** "Null" is one word covering four situations, and the difference decides where effort should go next.
+
+| why it ended | N | what it is a statement about |
+|---|---|---|
+| **nothing above threshold** | 22 | **the sky.** The detector worked, the control passed, the channel was empty at the stated level |
+| **underpowered** | 3 | the analysis. The search ran and could not have found the effect if present — measured power 36–53% (§A.2 rows 6, 13, 14) |
+| **detector failed its own control** | 2 | the analysis. A statistic that sat at 0.954 for data and surrogates alike; another that fired on unmodified data (§4.5, §4.9) |
+| **no defensible null** | 1 | the analysis. The surrogate is correct and calibrated, and the Sun rejects it — "no signal" cannot be specified for a star with its own higher-order structure (§4.9) |
+| **the Sun is too loud** | 1 | **the data.** A 76 ppm Venus transit against a 31–108 ppm noise floor at six hours. Not repairable by analysis (§4.17) |
+| **the archive removed the observable** | 1 | **the data.** A level-2 product had already discarded the roll correction, and the spatial structure with it (§4.19) |
+| **detection** | 1 | a known signal, recovered as a positive control (§4.6) |
+
+**Only the first line is astronomy.** Three are statements about our own machinery and two about the archives we were handed. Twenty-nine searches and twenty-five nulls reads as broad coverage; the honest reading is **twenty-two channels searched competently, three searches too weak to count, three defeated by their own machinery, and two defeated by the data**.
+
 ### 4.2 Limits
 
 All limits are fractional amplitudes of a modulation in the named observable, against the stated null. **Each is the amplitude recovered 95% of the time under injection**, against the threshold the search itself uses (μ = median(_R_)/ln 2, α = 0.05).
@@ -1040,6 +1054,32 @@ The fast-band threshold μ·ln(N/α) was challenged on review. The challenge was
 **The limits are therefore left as printed**, on three independent grounds: the one channel whose pipeline genuinely removes the daily structure returns a threshold calibrated to 2%; every measured excess sits in bins the search vetoes; and the candidate lists of §A.1 are clean, which a badly miscalibrated threshold could not produce. **That is not a verification — it is the absence of a defensible measurement against.** The distinction is stated because the alternative was to change a printed number on the first of six attempts, which is what happened, and was reverted.
 
 > **The generalisable rule.** Each of the six failures was the same kind: the audit did not replicate the procedure it was auditing. The surrogate was not the same kind of object as the data; the bin set was not the one the search reports on; the veto was narrower than the structure it targeted. None was a statistical error, and twice a diagnosis of one instance was followed immediately by committing the next. **A control must be able to fail; an audit must reproduce what it audits — and the second is harder, because a broken audit produces a number rather than an error.**
+
+### 5.6b What has not been done, and what it would cost
+
+A coverage claim is only meaningful beside a statement of what was left. Three categories, and only the first is a matter of deciding to.
+
+**Runnable now, no new data and no significant compute.**
+
+| test | why it has not been run | cost |
+|---|---|---|
+| Rows 10–11 — line-profile ratios and disc-integrated polarimetry | below threshold by the §3.6 estimate, and that column has since been measured wrong three times out of three | hours |
+| The remaining 23 scripts migrated to the shared library | each produced a committed number and needs re-validating against it | ~1 day |
+| The 52 windows not passed through a transfer check | most are certainly fine; four of the same class cost a day of this programme | ~1 day |
+| VIRGO TSI minute at the slow end, with a longer detrend | the 45-day pass returned nothing at 10 d and beyond; the band between 3 d and 2 months is measured as unsearchable at ppm level, not merely unsearched | hours |
+
+**Needs a larger compute budget.**
+
+| test | scale | what it would buy |
+|---|---|---|
+| **T3 — quadruples over 30 channels** | 27,405 keys × 4 forms, ~18 d on one 88-core machine | nothing, until a defensible four-body null exists. §4.9 and §4.15–19 are explicit that the space is void for want of a null, not for want of compute, and running it would return 27,405 keys' worth of void |
+| **T6 — quadruples over 60 channels, fast band** | 2.8×10²³ FLOP — 6.2 d on a dedicated exascale machine, 1.3 d on a volunteer network at Folding@home's 2020 peak | the same objection applies, and more strongly |
+| **Peak-bagging with full Lorentzian profile fits, GOLF** | days, not hours | row 7 sits at 1.46×10⁻⁵ against a designer level of 10⁻⁶. A ten-candidate estimator search bought 1.33×; proper mode fitting is the one untried route to the remaining factor of fifteen, and it may not deliver |
+| **N² surrogate counts in place of the tail fit** | the reason §3.4 introduced the fit at all | the generalised-Pareto extrapolation is unstable across realisations at 1.7% of triples (§4.9). Counting exceedances instead removes that instability and costs N² |
+
+> **The compute argument is not the binding one and this table should not be read as asking for a machine.** Two of the four entries above are blocked on a null rather than on cycles, and §4.3's central finding is that coverage rather than sensitivity binds. An exascale allocation would buy a larger void.
+
+**Needs instruments that do not exist.** Four columns are blank across the whole seventy-year record: core g-modes, the interplanetary electric field, continuous disc-integrated polarimetry, and high-latitude solar wind, the last of which existed only while Ulysses flew. These are unmeasured quantities rather than unsearched archives, and they are the only lever on the roughly one-in-five chance that we happen to measure whichever combination was chosen — a probability no instrument on the observables we already have can improve.
 
 ### 5.7 The receiver's own position, and why coverage is not simply a matter of time
 
