@@ -1,10 +1,32 @@
 cff-version: 1.2.0
-title: "Behavioural SETI — analysis code"
+title: "Behavioral SETI — analysis code"
 message: "If you use this software or its derived results, please cite the paper."
 type: software
 authors:
   - family-names: Griffin
     given-names: Robert
     affiliation: "Dxtra Inc."
+version: 1.0.0
+date-released: 2026-09-13
 license: MIT
-repository-code: "https://github.com/REPLACE-ME/beacon-seti"
+repository-code: "https://github.com/dxtrainc/behavioral-seti"
+url: "https://dxtra.com/static/galactic-dx/index.html"
+abstract: >-
+  Analysis code for a combination-space search for embedded technosignatures in
+  public solar and heliospheric archives. The carrier is taken to be a
+  dimensionless relationship among observables rather than a named channel, so
+  the search space can be enumerated and its coverage measured. Twenty-nine
+  searches: twenty-five null, three void, one a known signal recovered as a
+  positive control.
+keywords:
+  - SETI
+  - behavioral SETI
+  - technosignatures
+  - Fermi paradox
+  - zoo hypothesis
+  - solar irradiance
+  - heliophysics
+  - helioseismology
+  - time-series analysis
+  - surrogate data
+  - reproducible research

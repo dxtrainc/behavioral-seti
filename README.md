@@ -1,4 +1,4 @@
-# Behavioural SETI — analysis code
+# Behavioral SETI — analysis code
 
 Code and intermediate results for *A combination-space search for embedded technosignatures in
 solar and heliospheric archives* (R. Griffin, Dxtra Inc.) and its companion,
