@@ -1079,6 +1079,47 @@ A coverage claim is only meaningful beside a statement of what was left. Three c
 
 > **The compute argument is not the binding one and this table should not be read as asking for a machine.** Two of the four entries above are blocked on a null rather than on cycles, and §4.3's central finding is that coverage rather than sensitivity binds. An exascale allocation would buy a larger void.
 
+**What the compute actually costs, in three machines.** Sustained rates: Cray-1 160 MFLOPS (1976), the 88-core workstation used here ≈ 176 GFLOPS, Frontier 1.353 EFLOPS (Rmax).
+
+| | FLOP | Cray-1 | 88 cores | Frontier |
+|---|---|---|---|---|
+| triple sweep | 5.5×10¹⁴ | 39.8 d | 52 min | 0.4 ms |
+| quadruple sweep + matched null | 2.9×10¹⁴ | 21.0 d | 27.5 min | 0.2 ms |
+| **every search in this paper** | **1.1×10¹⁵** | **79.6 d** | **1.7 h** | **0.8 ms** |
+| T3 — quadruples over 30 channels | 2.7×10¹⁷ | 53.5 yr | 17.8 d | **0.2 s** |
+| T6 — quadruples over 60, fast band | 2.8×10²³ | 5.5×10⁷ yr | 50,409 yr | **57.5 h** |
+
+**The whole programme is eighty Cray-1 days and under a millisecond of Frontier.** T6 — 55 million Cray-1 years in 1976 — is a long weekend on a flagship machine in 2026. Frontier is 8.5×10⁹ times a Cray-1, thirty-three doublings in forty-eight years, almost exactly Moore cadence.
+
+> **This table is an argument against an allocation, not for one.** T6 is not expensive; it is 2.4 machine-days. It is that 2.4 days spent on a question whose null is undefined returns 487,635 keys' worth of void, and §4.9 establishes that the higher-order space is blocked on the null rather than on cycles. **The gate also opens on its own schedule**: T3 is already 0.2 s on a flagship and eighteen days on a workstation. Waiting is cheaper than asking.
+
+### 5.6c A plan for T3, and the prerequisite that is a research project in its own right
+
+T3 — all 27,405 quadruples of thirty channels, four forms — is eighteen days on one machine and 0.2 s on Frontier. **Neither number is the obstacle.** The obstacle is that a four-body search needs a null, and §4.15–§4.19 show that the one correct null available is rejected by the Sun itself at median _z_ = 45, because solar output has intrinsic higher-order structure. Running T3 today produces void at scale.
+
+**Phase 0 — the null. This is the whole problem.** Two routes, and only the second is a compute problem:
+
+- *Targeted rather than omnibus.* Stop asking "is there four-way structure" — the Sun says yes — and ask "is there structure at the specific alignment a sender would impose", calibrated against decoy alignments. Cheap, and it narrows the hypothesis to something a null can be written for.
+- *An ensemble null from physics.* Below.
+
+**Phase 1 — forms, and one is already excluded.** §4.16's theorem: adding _c_ₖ·_s_(_t_) to channel _k_ gives a linear four-body form (_c_ₐ − 3_c_ᵦ + 3_c_ᵧ − _c_δ)_s_ and a pair form (_cᵢ_ − _cⱼ_)_s_, so invisibility to every pair forces all _c_ₖ equal, whereupon (1−3+3−1) = 0. **A linear four-body form cannot carry a signal pairs cannot also see.** Only the multiplicative form is a genuine four-body carrier, which cuts the space by three quarters before any compute is spent.
+
+**Phase 2 — the sweep.** Eighteen days on 88 cores, or under a second on a leadership machine, once Phases 0 and 1 are settled. It is the cheapest part and should be scheduled last.
+
+#### The HPC project: an ensemble null for solar higher-order statistics
+
+**The question, stated without reference to technosignatures.** *What is the null distribution of higher-order statistics — bispectra, trispectra, cross-channel phase alignment — of solar output?* Nobody knows, and it is not an idle question: it sets the false-alarm rate of every search for non-linear coupling in solar and heliospheric data, and it is the reason three results in this paper are void.
+
+**Why observation cannot answer it.** We have one Sun and one realisation of it. A null distribution requires an ensemble, and the only ensemble available is a synthetic one.
+
+**What the project would be.** A large ensemble of independent global solar convective-dynamo simulations — Rayleigh, ASH or MURaM class — each integrated over several simulated activity cycles, from which synthetic disc-integrated irradiance and Doppler-velocity series are extracted through a forward model matched to the instruments actually used (VIRGO SPM and TSI, GOLF, GOES EUVS). The ensemble _is_ the null: the distribution of any higher-order statistic across realisations is what "no imposed signal" looks like for a star that generates its own structure.
+
+**Scale.** At literature cost of 5×10⁵ to 2×10⁶ core-hours per realisation, an ensemble of 50–200 members is **0.4 to 1.8 million node-hours** — within a single INCITE-class award, and modest by the standards of the simulations themselves.
+
+> **The gate this project must pass, stated first because it decides whether it is worth running.** A null built from simulations that do not reproduce the Sun *in the statistics being tested* is worse than no null: it would license exactly the false confidence this paper spends §5.6 documenting. Global convection simulations are known to struggle with observed large-scale flows — the convective conundrum — and **the ensemble must be validated against the real Sun on the same higher-order statistics before it is used as a null, not after.** If it fails that validation the project still answers a real solar-physics question — *how far do our dynamo models depart from the Sun in their non-linear structure?* — which is worth knowing independently and is arguably the more interesting result.
+
+**What it unlocks if it passes.** The triple and quadruple spaces become searchable, the two void results of §4.9 and §4.15–19 become limits, and any future search for non-linear coupling in solar data inherits a characterised false-alarm rate. **That is the sequence: the ensemble is the expensive part, and the sweep that follows it is 0.2 seconds.**
+
 **Needs instruments that do not exist.** Four columns are blank across the whole seventy-year record: core g-modes, the interplanetary electric field, continuous disc-integrated polarimetry, and high-latitude solar wind, the last of which existed only while Ulysses flew. These are unmeasured quantities rather than unsearched archives, and they are the only lever on the roughly one-in-five chance that we happen to measure whichever combination was chosen — a probability no instrument on the observables we already have can improve.
 
 ### 5.7 The receiver's own position, and why coverage is not simply a matter of time
