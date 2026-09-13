@@ -501,13 +501,13 @@ Twenty-nine searches were run, every one against a public archive collected for 
 |---|---|---|
 | **nothing above threshold** | 22 | **the sky.** The detector worked, the control passed, the channel was empty at the stated level |
 | **underpowered** | 3 | the analysis. The search ran and could not have found the effect if present — measured power 36–53% (§A.2 rows 6, 13, 14) |
-| **detector failed its own control** | 2 | the analysis. A statistic that sat at 0.954 for data and surrogates alike; another that fired on unmodified data (§4.5, §4.9) |
+| **detector failed its own control** | 1 | the analysis. A statistic that sat at 0.954 for data and surrogates alike, and another that fired on unmodified data — one search failing its own control twice over (§4.5) |
 | **no defensible null** | 1 | the analysis. The surrogate is correct and calibrated, and the Sun rejects it — "no signal" cannot be specified for a star with its own higher-order structure (§4.9) |
 | **the Sun is too loud** | 1 | **the data.** A 76 ppm Venus transit against a 31–108 ppm noise floor at six hours. Not repairable by analysis (§4.17) |
-| **the archive removed the observable** | 1 | **the data.** A level-2 product had already discarded the roll correction, and the spatial structure with it (§4.19) |
+| **the archive removed the observable** | — | **the data.** A level-2 product had already discarded the roll correction, and the spatial structure with it (§4.19). The LOI channel sits outside the twenty-nine: the observable was gone before a search could be scored |
 | **detection** | 1 | a known signal, recovered as a positive control (§4.6) |
 
-**Only the first line is astronomy.** Three are statements about our own machinery and two about the archives we were handed. Twenty-nine searches and twenty-five nulls reads as broad coverage; the honest reading is **twenty-two channels searched competently, three searches too weak to count, three defeated by their own machinery, and two defeated by the data**.
+**Only the first line is astronomy.** Three are statements about our own machinery and two about the archives we were handed. Twenty-nine searches and twenty-five nulls reads as broad coverage; the honest reading is **twenty-two channels searched competently, three searches too weak to count, two defeated by their own machinery, and one defeated by the data**.
 
 ### 4.2 Limits
 
@@ -1233,13 +1233,13 @@ Twenty-nine searches, one row each: **null** (no detection), **void** (the detec
 |---|---|---|---|
 | **nothing above threshold** | 22 | the detector worked, the control passed, and the sky was empty at the stated level. This is a result | most rows |
 | **underpowered** | 3 | the search ran and could not have found the effect even if present — power measured at 36–53% | §A.2 rows 6, 13, 14 |
-| **detector failed its own control** | 2 | the statistic could not fire, or fired on unmodified data. Constrains nothing | §4.5, §4.9 |
+| **detector failed its own control** | 1 | the statistic could not fire, or fired on unmodified data. Constrains nothing | §4.5 |
 | **no defensible null** | 1 | the surrogate is correct and the Sun rejects it, so "no signal" cannot be specified | §4.9 |
 | **the Sun is too loud** | 1 | the physical noise floor sits above the level required. Not fixable by analysis | §4.17 |
-| **the archive removed the observable** | 1 | a level-2 product had already decided what to discard | §4.19 |
+| **the archive removed the observable** | — | a level-2 product had already decided what to discard; outside the twenty-nine, the observable having gone before a search could be scored | §4.19 |
 | **detection** | 1 | a known signal recovered as a positive control | §4.6 |
 
-**Only the first is an astronomical statement.** The next three are statements about the analysis, and the last two about the data. That distinction matters more than the tally: twenty-five nulls sound like broad coverage, and the honest reading is that twenty-two channels were searched competently, three searches were too weak to count, three were defeated by their own machinery, and two were defeated by the archive.
+**Only the first is an astronomical statement.** The next three are statements about the analysis, and the last two about the data. That distinction matters more than the tally: twenty-five nulls sound like broad coverage, and the honest reading is that twenty-two channels were searched competently, three searches were too weak to count, two were defeated by their own machinery, and one was defeated by the data.
 
 ### A.1 Solar, fast band (14)
 
