@@ -30,6 +30,8 @@ FOUR TESTS.
 import os, json, glob, datetime as dt
 import numpy as np
 
+DATA = os.environ.get("BEACON_DATA") or os.path.expanduser("~")   # data root; see README
+
 CARR = 27.2753          # synodic Carrington rotation, days
 
 def detrend(y, w=61):
@@ -49,7 +51,9 @@ def corr(x, c):
     if sa <= 0: return 0.0
     return float(np.dot(a/sa, b)/np.sqrt(n))
 
-def load_f107(path="/home/dxtra/f107.csv"):
+def load_f107(path=None):
+    if path is None:
+        path = os.path.join(DATA, "f107.csv")
     d = np.loadtxt(path, delimiter=",", skiprows=1)
     jd, flux = d[:, 0], d[:, 1]
     ok = np.isfinite(flux) & (flux > 0)
@@ -110,12 +114,12 @@ def to_series(dd):
     return full, out
 
 def ace_daily():
-    cache = "/home/dxtra/ace_daily.json"
+    cache = os.path.join(DATA, "ace_daily.json")
     if os.path.exists(cache):
         return json.load(open(cache))
     import cdflib
     d = {}
-    files = sorted(glob.glob("/home/dxtra/ace/*.cdf"))
+    files = sorted(glob.glob(os.path.join(DATA, "ace", "*.cdf")))
     print("reducing %d ACE files" % len(files), flush=True)
     for i, f in enumerate(files):
         try:
@@ -152,7 +156,7 @@ def main():
     report("ACE first half", xa[:h], ca[:h], out)
     report("ACE second half", xa[h:], ca[h:], out)
 
-    wf = "/home/dxtra/wind_daily.json"
+    wf = os.path.join(DATA, "wind_daily.json")
     if os.path.exists(wf):
         w = json.load(open(wf))
         print("\nWind daily medians: %d" % len(w), flush=True)
@@ -165,7 +169,7 @@ def main():
     else:
         print("\nWind daily medians not present -- skipped", flush=True)
 
-    json.dump(out, open("/home/dxtra/selfkey_replicate.json", "w"), indent=1)
+    json.dump(out, open(os.path.join(DATA, "selfkey_replicate.json"), "w"), indent=1)
     print("\nsaved ~/selfkey_replicate.json", flush=True)
 
 if __name__=="__main__": main()

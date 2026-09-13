@@ -24,6 +24,21 @@ No data is committed. Everything is public; `acquire/` fetches it.
 GOES-R EXIS, OMNI2, SILSO, F10.7, NMDB and LISIRD products are listed in the paper's data
 availability statement and were retrieved from the archives named there.
 
+### Where it is written
+
+Downloads, caches and intermediate products go to **`$BEACON_DATA`**, which defaults to
+`$HOME` if unset:
+
+    export BEACON_DATA=/srv/beacon        # optional; defaults to $HOME
+    python acquire/wind_fetch.py
+
+Python scripts read it as
+
+    DATA = os.environ.get("BEACON_DATA") or os.path.expanduser("~")
+
+and the shell ones as `${BEACON_DATA:-$HOME}`. Code in this repository imports from this
+repository: nothing resolves a module through an absolute path outside it.
+
 ## Audit trail
 
 | Paper claim | Script | Result |

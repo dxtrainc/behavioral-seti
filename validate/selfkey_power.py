@@ -14,6 +14,9 @@ import json, datetime as dt
 import numpy as np
 from selfkey_replicate import (detrend, chips, corr, load_f107, build,
                                nulls, to_series, ace_daily)
+import os
+
+DATA = os.environ.get("BEACON_DATA") or os.path.expanduser("~")   # data root; see README
 
 rng = np.random.default_rng(11)
 
@@ -38,7 +41,7 @@ def main():
     jd_f, flux = load_f107()
     res = {}
     for name, dd in (("ACE", ace_daily()),
-                     ("WIND", json.load(open("/home/dxtra/wind_daily.json")))):
+                     ("WIND", json.load(open(os.path.join(DATA, "wind_daily.json"))))):
         jd, b = to_series(dd)
         x, c = build(jd, b, jd_f, flux)
         fk = np.interp(jd, jd_f, flux)
@@ -55,7 +58,7 @@ def main():
                   flush=True)
             res["%s %s" % (name, tag)] = {"power": pw, "dF_median": md,
                                           "dF_std": sd, "n": len(xs)}
-    json.dump(res, open("/home/dxtra/selfkey_power.json", "w"), indent=1)
+    json.dump(res, open(os.path.join(DATA, "selfkey_power.json"), "w"), indent=1)
     print("\nsaved ~/selfkey_power.json", flush=True)
 
 main()

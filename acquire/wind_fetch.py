@@ -9,8 +9,10 @@ import os, io, sys, json, datetime as dt
 import numpy as np, requests, cdflib
 from concurrent.futures import ThreadPoolExecutor
 
+DATA = os.environ.get("BEACON_DATA") or os.path.expanduser("~")   # data root; see README
+
 BASE="https://cdaweb.gsfc.nasa.gov/pub/data/wind/mfi/mfi_h0"
-TMP="/home/dxtra/windtmp"; os.makedirs(TMP, exist_ok=True)
+TMP=os.path.join(DATA, "windtmp"); os.makedirs(TMP, exist_ok=True)
 S=requests.Session()
 
 def listing(year):
@@ -60,7 +62,7 @@ def main():
             else: nb+=1
             if k%400==0 and k: print("  %d/%d  good=%d"%(k,len(todo),len(out)), flush=True)
     print("daily medians: %d   unusable days: %d"%(len(out), nb), flush=True)
-    json.dump(out, open("/home/dxtra/wind_daily.json","w"))
+    json.dump(out, open(os.path.join(DATA, "wind_daily.json"),"w"))
     print("saved ~/wind_daily.json", flush=True)
 
 main()

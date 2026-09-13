@@ -22,10 +22,12 @@ import os, re, sys, time, json, datetime as dt
 import numpy as np, requests, cdflib
 from concurrent.futures import ThreadPoolExecutor
 
+DATA = os.environ.get("BEACON_DATA") or os.path.expanduser("~")   # data root; see README
+
 PPI = "https://pds-ppi.igpp.ucla.edu/data/maven-euv-calibrated/data/bands"
 UA = {"User-Agent": "beacon-search/1.0 (rtg@dxtra.com; academic solar irradiance study)"}
-OUT = "/home/dxtra/maven_l2_1m.json"
-TMP = "/home/dxtra/mavtmp"
+OUT = os.path.join(DATA, "maven_l2_1m.json")
+TMP = os.path.join(DATA, "mavtmp")
 START, NDAYS = dt.date(2019, 12, 10), 1945
 os.makedirs(TMP, exist_ok=True)
 S = requests.Session(); S.headers.update(UA)

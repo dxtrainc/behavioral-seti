@@ -14,14 +14,17 @@ Three questions decide it.
 """
 import sys, glob, os
 import numpy as np
-sys.path.insert(0, "/home/dxtra")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                os.pardir, "search"))
 import rstn_search as R
+
+DATA = os.environ.get("BEACON_DATA") or os.path.expanduser("~")   # data root; see README
 
 TARGETS = [5.900, 5.910, 5.555, 2.975, 2.721]
 
 def pool(station, k=None, ratio=None, nmax=36):
     acc = None; f = None; n = 0
-    for p in sorted(glob.glob("/home/dxtra/rstn/%s_*.gz" % station))[:nmax]:
+    for p in sorted(glob.glob(os.path.join(DATA, "rstn", "%s_*.gz" % station)))[:nmax]:
         g = R.read_day(p)
         if g is None: continue
         t, v = g
@@ -65,7 +68,7 @@ print("* = above that series' own threshold\n")
 for st in ("learmonth", "palehua", "san-vito"):
     print("%s:" % st, flush=True)
     days0 = None
-    for p in sorted(glob.glob("/home/dxtra/rstn/%s_*.gz" % st))[:1]:
+    for p in sorted(glob.glob(os.path.join(DATA, "rstn", "%s_*.gz" % st)))[:1]:
         g = R.read_day(p)
         if g: days0 = g[1]
     good = [k for k in range(8) if days0 is not None

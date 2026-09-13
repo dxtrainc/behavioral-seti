@@ -1,6 +1,6 @@
 #!/bin/bash
 UA="beacon-search/1.0 (rtg@dxtra.com; academic pulsar timing study)"
-cd /home/dxtra
+cd "${BEACON_DATA:-$HOME}"
 U="https://zenodo.org/api/records/16051178/files/NANOGrav15yr_PulsarTiming_v2.1.0.tar.gz/content"
 echo "downloading $(date -u +%T)"
 curl -s -L -A "$UA" -o ng15.tar.gz "$U"

@@ -21,10 +21,12 @@ appears, and records progress after every file so it can resume.
 import os, sys, time, json, datetime as dt
 import numpy as np, requests, cdflib
 
+DATA = os.environ.get("BEACON_DATA") or os.path.expanduser("~")   # data root; see README
+
 BASE = "https://lasp.colorado.edu/maven/sdc/public/data/sci/euv/l2"
 UA = {"User-Agent": "beacon-search/1.0 (rtg@dxtra.com; academic solar irradiance study)"}
-OUT = "/home/dxtra/maven_l2_1m.json"
-TMP = "/home/dxtra/mavtmp"
+OUT = os.path.join(DATA, "maven_l2_1m.json")
+TMP = os.path.join(DATA, "mavtmp")
 START = dt.date(2019, 12, 10)
 NDAYS = 1945
 DELAY = 2.5           # polite baseline between requests
