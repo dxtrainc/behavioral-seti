@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Galactic DX — Behavioral SETI</title>
+<meta name="description" content="Behavioral SETI: a new approach to the Fermi paradox. Twenty-nine searches of public solar and heliospheric archives for a technosignature carried in a relationship among observables rather than on a chosen channel.">
+<meta property="og:title" content="Galactic DX — Behavioral SETI">
+<meta property="og:description" content="A new approach to the Fermi paradox. Looking for the behavior of a source, not for a transmitter.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#E8E6E0; --slate:#8E99A4; --rule:#232A33; --paper:#0B0E13; --card:#131820;
+  --red:#D9594F; --gold:#D9A21B; --blue:#5E9EC4; --green:#6FA87C;
+  --measure:66ch;
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --ink:#14171A; --slate:#5B6670; --rule:#E0E0DA; --paper:#FBFBF9; --card:#FFFFFF;
+    --red:#B8322A; --gold:#B8870F; --blue:#2F6F8F; --green:#4A7C59;
+  }
+}
+:root[data-theme="light"]{
+  --ink:#14171A; --slate:#5B6670; --rule:#E0E0DA; --paper:#FBFBF9; --card:#FFFFFF;
+  --red:#B8322A; --gold:#B8870F; --blue:#2F6F8F; --green:#4A7C59;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Newsreader",Georgia,serif; font-size:18px; line-height:1.62;
+  font-optical-sizing:auto; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px 90px}
+
+/* the hero carries the one idea: a signal riding light the star already emits */
+.hero{position:relative;margin:0 -24px 0;padding:74px 24px 44px;overflow:hidden;border-bottom:1px solid var(--rule)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero .inner{position:relative;max-width:900px;margin:0 auto}
+.eyebrow{
+  font-family:Inter,system-ui,sans-serif; font-size:.68rem; font-weight:600;
+  letter-spacing:.17em; text-transform:uppercase; color:var(--gold); margin:0 0 14px;
+}
+h1{
+  font-size:clamp(2.1rem,5.2vw,3.1rem); line-height:1.08; font-weight:500; margin:0 0 16px;
+  letter-spacing:-.02em; text-wrap:balance; max-width:17ch;
+}
+.standfirst{font-size:1.16rem; margin:0; max-width:var(--measure); color:var(--ink)}
+.byline{
+  font-family:Inter,system-ui,sans-serif; font-size:.82rem; color:var(--slate);
+  margin:22px 0 0;
+}
+.byline a{color:var(--slate)}
+
+h2{font-size:1.22rem; font-weight:600; margin:46px 0 10px; letter-spacing:-.005em}
+p{margin:0 0 .85em; max-width:var(--measure)}
+a{color:var(--blue); text-decoration:none; border-bottom:1px solid color-mix(in srgb,var(--blue) 32%,transparent)}
+a:hover{border-bottom-color:var(--blue)}
+a:focus-visible{outline:2px solid var(--blue); outline-offset:3px}
+
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:13px; margin:22px 0 8px}
+a.card{
+  display:block; border:1px solid var(--rule); border-radius:11px; padding:17px 18px 15px;
+  background:var(--card); color:inherit; border-bottom:1px solid var(--rule);
+  transition:border-color .16s, transform .16s;
+}
+a.card:hover{border-color:var(--blue); transform:translateY(-2px)}
+a.card .k{font-family:Inter,system-ui,sans-serif; font-size:.64rem; font-weight:600;
+          letter-spacing:.13em; text-transform:uppercase; color:var(--slate)}
+a.card .t{font-size:1.06rem; font-weight:600; margin:7px 0 5px}
+a.card .d{font-family:Inter,system-ui,sans-serif; font-size:.79rem; color:var(--slate); line-height:1.5}
+
+.figures{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(124px,1fr));
+  gap:1px; background:var(--rule); border:1px solid var(--rule);
+  border-radius:11px; overflow:hidden; margin:22px 0 10px;
+}
+.fig{background:var(--card); padding:15px 16px 14px}
+.fig .n{font-family:Inter,system-ui,sans-serif; font-size:1.42rem; font-weight:600;
+        letter-spacing:-.02em; line-height:1.1; font-variant-numeric:tabular-nums}
+.fig .l{font-family:Inter,system-ui,sans-serif; font-size:.69rem; line-height:1.36;
+        color:var(--slate); margin-top:5px}
+.fig.a .n{color:var(--blue)} .fig.b .n{color:var(--gold)} .fig.c .n{color:var(--red)}
+
+blockquote{
+  margin:26px 0; padding:0 0 0 20px; border-left:3px solid var(--gold);
+  font-size:1.04rem;
+}
+blockquote p:last-child{margin-bottom:0}
+footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--rule);
+       font-family:Inter,system-ui,sans-serif; font-size:.79rem; color:var(--slate)}
+footer a{color:var(--slate)}
+@media (prefers-reduced-motion:reduce){.hero canvas{display:none}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="inner">
+    <p class="eyebrow">Galactic DX &middot; Behavioral SETI</p>
+    <h1>Looking for the behavior of a source, not for a transmitter</h1>
+    <p class="standfirst">Every search for a technosignature so far has begun by naming a
+    carrier &mdash; the 21&nbsp;cm line, an optical pulse, a waste-heat excess &mdash; and then
+    searching it as deeply as instruments allow. All of them presuppose the channel. This asks
+    what is left over if you assume no beam, no beacon hardware, and no carrier named in
+    advance.</p>
+    <p class="byline">Robert Griffin &middot; Dxtra Inc. (dxtra.com) &middot; September 2026<br>
+    To appear in the <b>Radio Club of America</b> scientific papers section</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+<h2>The idea</h2>
+<p>A sender who shares no units with the receiver can only use <b>dimensionless</b> quantities
+&mdash; ratios and normalized combinations of things both parties measure. A sender minimizing
+transmitted energy will not broadcast; it will pose a gate that is cheap to set, expensive to
+solve, and trivial to verify, so that no energy is spent on receivers who could not act on the
+message anyway.</p>
+
+<blockquote>
+  <p>Put those two constraints together and the carrier is not a channel at all. It is a
+  <b>relationship among observables</b> &mdash; and unlike a channel, that space can be
+  enumerated, searched, and have its coverage measured.</p>
+</blockquote>
+
+<p>The signal, on this account, is structure imposed on light the star already emits, by
+redistributing that flux rather than generating any. There is nothing to build, nothing to see
+as an occulter, no byproduct and no object to encounter. The receiver's problem stops being
+sensitivity and becomes <em>not knowing which series to examine</em>.</p>
+
+<h2>What was searched, and what was found</h2>
+<div class="figures">
+  <div class="fig a"><div class="n">29</div><div class="l">searches of public archives</div></div>
+  <div class="fig a"><div class="n">25</div><div class="l">null</div></div>
+  <div class="fig b"><div class="n">3</div><div class="l">void &mdash; the detector or the null failed its own validation</div></div>
+  <div class="fig c"><div class="n">1</div><div class="l">detection &mdash; a known signal, as a positive control</div></div>
+  <div class="fig"><div class="n">13</div><div class="l">limits verified by injection</div></div>
+</div>
+<p>Every archive used was collected for space weather or helioseismology, none of it for SETI.
+The deepest verified limit is 1.4&times;10<sup>&minus;6</sup> in fractional Lyman-&alpha;
+irradiance at two minutes. Two channels were searched here for the first time.</p>
+<p><b>Sensitivity turned out not to be the binding constraint.</b> The same instrument and
+pipeline are 245&times; more sensitive at two minutes than at one day; what limits the search is
+how much of the combination space has been looked at, and that is a compute problem rather than
+a telescope problem.</p>
+
+<h2>Read it</h2>
+<div class="cards">
+  <a class="card" href="summary.html">
+    <div class="k">Five pages</div>
+    <div class="t">Summary &rarr;</div>
+    <div class="d">The argument, the twelve-step gate chain, the 29 searches, and where it
+    leaves the Fermi debate.</div>
+  </a>
+  <a class="card" href="deck.html">
+    <div class="k">20 slides</div>
+    <div class="t">Slide show &rarr;</div>
+    <div class="d">The same story in plain terms, without the statistics.</div>
+  </a>
+  <a class="card" href="paper.html">
+    <div class="k">Full paper &middot; interactive</div>
+    <div class="t">The paper &rarr;</div>
+    <div class="d">Complete, with nine live figures.</div>
+  </a>
+  <a class="card" href="beacon-paper.pdf">
+    <div class="k">PDF &middot; 75 pages</div>
+    <div class="t">Download &rarr;</div>
+    <div class="d">Typeset for print.</div>
+  </a>
+</div>
+
+<h2>What it does to the Fermi paradox</h2>
+<p>The paradox usually rests on an assumption that is rarely argued for: that contact would be
+<b>self-announcing</b>. A signal gated on the receiver's own capability is not. A civilization
+holding the right archives, at the right cadence, that has not yet thought to search
+relationships sees exactly what a civilization with nothing to find sees.</p>
+<p>That is a smaller claim than it sounds, and it is worth being precise about its limits. It
+shares a prediction with the <b>zoo hypothesis</b> &mdash; silence despite presence &mdash; and
+shares no mechanism with it: that hypothesis needs many civilizations to abstain indefinitely
+and breaks on a single defector, while a difficulty-bounded gate needs nobody to abstain at all.
+<b>It informs the debate. It settles neither question</b>, and none of the twenty-five nulls is
+evidence for the framework that motivated looking.</p>
+
+<h2>What would close it</h2>
+<p>The search measured something about the archive rather than about the sky:
+<b>coverage is the binding constraint, and it responds to the number of
+<em>jointly measured</em> observables and to nothing else.</b> Not sensitivity
+&mdash; the same pipeline is 245&times; more sensitive at two minutes than at one
+day. Not compute &mdash; the entire programme is under a millisecond of Frontier.</p>
+<p>What limits it is that the long solar records were made by instruments that
+never observed together. A relationship between quantities is only measurable if
+the quantities are simultaneous and share a calibration chain, and most of ours
+are neither. Three things would change that, and the order matters because the
+first is a precondition for interpreting the second.</p>
+
+<div class="tw">
+<table>
+<thead><tr><th></th><th>What</th><th>Scale</th><th>When</th></tr></thead>
+<tbody>
+<tr><td class="step">1</td>
+    <td><b>A null distribution for higher-order solar statistics</b> &mdash; nobody
+    knows the false-alarm rate of a bispectrum on a Sun-like system, because it
+    needs an ensemble and we have one Sun. A dynamo simulation campaign supplies
+    it.</td>
+    <td>a compute allocation</td><td>1&ndash;2 years</td></tr>
+<tr><td class="step">2</td>
+    <td><b>One Sun-as-a-star instrument, four channels, one clock</b> &mdash;
+    spectropolarimetry, line-profile ratios, p-modes and core g-modes measured
+    together rather than by four separate instruments across handovers.</td>
+    <td>one instrument</td><td>mid-term</td></tr>
+<tr><td class="step">3</td>
+    <td><b>Two in-situ measurements no telescope can supply</b> &mdash; the
+    interplanetary electric field, never measured continuously; and high-latitude
+    solar wind, which existed only while Ulysses flew and has had no successor.</td>
+    <td>two missions</td><td>decadal</td></tr>
+</tbody>
+</table>
+</div>
+
+<p><b>None of it is proposed for this search&rsquo;s benefit.</b> Core g-modes have
+been a helioseismology objective for fifty years. Disc-integrated polarimetry
+calibrates every inference drawn from unresolved stellar observation. A solar
+polar mission has been asked for repeatedly. The argument here is that they are
+also, jointly, the constraint on a separable question &mdash; and that costs
+nothing extra.</p>
+
+<div class="cards">
+  <a class="card" href="whitepaper.html">
+    <div class="k">White paper</div>
+    <div class="t">The co-registration gap &rarr;</div>
+    <div class="d">The full case, with measured precisions and shortfalls,
+    addressed to people who build instruments.</div>
+  </a>
+  <a class="card" href="whitepaper.md">
+    <div class="k">Source</div>
+    <div class="t">Markdown &rarr;</div>
+    <div class="d">The same document, plain text.</div>
+  </a>
+</div>
+
+<h2>Code and data</h2>
+<p>The analysis code is public. It carries the search scripts, the surrogate
+library, the validation suite and the audit trail &mdash; including the negative
+controls, the injection-recovery curves behind every stated limit, and the
+record of corrections made along the way.</p>
+<div class="cards">
+  <a class="card" href="https://github.com/dxtrainc/behavioral-seti">
+    <div class="k">GitHub &middot; MIT</div>
+    <div class="t">behavioral-seti &rarr;</div>
+    <div class="d">Analysis code, surrogates, validation suite and audit trail.
+    Results under CC&nbsp;BY&nbsp;4.0.</div>
+  </a>
+</div>
+
+<footer>
+  <b>Galactic DX</b> &middot; Behavioral SETI &middot; Robert Griffin, Dxtra Inc.
+  (<a href="https://dxtra.com">dxtra.com</a>)<br>
+  Per-search method, code and data provenance are in the paper's Appendix A.
+</footer>
+
+</div>
+
+<script>
+// A quiet starfield with one star modulating: the premise of the paper, at a
+// glance. Static if the viewer prefers reduced motion.
+(function(){
+  var c=document.getElementById("sky"); if(!c) return;
+  var ctx=c.getContext("2d"), stars=[], W=0, H=0, dpr=Math.min(window.devicePixelRatio||1,2);
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function light(){
+    var v=getComputedStyle(document.documentElement).getPropertyValue("--paper").trim();
+    return v === "#FBFBF9";
+  }
+  function size(){
+    var r=c.parentNode.getBoundingClientRect();
+    W=r.width; H=r.height;
+    c.width=W*dpr; c.height=H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    stars=[];
+    var n=Math.round(Math.min(150, W*H/9000));
+    for(var i=0;i<n;i++){
+      stars.push({x:Math.random()*W, y:Math.random()*H,
+                  r:Math.random()*1.15+0.25, p:Math.random()*Math.PI*2,
+                  s:0.4+Math.random()*0.7});
+    }
+    if(stars.length){ stars[0].r=2.3; stars[0].beacon=true;
+                      stars[0].x=W*0.80; stars[0].y=H*0.30; }
+  }
+  function draw(t){
+    if(!W) return;
+    ctx.clearRect(0,0,W,H);
+    var lit=light();
+    for(var i=0;i<stars.length;i++){
+      var st=stars[i], a;
+      if(st.beacon){
+        // a small, regular modulation -- the signal the paper looks for
+        a = 0.55 + 0.45*Math.sin(t/620);
+        ctx.fillStyle = lit ? "rgba(184,135,15,"+a+")" : "rgba(217,162,27,"+a+")";
+      } else {
+        a = 0.18 + 0.30*(0.5+0.5*Math.sin(t/1400*st.s + st.p));
+        ctx.fillStyle = lit ? "rgba(91,102,112,"+(a*0.55)+")" : "rgba(232,230,224,"+a+")";
+      }
+      ctx.beginPath(); ctx.arc(st.x, st.y, st.r, 0, 6.2832); ctx.fill();
+    }
+  }
+  function loop(t){ draw(t); requestAnimationFrame(loop); }
+  size();
+  if(reduce){ draw(0); } else { requestAnimationFrame(loop); }
+  var to; window.addEventListener("resize", function(){
+    clearTimeout(to); to=setTimeout(function(){ size(); if(reduce) draw(0); }, 150);
+  });
+})();
+</script>
+</body>
+</html>

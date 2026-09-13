@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Co-Registration Gap</title>
+<meta name="description" content="A white paper on why simultaneity, not sensitivity, is the binding constraint on multi-channel solar time-series analysis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"Charis";src:url("fonts/Charis-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Charis";src:url("fonts/Charis-Bold.ttf") format("truetype");font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Charis";src:url("fonts/Charis-Italic.ttf") format("truetype");font-weight:400;font-style:italic;font-display:swap}
+:root{
+  --ink:#14171A; --slate:#5B6670; --rule:#E0E0DA; --paper:#FBFBF9; --card:#FFFFFF;
+  --gold:#B8870F; --blue:#2F6F8F; --measure:68ch;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ink:#ECEAE4; --slate:#9BA3AC; --rule:#2C3137; --paper:#15181B; --card:#1B1F23;
+  --gold:#E8BE55; --blue:#68A6C4;}}
+:root[data-theme="dark"]{
+  --ink:#ECEAE4; --slate:#9BA3AC; --rule:#2C3137; --paper:#15181B; --card:#1B1F23;
+  --gold:#E8BE55; --blue:#68A6C4;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Newsreader",Georgia,serif;font-size:18px;line-height:1.62;font-optical-sizing:auto}
+.wrap{max-width:880px;margin:0 auto;padding:52px 24px 90px}
+h1{font-size:2.1rem;line-height:1.14;font-weight:500;margin:0 0 14px;letter-spacing:-.015em;
+   text-wrap:balance;max-width:24ch}
+.sub{font-size:1.06rem;color:var(--ink);margin:0 0 18px;max-width:var(--measure);font-style:italic}
+.by{font-family:Inter,system-ui,sans-serif;font-size:.82rem;color:var(--slate);margin:0}
+h2{font-size:1.2rem;font-weight:600;margin:44px 0 10px;letter-spacing:-.005em;
+   padding-top:16px;border-top:1px solid var(--rule)}
+h3{font-size:1rem;font-weight:600;margin:24px 0 6px}
+p{margin:0 0 .8em;max-width:var(--measure)}
+ul,ol{max-width:var(--measure);padding-left:1.2em;margin:.2em 0 .9em}
+li{margin:.32em 0}
+hr{border:0;border-top:1px solid var(--rule);margin:34px 0}
+blockquote{margin:24px 0;padding:0 0 0 20px;border-left:3px solid var(--gold);font-size:1.02rem}
+blockquote p:last-child{margin-bottom:0}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;
+  background:color-mix(in srgb,var(--slate) 12%,transparent);padding:1px 5px;border-radius:4px}
+.tw{overflow-x:auto;border:1px solid var(--rule);border-radius:10px;background:var(--card);margin:18px 0}
+table{border-collapse:collapse;width:100%;font-family:Inter,system-ui,sans-serif;
+  font-size:.83rem;line-height:1.42}
+th,td{text-align:left;padding:9px 13px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);
+   font-weight:600;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+a{color:var(--blue);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--blue) 32%,transparent)}
+a:hover{border-bottom-color:var(--blue)}
+.back{font-family:Inter,system-ui,sans-serif;font-size:.8rem;margin-bottom:26px;display:inline-block}
+footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--rule);
+  font-family:Inter,system-ui,sans-serif;font-size:.78rem;color:var(--slate)}
+@media print{
+  @page{size:Letter;margin:0.6in 0.7in}
+  html,body{background:#fff!important}
+  body{font-family:"Charis",Georgia,serif;font-size:10pt;line-height:1.4;color:#111316;
+       font-optical-sizing:none}
+  .wrap{max-width:100%!important;padding:0!important}
+  p,ul,ol,blockquote,.sub{max-width:none!important}
+  h1{font-size:18pt;margin:0 0 8px}
+  h2{font-size:11.6pt;margin:13px 0 5px;padding-top:7px;break-after:avoid}
+  h3{font-size:10.2pt;margin:9px 0 3px;break-after:avoid}
+  table{font-family:"Charis",Georgia,serif;font-size:8pt}
+  th,td{padding:4px 7px}
+  .tw{break-inside:auto}
+  thead{display:table-header-group}
+  tr,td,th{break-inside:avoid}
+  .back,footer{display:none}
+  a{color:inherit!important;text-decoration:none!important;border:0!important}
+}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="index.html">&larr; Galactic DX</a>
+<h1>The co-registration gap in Sun-as-a-star observables</h1>
+<p class="sub"><strong>A white paper on why simultaneity, not sensitivity, is the binding constraint on multi-channel solar time-series analysis — and on the null distribution that would make such analysis defensible</strong></p>
+<p class="by">Robert Griffin · Dxtra Inc. (dxtra.com) · rtg@dxtra.com</p>
+<hr>
+<h2>Synopsis</h2>
+<p>Seventy years of solar monitoring has produced a record that is deep in a few observables, blank in others, and — critically — <strong>assembled from instruments that never observed together</strong>. Every long solar series is a concatenation across handovers rather than a measurement, and the size of that effect is measurable: across the GOES-15 to GOES-16 X-ray handover, detector output shifts by <strong>27.7σ</strong>.</p>
+<p>For any question about a <em>single</em> observable this is a manageable cross-calibration problem. For any question about a <strong>relationship between observables</strong> it is close to fatal, because the relationship is only measurable if the quantities are simultaneous, co-registered, and share a calibration chain.</p>
+<p>This paper argues that the binding constraint is neither sensitivity nor compute, and that this is now demonstrable rather than assertable. It asks for three things in a specific order: a simulation campaign that would give higher-order solar statistics a calibrated null distribution for the first time; a single Sun-as-a-star instrument measuring four presently-separated quantities on one clock; and, on a decadal timescale, two in-situ measurements that no telescope can supply.</p>
+<p>All three are independently motivated by mainstream heliophysics.</p>
+<hr>
+<h2>1. The measurable claim</h2>
+<p>A recent search programme (Griffin 2026) enumerated the space of dimensionless relationships among 30 solar and heliospheric observables and searched it exhaustively. The result of interest here is not the search outcome — twenty-five of twenty-nine searches were null — but what the exercise <strong>measured about the archive itself</strong>:</p>
+<ul><li>The pair space over 30 observables closes at <strong>88%</strong> — 382 of 435 pairs. The</li></ul>
+<p>remaining 53 are unreachable <strong>because no overlapping record exists</strong>, not because of sensitivity.</p>
+<ul><li>Acquiring seventeen further observables moved coverage from <strong>18% to 88%</strong>: a</li></ul>
+<p>direct demonstration that coverage responds to the number of <em>jointly measured</em> quantities and to nothing else.</p>
+<ul><li>The same instrument, days and pipeline are **245× more sensitive at two minutes</li></ul>
+<p>than at one day**. Sensitivity is not what is limiting.</p>
+<ul><li>Of 4,060 possible triples, 2,934 are reachable and 2,749 were completed. The</li></ul>
+<p>result was <strong>void, not null</strong>, for want of a defensible three-body null.</p>
+<p>The last point is addressed in §2, because it must be solved before any new measurement can be interpreted.</p>
+<hr>
+<h2>2. The null distribution, which comes first</h2>
+<p>The triple and quadruple spaces returned void for a reason that generalises well beyond this application:</p>
+<blockquote><p><strong>Nobody knows the null distribution of higher-order statistics — bispectra, trispectra, cross-channel phase alignment — of solar output.</strong></p></blockquote>
+<p>Observation cannot supply it. There is one Sun and one realisation of it; a null distribution requires an ensemble. Any published claim of non-linear coupling in solar time series presently rests on a surrogate whose false-alarm rate has never been characterised against a Sun-like system.</p>
+<p><strong>Proposed:</strong> a large ensemble of independent global solar convective-dynamo simulations — Rayleigh, ASH or MURaM class — each integrated over several simulated activity cycles, from which synthetic disc-integrated irradiance and velocity series are drawn and higher-order statistics measured across members.</p>
+<p><strong>Scale.</strong> At literature cost of 5×10⁵ to 2×10⁶ core-hours per realisation, an ensemble of 50–200 members is <strong>0.4 to 1.8 million node-hours</strong> — within a single INCITE-class award, and modest by the standards of the simulations themselves.</p>
+<p><strong>The gate this project must pass, stated first because it decides whether it is worth running.</strong> A null built from simulations that do not reproduce the Sun <em>in the statistics being tested</em> is worse than no null: it would license exactly the false positives such a null exists to prevent. The ensemble must be validated against the real Sun in the same statistics before any limit derived from it means anything.</p>
+<p><strong>Why it comes first.</strong> New instruments cannot be interpreted without it. A multi-channel measurement with no characterised false-alarm rate produces void results exactly as the existing archive does. This is also by far the cheapest of the three requests, and the only one achievable within a single allocation cycle.</p>
+<hr>
+<h2>3. One instrument: co-registration is the requirement</h2>
+<p>Four quantities sit high in the ordering of what a Sun-as-a-star programme should measure, and all four are either uninstrumented or short of the precision required. Stated reaches below are measured by injection-recovery on real archival data, not design goals:</p>
+<div class="tw"><table><thead><tr><th>Quantity</th><th>Required</th><th>Presently achieved</th><th>Shortfall</th></tr></thead><tbody><tr><td>Disc-integrated spectropolarimetry</td><td>10⁻⁷</td><td>10⁻⁵–10⁻⁶</td><td><strong>10–100×</strong></td></tr><tr><td>Line-profile ratios, disc-integrated</td><td>10⁻⁷</td><td>10⁻⁶</td><td><strong>10×</strong></td></tr><tr><td>p-mode frequency structure</td><td>10⁻⁶</td><td>1.46×10⁻⁵ (SOHO/GOLF, 25.9 yr)</td><td><strong>15×</strong></td></tr><tr><td>Core g-modes</td><td>—</td><td>no detection, ever</td><td><strong>no instrument</strong></td></tr></tbody></table></div>
+<p><strong>These are not four instruments.</strong> They are four channels of one telescope, and the argument for building them together rather than separately is the whole point of this paper:</p>
+<ol><li><strong>A relationship is only measurable if its terms are simultaneous.</strong> Two excellent instruments with independent clocks and separate calibration histories are <em>worse</em> for this class of question than one modest instrument measuring both quantities together.</li><li><strong>A common calibration chain removes the handover systematic entirely.</strong> A 27.7σ step in detector output across a single handover is the scale of the obstacle facing any claim about slow structure; a single long-lived instrument has none.</li><li><strong>The marginal cost of an additional channel on an existing solar feed is small</strong> relative to a standalone mission, which is why the combination has never been costed as a unit.</li></ol>
+<p><strong>Precedent exists for every component.</strong> HARPS-N and NEID both operate Sun-as-a-star solar feeds; SOHO/VIRGO performed multi-channel irradiance photometry; BiSON and GONG have run helioseismic networks for decades. What does not exist is the <strong>combination</strong>, at these precisions, on a common clock and calibration chain. That makes this a describable instrument rather than a speculative one.</p>
+<h3>Why each channel is independently wanted</h3>
+<p><strong>Spectropolarimetry at 10⁻⁷.</strong> The Sun is the only star whose surface magnetism we resolve, and the only one for which a disc-integrated polarimetric signal can be checked against resolved truth. Closing that gap calibrates every inference drawn from unresolved stellar polarimetry, including exoplanet host characterisation.</p>
+<p><strong>Line-profile ratios at 10⁻⁷.</strong> Chromospheric and transition-region diagnostics rest on line ratios whose decade-scale stability has never been established at this level. A stable ratio measurement constrains chromospheric heating models directly.</p>
+<p><strong>p-modes at 10⁻⁶.</strong> GOLF reached 1.46×10⁻⁵ over 25.9 years. A successor a factor of fifteen better resolves activity-cycle frequency shifts at a precision that discriminates between competing models of the near-surface shear layer.</p>
+<p><strong>Core g-modes.</strong> The only direct probe of the solar core, sought for fifty years, and the outstanding unsolved objective of helioseismology independent of any application here.</p>
+<hr>
+<h2>4. Two spacecraft: what no telescope can supply</h2>
+<p>Two of the permanently blank columns are not observable from a solar telescope at any precision:</p>
+<p><strong>The interplanetary electric field</strong> has never been measured continuously. It is fundamental to solar wind acceleration and requires in-situ instrumentation.</p>
+<p><strong>High-latitude solar wind</strong> existed only while Ulysses flew, 1990–2009, and has had no successor. It requires an out-of-ecliptic orbit. The gap is stark: one mission, one snapshot, no plan to replace it — and it bears directly on the polar field reversal that sets the activity cycle.</p>
+<p>These are decadal-scale requests and are stated here for completeness of the argument rather than as near-term asks. The point worth carrying into prioritisation is that <strong>the cost of their absence is now calculable</strong>: each removes a column from every multi-observable analysis for as long as it persists.</p>
+<hr>
+<h2>5. What is <em>not</em> being asked for</h2>
+<p>This paper makes no request for computing time beyond §2, and that is deliberate.</p>
+<p>The entire search programme — 29 searches, 117 million statistic evaluations — cost <strong>1.1×10¹⁵ FLOP</strong>: eighty days on a Cray-1 of 1976, 1.7 hours on a single 88-core workstation, and <strong>under a millisecond of Frontier</strong>. An exhaustive quadruple sweep over 30 channels is 17.8 days on that same workstation and 0.2 seconds on a flagship machine.</p>
+<p>Compute has not been the constraint for some time. Saying so plainly is part of the argument: when the cheap resource is already saturated, what remains is the expensive one — and here that is <strong>joint measurement</strong>.</p>
+<hr>
+<h2>6. Ordering and cost class</h2>
+<div class="tw"><table><thead><tr><th></th><th>Request</th><th>Scale</th><th>Timescale</th></tr></thead><tbody><tr><td>1</td><td>Dynamo ensemble for the higher-order null</td><td>0.4–1.8M node-hours</td><td>one allocation cycle</td></tr><tr><td>2</td><td>Co-registered Sun-as-a-star multi-channel monitor</td><td>one instrument, four channels</td><td>mid-term</td></tr><tr><td>3</td><td>Interplanetary E-field; out-of-ecliptic solar wind</td><td>two missions</td><td>decadal</td></tr></tbody></table></div>
+<p>The ordering is not arbitrary. <strong>(1) is a precondition for interpreting (2)</strong>, and is roughly three orders of magnitude cheaper. <strong>(2) closes four gaps with one instrument</strong> and removes the handover systematic that limits the existing record. <strong>(3)</strong> is stated for completeness and is where the real money is.</p>
+<hr>
+<h2>7. Relevance to the decadal process</h2>
+<p>The request is unusual in shape: not a mission concept so much as a case for <strong>breadth and simultaneity across capabilities that already exist in principle</strong>. Three implications for prioritisation:</p>
+<ol><li><strong>Instrument handovers are a scientific risk, not a programmatic inconvenience.</strong> A slow signal spanning a handover can be destroyed by cross-calibration or manufactured by it, and the GOES-15/16 step shows the scale. Overlap periods deserve treatment as science requirements with stated durations — the 1,031 dual days of GOES overlap are what made that control possible at all.</li></ol>
+<ol><li><strong>Continuity has a value that can now be quoted.</strong> The high-latitude gap is not merely regrettable; its cost to multi-observable analysis is calculable, and the same method prices any other proposed gap.</li></ol>
+<ol><li><strong>Sun-as-a-star measurements are undervalued relative to resolved ones.</strong> The Sun is the calibration source for all unresolved stellar observation, and the disc-integrated quantities that would serve that role are precisely the ones left uninstrumented.</li></ol>
+<hr>
+<h2>8. Statement of limitations</h2>
+<p>The search programme that motivated this paper returned <strong>twenty-five nulls, three void results, and one re-detection of a known signal used as a positive control</strong>. It has detected nothing. The framework that motivated it is not supported by its results and is not invoked to explain them.</p>
+<p>The claim advanced here is narrower and does not depend on that framework:</p>
+<blockquote><p>Coverage across <em>jointly measured</em> observables is the binding constraint on a class of solar time-series questions; this is now measured rather than asserted; and the measurements that would relieve it are ones heliophysics has independent reason to want.</p></blockquote>
+<p>The four blank columns are blank regardless of whether anything is encoded in the filled ones, and the 36 handovers complicate slow-structure claims regardless of their origin.</p>
+<hr>
+<h2>References</h2>
+<p>Griffin, R. (2026). <em>A combination-space search for embedded technosignatures in solar and heliospheric archives.</em> Radio Club of America. Code and data: <a href="https://github.com/dxtrainc/behavioral-seti">https://github.com/dxtrainc/behavioral-seti</a> · <a href="https://dxtra.com/static/galactic-dx/">https://dxtra.com/static/galactic-dx/</a></p>
+<p>Eden, D. et al. (2024). Solar p-modes in GOES EXIS Mg II irradiance — used in the above as an independent positive control.</p>
+<p>Wright, J. T., Kanodia, S., Lubar, E. (2018). How much SETI has been done? <em>Astronomical Journal</em> <strong>156</strong>, 260.</p>
+<p>Hippke, M. (2017). Interstellar communication and the energy cost per bit. <em>Acta Astronautica</em>.</p>
+<footer>Robert Griffin &middot; Dxtra Inc. (<a href="https://dxtra.com">dxtra.com</a>) &middot;
+companion to <a href="paper.html">the full paper</a> and its
+<a href="summary.html">summary</a>.</footer>
+</div></body></html>
