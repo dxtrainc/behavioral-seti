@@ -77,7 +77,7 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--rule);
 <p class="by">Robert Griffin · Dxtra Inc. (dxtra.com) · rtg@dxtra.com</p>
 <hr>
 <h2>Synopsis</h2>
-<p>Seventy years of solar monitoring has produced a record that is deep in a few observables, blank in others, and — critically — <strong>assembled from instruments that never observed together</strong>. Every long solar series is a concatenation across handovers rather than a measurement, and the size of that effect is measurable: across the GOES-15 to GOES-16 X-ray handover, detector output shifts by <strong>27.7σ</strong>.</p>
+<p>Seventy years of solar monitoring has produced a record that is deep in a few observables, blank in others, and — critically — <strong>assembled from instruments that never observed together</strong>. Every long solar series is a concatenation across handovers rather than a measurement, and the size of that effect is measurable: across the GOES-15 to GOES-16 X-ray handover, detector output shifts by <strong>27.7σ</strong> (Griffin 2026, search 25).</p>
 <p>For any question about a <em>single</em> observable this is a manageable cross-calibration problem. For any question about a <strong>relationship between observables</strong> it is close to fatal, because the relationship is only measurable if the quantities are simultaneous, co-registered, and share a calibration chain.</p>
 <p>This paper argues that the binding constraint is neither sensitivity nor compute, and that this is now demonstrable rather than assertable. It asks for three things in a specific order: a simulation campaign that would give higher-order solar statistics a calibrated null distribution for the first time; a single Sun-as-a-star instrument measuring four presently-separated quantities on one clock; and, on a decadal timescale, two in-situ measurements that no telescope can supply.</p>
 <p>All three are independently motivated by mainstream heliophysics.</p>
@@ -98,8 +98,8 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--rule);
 <p>The triple and quadruple spaces returned void for a reason that generalises well beyond this application:</p>
 <blockquote><p><strong>Nobody knows the null distribution of higher-order statistics — bispectra, trispectra, cross-channel phase alignment — of solar output.</strong></p></blockquote>
 <p>Observation cannot supply it. There is one Sun and one realisation of it; a null distribution requires an ensemble. Any published claim of non-linear coupling in solar time series presently rests on a surrogate whose false-alarm rate has never been characterised against a Sun-like system.</p>
-<p><strong>Proposed:</strong> a large ensemble of independent global solar convective-dynamo simulations — Rayleigh, ASH or MURaM class — each integrated over several simulated activity cycles, from which synthetic disc-integrated irradiance and velocity series are drawn and higher-order statistics measured across members.</p>
-<p><strong>Scale.</strong> At literature cost of 5×10⁵ to 2×10⁶ core-hours per realisation, an ensemble of 50–200 members is <strong>0.4 to 1.8 million node-hours</strong> — within a single INCITE-class award, and modest by the standards of the simulations themselves.</p>
+<p><strong>Proposed:</strong> a large ensemble of independent global solar convective-dynamo simulations — Rayleigh (Featherstone &amp; Hindman 2016), ASH (Brun, Miesch &amp; Toomre 2004) or MURaM (Vögler et al. 2005) class — each integrated over several simulated activity cycles, from which synthetic disc-integrated irradiance and velocity series are drawn and higher-order statistics measured across members.</p>
+<p><strong>Scale.</strong> Taking 5×10⁵ to 2×10⁶ core-hours per realisation as an order-of-magnitude figure, an ensemble of 50–200 members is <strong>0.4 to 1.8 million node-hours</strong> — within a single INCITE-class award, and modest by the standards of the simulations themselves. <em>This bracket is an estimate and is not yet sourced to published per-run costs; it requires a scoping study against the chosen code before it is quoted in a proposal.</em></p>
 <p><strong>The gate this project must pass, stated first because it decides whether it is worth running.</strong> A null built from simulations that do not reproduce the Sun <em>in the statistics being tested</em> is worse than no null: it would license exactly the false positives such a null exists to prevent. The ensemble must be validated against the real Sun in the same statistics before any limit derived from it means anything.</p>
 <p><strong>Why it comes first.</strong> New instruments cannot be interpreted without it. A multi-channel measurement with no characterised false-alarm rate produces void results exactly as the existing archive does. This is also by far the cheapest of the three requests, and the only one achievable within a single allocation cycle.</p>
 <hr>
@@ -108,17 +108,17 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--rule);
 <div class="tw"><table><thead><tr><th>Quantity</th><th>Required</th><th>Presently achieved</th><th>Shortfall</th></tr></thead><tbody><tr><td>Disc-integrated spectropolarimetry</td><td>10⁻⁷</td><td>10⁻⁵–10⁻⁶</td><td><strong>10–100×</strong></td></tr><tr><td>Line-profile ratios, disc-integrated</td><td>10⁻⁷</td><td>10⁻⁶</td><td><strong>10×</strong></td></tr><tr><td>p-mode frequency structure</td><td>10⁻⁶</td><td>1.46×10⁻⁵ (SOHO/GOLF, 25.9 yr)</td><td><strong>15×</strong></td></tr><tr><td>Core g-modes</td><td>—</td><td>no detection, ever</td><td><strong>no instrument</strong></td></tr></tbody></table></div>
 <p><strong>These are not four instruments.</strong> They are four channels of one telescope, and the argument for building them together rather than separately is the whole point of this paper:</p>
 <ol><li><strong>A relationship is only measurable if its terms are simultaneous.</strong> Two excellent instruments with independent clocks and separate calibration histories are <em>worse</em> for this class of question than one modest instrument measuring both quantities together.</li><li><strong>A common calibration chain removes the handover systematic entirely.</strong> A 27.7σ step in detector output across a single handover is the scale of the obstacle facing any claim about slow structure; a single long-lived instrument has none.</li><li><strong>The marginal cost of an additional channel on an existing solar feed is small</strong> relative to a standalone mission, which is why the combination has never been costed as a unit.</li></ol>
-<p><strong>Precedent exists for every component.</strong> HARPS-N and NEID both operate Sun-as-a-star solar feeds; SOHO/VIRGO performed multi-channel irradiance photometry; BiSON and GONG have run helioseismic networks for decades. What does not exist is the <strong>combination</strong>, at these precisions, on a common clock and calibration chain. That makes this a describable instrument rather than a speculative one.</p>
+<p><strong>Precedent exists for every component.</strong> HARPS-N and NEID both operate Sun-as-a-star solar feeds (Dumusque et al. 2015; Lin et al. 2022); SOHO/VIRGO performed multi-channel irradiance photometry (Fröhlich et al. 1995); BiSON and GONG have run helioseismic networks for decades (Chaplin et al. 1996; Harvey et al. 1996). What does not exist is the <strong>combination</strong>, at these precisions, on a common clock and calibration chain. That makes this a describable instrument rather than a speculative one.</p>
 <h3>Why each channel is independently wanted</h3>
 <p><strong>Spectropolarimetry at 10⁻⁷.</strong> The Sun is the only star whose surface magnetism we resolve, and the only one for which a disc-integrated polarimetric signal can be checked against resolved truth. Closing that gap calibrates every inference drawn from unresolved stellar polarimetry, including exoplanet host characterisation.</p>
 <p><strong>Line-profile ratios at 10⁻⁷.</strong> Chromospheric and transition-region diagnostics rest on line ratios whose decade-scale stability has never been established at this level. A stable ratio measurement constrains chromospheric heating models directly.</p>
-<p><strong>p-modes at 10⁻⁶.</strong> GOLF reached 1.46×10⁻⁵ over 25.9 years. A successor a factor of fifteen better resolves activity-cycle frequency shifts at a precision that discriminates between competing models of the near-surface shear layer.</p>
-<p><strong>Core g-modes.</strong> The only direct probe of the solar core, sought for fifty years, and the outstanding unsolved objective of helioseismology independent of any application here.</p>
+<p><strong>p-modes at 10⁻⁶.</strong> GOLF (Gabriel et al. 1995) reached 1.46×10⁻⁵ over 25.9 years, as measured in Griffin (2026). A successor a factor of fifteen better resolves activity-cycle frequency shifts at a precision that discriminates between competing models of the near-surface shear layer.</p>
+<p><strong>Core g-modes.</strong> The only direct probe of the solar core, sought for fifty years and still without an uncontested detection (Appourchaux et al. 2010; cf. García et al. 2007), and the outstanding unsolved objective of helioseismology independent of any application here.</p>
 <hr>
 <h2>4. Two spacecraft: what no telescope can supply</h2>
 <p>Two of the permanently blank columns are not observable from a solar telescope at any precision:</p>
 <p><strong>The interplanetary electric field</strong> has never been measured continuously. It is fundamental to solar wind acceleration and requires in-situ instrumentation.</p>
-<p><strong>High-latitude solar wind</strong> existed only while Ulysses flew, 1990–2009, and has had no successor. It requires an out-of-ecliptic orbit. The gap is stark: one mission, one snapshot, no plan to replace it — and it bears directly on the polar field reversal that sets the activity cycle.</p>
+<p><strong>High-latitude solar wind</strong> existed only while Ulysses flew, 1990–2009 (Wenzel et al. 1992), and has had no successor. It requires an out-of-ecliptic orbit; Solar Orbiter reaches only ~33° inclination (Müller et al. 2020). The gap is stark: one mission, one snapshot, no plan to replace it — and it bears directly on the polar field reversal that sets the activity cycle.</p>
 <p>These are decadal-scale requests and are stated here for completeness of the argument rather than as near-term asks. The point worth carrying into prioritisation is that <strong>the cost of their absence is now calculable</strong>: each removes a column from every multi-observable analysis for as long as it persists.</p>
 <hr>
 <h2>5. What is <em>not</em> being asked for</h2>
@@ -143,10 +143,30 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--rule);
 <p>The four blank columns are blank regardless of whether anything is encoded in the filled ones, and the 36 handovers complicate slow-structure claims regardless of their origin.</p>
 <hr>
 <h2>References</h2>
+<p>Prior art is credited below. Entries marked <strong>[verify]</strong> are cited from the author's recollection of the canonical reference and must be checked against the literature before this document is submitted anywhere.</p>
+<p><strong>The search programme this paper draws on</strong></p>
 <p>Griffin, R. (2026). <em>A combination-space search for embedded technosignatures in solar and heliospheric archives.</em> Radio Club of America. Code and data: <a href="https://github.com/dxtrainc/behavioral-seti">https://github.com/dxtrainc/behavioral-seti</a> · <a href="https://dxtra.com/static/galactic-dx/">https://dxtra.com/static/galactic-dx/</a></p>
-<p>Eden, D. et al. (2024). Solar p-modes in GOES EXIS Mg II irradiance — used in the above as an independent positive control.</p>
-<p>Wright, J. T., Kanodia, S., Lubar, E. (2018). How much SETI has been done? <em>Astronomical Journal</em> <strong>156</strong>, 260.</p>
-<p>Hippke, M. (2017). Interstellar communication and the energy cost per bit. <em>Acta Astronautica</em>.</p>
+<p><strong>Instruments</strong></p>
+<p>Dumusque, X., et al. (2015). HARPS-N observes the Sun as a star. <em>ApJL</em> <strong>814</strong>, L21. <strong>[verify]</strong></p>
+<p>Fröhlich, C., et al. (1995). VIRGO: experiment for helioseismology and solar irradiance monitoring. <em>Solar Physics</em> <strong>162</strong>, 101. <strong>[verify]</strong></p>
+<p>Gabriel, A. H., et al. (1995). Global oscillations at low frequency from the SOHO mission (GOLF). <em>Solar Physics</em> <strong>162</strong>, 61. <strong>[verify]</strong></p>
+<p>Harvey, J. W., et al. (1996). The Global Oscillation Network Group (GONG) project. <em>Science</em> <strong>272</strong>, 1284. <strong>[verify]</strong></p>
+<p>Chaplin, W. J., et al. (1996). BiSON performance. <em>Solar Physics</em> <strong>168</strong>, 1. <strong>[verify]</strong></p>
+<p>Lin, A. S. J., et al. (2022). The NEID solar feed. <strong>[verify — journal and volume not confirmed]</strong></p>
+<p>Müller, D., et al. (2020). The Solar Orbiter mission. <em>A&amp;A</em> <strong>642</strong>, A1. <strong>[verify]</strong></p>
+<p>Wenzel, K.-P., et al. (1992). The Ulysses mission. <em>A&amp;AS</em> <strong>92</strong>, 207. <strong>[verify]</strong></p>
+<p>Kopp, G., &amp; Lean, J. L. (2011). A new, lower value of total solar irradiance. <em>GRL</em> <strong>38</strong>, L01706. <strong>[verify]</strong></p>
+<p><strong>Simulation codes</strong></p>
+<p>Featherstone, N. A., &amp; Hindman, B. W. (2016). The emergence of solar supergranulation as a natural consequence of rotationally constrained interior convection [Rayleigh]. <em>ApJ</em> <strong>818</strong>, 32. <strong>[verify]</strong></p>
+<p>Brun, A. S., Miesch, M. S., &amp; Toomre, J. (2004). Global-scale turbulent convection and magnetic dynamo action in the solar envelope [ASH]. <em>ApJ</em> <strong>614</strong>, 1073. <strong>[verify]</strong></p>
+<p>Vögler, A., et al. (2005). Simulations of magneto-convection in the solar photosphere [MURaM]. <em>A&amp;A</em> <strong>429</strong>, 335. <strong>[verify]</strong></p>
+<p><strong>Solar g-modes</strong></p>
+<p>Appourchaux, T., et al. (2010). The quest for the solar g modes. <em>A&amp;A Review</em> <strong>18</strong>, 197. <strong>[verify]</strong></p>
+<p>García, R. A., et al. (2007). Tracking solar gravity modes: the dynamics of the solar core. <em>Science</em> <strong>316</strong>, 1591. <strong>[verify]</strong></p>
+<p><strong>Cited in the source paper, and carried here with its citation</strong></p>
+<p>Eden, T. D., et al. (2024). Solar atmospheric oscillations as measured by GOES-R EXIS EUVS-C. <em>ApJL</em> <strong>973</strong>, L18.</p>
+<p>Wright, J. T., Kanodia, S., &amp; Lubar, E. (2018). How much SETI has been done? <em>AJ</em> <strong>156</strong>, 260.</p>
+<p>Sheikh, S. Z. (2020). The nine axes of merit for technosignature searches. <em>Int. J. Astrobiology</em> <strong>19</strong>, 237.</p>
 <footer>Robert Griffin &middot; Dxtra Inc. (<a href="https://dxtra.com">dxtra.com</a>) &middot;
 companion to <a href="paper.html">the full paper</a> and its
 <a href="summary.html">summary</a>.</footer>

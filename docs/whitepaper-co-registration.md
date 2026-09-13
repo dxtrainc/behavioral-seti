@@ -12,8 +12,8 @@ Seventy years of solar monitoring has produced a record that is deep in a few
 observables, blank in others, and — critically — **assembled from instruments
 that never observed together**. Every long solar series is a concatenation across
 handovers rather than a measurement, and the size of that effect is measurable:
-across the GOES-15 to GOES-16 X-ray handover, detector output shifts by
-**27.7σ**.
+across the GOES-15 to GOES-16 X-ray handover, detector output shifts by **27.7σ**
+(Griffin 2026, search 25).
 
 For any question about a *single* observable this is a manageable
 cross-calibration problem. For any question about a **relationship between
@@ -70,13 +70,17 @@ solar time series presently rests on a surrogate whose false-alarm rate has neve
 been characterised against a Sun-like system.
 
 **Proposed:** a large ensemble of independent global solar convective-dynamo
-simulations — Rayleigh, ASH or MURaM class — each integrated over several
+simulations — Rayleigh (Featherstone & Hindman 2016), ASH (Brun, Miesch &
+Toomre 2004) or MURaM (Vögler et al. 2005) class — each integrated over several
 simulated activity cycles, from which synthetic disc-integrated irradiance and
 velocity series are drawn and higher-order statistics measured across members.
 
-**Scale.** At literature cost of 5×10⁵ to 2×10⁶ core-hours per realisation, an
-ensemble of 50–200 members is **0.4 to 1.8 million node-hours** — within a single
-INCITE-class award, and modest by the standards of the simulations themselves.
+**Scale.** Taking 5×10⁵ to 2×10⁶ core-hours per realisation as an order-of-magnitude
+figure, an ensemble of 50–200 members is **0.4 to 1.8 million node-hours** — within
+a single INCITE-class award, and modest by the standards of the simulations
+themselves. *This bracket is an estimate and is not yet sourced to published
+per-run costs; it requires a scoping study against the chosen code before it is
+quoted in a proposal.*
 
 **The gate this project must pass, stated first because it decides whether it is
 worth running.** A null built from simulations that do not reproduce the Sun *in
@@ -123,8 +127,10 @@ of this paper:
    never been costed as a unit.
 
 **Precedent exists for every component.** HARPS-N and NEID both operate
-Sun-as-a-star solar feeds; SOHO/VIRGO performed multi-channel irradiance
-photometry; BiSON and GONG have run helioseismic networks for decades. What does
+Sun-as-a-star solar feeds (Dumusque et al. 2015; Lin et al. 2022); SOHO/VIRGO
+performed multi-channel irradiance photometry (Fröhlich et al. 1995); BiSON and
+GONG have run helioseismic networks for decades (Chaplin et al. 1996; Harvey et
+al. 1996). What does
 not exist is the **combination**, at these precisions, on a common clock and
 calibration chain. That makes this a describable instrument rather than a
 speculative one.
@@ -142,13 +148,15 @@ rest on line ratios whose decade-scale stability has never been established at
 this level. A stable ratio measurement constrains chromospheric heating models
 directly.
 
-**p-modes at 10⁻⁶.** GOLF reached 1.46×10⁻⁵ over 25.9 years. A successor a factor
+**p-modes at 10⁻⁶.** GOLF (Gabriel et al. 1995) reached 1.46×10⁻⁵ over 25.9
+years, as measured in Griffin (2026). A successor a factor
 of fifteen better resolves activity-cycle frequency shifts at a precision that
 discriminates between competing models of the near-surface shear layer.
 
-**Core g-modes.** The only direct probe of the solar core, sought for fifty
-years, and the outstanding unsolved objective of helioseismology independent of
-any application here.
+**Core g-modes.** The only direct probe of the solar core, sought for fifty years
+and still without an uncontested detection (Appourchaux et al. 2010; cf. García
+et al. 2007), and the outstanding unsolved objective of helioseismology
+independent of any application here.
 
 ---
 
@@ -160,8 +168,9 @@ any precision:
 **The interplanetary electric field** has never been measured continuously. It is
 fundamental to solar wind acceleration and requires in-situ instrumentation.
 
-**High-latitude solar wind** existed only while Ulysses flew, 1990–2009, and has
-had no successor. It requires an out-of-ecliptic orbit. The gap is stark: one
+**High-latitude solar wind** existed only while Ulysses flew, 1990–2009 (Wenzel
+et al. 1992), and has had no successor. It requires an out-of-ecliptic orbit;
+Solar Orbiter reaches only ~33° inclination (Müller et al. 2020). The gap is stark: one
 mission, one snapshot, no plan to replace it — and it bears directly on the polar
 field reversal that sets the activity cycle.
 
@@ -249,16 +258,74 @@ their origin.
 
 ## References
 
+Prior art is credited below. Entries marked **[verify]** are cited from the
+author's recollection of the canonical reference and must be checked against the
+literature before this document is submitted anywhere.
+
+**The search programme this paper draws on**
+
 Griffin, R. (2026). *A combination-space search for embedded technosignatures in
-solar and heliospheric archives.* Radio Club of America.
-Code and data: https://github.com/dxtrainc/behavioral-seti ·
+solar and heliospheric archives.* Radio Club of America. Code and data:
+https://github.com/dxtrainc/behavioral-seti ·
 https://dxtra.com/static/galactic-dx/
 
-Eden, D. et al. (2024). Solar p-modes in GOES EXIS Mg II irradiance — used in the
-above as an independent positive control.
+**Instruments**
 
-Wright, J. T., Kanodia, S., Lubar, E. (2018). How much SETI has been done?
-*Astronomical Journal* **156**, 260.
+Dumusque, X., et al. (2015). HARPS-N observes the Sun as a star. *ApJL* **814**,
+L21. **[verify]**
 
-Hippke, M. (2017). Interstellar communication and the energy cost per bit.
-*Acta Astronautica*.
+Fröhlich, C., et al. (1995). VIRGO: experiment for helioseismology and solar
+irradiance monitoring. *Solar Physics* **162**, 101. **[verify]**
+
+Gabriel, A. H., et al. (1995). Global oscillations at low frequency from the SOHO
+mission (GOLF). *Solar Physics* **162**, 61. **[verify]**
+
+Harvey, J. W., et al. (1996). The Global Oscillation Network Group (GONG)
+project. *Science* **272**, 1284. **[verify]**
+
+Chaplin, W. J., et al. (1996). BiSON performance. *Solar Physics* **168**, 1.
+**[verify]**
+
+Lin, A. S. J., et al. (2022). The NEID solar feed. **[verify — journal and volume
+not confirmed]**
+
+Müller, D., et al. (2020). The Solar Orbiter mission. *A&A* **642**, A1.
+**[verify]**
+
+Wenzel, K.-P., et al. (1992). The Ulysses mission. *A&AS* **92**, 207.
+**[verify]**
+
+Kopp, G., & Lean, J. L. (2011). A new, lower value of total solar irradiance.
+*GRL* **38**, L01706. **[verify]**
+
+**Simulation codes**
+
+Featherstone, N. A., & Hindman, B. W. (2016). The emergence of solar
+supergranulation as a natural consequence of rotationally constrained
+interior convection [Rayleigh]. *ApJ* **818**, 32. **[verify]**
+
+Brun, A. S., Miesch, M. S., & Toomre, J. (2004). Global-scale turbulent
+convection and magnetic dynamo action in the solar envelope [ASH]. *ApJ*
+**614**, 1073. **[verify]**
+
+Vögler, A., et al. (2005). Simulations of magneto-convection in the solar
+photosphere [MURaM]. *A&A* **429**, 335. **[verify]**
+
+**Solar g-modes**
+
+Appourchaux, T., et al. (2010). The quest for the solar g modes. *A&A Review*
+**18**, 197. **[verify]**
+
+García, R. A., et al. (2007). Tracking solar gravity modes: the dynamics of the
+solar core. *Science* **316**, 1591. **[verify]**
+
+**Cited in the source paper, and carried here with its citation**
+
+Eden, T. D., et al. (2024). Solar atmospheric oscillations as measured by GOES-R
+EXIS EUVS-C. *ApJL* **973**, L18.
+
+Wright, J. T., Kanodia, S., & Lubar, E. (2018). How much SETI has been done?
+*AJ* **156**, 260.
+
+Sheikh, S. Z. (2020). The nine axes of merit for technosignature searches.
+*Int. J. Astrobiology* **19**, 237.
