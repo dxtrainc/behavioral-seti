@@ -1014,6 +1014,27 @@ Three practices used here have nothing to do with technosignatures and may be th
 
 *The voids (§4.5, §4.9) are the failure that, caught later, would have been a false limit; the false nulls (§4.14, §5.2) are the same failure inverted. This table is why the paper trusts the limits it does state.*
 
+**A fourth practice, learned the hard way: an audit must reproduce what it audits.**
+
+The three practices above concern controls — a control must be able to return "no". A separate discipline governs the checks applied to a completed search, and this programme learned it by violating it repeatedly in a single afternoon.
+
+The fast-band threshold μ·ln(N/α) was challenged on review. The challenge was legitimate: the control that had certified it tested a **single fixed bin** against a threshold set for 1.3 million bins, and returned ≈0% whether the pipeline was sound or not. Replacing it with a band-wide exceedance count was right. Everything concluded from the replacement was wrong.
+
+| attempt | result | why it was wrong |
+|---|---|---|
+| 1 | threshold 11,287× too low | surrogate rolled the series and re-applied the gap mask, carrying 1.5× the data's zero fraction |
+| 2 | 5,647× | surrogate fixed; day harmonics still counted |
+| 3 | 19.6× | day-harmonic veto applied at ±3 bins |
+| 4 | **1.02×** on MAVEN | correct surrogate, and a pipeline that folds the daily profile out |
+| 5 | 20.9× on GOES | same veto — but GOES's eclipse season drifts, so the comb is broadened and the veto caught line centres, not shoulders |
+| 6 | 35.0× | daily profile folded out, which made it worse |
+
+**No stable value was obtained, and the reason is structural rather than statistical.** A gapped series carries a comb in its *window*: EUVS Lyman-α is 26.9% absent on a daily pattern, and that mask is multiplicative. Subtracting a mean daily profile is additive and cannot remove it; notching requires a veto wider than a comb whose lines drift with the spacecraft's eclipse season. **Every excess measured localised entirely to that comb**, which the search rejects before declaring any candidate.
+
+**The limits are therefore left as printed**, on three independent grounds: the one channel whose pipeline genuinely removes the daily structure returns a threshold calibrated to 2%; every measured excess sits in bins the search vetoes; and the candidate lists of §A.1 are clean, which a badly miscalibrated threshold could not produce. **That is not a verification — it is the absence of a defensible measurement against.** The distinction is stated because the alternative was to change a printed number on the first of six attempts, which is what happened, and was reverted.
+
+> **The generalisable rule.** Each of the six failures was the same kind: the audit did not replicate the procedure it was auditing. The surrogate was not the same kind of object as the data; the bin set was not the one the search reports on; the veto was narrower than the structure it targeted. None was a statistical error, and twice a diagnosis of one instance was followed immediately by committing the next. **A control must be able to fail; an audit must reproduce what it audits — and the second is harder, because a broken audit produces a number rather than an error.**
+
 ### 5.7 The receiver's own position, and why coverage is not simply a matter of time
 
 A gate keyed to capability invites an obvious thought about our own position: we have monitored the Sun for about five decades, the fast band for less than one, and the compute for a combination sweep has existed for perhaps fifteen years. Our capability is still rising steeply, and a null obtained early on a rising curve is worth less than the same null obtained later.
