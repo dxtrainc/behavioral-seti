@@ -1,0 +1,615 @@
+channels: TSI, F10.7, sunspot, MgII, cosmic ray, IMF |B|, proton temp, wind density, wind speed, alpha/proton, X-ray bg, proton >10MeV, Lyman-alpha, spot_area, spot_asym, wso_meanfield, cak_emdx, cak_k2vk3, cak_k3, cak_delk1, cme_rate, cme_speed, swics_o7to6, swics_c6to5, swics_avqfe, swics_avqsi, swics_fetoo, swics_hetoo, swics_avqo, swics_ctoo
+  TSI            finite  16070 / 16802
+  F10.7          finite  16050 / 16802
+  sunspot        finite  15209 / 16802
+  MgII           finite  12109 / 16802
+  cosmic ray     finite  16048 / 16802
+  IMF |B|        finite  14321 / 16802
+  proton temp    finite  16070 / 16802
+  wind density   finite  14044 / 16802
+  wind speed     finite  14146 / 16802
+  alpha/proton   finite  12541 / 16802
+  X-ray bg       finite  15185 / 16802
+  proton >10MeV  finite  12401 / 16802
+  Lyman-alpha    finite   4866 / 16802
+  spot_area      finite  13454 / 16802
+  spot_asym      finite  11860 / 16802
+  wso_meanfield  finite  13065 / 16802
+  cak_emdx       finite   4042 / 16802
+  cak_k2vk3      finite   4042 / 16802
+  cak_k3         finite   4042 / 16802
+  cak_delk1      finite   4042 / 16802
+  cme_rate       finite   9951 / 16802
+  cme_speed      finite   9943 / 16802
+  swics_o7to6    finite   4783 / 16802
+  swics_c6to5    finite   4783 / 16802
+  swics_avqfe    finite   4782 / 16802
+  swics_avqsi    finite   4799 / 16802
+  swics_fetoo    finite   4782 / 16802
+  swics_hetoo    finite   4783 / 16802
+  swics_avqo     finite   4783 / 16802
+  swics_ctoo     finite   4783 / 16802
+days with ALL channels: 137  (using PER-PAIR overlap instead)
+  triples dropped for overlap < 2000 d: 1126 of 4060
+
+mode=triples shard=0/1  11736 jobs x 10000 shifts = 117.4M evaluations, pool=80
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:326: RuntimeWarning: invalid value encountered in multiply
+  out["resid-triple"]=da*db*dc
+completed 10996 tests in 56.7 min  (32342 evaluations/s)
+saved ~/sweepT_triples_reseed.json
+  p by method: {'gpd': 542, 'emp-floor': 184, 'emp': 10270}
+
+  combination                                    form                stat          p   meth
+  IMF |B| / swics_fetoo / alpha/proton           log-2nd-diff     -2.0393  3.506e-20    gpd
+  swics_c6to5 / wind density / swics_hetoo       log-2nd-diff     -1.9161  8.409e-20    gpd
+  wind speed / swics_avqo / swics_c6to5          log-2nd-diff     -1.9366  3.481e-17    gpd
+  swics_c6to5 / wind density / swics_fetoo       log-2nd-diff     -1.9548  1.371e-16    gpd
+  swics_c6to5 / IMF |B| / swics_avqsi            log-2nd-diff     -2.0567  1.800e-15    gpd
+  swics_o7to6 / swics_c6to5 / swics_ctoo         log-2nd-diff     -1.8824  5.529e-15    gpd
+  swics_avqfe / cosmic ray / swics_avqo          log-2nd-diff     -1.5833  5.727e-14    gpd
+  swics_o7to6 / swics_c6to5 / swics_avqsi        log-2nd-diff     -1.7642  6.469e-14    gpd
+  swics_c6to5 / wind density / swics_avqsi       log-2nd-diff     -1.9466  1.018e-13    gpd
+  wind density / alpha/proton / cme_speed        log-2nd-diff     -1.9987  1.144e-13    gpd
+  swics_c6to5 / wind density / swics_avqfe       log-2nd-diff     -1.9382  1.378e-13    gpd
+  wind density / swics_fetoo / swics_hetoo       log-2nd-diff     -1.9672  1.785e-13    gpd
+  swics_o7to6 / wind density / swics_avqsi       log-2nd-diff     -2.0293  4.687e-13    gpd
+  MgII / wind density / swics_fetoo              log-2nd-diff     -2.0345  9.694e-13    gpd
+  wind density / wind speed / cak_k2vk3          log-2nd-diff     -2.1931  3.048e-12    gpd

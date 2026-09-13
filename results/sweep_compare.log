@@ -1,0 +1,27 @@
+
+PAIR SWEEP
+  tests            1074 committed, 1074 reseeded
+  median p         0.5673  ->  0.5723
+  fraction < 0.05  0.1173  ->  0.1182
+  min p            0.00000  ->  0.00000
+  survivors at Bonferroni 4.66e-05:  10  ->  13
+  two-sample KS    D = 0.0084, p = 1.0000  -> same distribution
+  tests crossing threshold in one run only: 3
+     F10.7 / cme_rate                         log-ratio     0.00006 -> 0.00003
+     cme_rate / cme_speed                     log-ratio     0.00010 -> 0.00000
+     swics_o7to6 / swics_c6to5                log-ratio     0.00010 -> 0.00000
+
+TRIPLE SWEEP
+  tests            10996 committed, 10996 reseeded
+  median p         0.5766  ->  0.5777
+  fraction < 0.05  0.1543  ->  0.1540
+  min p            0.00000  ->  0.00000
+  survivors at Bonferroni 4.55e-06:  198  ->  206
+  two-sample KS    D = 0.0029, p = 1.0000  -> same distribution
+  tests crossing threshold in one run only: 182
+     MgII / TSI / cak_emdx                    log-2nd-diff  0.00000 -> 0.00010
+     TSI / wind density / IMF |B|             log-2nd-diff  0.00001 -> 0.00000
+     TSI / IMF |B| / swics_c6to5              log-2nd-diff  0.00000 -> 0.00008
+     TSI / IMF |B| / swics_hetoo              log-2nd-diff  0.00000 -> 0.00001
+     TSI / alpha/proton / proton temp         log-2nd-diff  0.00001 -> 0.00000
+     TSI / wind density / swics_o7to6         log-2nd-diff  0.00030 -> 0.00000

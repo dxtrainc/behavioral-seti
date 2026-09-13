@@ -1,0 +1,68 @@
+channels: TSI, F10.7, sunspot, MgII, cosmic ray, IMF |B|, proton temp, wind density, wind speed, alpha/proton, X-ray bg, proton >10MeV, Lyman-alpha, spot_area, spot_asym, wso_meanfield, cak_emdx, cak_k2vk3, cak_k3, cak_delk1, cme_rate, cme_speed, swics_o7to6, swics_c6to5, swics_avqfe, swics_avqsi, swics_fetoo, swics_hetoo, swics_avqo, swics_ctoo
+  TSI            finite  16070 / 16802
+  F10.7          finite  16050 / 16802
+  sunspot        finite  15209 / 16802
+  MgII           finite  12109 / 16802
+  cosmic ray     finite  16048 / 16802
+  IMF |B|        finite  14321 / 16802
+  proton temp    finite  16070 / 16802
+  wind density   finite  14044 / 16802
+  wind speed     finite  14146 / 16802
+  alpha/proton   finite  12541 / 16802
+  X-ray bg       finite  15185 / 16802
+  proton >10MeV  finite  12401 / 16802
+  Lyman-alpha    finite   4866 / 16802
+  spot_area      finite  13454 / 16802
+  spot_asym      finite  11860 / 16802
+  wso_meanfield  finite  13065 / 16802
+  cak_emdx       finite   4042 / 16802
+  cak_k2vk3      finite   4042 / 16802
+  cak_k3         finite   4042 / 16802
+  cak_delk1      finite   4042 / 16802
+  cme_rate       finite   9951 / 16802
+  cme_speed      finite   9943 / 16802
+  swics_o7to6    finite   4783 / 16802
+  swics_c6to5    finite   4783 / 16802
+  swics_avqfe    finite   4782 / 16802
+  swics_avqsi    finite   4799 / 16802
+  swics_fetoo    finite   4782 / 16802
+  swics_hetoo    finite   4783 / 16802
+  swics_avqo     finite   4783 / 16802
+  swics_ctoo     finite   4783 / 16802
+days with ALL channels: 137  (using PER-PAIR overlap instead)
+/home/dxtra/beacon-repo/search/sweepT.py:253: RuntimeWarning: divide by zero encountered in divide
+  out["ratio"]=ra/rb
+/home/dxtra/beacon-repo/search/sweepT.py:253: RuntimeWarning: invalid value encountered in divide
+  out["ratio"]=ra/rb
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: divide by zero encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:246: RuntimeWarning: invalid value encountered in divide
+  r=x/np.median(x)
+/home/dxtra/beacon-repo/search/sweepT.py:247: RuntimeWarning: invalid value encountered in subtract
+  d=r-runmed(r,W)
+/home/dxtra/.local/lib/python3.10/site-packages/numpy/_core/_methods.py:171: RuntimeWarning: invalid value encountered in reduce
+  arrmean = umr_sum(arr, axis, dtype, keepdims=True, where=where)
+/home/dxtra/beacon-repo/search/sweepT.py:255: RuntimeWarning: invalid value encountered in multiply
+  out["resid-product"]=da*db
+
+mode=pairs shard=0/1  1074 jobs x 10000 shifts = 10.7M evaluations, pool=80
+completed 1074 tests in 5.9 min  (30334 evaluations/s)
+saved ~/sweepT_pairs_reseed.json
+  p by method: {'gpd': 23, 'emp-floor': 11, 'emp': 1040}
+
+  combination                                    form                stat          p   meth
+  swics_o7to6 / swics_c6to5                      log-ratio        -1.6737  1.201e-16    gpd
+  proton temp / alpha/proton                     ratio            -1.6430  2.690e-12    gpd
+  IMF |B| / swics_fetoo                          log-ratio        -2.0485  1.296e-09    gpd
+  MgII / cak_k2vk3                               log-ratio        -1.8779  6.299e-09    gpd
+  wind density / swics_o7to6                     log-ratio        -2.0401  5.923e-08    gpd
+  cme_rate / cme_speed                           log-ratio        -2.3262  3.038e-07    gpd
+  cak_emdx / cak_k2vk3                           log-ratio        -1.9519  4.217e-07    gpd
+  wind density / swics_fetoo                     log-ratio        -2.0243  1.398e-06    gpd
+  wind density / swics_avqsi                     log-ratio        -2.0504  5.459e-06    gpd
+  MgII / cak_k2vk3                               ratio            -1.8375  9.486e-06    gpd
+  swics_fetoo / swics_ctoo                       log-ratio        -1.9285  2.353e-05    gpd
+  F10.7 / cme_rate                               log-ratio        -2.4980  2.580e-05    gpd
+  cak_k2vk3 / cak_k3                             ratio            -1.9454  4.633e-05    gpd
+  cak_k2vk3 / cak_delk1                          log-ratio        -1.8385  9.997e-05    gpd
+  sunspot / X-ray bg                             ratio            -1.7793  9.999e-05 emp-floor
