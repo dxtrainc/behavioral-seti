@@ -1145,54 +1145,69 @@ Wright et al. (2018) established that the value of a SETI result lies in the fra
 
 Twenty-nine searches, one row each: **null** (no detection), **void** (the detector or its null failed a positive control, so the row constrains nothing), **detection**. Numbering is the order in which the searches were run within the wider program, retained for traceability to code and data; the grouping is by domain.
 
+
+**Why each search ended where it did.** "Null" is not one thing, and a reader deciding where to spend effort next needs the distinction. Across the twenty-nine, the reasons sort into six:
+
+| failure mode | n | what it means | where |
+|---|---|---|---|
+| **nothing above threshold** | 22 | the detector worked, the control passed, and the sky was empty at the stated level. This is a result | most rows |
+| **underpowered** | 3 | the search ran and could not have found the effect even if present — power measured at 36–53% | §A.2 rows 6, 13, 14 |
+| **detector failed its own control** | 2 | the statistic could not fire, or fired on unmodified data. Constrains nothing | §4.5, §4.9 |
+| **no defensible null** | 1 | the surrogate is correct and the Sun rejects it, so "no signal" cannot be specified | §4.9 |
+| **the Sun is too loud** | 1 | the physical noise floor sits above the level required. Not fixable by analysis | §4.17 |
+| **the archive removed the observable** | 1 | a level-2 product had already decided what to discard | §4.19 |
+| **detection** | 1 | a known signal recovered as a positive control | §4.6 |
+
+**Only the first is an astronomical statement.** The next three are statements about the analysis, and the last two about the data. That distinction matters more than the tally: twenty-two nulls sound like broad coverage, and the honest reading is that twenty-two channels were searched competently, three searches were too weak to count, three were defeated by their own machinery, and two were defeated by the archive.
+
 ### A.1 Solar, fast band (14)
 
-| # | Search | Data | Population | Result | Null quality / limit |
-|---|---|---|---|---|---|
-| 17 | Solar p-modes, EXIS MgII | GOES-16 + 17, 1-min | 2 spacecraft, 5.3 yr | detection | Δν = 135.1 (G16) and 135.0 (G17) µHz, accepted 134.9 — the program's positive control |
-| 18 | EUVS 1-min, seven lines | GOES-16 + 17, 8 channels | 1.4M bins x 8, 5.3 yr | null | Lyman-alpha to 1.4 ppm at 2 min, 95% recovery — deepest verified limit here |
-| 19 | Multi-scale, six time bases | Oulu 1-min, 26 yr | 12 tests, 13.7M samples | null | both designs excluded above 0.5%; both detectors calibrated |
-| 20 | Neutron monitor fast search | Oulu + Kiel, 1-min | 6.8M bins, 26 yr | null | 163 candidates, 0 survive the twin; 0.0063% |
-| 21 | Blind narrowband, 1-min X-ray (cf. Hippke & Forgan 2017) | GOES-16 + GOES-17 XRS-B | 2.5M bins, 9.68 yr | null | 0 non-diurnal candidates; 0.027% at 2 min |
-| 22 | EXIS line ratios, twin-gated | 10 channels, one instrument | 135 tests, 5.3 yr | null | 9 survivors on one spacecraft, 0 replicate on two |
-| 23 | Achromatic spectral modulation | 7 UV lines + XRS-B | 972 d, frozen filter | null | <5% achromatic modulation excluded at 99% |
-| 24 | Coronal hardness (photon parameter) | XRS-A / XRS-B | 2,233 d, 3 spacecraft | null | occultation-vs-emission discriminator; noise-limited |
-| 25 | Instrument-handover control | GOES-15 vs GOES-16 X-ray | 1,031 dual days | null | detector output shifts 27.7σ across the handover; the shift-null p-value does not move |
-| 30 | Radio spectral index, 1 s | RSTN Learmonth, Palehua, San Vito | 84–89 d each, 28 pairs per site | null | no excess in the dimensionless carrier; the multi-site 5.9 s peaks are per-channel and the RSTN twin gate cannot separate a per-design artifact (§4.14) |
-| 31 | Broadband irradiance, coherent | SOHO/VIRGO SPM blue+green+red, 60 s | 7.16M bins x 3, 27.3 yr | null | 0 bins above threshold on any channel; 0 pass the three-photometer gate (§4.15) |
-| 32 | p-mode frequency structure | SOHO/GOLF Doppler velocity, 20 s | 25.9 yr, 98.4% duty; PM1+PM2, 180 d segments | null | 1.46×10⁻⁵ fractional at 95% recovery — **15× short of the designer level** (§4.16) |
-| 33 | Occultation dips, transit timing | SOHO/VIRGO TSI, 60 s, 27.0 yr | 6 known planetary transits | void | the detector cannot recover Venus at 76 ppm; six-hour noise floor measured at 31–108 ppm (§4.17) |
-| 34 | Sub-minute EUV, four bands + dark diode | SDO/EVE ESP, 0.25 s, 120 d | 20.7M bins x 4, Nyquist 2 Hz | null | all candidates at exactly Nyquist; p-modes recovered in light, absent from dark (§4.18) |
+| # | Search | Data | Population | Result | **Why** | Null quality / limit |
+|---|---|---|---|---|---|---|
+| 17 | Solar p-modes, EXIS MgII | GOES-16 + 17, 1-min | 2 spacecraft, 5.3 yr | detection | known signal, positive control | Δν = 135.1 (G16) and 135.0 (G17) µHz, accepted 134.9 — the program's positive control |
+| 18 | EUVS 1-min, seven lines | GOES-16 + 17, 8 channels | 1.4M bins x 8, 5.3 yr | null | nothing above threshold | Lyman-alpha to 1.4 ppm at 2 min, 95% recovery — deepest verified limit here |
+| 19 | Multi-scale, six time bases | Oulu 1-min, 26 yr | 12 tests, 13.7M samples | null | nothing above threshold | both designs excluded above 0.5%; both detectors calibrated |
+| 20 | Neutron monitor fast search | Oulu + Kiel, 1-min | 6.8M bins, 26 yr | null | nothing above threshold | 163 candidates, 0 survive the twin; 0.0063% |
+| 21 | Blind narrowband, 1-min X-ray (cf. Hippke & Forgan 2017) | GOES-16 + GOES-17 XRS-B | 2.5M bins, 9.68 yr | null | nothing above threshold | 0 non-diurnal candidates; 0.027% at 2 min |
+| 22 | EXIS line ratios, twin-gated | 10 channels, one instrument | 135 tests, 5.3 yr | null | nothing above threshold | 9 survivors on one spacecraft, 0 replicate on two |
+| 23 | Achromatic spectral modulation | 7 UV lines + XRS-B | 972 d, frozen filter | null | nothing above threshold | <5% achromatic modulation excluded at 99% |
+| 24 | Coronal hardness (photon parameter) | XRS-A / XRS-B | 2,233 d, 3 spacecraft | null | nothing above threshold | occultation-vs-emission discriminator; noise-limited |
+| 25 | Instrument-handover control | GOES-15 vs GOES-16 X-ray | 1,031 dual days | null | nothing above threshold | detector output shifts 27.7σ across the handover; the shift-null p-value does not move |
+| 30 | Radio spectral index, 1 s | RSTN Learmonth, Palehua, San Vito | 84–89 d each, 28 pairs per site | null | nothing above threshold | no excess in the dimensionless carrier; the multi-site 5.9 s peaks are per-channel and the RSTN twin gate cannot separate a per-design artifact (§4.14) |
+| 31 | Broadband irradiance, coherent | SOHO/VIRGO SPM blue+green+red, 60 s | 7.16M bins x 3, 27.3 yr | null | nothing above threshold | 0 bins above threshold on any channel; 0 pass the three-photometer gate (§4.15) |
+| 32 | p-mode frequency structure | SOHO/GOLF Doppler velocity, 20 s | 25.9 yr, 98.4% duty; PM1+PM2, 180 d segments | null | nothing above threshold | 1.46×10⁻⁵ fractional at 95% recovery — **15× short of the designer level** (§4.16) |
+| 33 | Occultation dips, transit timing | SOHO/VIRGO TSI, 60 s, 27.0 yr | 6 known planetary transits | void | see §4.5 / §4.9 / §4.17 / §4.19 | the detector cannot recover Venus at 76 ppm; six-hour noise floor measured at 31–108 ppm (§4.17) |
+| 34 | Sub-minute EUV, four bands + dark diode | SDO/EVE ESP, 0.25 s, 120 d | 20.7M bins x 4, Nyquist 2 Hz | null | nothing above threshold | all candidates at exactly Nyquist; p-modes recovered in light, absent from dark (§4.18) |
 
 ### A.2 Solar, slow band (10)
 
-| # | Search | Data | Population | Result | Null quality / limit |
-|---|---|---|---|---|---|
-| 2 | Cross-channel coherence | TSI + ACE + OMNI, 8 yr | 4 channels, 728 days | null | FP 3.5%, 100% power at 0.40σ |
-| 3 | Self-keyed spread spectrum | ACE MAG + F10.7, 8 yr | 15.3M field samples | null | FP 6.3%, 99.7% power at 0.10σ; alignment excess, resolved in §4.10 |
-| 4 | Dimensionless combination sweep | 13 solar/heliospheric channels | 229 tests, 13–44 yr | null | 126 tests across the Sun–heliosphere boundary, none survive |
-| 48 | Thirty-channel pair sweep | 30 observables, 5 new archives | 1,074 tests, 382 of 435 pairs | null | 0 of 510 across the Sun–heliosphere boundary; all 22 survivors known physics or shared-instrument |
-| 49 | Thirty-observable triple sweep | 30 observables, 2 three-body forms | 10,996 tests, 2,934 of 4,060 triples | void | neither form has a calibrated null — one is 9× heavy-tailed, the other cannot fire |
-| 6 | Sunspot cycle sequence | 24 cycles, 1755–2019 | 7 statistics | null | underpowered: misses lag-1 = 0.4 two times in three |
-| 13 | Cycle-resolved 14C, 976–1894 | Usoskin 2021 + SILSO | 85 cycles, 36 reliable | null | 29 of 85 unidentifiable; power only 36% → 53% |
-| 14 | Cosmogenic sequence, 11,350 yr | Solanki + Usoskin | 1,113 decadal points | null | no structure beyond spectrum + distribution, two reconstructions |
-| 27 | Occultation dips, quiet epochs | LASP TSI + SILSO, 46 yr | 4,919 quiet days | null | FP 7.2%, excludes 30-day dips > 62 ppm |
-| 28 | Aperiodic structure in solar output | LASP TSI, 46 yr | 16,801 daily samples | void | invalid — wrong channel, detector fails control |
+| # | Search | Data | Population | Result | **Why** | Null quality / limit |
+|---|---|---|---|---|---|---|
+| 2 | Cross-channel coherence | TSI + ACE + OMNI, 8 yr | 4 channels, 728 days | null | nothing above threshold | FP 3.5%, 100% power at 0.40σ |
+| 3 | Self-keyed spread spectrum | ACE MAG + F10.7, 8 yr | 15.3M field samples | null | nothing above threshold | FP 6.3%, 99.7% power at 0.10σ; alignment excess, resolved in §4.10 |
+| 4 | Dimensionless combination sweep | 13 solar/heliospheric channels | 229 tests, 13–44 yr | null | nothing above threshold | 126 tests across the Sun–heliosphere boundary, none survive |
+| 48 | Thirty-channel pair sweep | 30 observables, 5 new archives | 1,074 tests, 382 of 435 pairs | null | nothing above threshold | 0 of 510 across the Sun–heliosphere boundary; all 22 survivors known physics or shared-instrument |
+| 49 | Thirty-observable triple sweep | 30 observables, 2 three-body forms | 10,996 tests, 2,934 of 4,060 triples | void | see §4.5 / §4.9 / §4.17 / §4.19 | neither form has a calibrated null — one is 9× heavy-tailed, the other cannot fire |
+| 6 | Sunspot cycle sequence | 24 cycles, 1755–2019 | 7 statistics | null | nothing above threshold | underpowered: misses lag-1 = 0.4 two times in three |
+| 13 | Cycle-resolved 14C, 976–1894 | Usoskin 2021 + SILSO | 85 cycles, 36 reliable | null | nothing above threshold | 29 of 85 unidentifiable; power only 36% → 53% |
+| 14 | Cosmogenic sequence, 11,350 yr | Solanki + Usoskin | 1,113 decadal points | null | nothing above threshold | no structure beyond spectrum + distribution, two reconstructions |
+| 27 | Occultation dips, quiet epochs | LASP TSI + SILSO, 46 yr | 4,919 quiet days | null | nothing above threshold | FP 7.2%, excludes 30-day dips > 62 ppm |
+| 28 | Aperiodic structure in solar output | LASP TSI, 46 yr | 16,801 daily samples | void | see §4.5 / §4.9 / §4.17 / §4.19 | invalid — wrong channel, detector fails control |
 
 ### A.3 Frame & geometry (4)
 
-| # | Search | Data | Population | Result | Null quality / limit |
-|---|---|---|---|---|---|
-| 7 | Sidereal fold, EXIS | GOES-16 + 17, 3 channels | 1-min, 5.3 yr | null | sidereal 0.2σ against a 246σ solar artifact |
-| 15 | Sidereal fold, anti-sidereal gated | Oulu 1-min, 26 yr | 1440 bins, 9,530 folds | null | sidereal 4.9σ but anti-sidereal 6.6σ — leakage, not sky |
-| 16 | Barycentric-frame sky scan | Oulu 1-min, 26 yr | 60 directions, 3.2M bins | null | no direction beats topocentric; artifacts die 14× pole to plane |
-| 29 | Cross-viewpoint coherence, Earth vs Mars | GOES-16 EUVS + MAVEN/EUVM L2B Ly-α | 1,946 d, 94.3% MAVEN coverage | null | geometry recovered at _p_ = 5×10⁻⁴; 8.9×10⁻⁴ fractional at 3 d, no limit above ~10 d (§4.12) |
+| # | Search | Data | Population | Result | **Why** | Null quality / limit |
+|---|---|---|---|---|---|---|
+| 7 | Sidereal fold, EXIS | GOES-16 + 17, 3 channels | 1-min, 5.3 yr | null | nothing above threshold | sidereal 0.2σ against a 246σ solar artifact |
+| 15 | Sidereal fold, anti-sidereal gated | Oulu 1-min, 26 yr | 1440 bins, 9,530 folds | null | nothing above threshold | sidereal 4.9σ but anti-sidereal 6.6σ — leakage, not sky |
+| 16 | Barycentric-frame sky scan | Oulu 1-min, 26 yr | 60 directions, 3.2M bins | null | nothing above threshold | no direction beats topocentric; artifacts die 14× pole to plane |
+| 29 | Cross-viewpoint coherence, Earth vs Mars | GOES-16 EUVS + MAVEN/EUVM L2B Ly-α | 1,946 d, 94.3% MAVEN coverage | null | nothing above threshold | geometry recovered at _p_ = 5×10⁻⁴; 8.9×10⁻⁴ fractional at 3 d, no limit above ~10 d (§4.12) |
 
 ### A.4 Outer solar system (1)
 
-| # | Search | Data | Population | Result | Null quality / limit |
-|---|---|---|---|---|---|
-| 26 | Radial coincidence, 20–160 AU | Voyager 1 + 2, 48 yr | 32k hourly samples | null | FP 3.0%, 100% power at 50% injection |
+| # | Search | Data | Population | Result | **Why** | Null quality / limit |
+|---|---|---|---|---|---|---|
+| 26 | Radial coincidence, 20–160 AU | Voyager 1 + 2, 48 yr | 32k hourly samples | null | nothing above threshold | FP 3.0%, 100% power at 50% injection |
 
 *25 rows: 22 null, 2 void, 1 detection. Fifteen of the twenty-two nulls state a sensitivity — **11 injection-verified amplitude limits, 3 measured false-alarm-and-power pairs and 1 analytic sensitivity** (the sidereal fold) — and the other six are enumeration or control results that bound structure without quoting an amplitude. Per-search method, code and data provenance are in the supplementary material.*
 
