@@ -1,5 +1,8 @@
 #!/bin/bash
-# Fetch the four Charis TTFs the PDF build needs.
+# Fetch the four Charis TTFs. Used by the PDF build and by web/, which sets
+# Charis as its print face.
+#
+#   ./fetch-fonts.sh [destination]   (default: ./fonts)
 #
 # They are not vendored into the repo: the release zip is ~10 MB and the licence
 # (OFL 1.1) is better satisfied by pointing at upstream than by copying the
@@ -13,7 +16,7 @@
 # The full TTFs avoid both failure modes.
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DEST="$HERE/fonts"
+DEST="${1:-$HERE/fonts}"
 mkdir -p "$DEST"
 
 if [ -f "$DEST/Charis-Regular.ttf" ]; then

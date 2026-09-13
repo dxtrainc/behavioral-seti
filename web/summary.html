@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Behavioral SETI in Brief</title>
+<meta name="description" content="A five-page summary of a combination-space search for embedded technosignatures in solar and heliospheric archives: the twelve-step gate chain, the search as cryptanalysis, 29 searches, and where the compute and instruments run out.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Charis for print only: Charter redrawn, sturdy stems and low stroke contrast.
+   Newsreader is right for a monitor and goes thin on paper, which is the same
+   problem the submission PDF was re-rendered to fix. */
+@font-face{font-family:"Charis";src:url("fonts/Charis-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Charis";src:url("fonts/Charis-Bold.ttf") format("truetype");font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Charis";src:url("fonts/Charis-Italic.ttf") format("truetype");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Charis";src:url("fonts/Charis-BoldItalic.ttf") format("truetype");font-weight:600 700;font-style:italic;font-display:swap}
+
+:root{
+  --ink:#14171A; --slate:#5B6670; --rule:#E0E0DA; --paper:#FBFBF9; --card:#FFFFFF;
+  --red:#B8322A; --gold:#D9A21B; --blue:#2F6F8F; --green:#4A7C59; --violet:#6B4C9A;
+  --measure:70ch;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#ECEAE4; --slate:#9BA3AC; --rule:#2C3137; --paper:#15181B; --card:#1B1F23;
+    --red:#E0685F; --gold:#E8BE55; --blue:#68A6C4; --green:#7FB48C; --violet:#A98BD4;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#ECEAE4; --slate:#9BA3AC; --rule:#2C3137; --paper:#15181B; --card:#1B1F23;
+  --red:#E0685F; --gold:#E8BE55; --blue:#68A6C4; --green:#7FB48C; --violet:#A98BD4;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Newsreader",Georgia,serif; font-size:18px; line-height:1.6;
+  font-optical-sizing:auto;
+}
+.wrap{max-width:880px;margin:0 auto;padding:56px 24px 90px}
+.eyebrow{
+  font-family:Inter,system-ui,sans-serif; font-size:.7rem; font-weight:600;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--slate); margin:0 0 12px;
+}
+h1{
+  font-size:2.35rem; line-height:1.14; font-weight:500; margin:0 0 14px;
+  letter-spacing:-.015em; text-wrap:balance; max-width:22ch;
+}
+.standfirst{font-size:1.13rem; margin:0; max-width:var(--measure)}
+.byline{
+  font-family:Inter,system-ui,sans-serif; font-size:.82rem; color:var(--slate);
+  margin:20px 0 0; padding-top:16px; border-top:1px solid var(--rule);
+}
+h2{
+  font-size:1.2rem; font-weight:600; margin:52px 0 10px; letter-spacing:-.005em;
+  padding-top:16px; border-top:1px solid var(--rule);
+}
+h2:first-of-type{border-top:0;padding-top:0}
+h3{font-size:1rem; font-weight:600; margin:26px 0 6px}
+p{margin:0 0 .82em; max-width:var(--measure)}
+ul{max-width:var(--measure); padding-left:1.15em; margin:.2em 0 .9em}
+li{margin:.3em 0}
+.lead{border-left:3px solid var(--gold); padding-left:20px; margin:30px 0}
+.lead p:last-child{margin-bottom:0}
+.aside{
+  background:var(--card); border:1px solid var(--rule); border-left:3px solid var(--blue);
+  border-radius:8px; padding:16px 18px; margin:24px 0; font-size:.94rem; max-width:none;
+}
+.aside p{margin:0; max-width:none}
+.aside p+p{margin-top:9px}
+.aside.caution{border-left-color:var(--gold)}
+
+.figures{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:1px; background:var(--rule); border:1px solid var(--rule);
+  border-radius:10px; overflow:hidden; margin:26px 0 18px;
+}
+.fig{background:var(--card); padding:15px 16px 14px}
+.fig .n{
+  font-family:Inter,system-ui,sans-serif; font-size:1.44rem; font-weight:600;
+  letter-spacing:-.02em; line-height:1.1; font-variant-numeric:tabular-nums;
+}
+.fig .l{font-family:Inter,system-ui,sans-serif; font-size:.71rem; line-height:1.36;
+        color:var(--slate); margin-top:5px}
+.fig.null .n{color:var(--blue)}
+.fig.void .n{color:var(--gold)}
+.fig.det  .n{color:var(--red)}
+
+table{border-collapse:collapse; width:100%; font-family:Inter,system-ui,sans-serif;
+      font-size:.82rem; line-height:1.42}
+.tw{overflow-x:auto; border:1px solid var(--rule); border-radius:10px;
+    background:var(--card); margin:18px 0}
+th,td{text-align:left; padding:9px 13px; border-bottom:1px solid var(--rule); vertical-align:top}
+th{font-size:.67rem; letter-spacing:.08em; text-transform:uppercase; color:var(--slate);
+   font-weight:600; white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td.n{font-variant-numeric:tabular-nums; white-space:nowrap}
+td.step{font-variant-numeric:tabular-nums; color:var(--slate); font-weight:600; width:1.6rem}
+caption{caption-side:bottom; text-align:left; padding:11px 13px 0; font-size:.77rem;
+        color:var(--slate); font-family:Inter,system-ui,sans-serif}
+tr.gate0 td{background:color-mix(in srgb,var(--gold) 11%,transparent)}
+tr.gate0 td.step{color:var(--gold)}
+
+.links{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; margin-top:14px}
+a.card{display:block; text-decoration:none; color:inherit; background:var(--card);
+  border:1px solid var(--rule); border-radius:10px; padding:15px 16px;
+  transition:border-color .15s, transform .15s}
+a.card:hover{border-color:var(--blue); transform:translateY(-2px)}
+a.card:focus-visible{outline:2px solid var(--blue); outline-offset:3px}
+a.card .t{font-weight:600; font-size:1rem}
+a.card .d{font-family:Inter,system-ui,sans-serif; font-size:.78rem; color:var(--slate);
+          margin-top:4px; line-height:1.45}
+em.term{font-style:normal; font-weight:600}
+footer{margin-top:56px; padding-top:18px; border-top:1px solid var(--rule);
+       font-family:Inter,system-ui,sans-serif; font-size:.78rem; color:var(--slate)}
+
+/* Print: the screen page is set at 18px for reading on a monitor, which prints
+   at roughly 13.5pt and runs to ten pages. This brings it to the five-page
+   budget without touching the screen presentation or cutting any content. */
+@media print{
+  @page{ size:Letter; margin:0.5in 0.58in; }
+  html,body{ background:#fff !important; }
+  body{ font-family:"Charis",Georgia,serif; font-size:9.4pt; line-height:1.32;
+        color:#111316; font-optical-sizing:none; }
+  .wrap{ max-width:100% !important; padding:0 !important; }
+  p,ul,.standfirst{ max-width:none !important; }
+  p{ margin:0 0 .36em; orphans:2; widows:2; }
+
+  h1{ font-size:19pt; margin:0 0 8px; max-width:30ch; }
+  .standfirst{ font-size:10.8pt; }
+  .byline{ font-size:8pt; margin:10px 0 0; padding-top:8px; }
+  h2{ font-size:11.1pt; margin:10px 0 4px; padding-top:5px; break-after:avoid; }
+  h3{ font-size:10pt; margin:8px 0 3px; break-after:avoid; }
+
+  /* five stats, five columns: the auto-fit grid otherwise wraps 4+1 and
+     leaves a band of empty card behind the fifth. */
+  .figures{ margin:12px 0 9px; grid-template-columns:repeat(5,1fr); }
+  .fig{ padding:7px 9px 6px; }
+  .fig .n{ font-size:1.16rem; }
+  .fig .l{ font-size:.62rem; }
+
+  /* a tall table held whole orphans the page above it. Let the table flow
+     and keep rows atomic, repeating the header on each fragment. */
+  .tw{ margin:9px 0; break-inside:auto; }
+  table{ break-inside:auto; }
+  thead{ display:table-header-group; }
+  tr,td,th{ break-inside:avoid; }
+  caption{ break-before:avoid; }
+  table{ font-family:"Charis",Georgia,serif; font-size:7.3pt; line-height:1.24; }
+  th,td{ padding:3.2px 6px; }
+  caption{ font-family:"Charis",Georgia,serif; font-size:7pt; padding:6px 7px 0; }
+
+  .lead{ margin:11px 0; padding-left:12px; break-inside:auto; }
+  /* asides here are prose, sometimes half a page. Holding them together
+     orphans whatever was above them -- the same trap as in the paper. Let
+     them break; tables and the stat grid still may not. */
+  .aside{ margin:9px 0; padding:8px 10px; font-size:8.7pt; break-inside:auto; }
+  ul{ margin:.15em 0 .55em; }
+  li{ margin:.12em 0; }
+
+  a,a:link,a:visited{ color:inherit !important; text-decoration:none !important; }
+  .links{ gap:7px; margin-top:6px; }
+  a.card{ padding:9px 11px; }
+  footer{ margin-top:11px; padding-top:7px; font-size:7.2pt; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<p class="eyebrow">Summary &middot; Dxtra Inc.</p>
+<h1>Looking for the behavior of a source, not for a transmitter</h1>
+<p class="standfirst">Twenty-nine searches of public solar and heliospheric archives for a
+technosignature carried not on a chosen channel but in a <em class="term">relationship among
+observables</em>. Twenty-five are null, three void, and one recovers a known signal as a
+positive control.</p>
+<p class="byline">Robert Griffin &middot; Dxtra Inc., Massapequa, New York &middot;
+draft of 13 September 2026</p>
+
+<h2>The premise</h2>
+<p>Technosignature searches begin by naming a carrier &mdash; the 21&nbsp;cm line, an optical
+pulse, a waste-heat excess &mdash; and then searching it as deeply as instruments allow. Every
+one of them presupposes the channel. Coverage is measured in sky position, frequency and
+sensitivity: a map of how much radio has been searched, on the assumption that the answer is
+radio.</p>
+<p>This work takes the case left over: <b>no beam, no beacon hardware, no carrier specified in
+advance</b>. Structure is carried by emission a star already produces, imposed by redistributing
+that flux rather than generating it. The receiver's problem is then not sensitivity at all. It is
+not knowing which series to examine.</p>
+
+<div class="lead">
+  <p><b>Two constraints make that finite.</b> A sender sharing no units with the receiver can use
+  only <b>dimensionless</b> quantities &mdash; ratios and normalized combinations of measured
+  observables. And a sender minimizing transmitted energy will pose a <b>proof-of-work gate</b>:
+  cheap to set, expensive to solve, trivial to verify, so no energy is spent on receivers that
+  could not act on the message.</p>
+  <p>Together those define a <b>combination space</b> that can be enumerated, searched, and
+  &mdash; unlike a channel &mdash; have its coverage measured.</p>
+</div>
+
+<h2>Where this differs from the NASA taxonomy</h2>
+<p>The 2018 NASA Technosignatures Workshop is the field's reference organization of what a
+technosignature is, and a reader arriving from it is entitled to know which of its categories
+this paper occupies. <b>The answer is none of them</b>, and the reason is worth stating as the
+categories themselves state it &mdash; by what each one assumes exists.</p>
+
+<div class="tw">
+<table>
+<thead><tr><th>Category</th><th>Assumes</th><th>Here</th></tr></thead>
+<tbody>
+<tr><td>radio &mdash; narrowband or pulsed</td><td>a dedicated transmitter, powered and pointed</td><td>not assumed</td></tr>
+<tr><td>optical / infrared &mdash; laser pulses, beacons</td><td>a dedicated transmitter, at higher power</td><td>not assumed</td></tr>
+<tr><td>megastructures, waste heat</td><td>a structure large enough to occult or re-radiate a detectable fraction of the star</td><td>not assumed; the modulator is ~10<sup>&minus;6</sup> of the disc and invisible as an occulter</td></tr>
+<tr><td>atmospheric &mdash; industrial species</td><td>an industrial byproduct</td><td>not assumed; nothing here is a byproduct</td></tr>
+<tr><td>solar-system artifacts</td><td>a physical object to image or encounter</td><td>not the carrier here</td></tr>
+<tr><td>planetary surface &mdash; city lights</td><td>a modified planet</td><td>not assumed</td></tr>
+</tbody>
+<caption>The premise of this paper is that none of those is necessary. The carrier is emission
+the star already produces, redistributed rather than generated: nothing to build, nothing to
+see, no byproduct to accumulate, no object to encounter.</caption>
+</table>
+</div>
+
+<p><b>Three differences follow.</b> The carrier is a <b>relationship</b> among observables rather
+than a channel to point at. The gate is opened by the <b>receiver's capability</b> rather than
+paid for by the sender. And the target is <b>our own star, from archives already collected</b>
+&mdash; where the workshop's emphasis is on new instruments and on piggybacking planned missions.
+That premise does not appear in the workshop's taxonomy, and the archives it points at &mdash;
+solar and heliospheric records collected for space weather &mdash; do not appear in its inventory
+of what has been searched.</p>
+
+<h2>The gating argument, in twelve steps</h2>
+<p>The framework is not a claim about what a sender wants. It is an engineering derivation: what
+would a communications designer, facing an unknown number of unknown recipients over geological
+time, be <em>forced</em> to build? Four constraints &mdash; energy, parsimony, longevity, gating
+&mdash; each delete something, and what survives is a chain.</p>
+
+<div class="tw">
+<table>
+<thead><tr><th></th><th>Step</th><th>Gate it passes</th></tr></thead>
+<tbody>
+<tr><td class="step">0</td><td><b>The decision, under a budget</b> &mdash; total energy across all recipients and all time is minimized</td><td>&mdash;</td></tr>
+<tr><td class="step">1</td><td><b>Galactic survey</b> &mdash; candidates identified remotely, before anything is spent on them</td><td>stellar filter &mdash; ~10<sup>9</sup> candidates from ~10<sup>11</sup> stars</td></tr>
+<tr><td class="step">2</td><td><b>Mesh deployment</b> &mdash; a passive listening network seeded first, from a carrier bus</td><td>the address exists</td></tr>
+<tr><td class="step">3</td><td><b>Probe launch</b> &mdash; automated, self-repairing, transit 10<sup>4</sup>&ndash;10<sup>6</sup> yr, unsupervised</td><td>survival in transit</td></tr>
+<tr><td class="step">4</td><td><b>Emplacement at the star</b> &mdash; high in the stellar atmosphere, where the cheap channels form</td><td>persistence &mdash; the framework's largest unsupported assumption</td></tr>
+<tr><td class="step">5</td><td><b>The signal is embedded</b> &mdash; a small dimensionless modulation carrying a pointer to one mesh node, repeating indefinitely</td><td>the puzzle is posed</td></tr>
+<tr><td class="step">6</td><td><b>Maturity</b> &mdash; continuous monitoring, long archives, compute to search a combination space, all arising for the receiver's own reasons</td><td>capability</td></tr>
+<tr class="gate0"><td class="step">7</td><td><b>Recognition</b> &mdash; realizing that a puzzle has been posed at all. Costs nothing, and that is the difficulty</td><td><b>gate 0</b> &mdash; invisible from below. <b>The hardest gate in the chain</b></td></tr>
+<tr><td class="step">8</td><td><b>Detection</b> &mdash; right channel, right cadence, right combination</td><td>coverage of the combination space</td></tr>
+<tr><td class="step">9</td><td><b>Decode</b> &mdash; the encoding inverted without shared units</td><td>proof of work &mdash; the decode <em>is</em> the demonstration</td></tr>
+<tr><td class="step">10</td><td><b>The pointer is acted on</b> &mdash; the receiver's first real expense: it must build a transmitter</td><td>the gate opens &mdash; that expense is the filter</td></tr>
+<tr><td class="step">11</td><td><b>The mesh receives the reply</b> &mdash; at the named node, listening at zero idle cost</td><td>&mdash;</td></tr>
+<tr><td class="step">12</td><td><b>The return</b> &mdash; a response service acting for the sender, answering on parallel narrow beams</td><td>&mdash;</td></tr>
+</tbody>
+<caption>Steps 2 and 3 are the chain's only capital expenditure. Everything after step 5 is the
+receiver's money, which is the point of building it this way.</caption>
+</table>
+</div>
+
+<div class="aside">
+  <p><b>The architecture is designed to outlive its designer, and that is a core principle rather
+  than a flourish.</b> The longevity constraint is one-sided: it binds below, at the emergence of
+  a receiver, and sets <b>no upper bound</b> &mdash; nothing in the architecture specifies a date
+  at which the mesh stops, and no element of it is given a design life.</p>
+  <p>That is forced by the chain's own numbers. A bus crosses a 10<sup>4</sup>&nbsp;ly route in
+  7&times;10<sup>4</sup>&nbsp;yr; probes transit unsupervised for 10<sup>4</sup>&ndash;10<sup>6</sup>&nbsp;yr;
+  and the receiver takes 10<sup>6</sup>&ndash;10<sup>9</sup>&nbsp;yr to arise. A designer who
+  requires their own survival anywhere in that span has built a system that fails on the most
+  probable branch. <b>A Drake-style estimate multiplies by <em>L</em>, the civilization's
+  lifetime; if the artifact outlives its designer, <em>L</em> is the wrong lifetime to multiply
+  by.</b> "Is anyone alive out there" and "is anything out there still running" come apart, and
+  this searches for the second.</p>
+</div>
+
+<h2>Gate 0, and what recognition costs in compute</h2>
+<p>If the message is conditional on solving a problem, the first barrier is not solving it but
+<b>recognizing that a problem has been posed</b>. That barrier is invisible from below: a
+civilization holding the right archives, at the right cadence, sees exactly what a civilization
+with no signal to find sees. <b>The recognition gate has a size, and the size is set by the
+carrier</b> &mdash; a message carried in a relationship among observables is findable only by a
+receiver able to search relationships, which is a compute threshold, not a telescope.</p>
+
+<div class="tw">
+<table>
+<thead><tr><th>Search tier</th><th>FLOP</th><th>Cray-1, 1976</th><th>88 cores</th><th>Frontier</th></tr></thead>
+<tbody>
+<tr><td>triple sweep</td><td class="n">5.5×10<sup>14</sup></td><td class="n">39.8 d</td><td class="n">52 min</td><td class="n">0.4 ms</td></tr>
+<tr><td>quadruple sweep + matched null</td><td class="n">2.9×10<sup>14</sup></td><td class="n">21.0 d</td><td class="n">27.5 min</td><td class="n">0.2 ms</td></tr>
+<tr><td><b>every search in this paper</b></td><td class="n"><b>1.1×10<sup>15</sup></b></td><td class="n"><b>79.6 d</b></td><td class="n"><b>1.7 h</b></td><td class="n"><b>0.8 ms</b></td></tr>
+<tr><td>T3 &mdash; quadruples over 30 channels</td><td class="n">2.7×10<sup>17</sup></td><td class="n">53.5 yr</td><td class="n">17.8 d</td><td class="n"><b>0.2 s</b></td></tr>
+<tr><td>T6 &mdash; quadruples over 60, fast band</td><td class="n">2.8×10<sup>23</sup></td><td class="n">5.5×10<sup>7</sup> yr</td><td class="n">50,409 yr</td><td class="n"><b>57.5 h</b></td></tr>
+</tbody>
+<caption>Sustained rates: Cray-1 160 MFLOPS (1976), the 88-core workstation used here
+≈176 GFLOPS, Frontier 1.353 EFLOPS. The whole programme is eighty Cray-1 days and under a
+millisecond of Frontier; T6 — 55 million Cray-1 years in 1976 — is a long weekend on a flagship
+machine in 2026.</caption>
+</table>
+</div>
+
+<p>Our own position on that ladder is measurable rather than rhetorical. The pair space of thirty
+observables closes in under an hour on one machine; the triple space took 117 million statistic
+evaluations and 26 hours. <b>The recognition gate weakens a common premise of the Fermi paradox
+&mdash; that contact would be self-announcing &mdash; without requiring absence, concealment or a
+great filter.</b></p>
+
+<h2>The search is a cryptanalyst's procedure</h2>
+<p>The correspondence is exact, and naming it is what makes the search design falsifiable rather
+than a matter of taste. <b>The gate is a symmetric cipher under brute-force key search</b>, and
+this paper runs the cryptanalyst's side of it.</p>
+
+<div class="tw">
+<table>
+<thead><tr><th>Cryptographic object</th><th>Here</th></tr></thead>
+<tbody>
+<tr><td>the key</td><td>the tuple <em>(which observables, which functional form)</em></td></tr>
+<tr><td>the ciphertext</td><td>the public archive &mdash; already collected, by someone else, for other reasons</td></tr>
+<tr><td>the plaintext</td><td>the imposed modulation</td></tr>
+<tr><td>the key space</td><td>C(<em>N</em>,<em>k</em>) × |<em>F</em>| &mdash; enumerable, which is why coverage is a number</td></tr>
+<tr><td>exhaustive key search</td><td>the sweep of §4: every admissible key tried, the statistic as the oracle</td></tr>
+<tr><td>unicity distance</td><td><b>the multiple-testing threshold</b> &mdash; below it, more than one key yields a plausible decryption</td></tr>
+</tbody>
+</table>
+</div>
+
+<p><b>What makes the scheme work at all is self-identifying plaintext.</b> A receiver knows when
+the right key has been tried because the statistic fires &mdash; no crib and no known-plaintext
+pair is needed. That is the same property that makes brute-force search viable, and it is why the
+sender need not transmit anything to tell you that you have succeeded.</p>
+<p>Two consequences of taking the analogy seriously. It satisfies <b>Kerckhoffs's principle</b> in
+its purest available form: nothing is hidden, the whole scheme can be published, and the security
+lies entirely in the work. And it is <b>not proof of work in the hashcash sense</b> &mdash; there
+the sender performs the work to price a message; here the receiver performs it, and the direction
+of payment is inverted. The nearest technical antecedent is not in the SETI literature at all but
+in Rivest, Shamir &amp; Wagner's time-lock puzzles (1996), which set difficulty from projected
+future hardware speed. One difference is favourable here: a time-lock puzzle is inherently
+sequential and its delay cannot be bought off with more machines, whereas <b>a key search
+parallelizes</b> &mdash; which is precisely why the compute table above is a table of
+wall-clock times rather than of impossibilities.</p>
+
+<h2>What 29 searches found</h2>
+<div class="figures">
+  <div class="fig null"><div class="n">25</div><div class="l">null</div></div>
+  <div class="fig void"><div class="n">3</div><div class="l">void &mdash; the detector or the null failed its own validation</div></div>
+  <div class="fig det"><div class="n">1</div><div class="l">detection &mdash; a known signal, as a positive control</div></div>
+  <div class="fig"><div class="n">17</div><div class="l">carry a stated sensitivity</div></div>
+  <div class="fig"><div class="n">13</div><div class="l">of those verified by injection</div></div>
+</div>
+
+<p>The deepest verified limit is <b>1.4&times;10<sup>&minus;6</sup></b> in fractional
+Lyman-&alpha; irradiance at two minutes, at 95% recovery. Two channels were searched here for
+the first time: SOHO/VIRGO SPM photometry at one minute over 27.3&nbsp;yr, and SOHO/GOLF Doppler
+velocity at 20&nbsp;s over 25.9&nbsp;yr.</p>
+
+<h3>Sensitivity is not what is limiting</h3>
+<p>The same instrument, days and pipeline are <b>245&times; more sensitive at two minutes than at
+one day</b>. The binding constraint is not how faint a signal can be seen &mdash; it is how much
+of the combination space has been looked at.</p>
+
+<div class="tw">
+<table>
+<thead><tr><th>Coverage</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Pair space, after acquiring 17 further observables</td><td class="n">18% &rarr; 88% &mdash; 382 of 435 pairs</td></tr>
+<tr><td>Tests spanning the Sun&ndash;heliosphere boundary</td><td class="n">no survivor in 510</td></tr>
+<tr><td>Triples, of 4,060 (2,934 reachable)</td><td class="n">2,749 completed &rarr; void</td></tr>
+<tr><td>Cross-viewpoint, Earth line against Mars line</td><td class="n">null to 8.9&times;10<sup>&minus;4</sup> at 3 d</td></tr>
+</tbody>
+<caption>The triple sweep returned void, not null, for want of a matched three-body null &mdash;
+a statement about the analysis, not about the sky.</caption>
+</table>
+</div>
+
+<h3>Why each search ended where it did</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Reason</th><th>n</th><th>A statement about</th></tr></thead>
+<tbody>
+<tr><td>nothing above threshold</td><td class="n">22</td><td><b>the sky.</b> The detector worked, the control passed, the channel was empty at the stated level</td></tr>
+<tr><td>underpowered</td><td class="n">3</td><td>the analysis &mdash; could not have found the effect if present</td></tr>
+<tr><td>detector failed its own control</td><td class="n">1</td><td>the analysis</td></tr>
+<tr><td>no defensible null</td><td class="n">1</td><td>the analysis &mdash; "no signal" cannot be specified for a star with its own higher-order structure</td></tr>
+<tr><td>the Sun is too loud</td><td class="n">1</td><td><b>the data.</b> Not repairable by analysis</td></tr>
+<tr><td>detection</td><td class="n">1</td><td>a known signal, recovered as a positive control</td></tr>
+</tbody>
+<caption>Only the first line is astronomy. The honest reading is twenty-two channels searched
+competently, three searches too weak to count, two defeated by their own machinery, and one
+defeated by the data.</caption>
+</table>
+</div>
+
+<h3>The one detection is a re-detection</h3>
+<p>Solar p-modes in GOES EXIS Mg&nbsp;II irradiance, comb spacing 135.1 and 135.0&nbsp;&micro;Hz
+on the two spacecraft against an accepted 134.9. <b>Priority belongs to Eden et al. (2024), and
+we claim none.</b> Its value here is as a positive control whose answer was fixed in advance and
+corroborated by an independent group &mdash; a stronger check on the pipeline than any
+self-designed injection.</p>
+
+<h2>What this does and does not claim</h2>
+<p>A null result bounds an amplitude; it does not settle existence. What the limits establish is
+that no dimensionless modulation exceeding the stated amplitude exists in the stated observable
+over the stated band, during the interval observed &mdash; and every qualifier there is
+load-bearing.</p>
+<p>The framework of the opening sections is <b>not</b> claimed to be supported by these results,
+and is not invoked to explain them. What is new is narrower than the machinery around it: that
+the carrier may be a relationship among observables rather than a channel to point at, that the
+resulting space can be enumerated and its coverage measured, and that a capability-gated sender
+needs nobody to abstain from anything.</p>
+
+<h2>Future research directions</h2>
+<p>Three things block the next tier, and only one of them is compute. They are listed in the order
+that matters, which is not the order of cost.</p>
+
+<h3>1. The null, not the cycles &mdash; an HPC ensemble for solar higher-order statistics</h3>
+<p>The triple space returned <b>void</b>, and the quadruple space would too, for the same reason:
+<b>there is no defensible null</b> for higher-order statistics of solar output. The question,
+stated without reference to technosignatures, is this: <em>what is the null distribution of
+bispectra, trispectra and cross-channel phase alignment of solar output?</em> Nobody knows.</p>
+<p><b>Observation cannot answer it.</b> We have one Sun and one realisation of it; a null
+distribution requires an ensemble, and the only ensemble available is a synthetic one.</p>
+
+<div class="aside">
+  <p><b>The project.</b> A large ensemble of independent global solar convective-dynamo
+  simulations &mdash; Rayleigh, ASH or MURaM class &mdash; each integrated over several simulated
+  activity cycles, from which synthetic disc-integrated irradiance and velocity series are drawn
+  and the higher-order statistics measured across members.</p>
+  <p><b>Scale.</b> At literature cost of 5&times;10<sup>5</sup> to 2&times;10<sup>6</sup>
+  core-hours per realisation, an ensemble of 50&ndash;200 members is <b>0.4 to 1.8 million
+  node-hours</b> &mdash; within a single INCITE-class award, and modest by the standards of the
+  simulations themselves.</p>
+  <p><b>What it unlocks.</b> The triple and quadruple spaces become searchable, the void results
+  become limits, and any future search for non-linear coupling in solar data inherits a
+  characterised false-alarm rate. The value is not specific to SETI.</p>
+</div>
+
+<div class="aside caution">
+  <p><b>The gate this project must pass, stated first because it decides whether it is worth
+  running.</b> A null built from simulations that do not reproduce the Sun <em>in the statistics
+  being tested</em> is worse than no null: it would license exactly the false positives the
+  discipline of this paper exists to prevent. The ensemble has to be validated against the real
+  Sun in the same statistics before any limit derived from it means anything.</p>
+</div>
+
+<h3>2. Compute, once the null exists</h3>
+<p>The tiers are not blocked on machines &mdash; T3 is 17.8 days on the single workstation used
+here, and 0.2&nbsp;s on Frontier. <b>This table should not be read as asking for a machine.</b>
+It is here to show that the compute is not the binding constraint, which is itself the finding.</p>
+
+<div class="tw">
+<table>
+<thead><tr><th>Tier</th><th>Scale</th><th>What it would buy</th></tr></thead>
+<tbody>
+<tr><td><b>T3</b> &mdash; quadruples over 30 channels</td><td class="n">27,405 keys × 4 forms<br>~18 d on one 88-core machine</td><td>nothing, until a defensible four-body null exists</td></tr>
+<tr><td><b>T6</b> &mdash; quadruples over 60 channels, fast band</td><td class="n">2.8×10<sup>23</sup> FLOP<br>6.2 d on a dedicated exascale machine</td><td>the same objection, more strongly</td></tr>
+<tr><td>Peak-bagging, full Lorentzian profile fits, GOLF</td><td class="n">days, not hours</td><td>row 7 sits at 1.46×10<sup>&minus;5</sup> against a designer level of 10<sup>&minus;6</sup>; a ten-candidate estimator search bought 1.33×</td></tr>
+<tr><td><em>N</em><sup>2</sup> surrogate counts in place of the tail fit</td><td class="n">the reason the fit was introduced</td><td>the generalised-Pareto extrapolation is unstable across realisations at 1.7% of triples</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>3. Instruments that do not exist</h3>
+<p>Four columns are blank across the whole seventy-year record, and no amount of compute or
+patience fills them:</p>
+<ul>
+<li><b>core g-modes</b> &mdash; the only direct probe of the solar core</li>
+<li><b>the interplanetary electric field</b> &mdash; never measured continuously</li>
+<li><b>continuous disc-integrated polarimetry</b></li>
+<li><b>high-latitude solar wind</b> &mdash; which existed only while Ulysses flew (1990&ndash;2009) and has had no successor</li>
+</ul>
+<p>Across the columns that <em>are</em> filled there have been <b>36 instrument handovers</b>:
+total irradiance alone has passed through Nimbus-7, three ACRIMs, SORCE and TSIS. Every long
+solar series is a concatenation, and a slow signal spanning a handover could be destroyed by
+cross-calibration or manufactured by it &mdash; which is why one of the 29 searches is spent as a
+control on exactly that question.</p>
+<p><b>This is the binding constraint, and it is the one the paper cannot lift.</b> Whether we
+happen to measure the particular combination a sender chose is roughly one chance in five for a
+pair and one in eleven for a triple, and it cannot be improved by better instruments on the
+channels we already have. <b>Only by measuring more things.</b></p>
+
+<h2>The hypothesis, and what it does to the Fermi debate</h2>
+<p><b>Behavioral SETI is offered here as a hypothesis, not as a result.</b> Its claim is narrow:
+that a sender constrained by energy, parsimony and longevity would encode not <em>on</em> a
+channel but <em>in a relationship among observables</em>, and would gate the message on the
+receiver's demonstrated capability rather than pay to make it legible. Everything in the search
+above is downstream of that, and none of the twenty-five nulls is evidence for it.</p>
+
+<p>Where it touches the Fermi paradox is at a single premise. The paradox is usually posed as a
+contradiction between expectation and silence &mdash; they should be here, or we should have
+heard &mdash; and it inherits, mostly without argument, the assumption that <b>contact would be
+self-announcing</b>. A capability-gated signal is not. It is invisible from below by
+construction: a civilization holding the right archives, at the right cadence, that has not yet
+thought to search relationships sees exactly what a civilization with nothing to find sees.
+<b>That weakens the premise without requiring absence, concealment, or a great filter</b> &mdash;
+which is the whole of the contribution, and it is a smaller thing than it may sound.</p>
+
+<p>The nearest hypothesis in the literature is <b>Ball's zoo hypothesis (1973)</b>, and the
+relationship is worth stating precisely, because the two share a prediction and share no
+mechanism at all.</p>
+
+<div class="tw">
+<table>
+<thead><tr><th></th><th>Zoo hypothesis (Ball 1973)</th><th>Capability gating</th></tr></thead>
+<tbody>
+<tr><td>Predicts</td><td>silence despite presence</td><td>silence despite presence</td></tr>
+<tr><td>Requires</td><td><b>coordination</b> &mdash; many civilizations abstaining, indefinitely</td><td><b>nobody to abstain at all</b></td></tr>
+<tr><td>Fails when</td><td>a single defector breaks it</td><td>it does not have this failure mode: the barrier is difficulty, not etiquette</td></tr>
+<tr><td>Enforcement</td><td>external, and must be maintained</td><td><b>self-enforcing</b> &mdash; opened by the receiver's own capability</td></tr>
+</tbody>
+<caption>A shared prediction is not a shared explanation. The gate repairs the zoo hypothesis's
+known weakness — its dependence on universal, permanent agreement — by removing the need for
+agreement.</caption>
+</table>
+</div>
+
+<div class="aside caution">
+  <p><b>It informs the debate. It does not settle either question.</b> Two consequences are drawn
+  here and a third is refused. It weakens the self-announcing premise, and it argues that a search
+  of this kind should report <b>coverage</b> rather than detections, coverage being the only
+  quantity that accumulates.</p>
+  <p><b>What it must not be used for is explaining a null.</b> A framework that can absorb any
+  non-detection explains nothing, and a hypothesis invoked to account for its own failure to find
+  anything has stopped being a hypothesis. The twenty-five nulls in this paper are bounded
+  statements about particular observables at particular amplitudes, and they are not offered as
+  support for the framework that motivated looking. <b>Neither the Fermi paradox nor the zoo
+  hypothesis is resolved by anything here</b> — the first keeps its force, the second keeps its
+  difficulty, and what changes is only that one premise the paradox rests on turns out not to be
+  free.</p>
+</div>
+
+<h2>Read further</h2>
+<div class="links">
+  <a class="card" href="site/index.html">
+    <div class="t">Full paper &rarr;</div>
+    <div class="d">With the nine figures live and interactive.</div>
+  </a>
+  <a class="card" href="beacon-paper-submission.pdf">
+    <div class="t">Submission PDF &rarr;</div>
+    <div class="d">75 pages, typeset for print.</div>
+  </a>
+</div>
+
+<footer>
+  Every archive used was collected for space weather or helioseismology, none of it for SETI.
+  Per-search method, code and data provenance are in the paper's Appendix A and the
+  supplementary material.
+</footer>
+
+</div>
+</body>
+</html>
