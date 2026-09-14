@@ -1,0 +1,29 @@
+sidereal fold, injected against the anti-sidereal gate
+  2735136 samples at 300 s
+
+  unmodified data:
+    solar         2.481e-03   (132.2 sd)
+    sidereal      1.742e-04   (9.3 sd)
+    anti-sidereal 2.135e-04   (11.4 sd)
+    -> the fold statistic amp(sidereal) is ABOVE a 5 sd threshold with nothing injected
+
+  gated statistic D = amp(sidereal) - amp(anti-sidereal):
+    null sd from 13 noise-band pairs: 3.158e-05
+    threshold 5 sd = +1.579e-04
+    observed D on unmodified data = -3.936e-05  (-1.2 sd)  -> does not fire, as required
+
+  injection scan, first amplitude ZERO:
+    amp  0.0e+00 ->   0.0%
+    amp  5.0e-05 ->   0.0%
+    amp  1.0e-04 ->   0.0%
+    amp  1.8e-04 ->   0.0%
+    amp  3.0e-04 ->  46.5%
+    amp  5.0e-04 ->  80.0%
+    amp  1.0e-03 -> 100.0%
+    amp  2.0e-03 -> 100.0%
+
+  zero-amplitude recovery: 0.0%  (correct: the gate does not fire on nothing)
+  monotonic: True
+  95% recovery at 8.41e-04   (paper quotes 1.8e-4 as an analytic sensitivity)
+
+  saved ~/sidereal_gate.json

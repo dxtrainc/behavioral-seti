@@ -1,0 +1,13 @@
+GOLF row 7 -- Lorentzian profile fits vs power-weighted centroids
+  segments 180 d, window +/-4.0 uHz
+
+  PM1: 44/44 modes in reference, fit failure rate 43.9%, 51/52 segments usable
+  PM2: 45/45 modes in reference, fit failure rate 44.1%, 51/52 segments usable
+/home/dxtra/beacon-repo/validate/golf_lorentz.py:190: RuntimeWarning: Mean of empty slice
+  return np.nanmean(np.vstack([a, b]), axis=0)
+
+  centroid  usable 51  raw rms 0.1159 uHz
+
+  lorentz   usable 51  raw rms 0.1458 uHz
+
+  saved ~/golf_lorentz.npz and .json   (40 s)

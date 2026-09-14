@@ -1,0 +1,55 @@
+{
+ "statistic": "amp(sidereal) - amp(anti-sidereal)",
+ "unmodified": {
+  "solar": 0.002480539571329162,
+  "sidereal": 0.00017418058324395727,
+  "anti_sidereal": 0.00021354132727682896,
+  "noise_sd": 1.876939346050647e-05,
+  "sidereal_sd": 9.28003260256963,
+  "anti_sidereal_sd": 11.377103246631327
+ },
+ "gate": {
+  "null_sd": 3.1575079146976884e-05,
+  "threshold": 0.00015787539573488443,
+  "observed": -3.936074403287169e-05,
+  "fires_on_unmodified": false
+ },
+ "curve": [
+  {
+   "amp": 0.0,
+   "rec": 0.0
+  },
+  {
+   "amp": 5e-05,
+   "rec": 0.0
+  },
+  {
+   "amp": 0.0001,
+   "rec": 0.0
+  },
+  {
+   "amp": 0.00018,
+   "rec": 0.0
+  },
+  {
+   "amp": 0.0003,
+   "rec": 0.465
+  },
+  {
+   "amp": 0.0005,
+   "rec": 0.8
+  },
+  {
+   "amp": 0.001,
+   "rec": 1.0
+  },
+  {
+   "amp": 0.002,
+   "rec": 1.0
+  }
+ ],
+ "zero_arm": 0.0,
+ "monotonic": true,
+ "a95": 0.0008408964152537144,
+ "quoted_analytic": 0.00018
+}

@@ -1,0 +1,32 @@
+{
+ "seg_d": 180,
+ "half_uHz": 4.0,
+ "reports": {
+  "PM1": {
+   "modes_in_reference": 44,
+   "modes_located": 44,
+   "fits_attempted": 2244,
+   "fits_failed": 986,
+   "fit_failure_rate": 0.4393939393939394,
+   "segments": 52,
+   "segments_usable": 51
+  },
+  "PM2": {
+   "modes_in_reference": 45,
+   "modes_located": 45,
+   "fits_attempted": 2295,
+   "fits_failed": 1013,
+   "fit_failure_rate": 0.4413943355119826,
+   "segments": 52,
+   "segments_usable": 51
+  }
+ },
+ "centroid": {
+  "usable": 51,
+  "rms_uHz": 0.11585860938443308
+ },
+ "lorentz": {
+  "usable": 51,
+  "rms_uHz": 0.1457855721171344
+ }
+}
