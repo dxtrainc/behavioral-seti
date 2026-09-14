@@ -23,7 +23,7 @@
   html, body{ background:#fff !important; }
 
   body{
-    font-family:"Charter","Bitstream Charter","Source Serif 4","Charis SIL",Georgia,serif;
+    font-family:"Charis","Charis SIL","Charter","Bitstream Charter",Georgia,serif;
     font-size:10.4pt;
     line-height:1.44;
     color:var(--ink);
@@ -64,7 +64,7 @@
   p{ orphans:2; widows:2; margin:0 0 .52em; }
 
   table{
-    font-family:"Charter","Bitstream Charter",Georgia,serif;
+    font-family:"Charis","Charis SIL","Charter","Bitstream Charter",Georgia,serif;
     font-size:8.4pt;
     line-height:1.26;
     break-inside:auto;
@@ -86,7 +86,7 @@
   figure.chartfig .chart{ margin:0 !important; }
 
   figcaption{
-    font-family:"Charter","Bitstream Charter",Georgia,serif;
+    font-family:"Charis","Charis SIL","Charter","Bitstream Charter",Georgia,serif;
     font-size:8.6pt; color:var(--slate);
     max-width:100% !important;
   }

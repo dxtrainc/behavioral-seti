@@ -14,7 +14,7 @@
 
 The modern search for technosignatures begins with a choice of channel. Cocconi & Morrison (1959) argued for the 21 cm line, and essentially every program since has followed the same logic: name a carrier both parties can identify, then search it as deeply as instruments allow. Wright, Kanodia & Lubar (2018) formalized SETI as a coverage problem, but their axes are sky position, frequency, sensitivity, polarization, modulation and repetition rate: **a map of how much radio has been searched, presupposing that the answer is radio.**
 
-**Where this sits among the alternatives.** The 2018 NASA Technosignatures Workshop is the field's reference organisation of what a technosignature is, and a reader arriving from it is entitled to know which of its categories this paper occupies. The answer is none of them, and the reason is worth stating as the categories themselves state it — by what each one **assumes exists**:
+**Where this sits among the alternatives.** The 2018 NASA Technosignatures Workshop is the field's reference organization of what a technosignature is, and a reader arriving from it is entitled to know which of its categories this paper occupies. The answer is none of them, and the reason is worth stating as the categories themselves state it — by what each one **assumes exists**:
 
 | category | assumes | |
 |---|---|---|
@@ -210,7 +210,7 @@ The four constraints generate a single chain: the sender's half paid once and am
 >
 > *Gain is (aperture ratio)² × duty × atmospheric transmission relative to the first row; aggregate spans 0.1–1 bit per photon; cliff distances are the 5-photon-per-second floor of the previous table. The 8 m row is a single-launch monolith of the kind a 9 m fairing permits; the 100 m row is a light bucket, not an imaging telescope, and its mass is dominated by structure rather than optic.*
 >
-> The last row is the one a receiver with decades and a reason would build — and it would not build one. An instrument that is the only channel to a return of this value is a single point of failure for a program measured in decades, and the sensible deployment is several collectors in parallel: three or four buckets on independent spacecraft, at separated stations, with independent detectors and clocks. Redundancy is nearly free here, because a light bucket has no precision optic to duplicate, and it buys three things at once — continuous coverage through any one unit's conjunction, outage or loss; independent confirmation of every symbol, so that no single detector artefact can enter the record of a message that will be studied for centuries; and, since photon rates add across collectors, the aggregate of the fleet is the sum of its members. Four 100 m buckets are a 200 m receiver that cannot be lost to one launch failure or one micrometeoroid. That is how a receiver at step 12 would actually be built, and it changes the character of the return. At 100 TB a year the exchange is limited by the node's power and by what the sender chose to send, not by the receiver; and a 100 m bucket reaches a 1 kW node at 2,200 ly, which is the whole neighborhood of the lattice and not merely its nearest cell. It also settles who pays for what, which is the framework's recurring question: the receiver builds the aperture and the transmitter, the sender's node supplies the power, and the link budget closes with margin at every distance the mesh uses. None of this requires anything beyond a heavy-lift launcher, membrane optics of the kind flown as sunshields and solar sails, and superconducting detectors that exist in laboratories today — the receiver is within reach of the same civilization that has just built a transmitter, which is the rung the gate was set to.
+> The last row is the one a receiver with decades and a reason would build — and it would not build one. An instrument that is the only channel to a return of this value is a single point of failure for a program measured in decades, and the sensible deployment is several collectors in parallel: three or four buckets on independent spacecraft, at separated stations, with independent detectors and clocks. Redundancy is nearly free here, because a light bucket has no precision optic to duplicate, and it buys three things at once — continuous coverage through any one unit's conjunction, outage or loss; independent confirmation of every symbol, so that no single detector artifact can enter the record of a message that will be studied for centuries; and, since photon rates add across collectors, the aggregate of the fleet is the sum of its members. Four 100 m buckets are a 200 m receiver that cannot be lost to one launch failure or one micrometeoroid. That is how a receiver at step 12 would actually be built, and it changes the character of the return. At 100 TB a year the exchange is limited by the node's power and by what the sender chose to send, not by the receiver; and a 100 m bucket reaches a 1 kW node at 2,200 ly, which is the whole neighborhood of the lattice and not merely its nearest cell. It also settles who pays for what, which is the framework's recurring question: the receiver builds the aperture and the transmitter, the sender's node supplies the power, and the link budget closes with margin at every distance the mesh uses. None of this requires anything beyond a heavy-lift launcher, membrane optics of the kind flown as sunshields and solar sails, and superconducting detectors that exist in laboratories today — the receiver is within reach of the same civilization that has just built a transmitter, which is the rung the gate was set to.
 >
 > **Cross-check against the literature.** The link budget above uses nothing beyond the standard deep-space optical link equation (Hemmati 2006): received power = transmitted power × receiver area / (π (θ*d*/2)²), with θ = 1.22 λ/*D*. Its inputs check as follows. *Diffraction.* 1.9×10⁻⁷ rad for 10 m at 1.55 µm is the Airy full angle and is what LLCD and DSOC use to size their beams; the DSOC ground receiver was the 5.1 m Hale telescope feeding a superconducting nanowire array, so a 10 m receiver is two of those (Boroson et al. 2014; Biswas et al. 2018). *Photons per watt.* 220 s⁻¹ kW⁻¹ at 33 ly into 10 m follows from the equation with no free parameters. *Background.* The Sun's absolute *H* magnitude is 3.32 (Willmer 2018), so a solar twin at 10 pc is *H* ≈ 3.3; with the Vega zero-point of 1.13×10⁻⁹ W m⁻² µm⁻¹ (Cohen, Wheaton & Megeath 2003) that gives 2×10⁵ photons s⁻¹ per GHz in 10 m, as used. *Detectors.* The nanosecond slots assumed are conservative: flight-heritage SNSPD arrays at 1550 nm show sub-50 ps jitter, ~55% system efficiency and ~150 dark counts s⁻¹ per pixel (Guardiani et al. 2024), laboratory devices exceed 90% efficiency (Hao et al. 2024), and the 400 ps slots of the record photon-efficiency experiments are finer than assumed here. *Bits per photon.* The 0.1–1 bit per photon used in every table is deliberately pessimistic. Serially concatenated PPM (Moision & Hamkins 2005) with photon counting has demonstrated 13 bits per incident photon (Farr, Choi & Moision 2013) and 14.5 bits per received photon in a photon-starved channel (Banaszek et al. 2025), at low background; Hippke (2017a) reaches the same order for interstellar links from first principles. With the host star's background gated to 2×10⁻⁴ per slot, several bits per photon is the realistic figure, so the aggregate rates and payload volumes above are more likely low by a factor of a few than high, while the cliff distances, which depend on photons rather than bits, are unaffected.
 >
@@ -301,7 +301,7 @@ Two consequences follow. **The fast-band limits of §4.2 bound any modulator at 
 > ```
 > dr ~ 2GMr/(D^3 n^2)     r = Earth-Moon separation, n = lunar mean motion
 > 
->   modulator of this section, 2.1e9 kg, at 1 AU     4.5 femtometres
+>   modulator of this section, 2.1e9 kg, at 1 AU     4.5 femtometers
 >   short of a 1 mm normal point by                  2.2e11
 >   mass at 1 AU that WOULD give 1 mm                4.6e20 kg = half of Ceres
 >   or: how near a 2.1e9 kg probe must be            24,800 km, inside geostationary
@@ -321,11 +321,11 @@ An argument of this shape earns its place only by making the searches it motivat
 
 ### 2.9 The gate as a cryptographic object
 
-The constraints of §2.1 and the proof-of-work argument of §2.3 describe the gate functionally. It is worth naming the cryptographic primitive it actually corresponds to, because the correspondence is exact, because it repairs an imprecision in §2.3, and because it makes a prediction about **search order** that the bottom-up programme would not otherwise have made.
+The constraints of §2.1 and the proof-of-work argument of §2.3 describe the gate functionally. It is worth naming the cryptographic primitive it actually corresponds to, because the correspondence is exact, because it repairs an imprecision in §2.3, and because it makes a prediction about **search order** that the bottom-up program would not otherwise have made.
 
 **The gate is a symmetric cipher under brute-force key search.** The key is the tuple _(which observables, which functional form)_; the ciphertext is the public archive; the plaintext is the imposed modulation; the key space is C(_N_,_k_) × |_F_|, which is the combination space of §3.3 under another name. Everything is public except the key — the archives, the physics, the method, this paper — which is **Kerckhoffs's principle** in its purest available form, and not by accident: a sender wanting concealment would not modulate a star.
 
-The property that makes the scheme work at all is **self-identifying plaintext**. A receiver knows when the right key has been tried because the statistic fires; no crib and no known-plaintext pair is needed. That is the same property that makes brute force viable against a block cipher — one can recognise English without knowing in advance _which_ English — and it is what the detection criteria of §3.5 formalise.
+The property that makes the scheme work at all is **self-identifying plaintext**. A receiver knows when the right key has been tried because the statistic fires; no crib and no known-plaintext pair is needed. That is the same property that makes brute force viable against a block cipher — one can recognize English without knowing in advance _which_ English — and it is what the detection criteria of §3.5 formalise.
 
 **It is not proof of work in the hashcash sense, and the difference matters.** In hashcash the _sender_ performs the work, to price a message or prove commitment. Here the _receiver_ performs it. The direction of payment is inverted, and with it the design goal: this is a **proof-of-capability challenge** — a CAPTCHA turned inside out, a puzzle a computer is meant to _pass_ rather than fail. The analogy in §2.3 is right about the mechanism and wrong about the polarity.
 
@@ -365,9 +365,9 @@ The key space spans **fifteen orders of magnitude**; the required record length 
 
 The wordlist is **548× cheaper and, because the multiple-testing penalty scales with the number of keys tried, roughly 550× more sensitive** — a signal that an exhaustive sweep would bury under its own trials correction can survive the wordlist's. That gain is earned only by committing to the wordlist in advance; choosing it after seeing exhaustive results would be selection.
 
-The wordlist that follows from the designer's own constraints — the channels any civilisation measures early, precisely, and for a long time — is the §3.6 ordering reached by a different route. **Two independent arguments converging on the same search order is itself evidence the ordering is right**, and the consequence for this programme is concrete: the unsearched rows of §3.6 should be run before any exhaustive tier, not because exhaustion is expensive but because it answers a less likely question at greater cost.
+The wordlist that follows from the designer's own constraints — the channels any civilisation measures early, precisely, and for a long time — is the §3.6 ordering reached by a different route. **Two independent arguments converging on the same search order is itself evidence the ordering is right**, and the consequence for this program is concrete: the unsearched rows of §3.6 should be run before any exhaustive tier, not because exhaustion is expensive but because it answers a less likely question at greater cost.
 
-> **One caveat, stated because it bounds what the argument licenses.** The weak-key claim rests on a prior over what a sender would choose, and that prior is our reasoning about their design rather than anything testable. It justifies search **order**, which costs nothing if it is wrong. It would not justify restricting the search **space**, and nothing here should be read as licence to drop the exhaustive tiers.
+> **One caveat, stated because it bounds what the argument licenses.** The weak-key claim rests on a prior over what a sender would choose, and that prior is our reasoning about their design rather than anything testable. It justifies search **order**, which costs nothing if it is wrong. It would not justify restricting the search **space**, and nothing here should be read as license to drop the exhaustive tiers.
 
 
 ## 3. The combination space
@@ -380,7 +380,7 @@ A sender sharing no units with the receiver cannot encode in a quantity carrying
 
 Dimensionless is necessary and not sufficient, and we learned this the expensive way. A first sweep included plasma beta and the Alfvén Mach number _because_ they are dimensionless, and returned sixteen Bonferroni survivors — every one a pair involving those two quantities. Neither is a measurement: both are _functions_ of density, temperature, speed and field strength, all already in the channel set, so testing |**B**| against β tests |**B**| against a formula containing |**B**|. The geomagnetic indices failed the same way, as a downstream response to the solar wind. Requiring that a candidate be dimensionless _and_ independently measured took sixteen survivors to four, all textbook heliophysics.
 
-Extending the set to thirty (§3.2) showed that two clauses are still not enough: nine of the twenty-two survivors are pairs each dimensionless and independently measured yet not independent of _each other_ — the four Ca II K indices come from a single spectrum, the abundance ratios Fe/O, C/O and He/O share a denominator, CME rate and speed come from one catalog. **A pair sharing an instrument, a spectrum or a denominator will produce a survivor whether or not anything is modulating it.**
+Extending the set to thirty (§3.2) showed that two clauses are still not enough: seven of the nineteen survivors are pairs each dimensionless and independently measured yet not independent of _each other_ — the four Ca II K indices come from a single spectrum, the abundance ratios Fe/O, C/O and He/O share a denominator, CME rate and speed come from one catalog. **A pair sharing an instrument, a spectrum or a denominator will produce a survivor whether or not anything is modulating it.**
 
 > **The regularizer therefore has three clauses, not two.** An admissible carrier is a pair of quantities that are (i) dimensionless, (ii) independently measured, and (iii) not derived from a shared instrument, spectrum or normalizing quantity. Clause (iii) was added _after_ seeing the thirty-channel result and is a post-hoc correction — which is why §4.8 reports the uncorrected survivor list in full, and why a pre-sweep correlation audit at a **declared threshold of |_r_| > 0.90** (the value used in §4.8) is now part of the procedure, to be applied _before_ any future sweep rather than offered as an explanation after it.
 
@@ -504,7 +504,7 @@ Neutrinos are excluded from the pointer by cost, gravitational waves by physics,
 
 > **The framework's prediction, and the design reason behind it.** A designer *could* set the pointer in one of these channels, and would thereby select for a receiver centuries past the point of being able to reply. §2.3 says why a designer would not. The gate is bounded from above: it must be passable by the receiver it is meant for, or it is operationally no gate at all. The receiver the architecture is meant for is one that can build a transmitter and search a combination space — capable, but not necessarily mature — and a pointer that only a megaton neutrino observatory or a space-based gravitational-wave interferometer could read would choke off contact with exactly the receivers the safeguard exists to reach: species obviously capable of the exchange, whose remaining immaturity is the thing a staged disclosure is designed to accommodate. **The lower bound on difficulty filters out receivers that cannot act; the upper bound is there so that the filter does not also remove receivers that can.** The framework therefore predicts that the *pointer* is photonic and combinatorial, at the level of §3.6 rows 1–7, and that channels above the receiver's threshold appear, if at all, as content behind later gates at step 12 — where a receiver that has already demonstrated a transmitter can be told to build a detector, and where the sender's neutrino accelerator is paid for only after somebody has answered. This is the same asymmetry as everywhere else in the chain: the expensive channel is reserved for the stage at which the receiver has already paid to be found.
 
-Two consequences for this paper. First, the absence of neutrino and gravitational-wave searches in §4 is not a gap in coverage of the pointer; the framework says the pointer is not there, and a designer who put it there would have defeated their own purpose. Second, the §5.5 recommendation of a monoenergetic-line search in existing neutrino catalogues stands, but as a test for a *later-stage* channel or an unrelated beacon, not for the framework's pointer — a result there would be interesting on its own terms and would not bear on the gating argument.
+Two consequences for this paper. First, the absence of neutrino and gravitational-wave searches in §4 is not a gap in coverage of the pointer; the framework says the pointer is not there, and a designer who put it there would have defeated their own purpose. Second, the §5.5 recommendation of a monoenergetic-line search in existing neutrino catalogs stands, but as a test for a *later-stage* channel or an unrelated beacon, not for the framework's pointer — a result there would be interesting on its own terms and would not bear on the gating argument.
 
 ## 4. Results
 
@@ -622,35 +622,35 @@ Independent prior publication therefore _strengthens_ the control: the nulls in 
 
 ### 4.8 The thirty-channel pair sweep
 
-All 435 pairs were attempted; 382 had the required 2,000-day overlap, giving **1,074 tests** against 60,000 circular shifts each, a Bonferroni threshold of 4.66×10⁻⁵ and an attainable _p_-floor of 1.67×10⁻⁵.
+All 435 pairs were attempted; 382 had the required 2,000-day overlap, giving **1,074 tests** against 250,000 circular shifts each, a Bonferroni threshold of 4.66×10⁻⁵ and an attainable _p_-floor of **4.0×10⁻⁶ — 11.6× below the threshold**, so every test in the sweep could fire. Every _p_ below is a counted exceedance; the generalized Pareto extrapolation of §5.2 is not used anywhere in this paper.
 
 | Category | Tests | Survivors | Reading |
 |---|---|---|---|
-| heliospheric × heliospheric | 315 | 14 | solar-wind structure; see below |
-| solar × solar | 249 | 8 | activity proxies and same-spectrum indices |
+| heliospheric × heliospheric | 315 | 12 | solar-wind structure; see below |
+| solar × solar | 249 | 7 | activity proxies and same-spectrum indices |
 | **heliospheric × solar** | 510 | 0 | **the boundary a beacon would have to cross** |
 
 *129 tests fell below _p_ = 0.05 against 53.7 expected by chance — the signature of genuine physical coupling in the data rather than of a miscalibrated null.*
 
-**The first row of interest is the empty one.** Five hundred and ten tests span the Sun and 1 AU — the largest block in the sweep, and the one place a signal coupling a solar observable to a heliospheric one must appear. It was empty at thirteen channels and it is empty at thirty. Of the twenty-two survivors, **none is unexplained**:
+**The first row of interest is the empty one.** Five hundred and ten tests span the Sun and 1 AU — the largest block in the sweep, and the one place a signal coupling a solar observable to a heliospheric one must appear. It was empty at thirteen channels, empty at thirty, and still empty when the surrogate budget is deepened to 250,000 shifts. Of the nineteen survivors, **none is unexplained**:
 
 | N | Class | Examples |
 |---|---|---|
-| 9 | **shared instrument or denominator** — the failure mode of §3.1, clause (iii) | the four Ca II K indices against each other (one spectrum); Fe/O against C/O and He/O (shared denominator); O⁷⁺/O⁶⁺ against C⁶⁺/C⁵⁺; CME rate against CME speed (one catalog) |
-| 13 | **known physics** | wind density against five SWICS charge-state and abundance ratios, the standard fast/slow wind discriminators; \|**B**\| against density (stream interaction regions); proton temperature against alpha/proton; sunspot number against X-ray background, which SWPC publishes _as_ an activity index; Mg II against Ca II K, the two classic chromospheric proxies |
+| 7 | **shared instrument or denominator** — the failure mode of §3.1, clause (iii) | the four Ca II K indices against each other (one spectrum); Fe/O against C/O and He/O (shared denominator); O⁷⁺/O⁶⁺ against C⁶⁺/C⁵⁺; CME rate against CME speed (one catalog) |
+| 12 | **known physics** | wind density against five SWICS charge-state and abundance ratios, the standard fast/slow wind discriminators; \|**B**\| against density (stream interaction regions); proton temperature against alpha/proton; sunspot number against X-ray background, which SWPC publishes _as_ an activity index; Mg II against Ca II K, the two classic chromospheric proxies |
 | 0 | unaccounted for | — |
 
 > **A correlation audit run before the sweep predicted part of this.** Eight pairs exceeded |_r_| = 0.90 on their own overlap — among them Ca II K emission index against K3 at _r_ = 0.975 and O⁷⁺/O⁶⁺ against ⟨q⟩_(O) at 0.931 — and those pairs duly produced survivors. Sunspot _area_ against sunspot _number_ did not flag, the audit doing useful work in the other direction: area carries information the count does not.
 
 **Null.** The sweep recovers the strongest genuine couplings in the data unprompted, confines them to the physically related and instrumentally coupled subsets, and returns nothing across the Sun–heliosphere boundary in 510 tests.
 
-*Figure 4: Cumulative _p_-value distribution of the 1,074 pair tests, split by the physical category of the pair, against the uniform expectation (dashed). Both same-domain blocks run hard against the Bonferroni threshold and cross it. **The 510 tests spanning the Sun–heliosphere boundary do not reach it at all** — their steepest _p_ is 1.6×10⁻³, two orders above the line. That is the block in which a beacon coupling a solar observable to a heliospheric one would have to appear.*
+*Figure 4: Cumulative _p_-value distribution of the 1,074 pair tests, split by the physical category of the pair, against the uniform expectation (dashed). Both same-domain blocks run hard against the Bonferroni threshold and cross it. **The 510 tests spanning the Sun–heliosphere boundary do not reach it at all** — their steepest _p_ is 1.7×10⁻³ (proton temperature / Ca II K emission index), **37× above the line** at a floor 11.6× below it. That is the block in which a beacon coupling a solar observable to a heliospheric one would have to appear.*
 
 > **Both sweeps were re-run with deterministic seeds, and the result is reproducible for the first time.** The surrogate seed was previously derived from Python's `hash()`, which is salted per process: three consecutive runs returned 1689220225, 56146563 and 1311111642 for the same key, so no _p_-value here could be regenerated by anyone, including us. That is not a correctness fault — an arbitrary seed is still a valid seed — but for a paper whose standard is that a null is worth the fraction of a space it excludes, **an unreproducible null is worth less than it looks**. The seeds are now BLAKE2b over a canonical key, fixed across processes, versions and platforms.
 >
 > Re-running draws different surrogates from the same null, so the two sets should differ in detail and agree in distribution. They do: a two-sample Kolmogorov–Smirnov test gives _D_ = 0.008, _p_ = 1.00 on the 1,074 pairs and _D_ = 0.003, _p_ = 1.00 on the 10,996 triples. **The claim this section rests on is unchanged — zero survivors cross the Sun–heliosphere boundary in either run.**
 >
-> **One instability is worth reporting rather than absorbing.** Survivor counts at the family-wise threshold moved from 10 to 13 among the pairs and 198 to 206 among the triples, and **182 of 10,996 triples — 1.7% — cross the threshold in one run and not the other**. Every one of those sits below the counting floor of 1/(M+1) = 10⁻⁴, where the _p_-value comes from the generalised-Pareto tail fit of §3.4 rather than from counted exceedances. **The tail extrapolation is therefore not stable across surrogate realisations at the level of an individual test**, which is a real limit on the device that §3.4 introduces to escape the N² surrogate cost. It does not affect the distributions, the boundary result, or the void verdict below; it does mean that a single extrapolated _p_-value near threshold should not be read as a property of the data.
+> **One instability is worth reporting rather than absorbing.** Survivor counts at the family-wise threshold moved from 10 to 13 among the pairs and 198 to 206 among the triples, and **182 of 10,996 triples — 1.7% — cross the threshold in one run and not the other**. Every one of those sits below the counting floor of 1/(M+1) = 10⁻⁴, where the _p_-value came from the generalized-Pareto tail fit rather than from counted exceedances. **The extrapolation is not stable across surrogate realizations at the level of an individual test**, and this is one of the three findings that led us to abandon it (§5.2). It does not affect the distributions, the boundary result, or the void verdict below. The pair sweep has since been re-run at 250,000 shifts, where counting resolves every test and no extrapolated _p_-value is used at all.
 
 ### 4.9 The triple sweep, and why it is void
 
@@ -804,7 +804,7 @@ In the judged band, 125 s to 6 h, **the Earth line has no peak above threshold a
 
 > **The threshold was challenged and it holds.** A band-wide control was added on review — the count of exceedances over all 1,336,602 judged bins per surrogate, whose expectation is α = 0.05 if the threshold is calibrated — because the previous check tested a *single fixed bin* against a threshold set for 1.3 million and returned ~0% whether the pipeline was sound or not. The first run of the new control returned **197 exceedances per surrogate**, which would have meant the limits here were not family-wise 0.05 and would have loosened them roughly fourfold.
 >
-> **That number was an artefact of the control, not a property of the search.** The surrogate rolled the series and then re-applied the gap mask, which on a gapped record moves the existing zero-blocks to new positions and adds zeros back at the original gaps: at MAVEN's coverage it carried half again the data's zero fraction, and zero-blocks generate large spectral structure. Rolling only the observed samples, so the gap pattern stays exactly where it is, gives:
+> **That number was an artifact of the control, not a property of the search.** The surrogate rolled the series and then re-applied the gap mask, which on a gapped record moves the existing zero-blocks to new positions and adds zeros back at the original gaps: at MAVEN's coverage it carried half again the data's zero fraction, and zero-blocks generate large spectral structure. Rolling only the observed samples, so the gap pattern stays exactly where it is, gives:
 >
 > | line | analytic | empirical | ratio |
 > |---|---|---|---|
@@ -824,7 +824,7 @@ In the judged band, 125 s to 6 h, **the Earth line has no peak above threshold a
 
 Lunar laser ranging is the most precisely monitored geometric quantity in the solar system — five retroreflectors, four decades, millimeter normal points — exactly the archive the coverage principle of §5.5 points at. It is treated here, but it is **not one of the 25 searches** and does not enter the tally:
 
-> **It cannot constrain the modulator of §2.7, and we say so before reporting the nulls.** §2.7 puts ranging 2.2×10¹¹ short gravitationally and 2.0×10¹² short radiatively. A null here bounds any unmodelled periodic structure in the Earth–Moon system, but not the architecture this paper is about. It is a method demonstration and an honest negative.
+> **It cannot constrain the modulator of §2.7, and we say so before reporting the nulls.** §2.7 puts ranging 2.2×10¹¹ short gravitationally and 2.0×10¹² short radiatively. A null here bounds any unmodeled periodic structure in the Earth–Moon system, but not the architecture this paper is about. It is a method demonstration and an honest negative.
 
 **The construction is the interesting part.** A single-reflector range is contaminated by station coordinates, atmosphere, Earth orientation and the lunar ephemeris. Ranging to _two_ reflectors from the same station on the same night and taking the **ratio of the round-trip times** cancels all of those to first order — and the ratio is dimensionless by construction, satisfying §3.1 with no shared unit. Five reflectors give ten pairs. No dynamical model is used anywhere — published LLR residuals are post-fit against a full ephemeris, so a signal shaped like any fitted parameter is removed before anyone sees it; nothing here is fitted, so nothing is absorbed. The price is that a local detrend is a high-pass filter, so **the detrend window is the coverage claim**.
 
@@ -864,7 +864,7 @@ Two implementation errors produced a false null — **zero peaks at three sites,
 
 §3.6 ranked this row sixth by designer preference and recorded it unsearched, on the stated grounds that the archive was not reachable. **That was wrong, and the way it was wrong is worth recording.** PMOD's `ftp.pmodwrc.ch` publishes only an IPv6 AAAA record and does fail from our networks — retried here, three ways, still failing. But NASA mirrors the entire SOHO mission over plain HTTPS. The primary source was dead; the dataset never was. A dead primary source is not an unavailable dataset, and this one blocked three rows of the designer table for four revisions.
 
-VIRGO's three sun photometers (402 nm, 500 nm, 862 nm) give 14,342,400 samples each at 60 s from 1996-01-23 to 2023-04-30 — 27.3 years, 90.5% / 94.3% / 95.4% present. Because the product is already relative, in ppm, the **difference of two channels in ppm is their log colour ratio**: the dimensionless carriers of §3.1 come free, with no constructed quantity and no shared denominator.
+VIRGO's three sun photometers (402 nm, 500 nm, 862 nm) give 14,342,400 samples each at 60 s from 1996-01-23 to 2023-04-30 — 27.3 years, 90.5% / 94.3% / 95.4% present. Because the product is already relative, in ppm, the **difference of two channels in ppm is their log color ratio**: the dimensionless carriers of §3.1 come free, with no constructed quantity and no shared denominator.
 
 **Gate 1 is unusually strong here and it failed twice before it passed.** VIRGO SPM is an instrument solar p-modes are classically measured with, so the five-minute oscillation must come out of a blind search of this data or the search is not calibrated. The first run failed it on two channels — and returned eighteen "candidates", every one at exactly 180.0000 s or 360.0000 s, which are 2⁄3 and 1⁄3 of the 60 s Nyquist. **A real signal has no reason to land on a round number in our units.** They are instrument lines reaching _R_ ≈ 19,000, and they were strong enough to drag the envelope estimator off the p-mode peak. They are excluded a priori, as exact multiples of the sample interval, rather than after inspection of which bins came out large. The second failure was ours: an envelope filter of 2,001 bins is 2.3 µHz against an envelope roughly 1,000 µHz wide (§5.6).
 
@@ -874,9 +874,9 @@ VIRGO's three sun photometers (402 nm, 500 nm, 862 nm) give 14,342,400 samples e
 | GREEN | 2.9638 mHz | 3.0753 mHz | pass |
 | RED 862 nm | 2.9638 mHz | 3.0753 mHz | pass |
 
-**Null.** With the instrument lines excluded, **no bin of 7,164,744 exceeds threshold in any of the three channels**. The colour ratios return two marginal bins each, and all six are identifiable without appeal to anything new: exactly 720.0000 minutes (the 12-hour spacecraft thermal cycle), 4,780,800 minutes (9.1 years, the solar cycle), and 178 and 212 days, which sit against the edge of the filter described below. **No candidate appears in all three photometers**, which is the gate a solar signal would pass and a detector artefact would not.
+**Null.** With the instrument lines excluded, **no bin of 7,164,744 exceeds threshold in any of the three channels**. The color ratios return two marginal bins each, and all six are identifiable without appeal to anything new: exactly 720.0000 minutes (the 12-hour spacecraft thermal cycle), 4,780,800 minutes (9.1 years, the solar cycle), and 178 and 212 days, which sit against the edge of the filter described below. **No candidate appears in all three photometers**, which is the gate a solar signal would pass and a detector artifact would not.
 
-**The limit, and where the search is blind.** Injection into the prepared series puts 95% recovery at **0.20 ppm at 307 s**, rising to 0.80 ppm at 1,009 s and 1.60 ppm at 10 h. §3.6 estimated this row's reach at ~10⁻⁷ with margin ~1; the measured value is **2.0×10⁻⁷, margin 0.5** — the closest any row in this programme comes to the level the framework's own logic places a signal at, and null there.
+**The limit, and where the search is blind.** Injection into the prepared series puts 95% recovery at **0.20 ppm at 307 s**, rising to 0.80 ppm at 1,009 s and 1.60 ppm at 10 h. §3.6 estimated this row's reach at ~10⁻⁷ with margin ~1; the measured value is **2.0×10⁻⁷, margin 0.5** — the closest any row in this program comes to the level the framework's own logic places a signal at, and null there.
 
 **A second instrument, and a correction.** VIRGO also flies a PMO6 radiometer, and its one-minute total-irradiance product carries **no highpass at all**, so it reaches a band SPM cannot. Searched identically it is likewise null: every one of twenty candidates above threshold reads _R_ ≈ 1,000–2,000 in the radiometer and _R_ < 5.1 in all three photometers, and is therefore specific to one detector chain. **This matters as much as the null does**, because the a priori frequency veto had failed on those same candidates — it excluded exactly 180.0000 s and 360.0000 s at a half-width of 0.03%, while the real line carries sidebands to ±2% and a 120 s companion the veto never named. The cross-product gate caught all twenty without needing any of that to be predicted correctly.
 
@@ -886,7 +886,7 @@ VIRGO's three sun photometers (402 nm, 500 nm, 862 nm) give 14,342,400 samples e
 
 ### 4.16 Row 7: p-mode frequency structure, on SOHO/GOLF
 
-GOLF is the better instrument for this row than the EXIS photometry of §4.6, and for a reason that matters to the argument: it measures **Doppler velocity**, a different observable of the same oscillation, and its two photomultipliers PM1 and PM2 put the twin gate **inside the instrument**, where there is no cross-calibration to dispute. 40,845,600 samples at 20 s over 25.9 years at **98.4% duty** — the most continuous record in this programme.
+GOLF is the better instrument for this row than the EXIS photometry of §4.6, and for a reason that matters to the argument: it measures **Doppler velocity**, a different observable of the same oscillation, and its two photomultipliers PM1 and PM2 put the twin gate **inside the instrument**, where there is no cross-calibration to dispute. 40,845,600 samples at 20 s over 25.9 years at **98.4% duty** — the most continuous record in this program.
 
 What is searched is not whether p-modes exist. That is settled, and here it is the control. A sender able to modulate the Sun at all could shift **mode frequencies**, the most precisely measured quantity in solar physics; the observable is therefore the frequency shift over time, and the question is whether it carries structure beyond what solar activity explains.
 
@@ -912,7 +912,7 @@ Gate 1a is the rare control with no free parameter: Δν follows from stellar st
 
 §3.6 ranks this row fifth at a level of 10 ppm dips, after Arnold (2005), and records it searched only as a daily single-dip test. VIRGO's one-minute total irradiance — 14,199,837 samples over 27.0 years, no highpass — is the right archive for it.
 
-**The control is the strongest available anywhere in this programme, because the Sun is transited by known bodies at known times and the depth is not fitted.** It is the ratio of two disk areas: Venus (R/R_☉)² = **75.6 ppm**, Mercury **12.3 ppm**. Venus transited on 2004-06-08 and 2012-06-06, Mercury on four dates between 2003 and 2019.
+**The control is the strongest available anywhere in this program, because the Sun is transited by known bodies at known times and the depth is not fitted.** It is the ratio of two disk areas: Venus (R/R_☉)² = **75.6 ppm**, Mercury **12.3 ppm**. Venus transited on 2004-06-08 and 2012-06-06, Mercury on four dates between 2003 and 2019.
 
 **Void: none of the six is recovered.** A matched filter at the known duration and the known mid-transit time returns Venus 2004 at **−57 ppm** — the Sun was *brighter* across the transit window than the surrounding six days — and Venus 2012 at 164.6 ppm against a null scatter of 108.2. Across all six the SNR spans −1.3 to +1.5.
 
@@ -932,7 +932,7 @@ SDO/EVE ESP gives four EUV bands at **0.25 s over 120 consecutive days** — 41,
 
 > **CH_36 is excluded from any limit.** Its values cross zero (median 2.6×10⁻⁴, minimum −5.2×10⁻⁴), so the relative residual _x_/trend − 1 diverges and its residual rms is 76%. The channel is reported as searched and returning nothing, not as constraining anything, and it is excluded from the ratios below — a ratio against a divergent denominator is a division by something near zero, not a dimensionless carrier.
 
-**The dimensionless carriers.** §3.1 restricts a sender to dimensionless quantities, so the single channels above are the wrong object and the colour ratios are the right one. Because each channel is prepared as a relative residual, the difference of two prepared channels *is* their log ratio to first order, and the three ratios among CH_18, CH_26 and CH_30 cost nothing extra to form. **All three are null, and every candidate is again at exactly 2.000000 Hz** — 11, 2 and 31 bins above threshold across the three, all at Nyquist. Three of those pass the dark-channel veto, which records only that the dark diode happened to carry less power in those particular bins: **a control discriminates against the failures it was built for, and this one was not built against a sampling edge.** With Nyquist excluded a priori, as it can be from the cadence alone, no candidate survives in any ratio.
+**The dimensionless carriers.** §3.1 restricts a sender to dimensionless quantities, so the single channels above are the wrong object and the color ratios are the right one. Because each channel is prepared as a relative residual, the difference of two prepared channels *is* their log ratio to first order, and the three ratios among CH_18, CH_26 and CH_30 cost nothing extra to form. **All three are null, and every candidate is again at exactly 2.000000 Hz** — 11, 2 and 31 bins above threshold across the three, all at Nyquist. Three of those pass the dark-channel veto, which records only that the dark diode happened to carry less power in those particular bins: **a control discriminates against the failures it was built for, and this one was not built against a sampling edge.** With Nyquist excluded a priori, as it can be from the cadence alone, no candidate survives in any ratio.
 
 
 ### 4.19 The one spatially resolved channel, and why it is void
@@ -984,7 +984,7 @@ The natural objection to enumerating the space — of order 1,300 pair tests and
 
 *Runtimes at a measured 3.0×10⁴ statistic evaluations per second on 80 cores of one machine. The quadratic term is invisible at 229 tests and dominates by 12,000.*
 
-The remedy is to stop counting exceedances: a generalized Pareto fit to the upper tail of the shift null gives _p_-values below the empirical floor from a fixed surrogate budget, returning the cost to linear in _N_ — at 10,000 shifts the full pair space costs seven minutes and the triples about an hour (the triple sweep of §4.9 took 64 minutes for 117M evaluations). **We validated the fit against direct counting on the full pair space before using it on the triples:**
+The obvious remedy is to stop counting exceedances: a generalized Pareto fit to the upper tail of the shift null returns _p_-values below the empirical floor from a fixed surrogate budget, which would return the cost to linear in _N_. **We tried it, validated it against direct counting, and rejected it.** The validation is reported here because the reasons it failed are the reasons to pay the quadratic cost instead:
 
 | Counted-_p_ band | Tests | Median bias | 90% \|dev\| |
 |---|---|---|---|
@@ -994,14 +994,14 @@ The remedy is to stop counting exceedances: a generalized Pareto fit to the uppe
 | 10/_M_ – 0.001 | 11 | +0.223 | 0.46 |
 | **_p_ < 10/60001 (the tail)** | 25 | +0.404 | 2.28 |
 
-*Agreement in dex between the tail-fitted and counted _p_. Over the resolved range (_n_ = 1,049) the median bias is −0.000 dex, the interquartile spread 0.005, and the rank correlation 0.9999. The fit also does what counting cannot: |**B**| / Fe/O, pinned at the 1.67×10⁻⁵ floor by counting, resolves to 6×10⁻¹⁴.*
+*Agreement in dex between the tail-fitted and counted _p_. Over the resolved range (_n_ = 1,049) the median bias is −0.000 dex, the interquartile spread 0.005, and the rank correlation 0.9999 — agreement is essentially perfect everywhere the fit is not needed.*
 
-> **The validation passes on its pre-registered criteria and does not certify the regime it is needed for.** Agreement is essentially perfect wherever counting also resolves _p_ — precisely where the fit is unnecessary. In the extreme tail, where the two disagree by up to 2.3 dex, no comparison is possible _because counting has no answer there_; and the two methods disagree on the survivor count, 22 counted against 10 tail-fitted.
+> **The validation passes on its pre-registered criteria and does not certify the regime it is needed for.** Agreement is essentially perfect wherever counting also resolves _p_ — precisely where the fit is unnecessary. In the extreme tail, where the two disagree by up to 2.3 dex, no comparison is possible _because counting has no answer there_; and the two methods disagree on the survivor count, 22 counted against 10 tail-fitted at the 60,000 shifts this validation used — where the deeper 250,000-shift sweep of §4.8 resolves 19.
 > **A twin-instrument check on the fit itself settles how far it can be trusted.** The identical fit was computed independently on a second machine — different host, core count, SciPy, and random shift draws. In the bulk the runs are indistinguishable: median difference **+0.0000 dex**, interquartile spread 0.0064, 90% of deviations within 0.026 dex. **In the tail they are not**: the largest single disagreement is **10.3 dex**, and of ten Bonferroni survivors on each machine **only seven are the same tests**. The extrapolated _p_ in the far tail depends on the surrogate draw at a level that changes which tests are called significant. This is the control of §4.4 applied to a method rather than to data, and it fired.
 
-**The tail fit is therefore a screen and not a verdict, and we use it only that way.** Anything it selects is re-run by direct counting at a shift budget sufficient for its own threshold — affordable precisely because so few tests survive the screen.
+**The tail fit is therefore rejected, and no _p_-value in this paper comes from it.** The deciding test was to stop extrapolating and simply buy the surrogates: the pair sweep was re-run at **250,000 shifts**, where the empirical floor is 4.0×10⁻⁶ and sits 11.6× below the family-wise threshold. Counting then resolves **1,055 of 1,074 tests outright**, and the remaining 19 are bounded at the floor. The extrapolation proved not merely unnecessary there but unusable: offered all 19 tests that fell below ten exceedances — the only tests it exists to serve — **it failed its own Kolmogorov–Smirnov goodness-of-fit criterion on every one** and returned nothing. A bound reading _p_ < 4.0×10⁻⁶ with the exceedance count behind it is worth more than a decimal that moves by ten orders of magnitude when the seed changes.
 
-The conclusion survives the correction, with its margin reduced. **A complete enumeration of the pair space is not an instrumental, funding or telescope-time problem** — it is under an hour on one machine, against archives that already exist; the triple space is 26 h by direct counting and about an hour with a tail fit. And the case for finishing it does not depend on §2 being correct: the limits stand as limits regardless of why one went looking.
+The conclusion survives the correction, with its margin reduced. **A complete enumeration of the pair space is not an instrumental, funding or telescope-time problem** — it is a few hours on one machine at a surrogate budget deep enough to matter, against archives that already exist; the triple space is 26 h by direct counting, and direct counting is now the only method we are prepared to use. And the case for finishing it does not depend on §2 being correct: the limits stand as limits regardless of why one went looking.
 
 ### 5.3 The recognition problem, and the discipline it requires
 
@@ -1064,7 +1064,7 @@ Three practices used here have nothing to do with technosignatures and may be th
 
 **A fourth practice, learned the hard way: an audit must reproduce what it audits.**
 
-The three practices above concern controls — a control must be able to return "no". A separate discipline governs the checks applied to a completed search, and this programme learned it by violating it repeatedly in a single afternoon.
+The three practices above concern controls — a control must be able to return "no". A separate discipline governs the checks applied to a completed search, and this program learned it by violating it repeatedly in a single afternoon.
 
 The fast-band threshold μ·ln(N/α) was challenged on review. The challenge was legitimate: the control that had certified it tested a **single fixed bin** against a threshold set for 1.3 million bins, and returned ≈0% whether the pipeline was sound or not. Replacing it with a band-wide exceedance count was right. Everything concluded from the replacement was wrong.
 
@@ -1074,14 +1074,14 @@ The fast-band threshold μ·ln(N/α) was challenged on review. The challenge was
 | 2 | 5,647× | surrogate fixed; day harmonics still counted |
 | 3 | 19.6× | day-harmonic veto applied at ±3 bins |
 | 4 | **1.02×** on MAVEN | correct surrogate, and a pipeline that folds the daily profile out |
-| 5 | 20.9× on GOES | same veto — but GOES's eclipse season drifts, so the comb is broadened and the veto caught line centres, not shoulders |
+| 5 | 20.9× on GOES | same veto — but GOES's eclipse season drifts, so the comb is broadened and the veto caught line centers, not shoulders |
 | 6 | 35.0× | daily profile folded out, which made it worse |
 
 **No stable value was obtained, and the reason is structural rather than statistical.** A gapped series carries a comb in its *window*: EUVS Lyman-α is 26.9% absent on a daily pattern, and that mask is multiplicative. Subtracting a mean daily profile is additive and cannot remove it; notching requires a veto wider than a comb whose lines drift with the spacecraft's eclipse season. **Every excess measured localised entirely to that comb**, which the search rejects before declaring any candidate.
 
 **The limits are therefore left as printed**, on three independent grounds: the one channel whose pipeline genuinely removes the daily structure returns a threshold calibrated to 2%; every measured excess sits in bins the search vetoes; and the candidate lists of §A.1 are clean, which a badly miscalibrated threshold could not produce. **That is not a verification — it is the absence of a defensible measurement against.** The distinction is stated because the alternative was to change a printed number on the first of six attempts, which is what happened, and was reverted.
 
-> **The generalisable rule.** Each of the six failures was the same kind: the audit did not replicate the procedure it was auditing. The surrogate was not the same kind of object as the data; the bin set was not the one the search reports on; the veto was narrower than the structure it targeted. None was a statistical error, and twice a diagnosis of one instance was followed immediately by committing the next. **A control must be able to fail; an audit must reproduce what it audits — and the second is harder, because a broken audit produces a number rather than an error.**
+> **The generalizable rule.** Each of the six failures was the same kind: the audit did not replicate the procedure it was auditing. The surrogate was not the same kind of object as the data; the bin set was not the one the search reports on; the veto was narrower than the structure it targeted. None was a statistical error, and twice a diagnosis of one instance was followed immediately by committing the next. **A control must be able to fail; an audit must reproduce what it audits — and the second is harder, because a broken audit produces a number rather than an error.**
 
 ### 5.6b What has not been done, and what it would cost
 
@@ -1093,7 +1093,7 @@ A coverage claim is only meaningful beside a statement of what was left. Three c
 |---|---|---|
 | Rows 10–11 — line-profile ratios and disc-integrated polarimetry | below threshold by the §3.6 estimate, and that column has since been measured wrong three times out of three | hours |
 | The remaining 23 scripts migrated to the shared library | each produced a committed number and needs re-validating against it | ~1 day |
-| The 52 windows not passed through a transfer check | most are certainly fine; four of the same class cost a day of this programme | ~1 day |
+| The 52 windows not passed through a transfer check | most are certainly fine; four of the same class cost a day of this program | ~1 day |
 | VIRGO TSI minute at the slow end, with a longer detrend | the 45-day pass returned nothing at 10 d and beyond; the band between 3 d and 2 months is measured as unsearchable at ppm level, not merely unsearched | hours |
 
 **Needs a larger compute budget.**
@@ -1103,7 +1103,7 @@ A coverage claim is only meaningful beside a statement of what was left. Three c
 | **T3 — quadruples over 30 channels** | 27,405 keys × 4 forms, ~18 d on one 88-core machine | nothing, until a defensible four-body null exists. §4.9 and §4.15–19 are explicit that the space is void for want of a null, not for want of compute, and running it would return 27,405 keys' worth of void |
 | **T6 — quadruples over 60 channels, fast band** | 2.8×10²³ FLOP — 6.2 d on a dedicated exascale machine, 1.3 d on a volunteer network at Folding@home's 2020 peak | the same objection applies, and more strongly |
 | **Peak-bagging with full Lorentzian profile fits, GOLF** | days, not hours | row 7 sits at 1.46×10⁻⁵ against a designer level of 10⁻⁶. A ten-candidate estimator search bought 1.33×; proper mode fitting is the one untried route to the remaining factor of fifteen, and it may not deliver |
-| **N² surrogate counts in place of the tail fit** | the reason §3.4 introduced the fit at all | the generalised-Pareto extrapolation is unstable across realisations at 1.7% of triples (§4.9). Counting exceedances instead removes that instability and costs N² |
+| **N² surrogate counts in place of the tail fit** | the reason the fit was tried at all | adopted. The generalized-Pareto extrapolation is unstable across realizations at 1.7% of triples (§4.9) and failed its goodness-of-fit test on every test it was offered at 250,000 shifts (§5.2), so it is not used; counting costs N² and is what we pay |
 
 > **The compute argument is not the binding one and this table should not be read as asking for a machine.** Two of the four entries above are blocked on a null rather than on cycles, and §4.3's central finding is that coverage rather than sensitivity binds. An exascale allocation would buy a larger void.
 
@@ -1117,7 +1117,7 @@ A coverage claim is only meaningful beside a statement of what was left. Three c
 | T3 — quadruples over 30 channels | 2.7×10¹⁷ | 53.5 yr | 17.8 d | **0.2 s** |
 | T6 — quadruples over 60, fast band | 2.8×10²³ | 5.5×10⁷ yr | 50,409 yr | **57.5 h** |
 
-**The whole programme is eighty Cray-1 days and under a millisecond of Frontier.** T6 — 55 million Cray-1 years in 1976 — is a long weekend on a flagship machine in 2026. Frontier is 8.5×10⁹ times a Cray-1, thirty-three doublings in forty-eight years, almost exactly Moore cadence.
+**The whole program is eighty Cray-1 days and under a millisecond of Frontier.** T6 — 55 million Cray-1 years in 1976 — is a long weekend on a flagship machine in 2026. Frontier is 8.5×10⁹ times a Cray-1, thirty-three doublings in forty-eight years, almost exactly Moore cadence.
 
 > **This table is an argument against an allocation, not for one.** T6 is not expensive; it is 2.4 machine-days. It is that 2.4 days spent on a question whose null is undefined returns 487,635 keys' worth of void, and §4.9 establishes that the higher-order space is blocked on the null rather than on cycles. **The gate also opens on its own schedule**: T3 is already 0.2 s on a flagship and eighteen days on a workstation. Waiting is cheaper than asking.
 
@@ -1138,15 +1138,15 @@ T3 — all 27,405 quadruples of thirty channels, four forms — is eighteen days
 
 **The question, stated without reference to technosignatures.** *What is the null distribution of higher-order statistics — bispectra, trispectra, cross-channel phase alignment — of solar output?* Nobody knows, and it is not an idle question: it sets the false-alarm rate of every search for non-linear coupling in solar and heliospheric data, and it is the reason three results in this paper are void.
 
-**Why observation cannot answer it.** We have one Sun and one realisation of it. A null distribution requires an ensemble, and the only ensemble available is a synthetic one.
+**Why observation cannot answer it.** We have one Sun and one realization of it. A null distribution requires an ensemble, and the only ensemble available is a synthetic one.
 
-**What the project would be.** A large ensemble of independent global solar convective-dynamo simulations — Rayleigh, ASH or MURaM class — each integrated over several simulated activity cycles, from which synthetic disc-integrated irradiance and Doppler-velocity series are extracted through a forward model matched to the instruments actually used (VIRGO SPM and TSI, GOLF, GOES EUVS). The ensemble _is_ the null: the distribution of any higher-order statistic across realisations is what "no imposed signal" looks like for a star that generates its own structure.
+**What the project would be.** A large ensemble of independent global solar convective-dynamo simulations — Rayleigh, ASH or MURaM class — each integrated over several simulated activity cycles, from which synthetic disc-integrated irradiance and Doppler-velocity series are extracted through a forward model matched to the instruments actually used (VIRGO SPM and TSI, GOLF, GOES EUVS). The ensemble _is_ the null: the distribution of any higher-order statistic across realizations is what "no imposed signal" looks like for a star that generates its own structure.
 
-**Scale.** At literature cost of 5×10⁵ to 2×10⁶ core-hours per realisation, an ensemble of 50–200 members is **0.4 to 1.8 million node-hours** — within a single INCITE-class award, and modest by the standards of the simulations themselves.
+**Scale.** At literature cost of 5×10⁵ to 2×10⁶ core-hours per realization, an ensemble of 50–200 members is **0.4 to 1.8 million node-hours** — within a single INCITE-class award, and modest by the standards of the simulations themselves.
 
 > **The gate this project must pass, stated first because it decides whether it is worth running.** A null built from simulations that do not reproduce the Sun *in the statistics being tested* is worse than no null: it would license exactly the false confidence this paper spends §5.6 documenting. Global convection simulations are known to struggle with observed large-scale flows — the convective conundrum — and **the ensemble must be validated against the real Sun on the same higher-order statistics before it is used as a null, not after.** If it fails that validation the project still answers a real solar-physics question — *how far do our dynamo models depart from the Sun in their non-linear structure?* — which is worth knowing independently and is arguably the more interesting result.
 
-**What it unlocks if it passes.** The triple and quadruple spaces become searchable, the two void results of §4.9 and §4.15–19 become limits, and any future search for non-linear coupling in solar data inherits a characterised false-alarm rate. **That is the sequence: the ensemble is the expensive part, and the sweep that follows it is 0.2 seconds.**
+**What it unlocks if it passes.** The triple and quadruple spaces become searchable, the two void results of §4.9 and §4.15–19 become limits, and any future search for non-linear coupling in solar data inherits a characterized false-alarm rate. **That is the sequence: the ensemble is the expensive part, and the sweep that follows it is 0.2 seconds.**
 
 **Needs instruments that do not exist.** Four columns are blank across the whole seventy-year record: core g-modes, the interplanetary electric field, continuous disc-integrated polarimetry, and high-latitude solar wind, the last of which existed only while Ulysses flew. These are unmeasured quantities rather than unsearched archives, and they are the only lever on the roughly one-in-five chance that we happen to measure whichever combination was chosen — a probability no instrument on the observables we already have can improve.
 
@@ -1205,7 +1205,7 @@ None of this is offered as an account of the nulls, and §5.3 forbids using it t
 
 ### 5.9 Scored against the nine axes of merit
 
-Sheikh (2019) organises technosignature searches along nine axes — four functions of us, five of the technology sought — and the framework was developed at the same 2018 workshop whose taxonomy §1.1 sets this work against. Scoring against it is the honest way to answer *where does this sit*, and two of the answers are "worse".
+Sheikh (2019) organizes technosignature searches along nine axes — four functions of us, five of the technology sought — and the framework was developed at the same 2018 workshop whose taxonomy §1.1 sets this work against. Scoring against it is the honest way to answer *where does this sit*, and two of the answers are "worse".
 
 | axis | | |
 |---|---|---|
@@ -1223,7 +1223,7 @@ Sheikh (2019) organises technosignature searches along nine axes — four functi
 >
 > **Inevitability is the weakest axis and cannot be argued away.** This architecture requires a civilisation to want to signal, to prefer a capability gate to a broadcast, **and** to choose a combination we happen to measure. §2 argues each is the *efficient* choice; efficient is not inevitable. Radio leakage and waste heat score higher because they require no intent at all, and the arithmetic of §B.1 puts the chance that we measure a chosen pair at about one in five. What is offered in exchange is that the search costs nothing — the archives are already collected — so a low prior is affordable here in a way it would not be in a proposal for observing time.
 >
-> **Ambiguity is limited by the analysis, not by the physics, and §5.6 is the evidence.** The claim that a dimensionless carrier is hard for nature to imitate is true and is not the binding constraint. In the course of this programme four distinct artefact families were identified — instrument lines carrying sidebands sixty times wider than the veto written for them, solar-cycle harmonics, harmonics of the analysis's own detrend window, and the sampling Nyquist — and three were unanticipated. Every control that failed was a control incapable of returning "no". **The pipeline generates candidate structure faster than the sky does**, and a search of this kind is bounded by how well that is policed rather than by how exotic the carrier is.
+> **Ambiguity is limited by the analysis, not by the physics, and §5.6 is the evidence.** The claim that a dimensionless carrier is hard for nature to imitate is true and is not the binding constraint. In the course of this program four distinct artifact families were identified — instrument lines carrying sidebands sixty times wider than the veto written for them, solar-cycle harmonics, harmonics of the analysis's own detrend window, and the sampling Nyquist — and three were unanticipated. Every control that failed was a control incapable of returning "no". **The pipeline generates candidate structure faster than the sky does**, and a search of this kind is bounded by how well that is policed rather than by how exotic the carrier is.
 
 ## 6. Conclusions
 
@@ -1234,11 +1234,11 @@ We have asked what a technosignature search looks like when the channel is not k
 | 1 | **Twenty-five nulls, three void, one detection. Fourteen limits are injection-verified; none remains analytic.** The deepest verified limit is **1.4×10⁻⁶** in fractional Lyman-α irradiance at two minutes, at 95% recovery |
 | 2 | **Cadence dominates sensitivity.** The same instrument, days and pipeline are 245× more sensitive at two minutes than at one day (the limits table as a whole spans 10⁵, but across different observables and statistics). Most high-cadence solar data has never been searched at the cadence at which it is most sensitive |
 | 3 | **Coverage, not sensitivity, is the binding constraint.** Seventeen further observables took the pair space from 18% to 88% and found nothing across the Sun–heliosphere boundary in 510 tests. The remaining 12% of pairs are blocked by retired records and cannot close by waiting (§5.7); 2,749 of the 2,934 reachable triples completed and returned **void** for want of a matched three-body null (§4.9) |
-| 4 | **Completing the enumeration is affordable, but not linearly.** A 52× larger search costs only 25% in amplitude; the compute scales as _N_² because the surrogate count must scale with the test count. The full pair space is **under an hour** on one machine, the triple space 26 h by direct counting or about an hour with a tail-fitted null (§5.2) |
+| 4 | **Completing the enumeration is affordable, but not linearly.** A 52× larger search costs only 25% in amplitude; the compute scales as _N_² because the surrogate count must scale with the test count. The full pair space is **under an hour** on one machine, the triple space 26 h by direct counting, the only method used here (§5.2) |
 | 5 | **Physics-supplied controls earn their place.** Controls that cannot be tuned — acoustic cutoff, ecliptic pole, anti-sidereal frequency, twin instrument — removed two apparent detections that had passed every amplitude test, including one at 4.9σ whose anti-sidereal counterpart stood at 6.6σ |
 | 6 | **Both voids are failures of the null, not of the data.** A surrogate that preserves what the statistic measures, or a two-body null applied to a three-body form, constrains nothing. Neither is repaired by more data |
 | 7 | **The first line-of-sight test is null.** Earth against Mars in Lyman-α: no viewpoint-specific modulation to 8.9×10⁻⁴ at 3 d and 4.2×10⁻³ at 307 s, the latter limited 580× by the MAVEN monitor and not by the geometry (§4.12). **The first result here that bounds the mechanism §2.7 proposes rather than modulation in general** |
-| 8 | **The framework's own best guess is now tested, and it does not reach.** Of §3.6's unsearched rows 3–7, **four are searched here**. Row 6 is null at an injection-verified **2.0×10⁻⁷, margin 0.5** — the closest this programme comes to a designer level. Row 7 is null at **1.46×10⁻⁵, margin 0.069**. Row 3 is null. Row 5 is **void**: the six-hour noise floor is 31–108 ppm and a 76 ppm Venus transit is not recoverable. **All three rows whose reach was estimated and has since been measured came in worse than the estimate**, and the §3.6 margin column should be read as an upper bound on capability rather than as capability |
+| 8 | **The framework's own best guess is now tested, and it does not reach.** Of §3.6's unsearched rows 3–7, **four are searched here**. Row 6 is null at an injection-verified **2.0×10⁻⁷, margin 0.5** — the closest this program comes to a designer level. Row 7 is null at **1.46×10⁻⁵, margin 0.069**. Row 3 is null. Row 5 is **void**: the six-hour noise floor is 31–108 ppm and a 76 ppm Venus transit is not recoverable. **All three rows whose reach was estimated and has since been measured came in worse than the estimate**, and the §3.6 margin column should be read as an upper bound on capability rather than as capability |
 
 The one detection is a re-detection: solar p-modes in GOES EXIS Mg II irradiance, comb spacing 135.1 and 135.0 µHz on the two spacecraft against an accepted 134.9. Priority belongs to Eden et al. (2024), and we claim none. Its value is as a positive control whose answer was fixed in advance and corroborated by an independent group — a stronger check on the pipeline than any self-designed injection, and it correspondingly strengthens the twenty-five nulls.
 
@@ -1295,7 +1295,7 @@ Twenty-nine searches, one row each: **null** (no detection), **void** (the detec
 | 2 | Cross-channel coherence | TSI + ACE + OMNI, 8 yr | 4 channels, 728 days | null | nothing above threshold | FP 3.5%, 100% power at 0.40σ |
 | 3 | Self-keyed spread spectrum | ACE MAG + F10.7, 8 yr | 15.3M field samples | null | nothing above threshold | FP 6.3%, 99.7% power at 0.10σ; alignment excess, resolved in §4.10 |
 | 4 | Dimensionless combination sweep | 13 solar/heliospheric channels | 229 tests, 13–44 yr | null | nothing above threshold | 126 tests across the Sun–heliosphere boundary, none survive |
-| 48 | Thirty-channel pair sweep | 30 observables, 5 new archives | 1,074 tests, 382 of 435 pairs | null | nothing above threshold | 0 of 510 across the Sun–heliosphere boundary; all 22 survivors known physics or shared-instrument |
+| 48 | Thirty-channel pair sweep | 30 observables, 5 new archives | 1,074 tests, 382 of 435 pairs | null | nothing above threshold | 0 of 510 across the Sun–heliosphere boundary; all 19 survivors known physics or shared-instrument |
 | 49 | Thirty-observable triple sweep | 30 observables, 2 three-body forms | 10,996 tests, 2,934 of 4,060 triples | void | see §4.5 / §4.9 / §4.17 / §4.19 | neither form has a calibrated null — one is 9× heavy-tailed, the other cannot fire |
 | 6 | Sunspot cycle sequence | 24 cycles, 1755–2019 | 7 statistics | null | nothing above threshold | underpowered: misses lag-1 = 0.4 two times in three |
 | 13 | Cycle-resolved 14C, 976–1894 | Usoskin 2021 + SILSO | 85 cycles, 36 reliable | null | nothing above threshold | 29 of 85 unidentifiable; power only 36% → 53% |
@@ -1322,7 +1322,7 @@ Twenty-nine searches, one row each: **null** (no detection), **void** (the detec
 
 ## Appendix B. The datasets
 
-*A bird's-eye inventory of every archive processed in this programme: who collects it, when it
+*A bird's-eye inventory of every archive processed in this program: who collects it, when it
 starts, how many samples it holds, at what cadence, and — where an archive was not used — why.*
 
 **Every row count, start date, end date and duty cycle below was measured from the files on disk on
@@ -1346,7 +1346,7 @@ blank rather than estimated.
 
 | outcome | datasets | meaning |
 |---|---|---|
-| **detection** | GOES-16 + 17 EUVS | solar p-modes, Δν = 135.0/135.1 µHz against 134.9 predicted — a **known** signal, recovered as the programme's positive control |
+| **detection** | GOES-16 + 17 EUVS | solar p-modes, Δν = 135.0/135.1 µHz against 134.9 predicted — a **known** signal, recovered as the program's positive control |
 | **null, limit stated** | 15 searches | amplitude bounded; 11 verified by injection. Deepest: **1.4 ppm** in Lyman-α at 2 min |
 | **null, no limit** | 7 searches | constrains nothing; reported anyway so coverage is not overstated |
 | **void** | NANOGrav step search; TSI aperiodic; triple sweep; quadruple sweep | the detector or the null failed its own validation. **A null from an uncalibrated detector is a statement about the analysis, not the sky** |
@@ -1386,7 +1386,7 @@ present, so the fraction present is rows/16,802.
 | Ca II K2V/K3 | ” | ” | 1980-02-21 | 2015-09-30 | 4,042 | 1 d | §4.8 pair, §4.9 triple | **null** |
 | Ca II K3 | ” | ” | 1980-02-21 | 2015-09-30 | 4,042 | 1 d | §4.8 pair, §4.9 triple | **null** |
 | Ca II ΔK1 | ” | ” | 1980-02-21 | 2015-09-30 | 4,042 | 1 d | §4.8 pair, §4.9 triple | **null** |
-| CME rate | SOHO/LASCO coronagraph | CDAW universal catalogue | 1996-01-11 | 2025-12-31 | 9,951 | 1 d | §4.8 pair, §4.9 triple | **null** |
+| CME rate | SOHO/LASCO coronagraph | CDAW universal catalog | 1996-01-11 | 2025-12-31 | 9,951 | 1 d | §4.8 pair, §4.9 triple | **null** |
 | CME mean speed | ” | ” | 1996-01-11 | 2025-12-31 | 9,943 | 1 d | §4.8 pair, §4.9 triple | **null** |
 | O⁷⁺/O⁶⁺ | ACE SWICS 1.1 | ACE Science Center | 1998-02-04 | 2011-08-21 | 4,783 | 1 d | §4.8 pair, §4.9 triple | **null**; charge states implausible as a carrier |
 | C⁶⁺/C⁵⁺ | ” | ” | 1998-02-04 | 2011-08-21 | 4,783 | 1 d | §4.8 pair, §4.9 triple | **null** |
@@ -1457,7 +1457,7 @@ oscillation, so a candidate can be required to appear in both.
 > (fractional 1.89×10⁻⁴ against a literature ~1.3×10⁻⁴); and PM1 and PM2 agree at r = 0.982
 > over 104 segments. Both gates initially **failed on bugs of my own** — a continuum filter of
 > 501 bins = 0.61 µHz against a mode linewidth, which flattened the modes it was meant to
-> normalise against and returned r = 0.004, and an unguarded parabolic interpolation that
+> normalize against and returned r = 0.004, and an unguarded parabolic interpolation that
 > produced shifts of order 10²⁹ µHz. Row 6 (VIRGO SPM) still fails gate 1 on GREEN and RED
 > for the same reason in a different place: a 2,001-bin envelope filter is 2.3 µHz against an
 > envelope ~1,000 µHz wide. Its search is clean — zero of 7,164,744 bins above threshold on
@@ -1476,7 +1476,7 @@ oscillation, so a candidate can be required to appear in both.
 |---|---|---|---|---|---|---|
 | NANOGrav 15 yr | 68 millisecond pulsars, GBT + Arecibo + VLA | Zenodo 16051178 | 2,278 | irregular | timed spin-up step search | **VOID** — 4 nulls tried, none calibrated; the 10⁻¹⁴ limit was **withdrawn** |
 | Lunar laser ranging | APOLLO, OCA, McDonald; Apollo/Lunokhod retroreflectors | 80 files | — | irregular | within-session + inter-reflector | **null**; an h4/H4 case bug forced withdrawal of an earlier claim |
-| RSTN radio | US Air Force solar radio network, 4 stations | NOAA NGDC | 273 files, 80 MB | 1 s / 5 s | search 30, spectral index | **null**; twin gate cannot separate a per-design artefact |
+| RSTN radio | US Air Force solar radio network, 4 stations | NOAA NGDC | 273 files, 80 MB | 1 s / 5 s | search 30, spectral index | **null**; twin gate cannot separate a per-design artifact |
 | Voyager 1 & 2 | plasma wave + trajectory, 20–160 AU | NASA/JPL | — | — | search 26, radial coincidence | **null**; FP 3.0%, 100% power at 50% |
 | ¹⁴C, cycle-resolved | tree-ring radiocarbon | VizieR J/A+A/649/A141 | — | ~11 yr | searches 13, 14 | **null**, but underpowered (36%→53%) |
 
@@ -1505,7 +1505,7 @@ Stating these matters: a coverage claim is only meaningful if what is missing is
 | LASP LISIRD, sub-daily irradiance | rows 5–6 | ❌ not served | nothing faster than six-hourly |
 | Amateur-radio propagation archive | withdrawn | ⚠️ removed | 10.1 M spots, but **not public**, so not reproducible; and the medium is HF ionospheric propagation, whose diurnal structure is itself the dominant signal |
 
-> **The generalisable lesson, which cost four revisions: a dead primary source is not an unavailable
+> **The generalizable lesson, which cost four revisions: a dead primary source is not an unavailable
 > dataset.** Rows 5, 6 and 7 sat marked "capable but unsearched" across four drafts on the strength of
 > one true fact and one wrong inference drawn from it. Before recording an archive as blocked, check
 > for a mirror.
@@ -1534,7 +1534,7 @@ table despite being the shortest.
 | Tool | Use |
 |---|---|
 | **Claude Code** (Anthropic) | analysis environment: wrote and ran every search pipeline, designed and repaired the surrogate tests, executed the enumerations (~10⁸ statistic evaluations), retrieved and parsed the archives, derived the analytic results of §2, produced the figures, drafted the manuscript |
-| Python 3.10, NumPy, SciPy | numerics; `scipy.ndimage` for running medians, `scipy.stats` for the generalized-Pareto tail fit |
+| Python 3.10, NumPy, SciPy | numerics; `scipy.ndimage` for running medians. `scipy.stats`' generalized-Pareto fit appears only in the validation of §5.2, which rejected it; no reported _p_-value uses it |
 | pyhdf | ACE SWICS level-2 Vdata tables |
 | cdflib | ACE MAG, Wind MFI and MAVEN EUVM CDF files |
 | Astropy | heliocentric ephemerides of Earth and Mars for the viewpoint geometry of §4.12 |
