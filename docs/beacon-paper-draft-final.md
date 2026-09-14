@@ -2,7 +2,7 @@
 
 # A combination-space search for embedded technosignatures in solar and heliospheric archives
 
-*Robert Griffin · Dxtra Inc. Open items are listed at the end.*
+*Robert Griffin · Dxtra Inc. (dxtra.com) Open items are listed at the end.*
 
 **Abstract.** We call the approach set out here **behavioral SETI**: it looks for the behavior of a source rather than for a transmitter. Existing technosignature searches presuppose the channel. We consider the case in which _no dedicated radiating apparatus is assumed_: structure is carried by emission a star already produces, imposed by redistributing that flux rather than generating it, and neither carrier nor encoding is known in advance. Two constraints make the problem finite: a sender sharing no units with the receiver can use only **dimensionless** quantities — ratios and normalized combinations of measured observables — and a sender minimizing transmitted energy will pose a **proof-of-work gate**, cheap to set, expensive to solve, trivial to verify, so that no energy is spent on receivers that could not act on the message. We formalize the resulting **combination space** and report 29 searches of public solar and heliospheric archives against it. Twenty-five are null, three void, and one recovers a known signal as a positive control. Seventeen carry stated sensitivities, **thirteen of them verified by injection**. The deepest verified limit is **1.4×10⁻⁶** in fractional Lyman-α irradiance at two minutes, at 95% recovery; the remaining one, the sidereal fold, resisted a faithful injection (§4.2). Sensitivity is not the binding constraint: the same instrument, days and pipeline are **245×** more sensitive at two minutes than at one day, and the limiting quantity is instead the fraction of the combination space examined. Acquiring seventeen further observables closed the pair space from 18% to **88%** — 382 of 435 pairs, the remainder having no overlapping record — and returned **no survivor in 510 tests spanning the Sun–heliosphere boundary**. Of 4,060 triples, 2,934 are reachable and **2,749 completed**, returning **void** for want of a matched three-body null. A first **cross-viewpoint** test, Earth line against Mars line, is null for a line-of-sight modulator to 8.9×10⁻⁴ at 3 d and 4.2×10⁻³ at 307 s, the fast-band figure set by the Mars instrument rather than by the geometry. Finally, a designer-side ordering of channels places the most plausible first-contact carriers in archives that already exist and are resolved at the required level. **Two of those rows are searched here for the first time** — SOHO/VIRGO SPM photometry at one minute over 27.3 yr, and SOHO/GOLF Doppler velocity at 20 s over 25.9 yr — both null, the latter to an injection-verified 1.46×10⁻⁵ in fractional mode frequency, which is **fifteen times short of the 10⁻⁶ a designer would set**. The remaining rows are specified.
 
@@ -45,7 +45,7 @@ Together these have a consequence that is easy to miss: if the message is gated 
 
 ### 1.4 What this paper does and does not claim
 
-Most of the architecture assumed here is not ours. The two-tier pointer and its cost argument are Benford et al. (2010); modulating an existing astrophysical source is Learned et al. (2008) and Chennamangalam et al. (2015); local probes are Bracewell's (1960); coverage as a figure of merit is Wright et al. (2018), and the framework for comparing search value Sheikh (2020). **Hippke** (2017a,b; with Forgan 2017) developed interstellar communication as an energy-per-bit optimization far more thoroughly than §2.1 does, and paper VI is prior art for the blind narrowband X-ray search of §A.1. **Benford** (2019) developed the case for co-orbital "lurkers" — the mechanism §2.7 invokes. **Freudenthal** (1960) and **DeVito & Oehrle** (1990) built message systems that assume no shared units: the units-free constraint is long established for message _content_.
+Most of the architecture assumed here is not ours. The two-tier pointer and its cost argument are Benford et al. (2010); modulating an existing astrophysical source is Learned et al. (2008) and Chennamangalam et al. (2015); local probes are Bracewell's (1960); coverage as a figure of merit is Wright et al. (2018), and the framework for comparing search value Sheikh (2019). **Hippke** (2017a,b; with Forgan 2017) developed interstellar communication as an energy-per-bit optimization far more thoroughly than §2.1 does, and paper VI is prior art for the blind narrowband X-ray search of §A.1. **Benford** (2019) developed the case for co-orbital "lurkers" — the mechanism §2.7 invokes. **Freudenthal** (1960) and **DeVito & Oehrle** (1990) built message systems that assume no shared units: the units-free constraint is long established for message _content_.
 
 What we believe is not already occupied is narrower than we first claimed:
 
@@ -1205,7 +1205,7 @@ None of this is offered as an account of the nulls, and §5.3 forbids using it t
 
 ### 5.9 Scored against the nine axes of merit
 
-Sheikh (2020) organises technosignature searches along nine axes — four functions of us, five of the technology sought — and the framework was developed at the same 2018 workshop whose taxonomy §1.1 sets this work against. Scoring against it is the honest way to answer *where does this sit*, and two of the answers are "worse".
+Sheikh (2019) organises technosignature searches along nine axes — four functions of us, five of the technology sought — and the framework was developed at the same 2018 workshop whose taxonomy §1.1 sets this work against. Scoring against it is the honest way to answer *where does this sit*, and two of the answers are "worse".
 
 | axis | | |
 |---|---|---|
@@ -1605,7 +1605,7 @@ Every result in this paper derives from a public archive. No proprietary, embarg
 | Hemmati, H. (ed.) 2006 | Wiley — _Deep Space Optical Communications_ (JPL Deep-Space Communications and Navigation Series) |
 | Hippke, M., & Forgan, D. H. 2017 | arXiv:1712.06639 — Interstellar communication VI: searching X-ray spectra for narrowband communication |
 | Hippke, M., & Learned, J. G. 2018 | arXiv:1802.02180 — Interstellar communication. IX. Message decontamination is impossible |
-| Hippke, M. 2017a | arXiv:1706.03795 — Interstellar communication I: maximized data rate for lightweight space-probes (_Int. J. Astrobiology_) |
+| Hippke, M. 2017a | arXiv:1706.03795 — Interstellar communication I: maximized data rate for lightweight space-probes; _Int. J. Astrobiology_ **18**, 267–279 (2018) |
 | Hippke, M. 2017b | arXiv:1712.05682 — Interstellar communication V: introduction to photon information efficiency |
 | Hoang, T., Lazarian, A., Burkhart, B., & Loeb, A. 2017 | _ApJ_ **837**, 5 — The interaction of relativistic spacecrafts with the interstellar medium |
 | Hogben, L. 1952 | _JBIS_ **11**, 258 — Astraglossa, or first steps in celestial syntax |
@@ -1623,7 +1623,7 @@ Every result in this paper derives from a public archive. No proprietary, embarg
 | Rivest, R. L., Shamir, A. & Wagner, D. A. 1996 | MIT/LCS/TR-684 — Time-lock puzzles and timed-release crypto |
 | Sagan, C., Sagan, L. S., & Drake, F. 1972 | _Science_ **175**, 881 — A message from Earth |
 | Sawin, W. 2026 | arXiv:2605.20579 — An explicit lower bound for the unit distance problem |
-| Sheikh, S. Z. 2020 | _Int. J. Astrobiology_ **19**, 237 — The nine axes of merit for technosignature searches |
+| Sheikh, S. Z. 2019 | _Int. J. Astrobiology_ **19**, 237–243 — The nine axes of merit for technosignature searches |
 | Silagadze, Z. K. 2008 | _Acta Phys. Polon. B_ **39**, 2943 — SETI and muon collider |
 | SpaceNews 2026 | J. Foust, "SpaceX files plans for million-satellite orbital data center constellation," 31 Jan 2026 |
 | Staff at the National Astronomy and Ionosphere Center 1975 | _Icarus_ **26**, 462 — The Arecibo message of November, 1974 |
