@@ -1,0 +1,511 @@
+% Inverting anticryptography --- draft for IACR ePrint
+%
+% Compiles with pdflatex using only standard packages (no llncs.cls required),
+% so it builds on Overleaf out of the box. To submit under the Springer LNCS
+% style instead, swap the documentclass for \documentclass{llncs} and move the
+% abstract into \begin{abstract}...\end{abstract} inside \maketitle.
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+\newtheorem{proposition}{Proposition}
+
+\title{Inverting anticryptography:\\
+a capability-gated interstellar signal\\
+as a cipher under brute-force keysearch}
+\author{Robert Griffin\\
+\small Dxtra Inc.\\
+\small \texttt{rtg@dxtra.com}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The SETI message-design literature is explicitly \emph{anticryptographic}: from
+Freudenthal's \emph{Lincos} through Drake's Arecibo tests to contemporary message
+design, every construction assumes a sender who maximises decodability---maximum
+redundancy, minimum assumed context. We consider the inverse. Suppose a sender,
+constrained by transmission cost, wishes the message to be legible \emph{only} to
+a receiver above some capability threshold, and therefore makes decoding
+deliberately expensive.
+
+We show this construction is a \textbf{symmetric cipher under brute-force
+keysearch} with an unusual property: the plaintext is \emph{self-identifying}, so
+the receiver needs no crib, and the ciphertext is a \emph{public record} the
+sender did not transmit. We then observe that for such a scheme \textbf{Shannon's
+unicity distance and the multiple-testing threshold of the receiver's search are
+the same quantity}---the sender's difficulty parameter and the receiver's
+statistical burden are one number seen from two sides.
+
+Three consequences follow. Required record length scales as $\ln K$, so keyspace
+expansion is logarithmically cheap for the sender and linearly expensive for the
+receiver---an unusually favourable asymmetry for a gating construction. A
+receiver searching below the unicity distance for its keyspace obtains
+\textbf{no result}, not a negative one, a distinction we argue must be reported
+separately or accumulated coverage estimates are corrupted. And we prove that
+linear multi-channel forms cannot carry a signal invisible to pairwise analysis,
+which constrains what such a sender could choose.
+
+We report an instantiation over ${\sim}10^4$ keys on 30 public time series, in
+which the predicted below-unicity failure occurred and was diagnosed.
+
+\medskip
+\noindent\textbf{No hardness result is claimed and no security proof is
+transferred.} The contribution is the inversion, the correspondence it makes
+visible, and one theorem.
+
+\medskip
+\noindent\textbf{Keywords:} anticryptography $\cdot$ SETI $\cdot$ unicity
+distance $\cdot$ brute-force keysearch $\cdot$ self-identifying plaintext $\cdot$
+time-lock puzzles $\cdot$ multiple hypothesis testing $\cdot$ Kerckhoffs's
+principle
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{The tradition this inverts}\label{sec:tradition}
+
+Sixty years of interstellar message design share one assumption: \textbf{the
+sender wants to be understood.} Freudenthal's \emph{Lincos}~\cite{freudenthal}
+builds a language from logic upward so a receiver with no shared context can
+bootstrap it. Drake tested an early Arecibo message on colleagues at Green Bank
+in 1961 specifically to measure decodability. The tradition has an explicit
+name---
+
+\begin{quote}
+\textbf{Anticryptography:} the branch of signal synthesis concerned with making
+signals easily understandable; ``exactly the opposite goal to that of the science
+of cryptography.''~\cite{xenology}
+\end{quote}
+
+\noindent---and contemporary work continues it: general-purpose binary languages
+for crowdsourced messages, controlled decipherment experiments in which one
+researcher encodes and another decodes~\cite{busch}, and public decrypt
+challenges~\cite{decrypt}. Every such construction maximises redundancy and
+minimises assumed context.
+
+\textbf{This paper considers the inverse.} Suppose a sender is constrained by
+transmission cost, and wishes the message to be acted upon \emph{only} by a
+receiver above some capability threshold---because a reply from a receiver who
+cannot act on it is wasted energy. Such a sender has reason to make decoding
+\textbf{deliberately expensive}, and to let the expense do the filtering.
+
+To our knowledge this inversion has not been proposed. The nearest idea in the
+literature is the zoo hypothesis~\cite{ball}, which shares the \emph{prediction}
+---silence despite presence---but supplies no mechanism, and requires many
+parties to abstain indefinitely. A difficulty-gated signal requires nobody to
+abstain: it is simply unrecognised until someone spends enough.
+
+\subsection{Why this is a cryptographic object}
+
+Once difficulty is the design goal, the construction becomes a cipher and the
+standard analysis applies. Classical cryptanalysis assumes an adversary who must
+\emph{recognise} a correct decryption; Shannon fixed the condition under which
+that is possible, the \textbf{unicity distance}~\cite{shannon}
+\[
+  U \;=\; \frac{H(K)}{D},
+\]
+with $H(K)$ the keyspace entropy and $D$ the plaintext redundancy per unit
+length. Below $U$, spurious keys decrypt plausibly and the attack cannot
+conclude.
+
+Our setting has three unusual features:
+\begin{itemize}
+  \item the \textbf{ciphertext is a public record} the sender never
+    transmitted---an observational archive a third party collected for unrelated
+    reasons;
+  \item the \textbf{key is a selection}, not a bit string: which quantities are
+    combined and under which functional form;
+  \item the \textbf{plaintext is self-identifying}---the receiver knows the key is
+    right because a statistic fires. No crib, no known-plaintext pair, no channel
+    back to the sender.
+\end{itemize}
+
+The receiver's task is a brute-force keysearch with a statistical oracle. The
+observation of this paper is that the stopping condition for that search is the
+unicity distance in different vocabulary, and that this identity ties the
+sender's difficulty parameter to the receiver's statistical burden.
+
+\subsection{Contributions}
+
+\begin{enumerate}
+  \item \textbf{The inversion (\S\ref{sec:tradition}).} Sixty years of
+    interstellar message design assume a sender maximising decodability. We
+    consider a sender minimising it, and show the resulting object is a cipher.
+    We find no prior proposal of a difficulty-gated interstellar signal; the zoo
+    hypothesis shares the prediction and supplies no mechanism.
+  \item \textbf{The correspondence (\S\ref{sec:unicity}).} Unicity distance and
+    the multiple-testing threshold are the same quantity---the sender's
+    difficulty parameter and the receiver's statistical burden seen from two
+    sides. A Bonferroni or \v{S}id\'ak correction over $K$ candidate keys is a
+    unicity-distance calculation.
+  \item \textbf{The scaling (\S\ref{sec:scaling}).} Required record length grows
+    as $\ln K$. Keyspace expansion is logarithmically cheap in data and linearly
+    expensive in compute---the opposite of the usual intuition that a larger
+    search space demands proportionally more evidence.
+  \item \textbf{The void/null distinction (\S\ref{sec:void}).} A search below the
+    unicity distance for its keyspace returns \emph{no result}, not a negative
+    one. We argue this should be a reported category.
+  \item \textbf{Payment inversion (\S\ref{sec:notpow}).} The construction is not
+    proof-of-work: the receiver performs the work. We give the consequences for
+    what the scheme can and cannot enforce.
+  \item \textbf{A structural theorem (\S\ref{sec:theorem}).} For linear
+    multi-channel forms, any signal invisible to every pairwise test is invisible
+    to the multi-channel form as well. Only genuinely multiplicative forms escape.
+  \item \textbf{An empirical instantiation (\S\ref{sec:empirical})} over
+    ${\sim}10^4$ keys, in which the predicted below-unicity failure was observed
+    and diagnosed.
+\end{enumerate}
+
+\section{The construction}\label{sec:construction}
+
+Let $R$ be a public record comprising $n$ observable series
+$x_1(t),\dots,x_n(t)$, each of length $N$.
+
+A \textbf{key} is a pair $k=(C,f)$ where $C\subseteq\{1,\dots,n\}$ with $|C|=m$
+is a choice of channels and $f\in F$ a functional form combining them. The
+keyspace has size
+\[
+  K \;=\; \binom{n}{m}\,|F|, \qquad H(K)=\log_2 K .
+\]
+
+The \textbf{plaintext} is a modulation $s(t)$ imposed on the channels in $C$ such
+that $f$ applied to those channels exhibits structure absent under the null
+hypothesis for $R$.
+
+The \textbf{oracle} is a statistic $T(k)$ computed from $R$ under key $k$,
+together with a null distribution for $T$. The plaintext is self-identifying in
+the sense that $T$ exceeds threshold if and only if $k$ is correct---the receiver
+needs nothing but $R$ and $T$ to know.
+
+Three properties distinguish this from textbook keysearch.
+
+\paragraph{The ciphertext is not secret and not addressed.} $R$ was collected by
+third parties for unrelated purposes, and is public. There is no channel between
+the party imposing $s$ and the party searching.
+
+\paragraph{The scheme satisfies Kerckhoffs's principle~\cite{kerckhoffs} in its
+strongest form.} Nothing is hidden. The construction, the keyspace, the statistic
+and the record may all be published without loss. Whatever difficulty exists lies
+entirely in the work of enumeration.
+
+\paragraph{The keyspace is not uniform.} Whoever imposed $s$ had to choose
+channels the receiver plausibly measures, on records long enough to hold
+structure. This concentrates the key distribution---see \S\ref{sec:weak}.
+
+\section{It is not proof of work: the payment is inverted}\label{sec:notpow}
+
+The construction is often described by analogy to proof-of-work. The analogy
+misnames the primitive.
+
+In hashcash~\cite{hashcash} and its descendants the \textbf{sender} performs
+work, to price a message or prove commitment. Here the \textbf{receiver} performs
+the work, and the sender performs none. The direction of payment is inverted, and
+with it the design goal: the scheme does not ration access to the sender's
+resources, it conditions legibility on the receiver's.
+
+A more accurate description is a \textbf{proof-of-capability challenge}---a
+CAPTCHA inverted. A CAPTCHA is a puzzle a machine is meant to fail. This is a
+puzzle only a sufficiently resourced analyst can pass.
+
+The distinction is not terminological. It determines what the scheme can enforce.
+A proof-of-work scheme can impose a cost on a sender and verify it. This scheme
+can impose nothing on anyone; it can only remain unrecognised until a receiver
+spends enough. It is therefore self-enforcing in a weak sense---no party need
+cooperate for it to hold---and coercive in no sense at all.
+
+\subsection{Relation to time-lock puzzles}
+
+The nearest technical antecedent is Rivest, Shamir and Wagner's \textbf{time-lock
+puzzle}~\cite{rsw}, which requires a chosen amount of computation to open and
+whose difficulty is set from \emph{projected future hardware speed}, so that the
+puzzle opens at a chosen future date. That is the same reasoning as setting a
+keyspace size such that only a receiver above a given compute threshold can
+exhaust it.
+
+The constructions differ in one load-bearing respect. A time-lock puzzle is
+\textbf{inherently sequential}---its delay cannot be bought off with more
+machines, the property later formalised in verifiable delay
+functions~\cite{vdf}. \textbf{A keysearch parallelises perfectly.} Our
+construction therefore cannot enforce a delay; it can only enforce a total work
+requirement. A receiver with $P$ processors finishes in $1/P$ the time.
+
+This makes the scheme strictly weaker than a VDF as a timing primitive, and
+strictly more practical as a capability filter: total work is a meaningful
+threshold even when elapsed time is not.
+
+\section{Unicity distance is the multiple-testing threshold}\label{sec:unicity}
+
+\subsection{The correspondence}
+
+A receiver enumerating $K$ keys computes $K$ statistics and must decide whether
+the largest is evidence of a true key or the expected maximum of $K$ draws from
+the null. The standard remedy is a multiplicity correction: test at $\alpha/K$,
+or compare against the distribution of $\max T$ over $K$ nulls.
+
+This is Shannon's condition restated. Unicity distance is the ciphertext length
+below which spurious keys yield plausible decryptions. The multiple-testing
+threshold is the statistic level below which spurious keys fire. \textbf{They are
+the same boundary, derived in two vocabularies}---one information-theoretic, one
+frequentist.
+
+The practical consequence is that the multiplicity correction in such a search is
+not a conservative statistical convention that a cleverer method might avoid. It
+is an information-theoretic bound. No test can do better, because below the
+unicity distance the information required to distinguish the true key is not
+present in the record.
+
+\subsection{Deriving the scaling}\label{sec:derive}
+
+Let $T$ have a null distribution with sub-Gaussian tails. The maximum of $K$
+independent draws grows as
+\[
+  \mathbb{E}\!\left[\max_{1\le i\le K} T_i\right] \;\approx\; \sigma\sqrt{2\ln K}.
+\]
+A modulation of fractional amplitude $a$ imposed on a record of length $N$ yields
+a statistic scaling as $a\sqrt{N}$ against the same $\sigma$. Detection requires
+\[
+  a\sqrt{N} \;\gtrsim\; \sigma\sqrt{2\ln K}
+  \qquad\Longrightarrow\qquad
+  \boxed{\,N \;\gtrsim\; \frac{2\sigma^{2}}{a^{2}}\,\ln K\,.}
+\]
+Since $H(K)=\log_2 K$, this is $N \propto H(K)$---exactly the form of Shannon's
+$U = H(K)/D$, with $1/D$ playing the role of the per-sample information about the
+modulation.
+
+\subsection{The consequence that should change reporting}\label{sec:void}
+
+If $N < U(K)$, the search cannot conclude. It has not shown the plaintext absent;
+it has shown that this record is too short to distinguish $K$ candidate keys, for
+any test whatsoever.
+
+We propose that such an outcome be reported as \textbf{void} rather than
+\textbf{null}, and that the two be counted separately:
+
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+outcome & meaning \\
+\midrule
+\textbf{negative} & $N \ge U(K)$; the key is not in the searched space at the stated amplitude \\
+\textbf{void} & $N < U(K)$, or no calibrated null exists; the search is uninformative \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Reporting a void as a negative overstates coverage and, in a setting where
+searches accumulate, corrupts any estimate of how much of the keyspace has been
+eliminated.
+
+\section{Keyspace expansion is cheap in data, expensive in compute}\label{sec:scaling}
+
+\subsection{The asymmetry}
+
+From \S\ref{sec:derive}, enlarging the keyspace by a factor of ten costs a factor
+of $\ln(10K)/\ln K$ in record length---for $K\sim10^4$, about 25\%. It costs a
+factor of ten in computation.
+
+This inverts a common intuition. Analysts frequently restrict a search space to
+``preserve statistical power,'' reasoning that fewer tests means a laxer
+threshold. The scaling says the saving is logarithmic and the loss is the risk of
+excluding the true key entirely. \textbf{Where the record is fixed and compute is
+elastic---the usual modern situation---the correct move is to search the larger
+space.}
+
+Two caveats attach. The ladder below counts \emph{nominal} keys; the
+\textbf{reachable} keyspace may be smaller, since a key whose channels share no
+overlapping record cannot be tested---in the instantiation of
+\S\ref{sec:empirical} the reachable pair space was 88\% of nominal and the
+reachable triple space 72\%. The correct $K$ for a threshold calculation is the
+number of keys actually tested, not the number enumerable.
+
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+tier & keys $K$ & $H(K)$ bits & record length, relative \\
+\midrule
+pairs                      & $4.35\times10^{2}$ & 10.8 & $1.00\times$ \\
+triples                    & $4.06\times10^{3}$ & 14.0 & $1.30\times$ \\
+quadruples                 & $2.74\times10^{4}$ & 16.7 & $1.56\times$ \\
+triples over 60, 10 forms  & $3.42\times10^{4}$ & 18.4 & $1.71\times$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A sixty-fold keyspace expansion costs 71\% more record.
+
+\subsection{Weak keys, and why brute force is the wrong first attack}\label{sec:weak}
+
+The keyspace is not uniform. Whoever chose $C$ was constrained to channels the
+receiver plausibly measures, at cadences and durations sufficient to carry
+structure. The key distribution concentrates on the best-instrumented and most
+obvious observables.
+
+In cryptographic terms these are \textbf{weak keys}, and the standard response
+applies: \emph{no password cracker begins with brute force; it begins with a
+wordlist.} An ordered search over a prior-weighted enumeration reaches a probable
+key far sooner in expectation, at no cost in coverage provided the full
+enumeration is eventually completed.
+
+We stress the limit of this argument. The prior is the receiver's reasoning about
+a sender's choices and is not testable. It justifies search \textbf{order}, which
+costs nothing if wrong. It does not justify restricting the search
+\textbf{space}.
+
+\section{A structural constraint on multi-channel carriers}\label{sec:theorem}
+
+A natural question is whether a modulation can be hidden from all pairwise
+analysis while remaining visible to a higher-order form. For linear forms the
+answer is no.
+
+\begin{proposition}
+Let a modulation $s(t)$ be imposed with coefficients $c_k$ on channel $k$.
+Consider the linear four-channel form with coefficients $(1,-3,3,-1)$---the third
+finite difference---and the pairwise forms $x_i-x_j$. If the modulation is
+invisible to every pairwise form, it is invisible to the four-channel form.
+\end{proposition}
+
+\begin{proof}
+The pairwise form on $(i,j)$ picks up $(c_i-c_j)s$. Invisibility to every pair
+requires $c_i=c_j$ for all $i,j$, hence all $c_k$ equal to some $c$. The
+four-channel form then picks up $(c-3c+3c-c)s=0$.
+\end{proof}
+
+The result extends to any linear form whose coefficients sum to zero, which
+includes the finite differences and cross-differences commonly used as
+higher-order statistics. \textbf{Such forms are not independent carriers}; they
+are differences of pairwise information.
+
+Escaping the proposition requires a genuinely multiplicative form. A four-way
+phase alignment, living in the trispectrum, leaves every pairwise
+cross-correlation untouched and is therefore a real higher-order carrier.
+
+The practical import for search design is that enumerating linear higher-order
+forms enlarges $K$---and by \S\ref{sec:derive} raises the detection threshold for
+every key---while adding no reachable plaintext. It is a strictly bad trade.
+
+\section{Empirical instantiation}\label{sec:empirical}
+
+We instantiated the construction on 30 public observational time series,
+enumerating pairs and triples under four functional forms~\cite{griffin}.
+
+The reachable keyspace is smaller than the nominal one, and the distinction
+matters for \S\ref{sec:derive}: a key whose channels have no overlapping record
+is not a key the receiver can test at all. Of 435 nominal pairs, 382 had the
+required 2{,}000-sample overlap, giving \textbf{1{,}074 completed tests} against
+60{,}000 circular shifts each. Of 4{,}060 nominal triples, 2{,}934 were reachable
+and 2{,}749 completed, giving \textbf{10{,}996 tests}---117 million statistic
+evaluations in 26 hours on one 88-core machine.
+
+The pair search completed and returned negative at a stated amplitude.
+\textbf{The triple search returned void, in the precise sense of
+\S\ref{sec:void}}, and the diagnosis is instructive: no calibrated null
+distribution could be constructed for the higher-order statistics. Three
+candidate nulls were built and all three failed, each because it required a false
+modelling assumption about the underlying process:
+
+\begin{center}
+\begin{tabular}{@{}p{3.1cm}p{4.6cm}p{5.4cm}@{}}
+\toprule
+null & assumption & failure \\
+\midrule
+circular shift & pairwise structure irrelevant to a three-body statistic
+  & destroys it; ninefold tail excess \\
+common phase screen & series are stationary
+  & they are not; real data at median $z=45$ \\
+envelope-preserving & the nonlinearity is pure amplitude modulation
+  & absorbs the signal; $4.25\times$ over-firing \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Additionally, and in agreement with \S\ref{sec:theorem}, the two linear
+higher-order forms were swamped at $z\approx50$ while the single multiplicative
+form sat near its null at median $z=5.1$---the predicted signature of forms that
+are not independent carriers.
+
+The full search, its code and its data are public~\cite{griffin}.
+
+\section{What is not claimed}
+
+\begin{itemize}
+  \item \textbf{No hardness result.} The mapping to a cipher is structural. No
+    security proof, reduction or hardness assumption is transferred, and none is
+    implied. The keyspace arithmetic and the $\sqrt{2\ln K}$ threshold scaling
+    stand on their own.
+  \item \textbf{No claim of novelty for the components.} Unicity distance is
+    Shannon's. Self-identifying plaintext is the standing assumption beneath
+    every brute-force attack. Time-lock puzzles are RSW's. The claimed
+    contribution is the inversion of \S\ref{sec:tradition}, the correspondence of
+    \S\ref{sec:unicity}, the void/null distinction, and the proposition of
+    \S\ref{sec:theorem}.
+  \item \textbf{The weak-key prior is not testable.} It orders a search; it does
+    not bound one.
+  \item \textbf{The empirical instantiation detected nothing.} It is reported as
+    an existence proof for the failure mode of \S\ref{sec:void}, not as evidence
+    for any hypothesis about its subject matter.
+\end{itemize}
+
+\section{Open questions}
+
+\begin{enumerate}
+  \item Does the correspondence of \S\ref{sec:unicity} extend to keyspaces with
+    non-trivial structure---where keys are related, so that the $K$ tests are
+    dependent? The sub-Gaussian maximum is then an over-estimate and an effective
+    $K$ smaller than the nominal one may apply.
+  \item Is there a construction with self-identifying plaintext that is also
+    inherently sequential, recovering the VDF property lost in
+    \S\ref{sec:notpow}?
+  \item Can the void/null distinction be given a sharper operational test than
+    ``no calibrated null exists''---ideally one computable before a search is run?
+\end{enumerate}
+
+\begin{thebibliography}{99}
+
+\bibitem{griffin} Griffin, R.: A combination-space search for embedded
+technosignatures in solar and heliospheric archives (2026). Code and data:
+\url{https://github.com/dxtrainc/behavioral-seti}
+
+\bibitem{shannon} Shannon, C.E.: Communication theory of secrecy systems. Bell
+System Technical Journal \textbf{28}(4), 656--715 (1949)
+
+\bibitem{rsw} Rivest, R.L., Shamir, A., Wagner, D.A.: Time-lock puzzles and
+timed-release crypto. MIT/LCS/TR-684 (1996)
+
+\bibitem{vdf} Boneh, D., Bonneau, J., B\"unz, B., Fisch, B.: Verifiable delay
+functions. In: CRYPTO 2018
+
+\bibitem{hashcash} Back, A.: Hashcash --- a denial of service counter-measure
+(2002)
+
+\bibitem{kerckhoffs} Kerckhoffs, A.: La cryptographie militaire. Journal des
+sciences militaires \textbf{IX}, 5--38 (1883)
+
+\bibitem{xenology} Freitas, R.A.: Xenology, \S24.2.4 --- on anticryptography as
+the inverse of cryptography in signal synthesis. \emph{[verify]}
+
+\bibitem{busch} Busch, M.W., Reddick, R.M.: Testing SETI message designs.
+arXiv:0911.3976 (2009). \emph{[verify]}
+
+\bibitem{freudenthal} Freudenthal, H.: Lincos: Design of a Language for Cosmic
+Intercourse. North-Holland (1960)
+
+\bibitem{decrypt} Heller, R., Pudritz, R.E.: Decryption of messages from
+extraterrestrial intelligence using the power of social media --- the SETI
+Decrypt Challenge. arXiv:1706.00653 (2017). \emph{[verify --- authorship not
+confirmed]}
+
+\bibitem{ball} Ball, J.A.: The zoo hypothesis. Icarus \textbf{19}, 347 (1973)
+
+\end{thebibliography}
+
+\end{document}
