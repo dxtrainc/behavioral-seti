@@ -280,6 +280,16 @@ _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 
 from beacon.seeds import stable_seed as _stable_seed
 
 
+
+def _outpath(name):
+    """Bare filename -> written to ~; anything with a directory component or an
+    absolute path -> used as given. The old form joined "~/" unconditionally."""
+    name = os.path.expanduser(name)
+    if os.path.isabs(name) or os.path.dirname(name):
+        return name
+    return os.path.join(os.path.expanduser("~"), name)
+
+
 ap=argparse.ArgumentParser()
 ap.add_argument("--mode",default="pairs",choices=["pairs","triples"])
 ap.add_argument("--shifts",type=int,default=10000)
@@ -405,7 +415,7 @@ print("completed %d tests in %.1f min  (%.0f evaluations/s)"
       %(len(R),el/60,len(R)*NSH/max(el,1)),flush=True)
 
 json.dump(dict(mode=A.mode,shard=A.shard,shifts=NSH,ntests=len(R),
-               elapsed_s=el,results=R),open(os.path.expanduser("~/"+A.out),"w"))
+               elapsed_s=el,results=R),open(_outpath(A.out),"w"))
 print("saved ~/%s"%A.out,flush=True)
 
 R.sort(key=lambda r:r["p"])
