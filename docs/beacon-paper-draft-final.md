@@ -679,7 +679,25 @@ The screen-then-confirm design worked as intended: **105 of 198 screened survivo
 > **Void, and what would fix it.** The circular shift is the wrong null for a three-body statistic: it destroys pairwise structure along with three-way structure. The right surrogate **preserves every pairwise cross-correlation and destroys only the three-way alignment** — the third-order analog of IAAFT — and building it is the prerequisite for any triple enumeration.
 > Two honest limits on the control itself: its 320 synthetic triples measure the false-positive rate at 10⁻³, _not_ at the 4.5×10⁻⁶ Bonferroni threshold, and the synthetic channels approximate the real correlation structure rather than reproducing it. Neither weakens the verdict: **a ninefold tail excess and a form that cannot fire are sufficient grounds to void a result, though not to confirm one.**
 
-**Void.** No limit on three-way dimensionless structure is claimed, and the 93 survivors of direct counting are reported as artifacts of an uncalibrated statistic. The triple space remains, in the sense that matters, **unexamined**.
+> **The surrogate was built, and it repairs one form and not the other.** The construction is multivariate IAAFT: one common random phase applied to all three channels at once, which leaves every auto- and cross-spectrum exactly intact — the relative phases between channels are untouched — while the bispectral phase picks up φ(_f₁_) + φ(_f₂_) − φ(_f₁_+_f₂_) and is randomized. Second-order structure survives; three-way structure does not. Rank-mapping restores each channel's marginal and iterating restores the spectrum that rank-mapping perturbs. It was run against the **same 320 signal-free synthetic triples**, both nulls computed on the same triples in one process so the comparison is exact rather than remembered:
+
+| Form | Null | _p_ < 0.05 | _p_ < 10⁻³ | median _z_ |
+|---|---|---|---|---|
+| expected, sound | — | 5.0% | 0.1% | 0.00 |
+| log-curvature | circular shift | 6.6% | 0.9% | −0.03 |
+| log-curvature | **pairwise-preserving** | **0.0%** | **0.0%** | **−1.40** |
+| residual product | circular shift | 0.0% | 0.0% | −4.45 |
+| residual product | **pairwise-preserving** | **2.8%** | **0.0%** | **−0.17** |
+
+*The circular-shift rows reproduce the table above — 6.6% and 0.9%, median _z_ −4.45 against −4.49 — so the harness is validated by its own positive control before the surrogate columns are read.*
+
+> **The residual product was never the broken part.** Its median _z_ moves from −4.45 to **−0.17**: from four and a half standard deviations below its own null to centered on it, firing at 2.8% where 5% is nominal. A form that "cannot fire at all" turns out to have been a statement about the null and not about the statistic, exactly as the diagnosis above predicted. It remains mildly conservative, which is the safe direction — a limit drawn from it is understated, not overstated.
+>
+> **The log-curvature form is not repaired; it fails in the opposite direction.** The ninefold tail excess is gone, but it now fires **0.0%** of the time at _p_ < 0.05 with median _z_ −1.40, the observed statistic sitting systematically below the surrogate null. That is the residual product's original failure, relocated. **A form that cannot fire is not a form that found nothing**, and no limit is claimed from it under either null.
+>
+> The practical consequence is that three quarters of a full triple enumeration — the sweep builds one residual-product test and three log-curvature tests per triple — would be spent on a statistic that cannot produce a detection. Enumerating the residual product alone is 2,934 tests rather than 11,736, and the looser family-wise threshold that follows reduces the surrogate budget with it.
+
+**Void.** No limit on three-way dimensionless structure is claimed, and the 93 survivors of direct counting are reported as artifacts of an uncalibrated statistic. The triple space remains, in the sense that matters, **unexamined** — but it is no longer unexaminable. The residual product now has a null that passes its own zero arm, and the enumeration is affordable; the log-curvature form needs a null that has yet to be found.
 
 ### 4.10 A candidate, and what the detection procedure did to it
 
