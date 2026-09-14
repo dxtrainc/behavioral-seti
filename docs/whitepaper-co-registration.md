@@ -265,7 +265,7 @@ literature before this document is submitted anywhere.
 **The search programme this paper draws on**
 
 Griffin, R. (2026). *A combination-space search for embedded technosignatures in
-solar and heliospheric archives.* Radio Club of America. Code and data:
+solar and heliospheric archives.* Code and data:
 https://github.com/dxtrainc/behavioral-seti ·
 https://dxtra.com/static/galactic-dx/
 

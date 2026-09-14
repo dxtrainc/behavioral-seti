@@ -55,9 +55,10 @@ logic upward so a receiver with no shared context can bootstrap it. Drake tested
 an early Arecibo message on colleagues at Green Bank in 1961 specifically to
 measure decodability. The tradition has an explicit name —
 
-> **Anticryptography:** the branch of signal synthesis concerned with making
-> signals easily understandable; "exactly the opposite goal to that of the
-> science of cryptography." [7]
+> Freitas sets out a **Principle of Anticryptography**: a beacon message should
+> be optimised for easy decoding by its recipients, using simple, highly
+> redundant coding with abundant clues — the opposite objective to that of
+> secret code-making. [7]
 
 — and contemporary work continues it: general-purpose binary languages for
 crowdsourced messages [8], controlled decipherment experiments in which one
@@ -437,23 +438,25 @@ CRYPTO 2018.
 [6] Kerckhoffs, A. *La cryptographie militaire.* Journal des sciences
 militaires **IX**, 5–38, 1883.
 
-[7] Freitas, R. A. *Xenology*, §24.2.4 — on anticryptography as the inverse of
-cryptography in signal synthesis. **[verify]**
+[7] Freitas, R. A. Jr. *Xenology: An Introduction to the Scientific Study of
+Extraterrestrial Life, Intelligence, and Civilization.* 1st edn., §24.2.4
+"Alien Message Contents", 1979.
 
-[8] Busch, M. W., Reddick, R. M. *Testing SETI message designs.* arXiv:0911.3976,
-2009. **[verify]**
+[8] Busch, M. W., Reddick, R. M. *Testing SETI message designs.*
+arXiv:0911.3976, 2009. Also in Vakoch, D. A. (ed.), *Communication With
+Extraterrestrial Intelligence*, 2011.
 
 [9] Freudenthal, H. *Lincos: design of a language for cosmic intercourse.*
 North-Holland, 1960.
 
-[10] Heller, R., Pudritz, R. E. *Decryption of messages from extraterrestrial
-intelligence using the power of social media — the SETI Decrypt Challenge.*
-arXiv:1706.00653, 2017. **[verify — authorship not confirmed]**
+[10] Heller, R. *Decryption of messages from extraterrestrial intelligence
+using the power of social media — the SETI Decrypt Challenge.* International
+Journal of Astrobiology **18**(4), 296–303, 2019. arXiv:1706.00653,
+doi:10.1017/S1473550417000568.
 
 [11] Ball, J. A. *The zoo hypothesis.* Icarus **19**, 347, 1973.
 
 ---
 
-*Draft for IACR ePrint. References marked **[verify]** are cited from search
-results and recollection and must be checked against the originals before
-submission. ePrint requires PDF; this needs conversion to LaTeX.*
+*Draft for IACR ePrint. All references verified against the originals.
+ePrint requires PDF; see the LaTeX source alongside this file.*
