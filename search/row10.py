@@ -78,6 +78,27 @@ def stat(t, x, fmin, fmax, nf=4000):
     return float(LombScargle(t, x).power(f).max())
 
 
+def stat_chirp(t, x, fmin, fmax, ks, nf=1500):
+    """Maximum periodogram power over frequency AND frequency drift.
+
+    A signal whose frequency drifts linearly has phase
+        2*pi*f*(t0 + 0.5*k*t0**2)
+    so remapping time to tau = t0 + 0.5*k*t0**2 with the right k makes that
+    phase linear in tau again and the power recoheres into one bin. Trying a
+    grid of k and keeping the maximum is the de-chirped search; the null is
+    scored through this same function, so it pays the trials penalty too.
+    """
+    t0 = t - t.mean()
+    f = np.linspace(fmin, fmax, nf)
+    best = 0.0
+    for k in ks:
+        tau = t0 + 0.5 * k * t0 * t0
+        p = float(LombScargle(tau, x).power(f).max())
+        if p > best:
+            best = p
+    return best
+
+
 class GPNull:
     """Gaussian surrogates with the data's empirical autocovariance.
 
@@ -168,6 +189,8 @@ def main():
                     help="fractional frequency drift of the INJECTED signal across the span")
     ap.add_argument("--chirp", action="store_true",
                     help="search over frequency drift as well as frequency")
+    ap.add_argument("--amps", default="",
+                    help="comma-separated amplitude ladder; overrides the default grid")
     ap.add_argument("--out", default="~/row10.json")
     A = ap.parse_args()
 
@@ -194,7 +217,8 @@ def main():
                drift=A.drift, ks=ks, gpkey=A.chan)
     print("  injected drift %.1f%% across the span; search = %s"
           % (100 * A.drift, "de-chirped (7 drift rates)" if A.chirp else "fixed frequency"))
-    amps = [0.0, 1e-6, 3e-6, 1e-5, 3e-5, 1e-4, 3e-4, 1e-3]
+    amps = ([0.0] + [float(v) for v in A.amps.split(",") if v.strip()]
+            if A.amps else [0.0, 1e-6, 3e-6, 1e-5, 3e-5, 1e-4, 3e-4, 1e-3])
 
     from multiprocessing import Pool
     print("  %10s %9s %9s   %s" % ("amplitude", "p<0.05", "p<0.01", "median p"))

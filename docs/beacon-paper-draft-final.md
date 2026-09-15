@@ -1086,11 +1086,48 @@ the margin column remains an upper bound on capability rather than capability.
 > in real time and can lock a modulation to it. Solar rotation is differential
 > and its effective rate drifts a few percent over the cycle; at the Carrington
 > period a 1% drift accumulates ~8 radians of phase across a decade, more than a
-> full cycle, and coherent integration at a fixed frequency then loses most of
-> such a signal. Rotation appears elsewhere in this paper only as a *control*
+> full cycle, which a fixed-frequency search is not built to follow.
+> Rotation appears elsewhere in this paper only as a *control*
 > (§4.10, §4.12) and never as a clock a signal might track. The search is
 > therefore run de-chirped, over frequency drift as well as frequency, with the
 > null paying the same widened search.
+
+**What drift actually costs, measured.** The argument above says a
+fixed-frequency search should lose a drifting signal. It does not say by how
+much, and the answer is smaller than the argument implies. A drifting sinusoid
+injected into the equivalent-width daily series at 9.7 d, scanned in amplitude,
+gives the following 95%-recovery thresholds — every arm with a zero arm that
+fires 0.0% of the time:
+
+| injected drift across the record | fixed-frequency search | de-chirped search |
+|---|---|---|
+| none | 8.8×10⁻⁵ | — |
+| 1% | 1.2×10⁻⁴ (1.37×) | 1.1×10⁻⁴ (1.30×) |
+| 3% | 2.1×10⁻⁴ (2.34×) | 8.9×10⁻⁵ (1.01×) |
+
+**A 1% drift costs a fixed-frequency search a factor of 1.37 in amplitude, not
+the near-total loss the phase-slip argument suggests.** The reason is that
+accumulated slip *spreads* power across neighboring periodogram bins rather
+than canceling it, and a search that maximizes over the band keeps most of
+what spreads: at 9.7 d over a 9.86-year record, a 1% drift sweeps the signal
+across about 3.7 frequency resolution elements, and 1.37× in amplitude is 1.9×
+in power — roughly two elements' worth of dilution. Three percent sweeps about
+eleven elements and costs 2.34×.
+
+The de-chirped column carries the operationally useful result. **De-chirping is
+close to worthless at 1% drift and recovers the loss completely at 3%.** At 1%
+it returns 1.37× to 1.30×, about a fifth of the deficit, because searching
+seven drift rates raises the null's maximum by nearly as much as recohering the
+signal gains. At 3% the coherence loss is large enough to dominate that penalty
+and the search returns to 1.01× of the undrifted baseline. Somewhere between
+the two lies a crossover below which buying a drift dimension costs more than
+it returns — a statement about how to spend a search budget, not about the sky.
+
+One caveat on the de-chirped arm: its null is *conservative* rather than
+matched, with median _p_ at zero amplitude of 0.76 against 0.50 for the
+fixed-frequency arm, so its thresholds are a floor on de-chirped performance
+rather than a ceiling. No arm is anti-conservative; the zero arm is clean in
+all five.
 
 ### 4.19 The one spatially resolved channel, and why it is void
 
