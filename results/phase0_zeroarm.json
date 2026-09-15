@@ -1,0 +1,431 @@
+{
+ "ltrend": 1460,
+ "lres": 180,
+ "shifts": 4000,
+ "iters": 6,
+ "median_p": 0.9737565608597851,
+ "median_z": -1.8653323599637464,
+ "reproduces": true,
+ "results": [
+  {
+   "p": 0.8117970507373157,
+   "ne": 3247,
+   "z": -0.8821428254422473,
+   "n": 3000,
+   "combo": "swics_hetoo / wso_meanfield / cme_speed"
+  },
+  {
+   "p": 0.9187703074231443,
+   "ne": 3675,
+   "z": -1.4277043037594426,
+   "n": 4042,
+   "combo": "cak_k3 / swics_hetoo / spot_asym"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -6.3198923834219425,
+   "n": 4783,
+   "combo": "alpha/proton / proton >10MeV / swics_hetoo"
+  },
+  {
+   "p": 0.5481129717570608,
+   "ne": 2192,
+   "z": -0.1291434960738758,
+   "n": 4783,
+   "combo": "wind density / swics_hetoo / swics_o7to6"
+  },
+  {
+   "p": 0.18895276180954762,
+   "ne": 755,
+   "z": 0.8827591941207588,
+   "n": 4042,
+   "combo": "Lyman-alpha / wind speed / cak_emdx"
+  },
+  {
+   "p": 0.7985503624093977,
+   "ne": 3194,
+   "z": -0.8458236375459323,
+   "n": 4782,
+   "combo": "swics_hetoo / swics_fetoo / wind density"
+  },
+  {
+   "p": 0.9645088727818045,
+   "ne": 3858,
+   "z": -1.792232446280951,
+   "n": 3000,
+   "combo": "cak_k2vk3 / proton >10MeV / IMF |B|"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -4.352668532546371,
+   "n": 6000,
+   "combo": "TSI / F10.7 / cosmic ray"
+  },
+  {
+   "p": 0.8210447388152962,
+   "ne": 3284,
+   "z": -0.8888215426931414,
+   "n": 4042,
+   "combo": "proton >10MeV / swics_o7to6 / cak_delk1"
+  },
+  {
+   "p": 0.939515121219695,
+   "ne": 3758,
+   "z": -1.5603999620412974,
+   "n": 4782,
+   "combo": "IMF |B| / swics_hetoo / swics_fetoo"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -9.33133055441094,
+   "n": 4500,
+   "combo": "sunspot / proton temp / swics_fetoo"
+  },
+  {
+   "p": 0.9755061234691327,
+   "ne": 3902,
+   "z": -1.8698627300994597,
+   "n": 4042,
+   "combo": "TSI / cme_rate / cak_k2vk3"
+  },
+  {
+   "p": 0.9992501874531368,
+   "ne": 3997,
+   "z": -3.075291046613996,
+   "n": 3000,
+   "combo": "cme_speed / F10.7 / spot_asym"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -3.7077176991456913,
+   "n": 3000,
+   "combo": "alpha/proton / proton >10MeV / swics_ctoo"
+  },
+  {
+   "p": 0.9615096225943515,
+   "ne": 3846,
+   "z": -1.756624993763632,
+   "n": 3000,
+   "combo": "swics_ctoo / TSI / F10.7"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -4.615316514487974,
+   "n": 4866,
+   "combo": "Lyman-alpha / proton temp / IMF |B|"
+  },
+  {
+   "p": 0.5078730317420644,
+   "ne": 2031,
+   "z": -0.0357239691787676,
+   "n": 4500,
+   "combo": "swics_ctoo / swics_o7to6 / cosmic ray"
+  },
+  {
+   "p": 0.7630592351912022,
+   "ne": 3052,
+   "z": -0.7238344434106169,
+   "n": 4042,
+   "combo": "cak_k3 / cme_speed / IMF |B|"
+  },
+  {
+   "p": 0.9257685578605349,
+   "ne": 3703,
+   "z": -1.4463290647247462,
+   "n": 4783,
+   "combo": "cosmic ray / spot_area / swics_o7to6"
+  },
+  {
+   "p": 0.9995001249687578,
+   "ne": 3998,
+   "z": -3.022558775477009,
+   "n": 4500,
+   "combo": "proton temp / swics_avqsi / cme_speed"
+  },
+  {
+   "p": 0.8965258685328668,
+   "ne": 3586,
+   "z": -1.261941652340359,
+   "n": 4782,
+   "combo": "swics_ctoo / F10.7 / swics_avqfe"
+  },
+  {
+   "p": 0.052236940764808795,
+   "ne": 208,
+   "z": 1.6204659642111503,
+   "n": 3000,
+   "combo": "swics_fetoo / MgII / cak_emdx"
+  },
+  {
+   "p": 0.00024993751562109475,
+   "ne": 0,
+   "z": 4.145468878460242,
+   "n": 9951,
+   "combo": "wso_meanfield / cosmic ray / cme_rate"
+  },
+  {
+   "p": 0.04873781554611347,
+   "ne": 194,
+   "z": 1.6831737655294425,
+   "n": 4042,
+   "combo": "cme_speed / cosmic ray / cak_emdx"
+  },
+  {
+   "p": 0.9375156210947263,
+   "ne": 3750,
+   "z": -1.5374102247247803,
+   "n": 4799,
+   "combo": "cme_speed / wind speed / swics_avqsi"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -6.542566005923026,
+   "n": 12401,
+   "combo": "proton >10MeV / wso_meanfield / cosmic ray"
+  },
+  {
+   "p": 0.25218695326168455,
+   "ne": 1008,
+   "z": 0.6522975983058966,
+   "n": 9000,
+   "combo": "cosmic ray / alpha/proton / cme_rate"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -6.484066027785061,
+   "n": 4500,
+   "combo": "IMF |B| / proton temp / spot_area"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -4.937367341179494,
+   "n": 4782,
+   "combo": "swics_avqfe / proton temp / sunspot"
+  },
+  {
+   "p": 0.9985003749062734,
+   "ne": 3994,
+   "z": -2.791344572832538,
+   "n": 3000,
+   "combo": "IMF |B| / F10.7 / cak_delk1"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -6.9873657106791685,
+   "n": 6000,
+   "combo": "wso_meanfield / cme_speed / IMF |B|"
+  },
+  {
+   "p": 0.7563109222694326,
+   "ne": 3025,
+   "z": -0.7035346685939176,
+   "n": 3000,
+   "combo": "swics_avqo / sunspot / cme_rate"
+  },
+  {
+   "p": 0.9132716820794802,
+   "ne": 3653,
+   "z": -1.3777054112524902,
+   "n": 4042,
+   "combo": "cak_emdx / F10.7 / swics_c6to5"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -6.630267662652891,
+   "n": 4042,
+   "combo": "spot_area / cme_rate / cak_k3"
+  },
+  {
+   "p": 0.39665083729067735,
+   "ne": 1586,
+   "z": 0.2480647734684731,
+   "n": 4500,
+   "combo": "MgII / cme_speed / swics_ctoo"
+  },
+  {
+   "p": 0.9732566858285429,
+   "ne": 3893,
+   "z": -1.912361797050967,
+   "n": 3000,
+   "combo": "cme_speed / wind density / swics_ctoo"
+  },
+  {
+   "p": 0.9955011247188202,
+   "ne": 3982,
+   "z": -2.7270119879017223,
+   "n": 4500,
+   "combo": "cme_rate / proton >10MeV / wind density"
+  },
+  {
+   "p": 0.5631092226943264,
+   "ne": 2252,
+   "z": -0.16878894838909947,
+   "n": 3000,
+   "combo": "wind speed / swics_ctoo / swics_avqsi"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -12.809362523497764,
+   "n": 4782,
+   "combo": "proton temp / swics_fetoo / spot_asym"
+  },
+  {
+   "p": 0.26843289177705576,
+   "ne": 1073,
+   "z": 0.6142434088827542,
+   "n": 4042,
+   "combo": "swics_avqfe / wind density / cak_k3"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -3.4449160312017786,
+   "n": 9000,
+   "combo": "cme_speed / cme_rate / spot_asym"
+  },
+  {
+   "p": 0.9992501874531368,
+   "ne": 3997,
+   "z": -3.276603826726069,
+   "n": 13000,
+   "combo": "cosmic ray / X-ray bg / sunspot"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -4.003766501786452,
+   "n": 3000,
+   "combo": "X-ray bg / F10.7 / swics_c6to5"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -4.212503976325901,
+   "n": 4500,
+   "combo": "spot_asym / wind density / spot_area"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -3.758975753599952,
+   "n": 4042,
+   "combo": "proton >10MeV / cme_rate / cak_emdx"
+  },
+  {
+   "p": 0.8657835541114721,
+   "ne": 3463,
+   "z": -1.1090092559731897,
+   "n": 4500,
+   "combo": "cme_rate / swics_avqsi / F10.7"
+  },
+  {
+   "p": 0.4646338415396151,
+   "ne": 1858,
+   "z": 0.1501366929428275,
+   "n": 4042,
+   "combo": "proton temp / swics_avqsi / cak_emdx"
+  },
+  {
+   "p": 0.9742564358910273,
+   "ne": 3897,
+   "z": -1.8608019898280332,
+   "n": 4042,
+   "combo": "swics_ctoo / cak_delk1 / wind density"
+  },
+  {
+   "p": 0.986753311672082,
+   "ne": 3947,
+   "z": -2.3406172657794224,
+   "n": 3000,
+   "combo": "cak_delk1 / swics_o7to6 / cak_k3"
+  },
+  {
+   "p": 0.2696825793551612,
+   "ne": 1078,
+   "z": 0.5967714394195287,
+   "n": 4799,
+   "combo": "swics_avqsi / wind speed / wind density"
+  },
+  {
+   "p": 0.9877530617345663,
+   "ne": 3951,
+   "z": -2.1935638005589917,
+   "n": 3000,
+   "combo": "MgII / F10.7 / swics_avqo"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -6.748403591260393,
+   "n": 4783,
+   "combo": "swics_o7to6 / cme_speed / proton >10MeV"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -4.642406786162832,
+   "n": 3000,
+   "combo": "alpha/proton / swics_avqsi / IMF |B|"
+  },
+  {
+   "p": 0.7898025493626594,
+   "ne": 3159,
+   "z": -0.7972323046810482,
+   "n": 3000,
+   "combo": "F10.7 / alpha/proton / swics_c6to5"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -6.693349982017451,
+   "n": 4500,
+   "combo": "wso_meanfield / sunspot / swics_o7to6"
+  },
+  {
+   "p": 1.0,
+   "ne": 4000,
+   "z": -4.210347163514578,
+   "n": 4042,
+   "combo": "cme_speed / X-ray bg / cak_delk1"
+  },
+  {
+   "p": 0.9952511872031992,
+   "ne": 3981,
+   "z": -2.5953817093402725,
+   "n": 3000,
+   "combo": "wind density / MgII / spot_asym"
+  },
+  {
+   "p": 0.15846038490377407,
+   "ne": 633,
+   "z": 0.9936898869693145,
+   "n": 3000,
+   "combo": "swics_ctoo / cak_delk1 / cak_emdx"
+  },
+  {
+   "p": 0.9977505623594102,
+   "ne": 3991,
+   "z": -2.7597315964735745,
+   "n": 6000,
+   "combo": "TSI / X-ray bg / IMF |B|"
+  },
+  {
+   "p": 0.9185203699075232,
+   "ne": 3674,
+   "z": -1.377995970452951,
+   "n": 3000,
+   "combo": "cak_emdx / swics_hetoo / cme_rate"
+  }
+ ]
+}

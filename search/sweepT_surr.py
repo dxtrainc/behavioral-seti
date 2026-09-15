@@ -53,9 +53,52 @@ def load_sweepT(path):
     return ns
 
 
-S = load_sweepT(os.path.join(HERE, "sweepT.py"))
-M, names, N = S["M"], S["names"], S["N"]
-prep, forms_tri, stat = S["prep"], S["forms_tri"], S["stat"]
+_NPZ = os.path.expanduser("~/beacon_channels.npz")
+if os.path.exists(_NPZ):
+    # Portable path: the assembled matrix, exported from zeus. Used on boxes
+    # without the ingest, and identical to what the exec path produces.
+    _z = np.load(_NPZ, allow_pickle=True)
+    M = _z["M"]
+    names = [str(x) for x in _z["names"]]
+    N = M.shape[0]
+    W = int(_z["W"])
+    from scipy.ndimage import median_filter as _medfilt
+    from scipy import stats as _sps
+
+    def prep(x):
+        r = x / np.median(x)
+        d = r - _medfilt(r, size=W, mode="nearest")
+        sd = d.std()
+        return r, (d / sd if sd > 0 else d)
+
+    def stat(x):
+        d = np.diff(x)
+        s = 1.4826 * np.median(np.abs(d - np.median(d)))
+        if s <= 0:
+            return np.nan
+        d = np.clip(d, -3.0 * s, 3.0 * s)
+        y = np.concatenate([[x[0]], x[0] + np.cumsum(d)])
+        sd = y.std()
+        if sd <= 0:
+            return np.nan
+        z = (y - y.mean()) / sd
+        d = np.diff(z)
+        s = d.std()
+        if s <= 0:
+            return np.nan
+        return float(_sps.kurtosis(d, fisher=True) - 4.0 * np.median(np.abs(d)) / s)
+
+    def forms_tri(pa, pb, pc):
+        ra, da = pa; rb, db = pb; rc, dc = pc
+        out = {"resid-triple": da * db * dc}
+        la = np.log(np.maximum(ra, 1e-12)); lb = np.log(np.maximum(rb, 1e-12))
+        lc = np.log(np.maximum(rc, 1e-12))
+        out["log-2nd-diff"] = la - 2.0 * lb + lc
+        return {k: v for k, v in out.items() if np.all(np.isfinite(v))}
+else:
+    S = load_sweepT(os.path.join(HERE, "sweepT.py"))
+    M, names, N = S["M"], S["names"], S["N"]
+    prep, forms_tri, stat = S["prep"], S["forms_tri"], S["stat"]
 
 # log-2nd-diff reads the normalised ratio r; resid-triple reads the detrended
 # residual d. Neither reads both, so the surrogate is built on whichever the
@@ -90,20 +133,21 @@ def one(arg):
         if not np.isfinite(obs):
             return None
 
-        idx = 0 if fname in USES_R else 1
-        U, V, W = (P[0][idx], P[1][idx], P[2][idx])
-        if not np.allclose(form_one(fname, U, V, W), f[fname], equal_nan=True):
-            return None                     # fast path must match the canonical one
-
-        plan = Plan(np.vstack([U, V, W]))
+        # RAW surrogate path. The surrogate is drawn from the undetrended
+        # channels and prep() is applied to it afterwards, exactly as it is
+        # applied to the data. Surrogating the prepared residuals instead would
+        # be cheaper -- it keeps the 181-wide median filter out of this loop --
+        # but IAAFT does not commute with detrending, so that is a DIFFERENT
+        # null, and not the one the zero arm validated.
+        plan = Plan(np.vstack([M[i][ov], M[j][ov], M[k][ov]]))
         rng = np.random.default_rng(seed)
         null = []
         for _ in range(nsh):
-            Y = plan.draw(rng, iters)
-            g = form_one(fname, Y[0], Y[1], Y[2])
-            if not np.all(np.isfinite(g)):
+            Q = [prep(r) for r in plan.draw(rng, iters)]
+            fb = forms_tri(*Q)
+            if fname not in fb:
                 continue
-            v = stat(g)
+            v = stat(fb[fname])
             if np.isfinite(v):
                 null.append(v)
         if len(null) < nsh // 4:
@@ -131,29 +175,46 @@ if __name__ == "__main__":
     ap.add_argument("--minov", type=int, default=2000)
     ap.add_argument("--alpha", type=float, default=0.05)
     ap.add_argument("--shard", default="0/1")
+    ap.add_argument("--shards", default="",
+                    help="comma list of shard indices, e.g. 0,1,2 -- used with --shardn")
+    ap.add_argument("--shardn", type=int, default=0,
+                    help="total shards when --shards is given")
+    ap.add_argument("--forms", default="resid-triple,log-2nd-diff",
+                    help="comma-separated forms to enumerate. The zero arm shows\n                          log-2nd-diff cannot fire under this null, so the default\n                          for a real run is resid-triple alone.")
+    ap.add_argument("--sample", type=int, default=0,
+                    help="time N triples spread across the overlap range and stop")
     ap.add_argument("--ntests", type=int, default=0, help="0 = all; >0 truncates, for testing")
     ap.add_argument("--resume", action="store_true")
     ap.add_argument("--ckpt", default="")
     A = ap.parse_args()
     MINOV = A.minov
-    SI, SN = (int(x) for x in A.shard.split("/"))
+    if A.shards:
+        MINE = sorted(int(x) for x in A.shards.split(","))
+        SN = A.shardn or (max(MINE) + 1)
+        SI = MINE[0]
+    else:
+        SI, SN = (int(x) for x in A.shard.split("/"))
+        MINE = [SI]
 
+    want = tuple(f.strip() for f in A.forms.split(",") if f.strip())
     jobs = []
     for i, j, k in itertools.combinations(range(N), 3):
         ov = np.isfinite(M[i]) & np.isfinite(M[j]) & np.isfinite(M[k])
         if ov.sum() < MINOV:
             continue
-        jobs.append((i, j, k, "resid-triple"))
-        # log-2nd-diff is not symmetric: each channel takes a turn as the middle
-        jobs.append((i, j, k, "log-2nd-diff"))
-        jobs.append((j, i, k, "log-2nd-diff"))
-        jobs.append((i, k, j, "log-2nd-diff"))
+        if "resid-triple" in want:
+            jobs.append((i, j, k, "resid-triple"))
+        if "log-2nd-diff" in want:
+            # log-2nd-diff is not symmetric: each channel takes a turn as the middle
+            jobs.append((i, j, k, "log-2nd-diff"))
+            jobs.append((j, i, k, "log-2nd-diff"))
+            jobs.append((i, k, j, "log-2nd-diff"))
     ntest = len(jobs)
     thr = A.alpha / max(ntest, 1)
     floor = 1.0 / (A.shifts + 1)
 
     print("\ntriple space against the pairwise-preserving null")
-    print("  %d tests (%d triples x 4 forms)" % (ntest, ntest // 4))
+    print("  %d tests, forms: %s" % (ntest, ", ".join(want)))
     print("  Bonferroni threshold %.3e" % thr)
     print("  %d draws -> empirical floor %.3e" % (A.shifts, floor))
     if floor >= thr:
@@ -163,9 +224,10 @@ if __name__ == "__main__":
             "  Need --shifts > %d." % int(np.ceil(1.0 / thr)))
     print("  floor is %.1fx below the threshold -- the run can fire" % (thr / floor))
 
-    jobs = [x for n_, x in enumerate(jobs) if n_ % SN == SI]
-    ckpt = A.ckpt or os.path.join(os.path.expanduser("~"),
-                                  "sweepT_surr_%d-%d.jsonl" % (SI, SN))
+    jobs = [x for n_, x in enumerate(jobs) if (n_ % SN) in MINE]
+    ckpt = A.ckpt or os.path.join(
+        os.path.expanduser("~"),
+        "sweepT_surr_%s-%d.jsonl" % ("-".join(str(x) for x in MINE), SN))
     done = {}
     if A.resume and os.path.exists(ckpt):
         for ln in open(ckpt, errors="replace"):
@@ -176,11 +238,26 @@ if __name__ == "__main__":
                 continue
         print("  resuming: %d tests already in %s" % (len(done), ckpt))
 
+    if A.sample:
+        # UNIFORM RANDOM sample: representative of the real overlap distribution
+        # by construction. An even spread across the sorted range over-weights
+        # long triples, and the count must exceed --pool or idle workers are
+        # counted as though they were working.
+        rsel = np.random.default_rng(20260914)
+        pick = rsel.choice(len(jobs), size=min(A.sample, len(jobs)), replace=False)
+        jobs = [jobs[int(p)] for p in pick]
+        ns = [int((np.isfinite(M[a]) & np.isfinite(M[b]) & np.isfinite(M[c])).sum())
+              for (a, b, c, _f) in jobs]
+        print("  SAMPLE MODE: %d random triples, n %d..%d (mean %d), pool %d"
+              % (len(jobs), min(ns), max(ns), int(np.mean(ns)), A.pool))
+        if len(jobs) < A.pool:
+            print("  WARNING: fewer tests than workers -- the rate will be understated")
     todo = [(i, j, k, fn, A.shifts, A.iters, abs(hash((i, j, k, fn))) % (2 ** 32))
             for (i, j, k, fn) in jobs if "%d-%d-%d|%s" % (i, j, k, fn) not in done]
     if A.ntests:
         todo = todo[:A.ntests]
-    print("  shard %d/%d: %d tests, %d to run, pool=%d" % (SI, SN, len(jobs), len(todo), A.pool))
+    print("  shards %s of %d: %d tests, %d to run, pool=%d"
+          % (",".join(str(x) for x in MINE), SN, len(jobs), len(todo), A.pool))
     print("  checkpoint: %s\n" % ckpt, flush=True)
 
     t0 = time.time()
@@ -214,7 +291,8 @@ if __name__ == "__main__":
             continue
     ok = [r for r in R if "error" not in r]
     bad = [r for r in R if "error" in r]
-    out = os.path.join(os.path.expanduser("~"), "sweepT_surr_%d-%d.json" % (SI, SN))
+    out = os.path.join(os.path.expanduser("~"), "sweepT_surr_%s-%d.json"
+                       % ("-".join(str(x) for x in MINE), SN))
     json.dump(dict(shifts=A.shifts, iters=A.iters, shard=A.shard, ntests_total=ntest,
                    threshold=thr, floor=floor, elapsed_s=el, errors=len(bad),
                    results=ok), open(out, "w"))
