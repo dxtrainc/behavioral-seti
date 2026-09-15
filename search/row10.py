@@ -100,10 +100,19 @@ class GPNull:
         var = float(np.mean(x * x))
         C = np.interp(d, ctr, acf, left=var, right=0.0)
         C[np.diag_indices(n)] = var
-        # nearest positive-definite: clip negative eigenvalues
-        w, V = np.linalg.eigh(C)
-        w = np.clip(w, jitter * var, None)
-        self.L = V * np.sqrt(w)
+        # Cholesky where possible -- several times faster than eigh and enough
+        # whenever C is already positive definite, which it usually is once the
+        # diagonal is the sample variance. Eigenvalue clipping is the fallback.
+        self.L = None
+        for j in (0.0, 1e-10, 1e-8, 1e-6):
+            try:
+                self.L = np.linalg.cholesky(C + np.eye(n) * (j * var))
+                break
+            except np.linalg.LinAlgError:
+                continue
+        if self.L is None:
+            w, V = np.linalg.eigh(C)
+            self.L = V * np.sqrt(np.clip(w, jitter * var, None))
         self.n = n
 
     def draw(self, rng):
@@ -191,15 +200,18 @@ def main():
     print("  %10s %9s %9s   %s" % ("amplitude", "p<0.05", "p<0.01", "median p"))
     print("  " + "-" * 50)
     curve = []
-    for a in amps:
-        jobs = [(a, k) for k in range(A.trials)]
-        with Pool(A.pool) as p:
-            ps = np.array(p.map(_work, jobs))
-        rec = float((ps < 0.05).mean())
-        curve.append(dict(amp=a, rec05=rec, rec01=float((ps < 0.01).mean()),
-                          med_p=float(np.median(ps))))
-        print("  %10.1e %8.1f%% %8.1f%%   %.4f"
-              % (a, 100 * rec, 100 * (ps < 0.01).mean(), np.median(ps)), flush=True)
+    pool = Pool(A.pool)          # pool hoisted: workers persist so the cached
+    try:                         # GP factor survives across the amplitude ladder
+        for a in amps:
+            jobs = [(a, k) for k in range(A.trials)]
+            ps = np.array(pool.map(_work, jobs))
+            rec = float((ps < 0.05).mean())
+            curve.append(dict(amp=a, rec05=rec, rec01=float((ps < 0.01).mean()),
+                              med_p=float(np.median(ps))))
+            print("  %10.1e %8.1f%% %8.1f%%   %.4f"
+                  % (a, 100 * rec, 100 * (ps < 0.01).mean(), np.median(ps)), flush=True)
+    finally:
+        pool.close(); pool.join()
 
     r = [c["rec05"] for c in curve]
     mono = all(r[i] >= r[i - 1] - 0.15 for i in range(1, len(r)))
