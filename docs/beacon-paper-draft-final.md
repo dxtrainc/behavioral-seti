@@ -697,6 +697,41 @@ The screen-then-confirm design worked as intended: **105 of 198 screened survivo
 >
 > The practical consequence is that three quarters of a full triple enumeration — the sweep builds one residual-product test and three log-curvature tests per triple — would be spent on a statistic that cannot produce a detection. Enumerating the residual product alone is 2,934 tests rather than 11,736, and the looser family-wise threshold that follows reduces the surrogate budget with it.
 
+> **The floor was then measured, and it is not purchasable.** Having a null that
+> passes its zero arm is not the same as having sensitivity, so the detection
+> floor itself was scanned: signals injected three-way-only into signal-free
+> synthetic triples, across record lengths of 2,000 to 9,000 samples and signal
+> timescales of 3 to 30 days, with the 50% recovery amplitude bracketed by the
+> injected grid in all nine cells.
+>
+> | _n_ | 3 d | 10 d | 30 d |
+> |---|---|---|---|
+> | 2,000 | 0.117 | 0.132 | 0.149 |
+> | 4,500 | 0.107 | 0.055 | 0.112 |
+> | 9,000 | 0.088 | 0.088 | 0.100 |
+>
+> *Amplitude at 50% recovery. The floor sits at 5–15% fractional modulation
+> throughout.*
+>
+> **It improves as _n_^−0.25, not _n_^−0.5.** That is the fourth root — the
+> signature of incoherent power combination, which is what a third-order
+> statistic is left with once the phase information is gone. And it does not
+> depend on the signal's timescale at all: the slope against block length is
+> +0.11, +0.01 and +0.05 across a tenfold range, indistinguishable from zero.
+>
+> The consequence is arithmetic. **Improving the floor by a factor of ten
+> requires eleven thousand times the data.** The median three-way overlap in
+> these archives is 4,650 days; ten times better would need 5.1×10⁷ days, about
+> **140,000 years** of continuous observation. The pair limits of §4.8 run from
+> 10⁻⁵ to 10⁻⁶. Three-way-only structure is three to four orders beyond reach
+> and no observing programme moves it.
+>
+> This is a statement about detectability and not about the sky. It says what
+> any search of this kind can achieve on archives of this length, which is the
+> quantity §5.1 argues should be reported, and it retires the question of
+> whether a better surrogate or a better statistic would open the triple space:
+> neither buys what the scaling law forbids.
+
 **Void.** No limit on three-way dimensionless structure is claimed, and the 93 survivors of direct counting are reported as artifacts of an uncalibrated statistic. The triple space remains, in the sense that matters, **unexamined** — but it is no longer unexaminable. The residual product now has a null that passes its own zero arm, and the enumeration is affordable; the log-curvature form needs a null that has yet to be found.
 
 ### 4.10 A candidate, and what the detection procedure did to it
