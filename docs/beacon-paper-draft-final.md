@@ -4,7 +4,7 @@
 
 *Robert Griffin · Dxtra Inc. (dxtra.com) Open items are listed at the end.*
 
-**Abstract.** We call the approach set out here **behavioral SETI**: it looks for the behavior of a source rather than for a transmitter. Existing technosignature searches presuppose the channel. We consider the case in which _no dedicated radiating apparatus is assumed_: structure is carried by emission a star already produces, imposed by redistributing that flux rather than generating it, and neither carrier nor encoding is known in advance. Two constraints make the problem finite: a sender sharing no units with the receiver can use only **dimensionless** quantities — ratios and normalized combinations of measured observables — and a sender minimizing transmitted energy will pose a **proof-of-work gate**, cheap to set, expensive to solve, trivial to verify, so that no energy is spent on receivers that could not act on the message. We formalize the resulting **combination space** and report 29 searches of public solar and heliospheric archives against it. Twenty-five are null, three void, and one recovers a known signal as a positive control. Seventeen carry stated sensitivities, **fourteen of them verified by injection**. The deepest verified limit is **1.4×10⁻⁶** in fractional Lyman-α irradiance at two minutes, at 95% recovery; the last of them, the sidereal fold, only once its injection was rebuilt around the anti-sidereal control rather than around the fold (§4.2). Sensitivity is not the binding constraint: the same instrument, days and pipeline are **245×** more sensitive at two minutes than at one day, and the limiting quantity is instead the fraction of the combination space examined. Acquiring seventeen further observables closed the pair space from 18% to **88%** — 382 of 435 pairs, the remainder having no overlapping record — and returned **no survivor in 510 tests spanning the Sun–heliosphere boundary**. Of 4,060 triples, 2,934 are reachable and **2,749 completed**, returning **void** for want of a matched three-body null. A first **cross-viewpoint** test, Earth line against Mars line, is null for a line-of-sight modulator to 8.9×10⁻⁴ at 3 d and 4.2×10⁻³ at 307 s, the fast-band figure set by the Mars instrument rather than by the geometry. Finally, a designer-side ordering of channels places the most plausible first-contact carriers in archives that already exist and are resolved at the required level. **Two of those rows are searched here for the first time** — SOHO/VIRGO SPM photometry at one minute over 27.3 yr, and SOHO/GOLF Doppler velocity at 20 s over 25.9 yr — both null, the latter to an injection-verified 1.46×10⁻⁵ in fractional mode frequency, which is **fifteen times short of the 10⁻⁶ a designer would set**. The remaining rows are specified.
+**Abstract.** We call the approach set out here **behavioral SETI**: it looks for the behavior of a source rather than for a transmitter. Existing technosignature searches presuppose the channel. We consider the case in which _no dedicated radiating apparatus is assumed_: structure is carried by emission a star already produces, imposed by redistributing that flux rather than generating it, and neither carrier nor encoding is known in advance. Two constraints make the problem finite: a sender sharing no units with the receiver can use only **dimensionless** quantities — ratios and normalized combinations of measured observables — and a sender minimizing transmitted energy will pose a **proof-of-work gate**, cheap to set, expensive to solve, trivial to verify, so that no energy is spent on receivers that could not act on the message. We formalize the resulting **combination space** and report 30 searches of public solar and heliospheric archives against it. Twenty-five are null, three void, and one recovers a known signal as a positive control. Seventeen carry stated sensitivities, **fifteen of them verified by injection**. The deepest verified limit is **1.4×10⁻⁶** in fractional Lyman-α irradiance at two minutes, at 95% recovery; the last of them, the sidereal fold, only once its injection was rebuilt around the anti-sidereal control rather than around the fold (§4.2). Sensitivity is not the binding constraint: the same instrument, days and pipeline are **245×** more sensitive at two minutes than at one day, and the limiting quantity is instead the fraction of the combination space examined. Acquiring seventeen further observables closed the pair space from 18% to **88%** — 382 of 435 pairs, the remainder having no overlapping record — and returned **no survivor in 510 tests spanning the Sun–heliosphere boundary**. Of 4,060 triples, 2,934 are reachable and **2,749 completed**, returning **void** for want of a matched three-body null. A first **cross-viewpoint** test, Earth line against Mars line, is null for a line-of-sight modulator to 8.9×10⁻⁴ at 3 d and 4.2×10⁻³ at 307 s, the fast-band figure set by the Mars instrument rather than by the geometry. Finally, a designer-side ordering of channels places the most plausible first-contact carriers in archives that already exist and are resolved at the required level. **Two of those rows are searched here for the first time** — SOHO/VIRGO SPM photometry at one minute over 27.3 yr, and SOHO/GOLF Doppler velocity at 20 s over 25.9 yr — both null, the latter to an injection-verified 1.46×10⁻⁵ in fractional mode frequency, which is **fifteen times short of the 10⁻⁶ a designer would set**. The remaining rows are specified.
 
 *Keywords: technosignatures · SETI · solar irradiance · search strategy · time-series analysis*
 
@@ -55,7 +55,7 @@ What we believe is not already occupied is narrower than we first claimed:
 | ii | **The units-free constraint applied to carrier _selection_** rather than to message content | a redirection of Freudenthal and DeVito & Oehrle, not an independent idea |
 | iii | **The combination space** — the carrier may be a _relationship among_ observables, and that space can be enumerated and its coverage measured | **the strongest claim here.** Wright et al. enumerate pointings; this enumerates quantities |
 | iv | **Proof-of-work gating** — a **self-enforcing** gate opened by the receiver's own capability — and its corollary that recognition precedes detection | **we have found no prior proposal of a capability-gated signal.** It shares a _prediction_ with the zoo hypothesis (Ball 1973) and no _mechanism_: that hypothesis needs many civilizations to abstain indefinitely and breaks on one defector; this needs nobody to abstain at all |
-| v | **29 searches, thirteen limits injection-verified** against that space | the empirical content, and the reason for the paper |
+| v | **30 searches, fifteen limits injection-verified** against that space | the empirical content, and the reason for the paper |
 
 *An ADS full-text search returned no occurrences of the combination-space formulation within papers on technosignatures. **We do not treat that as establishing priority**: indexing is incomplete, and a search of the same kind failed to surface Hippke, Freudenthal and DeVito & Oehrle above.*
 
@@ -220,7 +220,7 @@ The four constraints generate a single chain: the sender's half paid once and am
 >
 *The asymmetry is the whole economy of the scheme: steps 1–5 are incurred once and run unattended; the receiver-side steps are incurred separately by each civilization, and only when it can act. **No energy is ever spent on a recipient that could not answer** — with no agreement between senders, no enforcement, no wish to exclude.*
 
-> **Only step 5 is testable from here, and only its consequence.** Steps 1–4 concern hardware in another star's atmosphere and a network between the stars, neither observable at our sensitivity; steps 6 onward have not happened. What §4 measures is whether the modulation step 5 would impose is present in the Sun's output, and across 29 searches it is not, above the amplitudes of §4.2. **That bounds step 5 and says nothing whatever about steps 1 to 4.**
+> **Only step 5 is testable from here, and only its consequence.** Steps 1–4 concern hardware in another star's atmosphere and a network between the stars, neither observable at our sensitivity; steps 6 onward have not happened. What §4 measures is whether the modulation step 5 would impose is present in the Sun's output, and across 30 searches it is not, above the amplitudes of §4.2. **That bounds step 5 and says nothing whatever about steps 1 to 4.**
 > **The obvious objection is the round trip.** One exchange at these distances is decades to millennia — a cost in _latency_, not in _energy_, and energy is the constraint: the reply's wavelength, modulation and symbol rate are specified in the pointer itself, so the node listens on one named channel at essentially zero cost. What the argument does _not_ establish is that gating is the only rational design: a sender optimizing latency would pay for the whole message up front and skip the gate. Energy minimization is a premise, not a fact about anybody.
 > **Step 12 is where the chain continues**: what the node returns can itself sit behind a second gate demanding a further capability. A directed neutrino beam at the **Glashow resonance, 6.3 PeV** (Learned, Pakvasa & Zee 2009; Silagadze 2008) is unabsorbed, unmistakable, and readable only by a receiver that has built a cubic-kilometer detector — and far too expensive for a first-contact pointer, needing an accelerator and continuous power, exactly the dedicated apparatus §2.7 excludes. Its place is as **content behind a later gate at step 12**. The solar neutrino flux itself is unavailable as a carrier — nothing at the photosphere or corona can modulate a flux made in the core — and serves as the one control channel no mechanism in this paper can touch.
 
@@ -465,7 +465,7 @@ For σ₁ ≈ 10⁻³ per minute and _N_ ≈ 2.6×10⁶ (five years) this gives 
 | 7 | p-mode frequency structure | 10⁻⁶ | **1.46×10⁻⁵ measured** | **0.069** | **yes** — §4.16, added after this table was drawn |
 | 8 | neutron monitor / particle flux | 10⁻⁴ | 7.6×10⁻⁵ | ~1 | **yes** |
 | 9 | solar-wind composition | 10⁻³ | 10⁻³ | ~1 | **yes** (§4.8); implausible as a carrier |
-| 10 | line-profile ratios, disc-integrated | 10⁻⁷ | 10⁻⁶ | ~0.1 | no |
+| 10 | line-profile ratios, disc-integrated | 10⁻⁷ | **9.4×10⁻⁵ measured** | **0.001** | **yes** — §4.20, added after this table was drawn |
 | 11 | polarization, disc-integrated | 10⁻⁷ | 10⁻⁵–10⁻⁶ | ~0.01–0.1 | no |
 | 12 | static artifact, Lagrange points and co-orbitals | ~10 m | few hundred m | ~10⁻² | no |
 | 13 | static artifact, asteroid surfaces | 1 m/pixel | a dozen bodies imaged | ~10⁻³ | no |
@@ -510,13 +510,13 @@ Two consequences for this paper. First, the absence of neutrino and gravitationa
 
 ### 4.1 Summary
 
-Twenty-nine searches were run, every one against a public archive collected for unrelated purposes. Three sections at the end of these results are not searches and do not enter the tally: §4.10 puts the one result that came closest to a detection through the procedure of §3.5, §4.11 tests whether the fast-band searches lose signal to a geometric term the coherent model omits, and §4.13 applies the method to a dataset the architecture cannot reach. All are null.
+Thirty searches were run, every one against a public archive collected for unrelated purposes. Three sections at the end of these results are not searches and do not enter the tally: §4.10 puts the one result that came closest to a detection through the procedure of §3.5, §4.11 tests whether the fast-band searches lose signal to a geometric term the coherent model omits, and §4.13 applies the method to a dataset the architecture cannot reach. All are null.
 
 > **Scope.** Every search examines the Sun, the heliosphere, or the solar system out to 160 AU — forced by the architecture, since step 4 of §2.5 places the modulator _at the local star_. **A search of distant sources tests a different hypothesis.** A further 23 searches of pulsar, pulsar-timing-array, X-ray binary, eclipsing binary and astrometric archives were run during this program and are reported separately. **All were null or void; none is excluded here because of its outcome**, and their exclusion is stated so that the coverage claimed in §4.3 is not read as covering more than it does.
 
 | Outcome | N | Meaning |
 |---|---|---|
-| null, injection-verified limit | 14 | amplitude bounded and recovery measured (§4.2, Figure 2) |
+| null, injection-verified limit | 15 | amplitude bounded and recovery measured (§4.2, Figure 2) |
 | null, analytic sensitivity only | 0 | none remain; the last, the sidereal fold, was verified against a gated statistic (§4.2) |
 | null, false-alarm and power pair | 3 | bounded by a measured false-alarm rate and power, not by a single amplitude (§4.2, Appendix A) |
 | null, no amplitude limit | 8 | reported as constraining nothing |
@@ -535,7 +535,7 @@ Twenty-nine searches were run, every one against a public archive collected for 
 | **the archive removed the observable** | — | **the data.** A level-2 product had already discarded the roll correction, and the spatial structure with it (§4.19). The LOI channel sits outside the twenty-nine: the observable was gone before a search could be scored |
 | **detection** | 1 | a known signal, recovered as a positive control (§4.6) |
 
-**Only the first line is astronomy.** Three are statements about our own machinery and two about the archives we were handed. Twenty-nine searches and twenty-five nulls reads as broad coverage; the honest reading is **twenty-two channels searched competently, three searches too weak to count, two defeated by their own machinery, and one defeated by the data**.
+**Only the first line is astronomy.** Three are statements about our own machinery and two about the archives we were handed. Thirty searches and twenty-six nulls reads as broad coverage; the honest reading is **twenty-two channels searched competently, three searches too weak to count, two defeated by their own machinery, and one defeated by the data**.
 
 ### 4.2 Limits
 
@@ -734,7 +734,7 @@ Re-running the self-keyed search (§A.2, row 3) returned a matched-filter correl
 ***The second half is not the insensitive one — it is the more sensitive one**: 100% and 94% power at 0.10σ, against 84% and 90% in the first half, because the field residual is quieter near solar minimum. Since power is quoted in units of the local standard deviation, a beacon of fixed _absolute_ amplitude would be easier to see in the second half, not harder. The absence is real.*
 
 > **Verdict: a real anticorrelation, and not a beacon.** It survives a rotation-matched null, so it is not solar rotation; it replicates on an independent magnetometer, so it is not an ACE artifact; but it is **confined to 2012–2015 in both instruments**, and the window in which it is absent has more power to detect it. A set-and-forget beacon does not switch off, and the interval carrying the excess is the maximum of cycle 24 — the temporal signature of an activity-driven physical coupling, which is the physics step of §3.5 doing its work.
-> **And it would not clear the trials correction in any case.** The self-keyed family tried one configuration, so there is no within-search look-elsewhere factor; but this is one result among **29 searches**, giving a per-search Bonferroni threshold of 0.05/29 = 1.7×10⁻³ (the denominator is 29, not 1,099, because the pair sweep carries its own within-search correction over its 1,074 tests). The observed _p_ of 0.006 to 0.012 does not reach it. **We report it as a candidate that failed replication in time and does not clear the paper's own trials threshold** — not as a result dismissed for having the wrong sign.
+> **And it would not clear the trials correction in any case.** The self-keyed family tried one configuration, so there is no within-search look-elsewhere factor; but this is one result among **30 searches**, giving a per-search Bonferroni threshold of 0.05/30 = 1.7×10⁻³ (the denominator is 29, not 1,099, because the pair sweep carries its own within-search correction over its 1,074 tests). The observed _p_ of 0.006 to 0.012 does not reach it. **We report it as a candidate that failed replication in time and does not clear the paper's own trials threshold** — not as a result dismissed for having the wrong sign.
 
 Two things are worth keeping. The rotation-matched null is a control of exactly the kind §4.4 argues for — supplied by physics, not tunable. And we would not have run any of these tests had the sign argument stood: **the sign was doing the work that four measurements should have done**, and it happened to reach a similar destination — the most dangerous way for a shortcut to fail. The anticorrelation itself is a modest heliophysical result we make no claim to have explained.
 
@@ -952,6 +952,78 @@ SDO/EVE ESP gives four EUV bands at **0.25 s over 120 consecutive days** — 41,
 
 **The dimensionless carriers.** §3.1 restricts a sender to dimensionless quantities, so the single channels above are the wrong object and the color ratios are the right one. Because each channel is prepared as a relative residual, the difference of two prepared channels *is* their log ratio to first order, and the three ratios among CH_18, CH_26 and CH_30 cost nothing extra to form. **All three are null, and every candidate is again at exactly 2.000000 Hz** — 11, 2 and 31 bins above threshold across the three, all at Nyquist. Three of those pass the dark-channel veto, which records only that the dark diode happened to carry less power in those particular bins: **a control discriminates against the failures it was built for, and this one was not built against a sampling edge.** With Nyquist excluded a priori, as it can be from the cadence alone, no candidate survives in any ratio.
 
+
+### 4.20 Row 10: disc-integrated line-profile ratios
+
+Row 10 sits at the bottom of the designer's ordering in §3.6 for a reason that is
+also the reason it is hard. A ratio of two line depths measured in the *same
+exposure* divides out atmospheric transmission, instrumental throughput, exposure
+time, detector gain and pointing; only differential effects survive. It is the
+dimensionless construction of §3.1 at its most complete, which is why a designer
+could set a gate at 10⁻⁷ there and expect a capable receiver to reach it.
+
+**The archive.** The HARPS-N solar telescope has observed the Sun as a star every
+possible day since 14 July 2015: **173,793 disc-integrated spectra** to 5 May
+2025, 9.86 years, 3,239 observing days, 300 s exposures at 325 s cadence,
+released publicly in 2025. Per-exposure relative precision is **7.96×10⁻⁵** on
+both cross-correlation contrast and FWHM; bisector span is two orders worse at
+8.6×10⁻³ and is not usable.
+
+Two dimensionless channels were formed from daily means: **contrast**, the line
+depth as a fraction of the continuum, and **equivalent width**, contrast × FWHM.
+The second is the better channel and the reason is worth stating — contrast *is*
+an activity indicator and is used as one, so measuring on it means measuring the
+Sun's activity. Depth and width anticorrelate under activity, so their product
+cancels part of it: scatter falls from 5.10×10⁻⁴ to 3.02×10⁻⁴.
+
+> **Three nulls were tried and two were wrong, each caught by the zero arm.**
+> Rolling values against fixed times breaks the value–time pairing on irregular
+> sampling and leaves every surrogate whiter than the data: the zero arm fired at
+> **100%**. A circular shift is in any case the wrong instrument here — Lomb–
+> Scargle power is invariant under a time shift, so it is degenerate for
+> intrinsic periodicity, however well it serves the external-key searches of
+> §4.10 and §4.12. Phase randomisation on an interpolated grid attenuates power
+> in the search band, because filling the daytime gaps smooths the series: the
+> zero arm was clean on contrast but fired at **95%** on equivalent width, which
+> carries more periodic content. The null adopted draws Gaussian surrogates at
+> the **observed times** from the data's own empirical autocovariance — no
+> gridding, no interpolation — and is clean on both channels, with median _p_ of
+> 0.4934 on equivalent width where a calibrated two-sided test belongs.
+>
+> What that null asserts is the whole test: a detection must exceed what the
+> star's own correlation structure produces. Quasi-periodic solar variability is
+> inside it by construction, which is the honest choice and is what stellar
+> activity modelling does; the cost is that a beacon sitting exactly in that
+> structure is partly absorbed.
+
+**Null.** No periodic fractional modulation in the 4–40 day band, at an
+**injection-verified 9.4×10⁻⁵** (95% recovery, equivalent width, zero arm 0.0%,
+monotonic). Contrast gives 2.84×10⁻⁴ and returns the same figure under either
+working null, which is a useful check that its answer does not depend on the
+choice.
+
+**§3.6 estimated 10⁻⁶ and the measurement is 94× worse.** That is the largest
+miss in the table, and it follows rows 6 and 7 coming in at margins 0.5 and
+0.069 against their own estimates. The margin column is an upper bound on
+capability, as §5.1 says, and each measurement has widened the gap.
+
+**The limit is the Sun, not the spectrograph.** Detrended daily scatter is 25 to
+43 times the photon floor of 1.2×10⁻⁵, so in this band the search is bounded by
+solar rotation and active-region evolution and no integration improves it. The
+same archive is recorded at five-minute cadence, where the solar background falls
+steeply and the photon floor does not — the fast band is where this channel's
+sensitivity actually lives, and it is the search §5.5 already ranks first.
+
+> **The search now allows the signal frequency to drift, and the paper did not
+> previously.** A designer with a probe in-system knows the star's rotation rate
+> in real time and can lock a modulation to it. Solar rotation is differential
+> and its effective rate drifts a few percent over the cycle; at the Carrington
+> period a 1% drift accumulates ~8 radians of phase across a decade, more than a
+> full cycle, and coherent integration at a fixed frequency then loses most of
+> such a signal. Rotation appears elsewhere in this paper only as a *control*
+> (§4.10, §4.12) and never as a clock a signal might track. The search is
+> therefore run de-chirped, over frequency drift as well as frequency, with the
+> null paying the same widened search.
 
 ### 4.19 The one spatially resolved channel, and why it is void
 
@@ -1227,7 +1299,7 @@ Sheikh (2019) organizes technosignature searches along nine axes — four functi
 
 | axis | | |
 |---|---|---|
-| **Cost** | **very high** | Twenty-nine searches, no new observations, one workstation. No telescope time was requested and none is needed |
+| **Cost** | **very high** | Thirty searches, no new observations, one workstation. No telescope time was requested and none is needed |
 | **Observing capability** | **high, with a correction** | The data exists now — but of §3.6's estimated reaches, all three that have since been measured came in short: row 5 unreachable, rows 6 and 7 at margins 0.5 and 0.069 against an estimated ~1 |
 | **Ancillary benefits** | **moderate** | The sweeps recover real heliophysics unprompted, and two bands are now measured as unsearchable at part-per-million level rather than merely unsearched. The durable product is methodological |
 | **Detectability** | **mixed** | Deep absolutely — 1.4×10⁻⁶ in fractional Lyman-α at two minutes, 2.0×10⁻⁷ in broadband irradiance. Marginal against the level the gating argument predicts: the best margin achieved anywhere is 0.5 |
@@ -1245,11 +1317,11 @@ Sheikh (2019) organizes technosignature searches along nine axes — four functi
 
 ## 6. Conclusions
 
-We have asked what a technosignature search looks like when the channel is not known in advance — no dedicated radiating apparatus assumed, the carrier possibly a relationship among observables. Two constraints make the question finite: a sender sharing no units can encode only in dimensionless quantities, and a sender minimizing energy gates the message on demonstrated capability. Against the resulting combination space we ran 29 searches of public archives, none of it data collected for SETI.
+We have asked what a technosignature search looks like when the channel is not known in advance — no dedicated radiating apparatus assumed, the carrier possibly a relationship among observables. Two constraints make the question finite: a sender sharing no units can encode only in dimensionless quantities, and a sender minimizing energy gates the message on demonstrated capability. Against the resulting combination space we ran 30 searches of public archives, none of it data collected for SETI.
 
 |   | Principal result |
 |---|---|
-| 1 | **Twenty-five nulls, three void, one detection. Fourteen limits are injection-verified; none remains analytic.** The deepest verified limit is **1.4×10⁻⁶** in fractional Lyman-α irradiance at two minutes, at 95% recovery |
+| 1 | **Twenty-five nulls, three void, one detection. Fifteen limits are injection-verified; none remains analytic.** The deepest verified limit is **1.4×10⁻⁶** in fractional Lyman-α irradiance at two minutes, at 95% recovery |
 | 2 | **Cadence dominates sensitivity.** The same instrument, days and pipeline are 245× more sensitive at two minutes than at one day (the limits table as a whole spans 10⁵, but across different observables and statistics). Most high-cadence solar data has never been searched at the cadence at which it is most sensitive |
 | 3 | **Coverage, not sensitivity, is the binding constraint.** Seventeen further observables took the pair space from 18% to 88% and found nothing across the Sun–heliosphere boundary in 510 tests. The remaining 12% of pairs are blocked by retired records and cannot close by waiting (§5.7); 2,749 of the 2,934 reachable triples completed and returned **void** for want of a matched three-body null (§4.9) |
 | 4 | **Completing the enumeration is affordable, but not linearly.** A 52× larger search costs only 25% in amplitude; the compute scales as _N_² because the surrogate count must scale with the test count. The full pair space is **under an hour** on one machine, the triple space 26 h by direct counting, the only method used here (§5.2) |
@@ -1258,7 +1330,7 @@ We have asked what a technosignature search looks like when the channel is not k
 | 7 | **The first line-of-sight test is null.** Earth against Mars in Lyman-α: no viewpoint-specific modulation to 8.9×10⁻⁴ at 3 d and 4.2×10⁻³ at 307 s, the latter limited 580× by the MAVEN monitor and not by the geometry (§4.12). **The first result here that bounds the mechanism §2.7 proposes rather than modulation in general** |
 | 8 | **The framework's own best guess is now tested, and it does not reach.** Of §3.6's unsearched rows 3–7, **four are searched here**. Row 6 is null at an injection-verified **2.0×10⁻⁷, margin 0.5** — the closest this program comes to a designer level. Row 7 is null at **1.46×10⁻⁵, margin 0.069**. Row 3 is null. Row 5 is **void**: the six-hour noise floor is 31–108 ppm and a 76 ppm Venus transit is not recoverable. **All three rows whose reach was estimated and has since been measured came in worse than the estimate**, and the §3.6 margin column should be read as an upper bound on capability rather than as capability |
 
-The one detection is a re-detection: solar p-modes in GOES EXIS Mg II irradiance, comb spacing 135.1 and 135.0 µHz on the two spacecraft against an accepted 134.9. Priority belongs to Eden et al. (2024), and we claim none. Its value is as a positive control whose answer was fixed in advance and corroborated by an independent group — a stronger check on the pipeline than any self-designed injection, and it correspondingly strengthens the twenty-five nulls.
+The one detection is a re-detection: solar p-modes in GOES EXIS Mg II irradiance, comb spacing 135.1 and 135.0 µHz on the two spacecraft against an accepted 134.9. Priority belongs to Eden et al. (2024), and we claim none. Its value is as a positive control whose answer was fixed in advance and corroborated by an independent group — a stronger check on the pipeline than any self-designed injection, and it correspondingly strengthens the twenty-six nulls.
 
 > **We do not claim that the framework of §§2–3 is supported by these results, and we do not invoke it to explain them.** A gating hypothesis that absorbs negative results has stopped being a hypothesis. The nulls are reported as nulls: each carrier was searched at a stated sensitivity and was not found. What the framework is credited with here is generating the searches, not surviving them.
 
@@ -1268,12 +1340,12 @@ Three things would advance the problem, in ascending order of cost. **Search the
 
 Wright et al. (2018) established that the value of a SETI result lies in the fraction of a defined space it excludes; this paper applies that standard to a space whose axes are quantities rather than pointings. By that measure the honest summary is not that nothing was found, but that **the pair space is now essentially closed and the triple space was attempted and returned void** — closing the pairs required no new instrument, only seventeen archives that already existed — that **the first viewpoint test bounds the mechanism §2.7 proposes rather than modulation in general** (§4.12), and that the framework's own ordering names where the next searches belong: in archives that exist, at sensitivities already achieved, and not yet examined (§3.6).
 
-## Appendix A. All 29 searches
+## Appendix A. All 30 searches
 
-Twenty-nine searches, one row each: **null** (no detection), **void** (the detector or its null failed a positive control, so the row constrains nothing), **detection**. Numbering is the order in which the searches were run within the wider program, retained for traceability to code and data; the grouping is by domain.
+Thirty searches, one row each: **null** (no detection), **void** (the detector or its null failed a positive control, so the row constrains nothing), **detection**. Numbering is the order in which the searches were run within the wider program, retained for traceability to code and data; the grouping is by domain.
 
 
-**Why each search ended where it did.** "Null" is not one thing, and a reader deciding where to spend effort next needs the distinction. Across the twenty-nine, the reasons sort into six:
+**Why each search ended where it did.** "Null" is not one thing, and a reader deciding where to spend effort next needs the distinction. Across the thirty, the reasons sort into six:
 
 | failure mode | n | what it means | where |
 |---|---|---|---|
@@ -1285,7 +1357,7 @@ Twenty-nine searches, one row each: **null** (no detection), **void** (the detec
 | **the archive removed the observable** | — | a level-2 product had already decided what to discard; outside the twenty-nine, the observable having gone before a search could be scored | §4.19 |
 | **detection** | 1 | a known signal recovered as a positive control | §4.6 |
 
-**Only the first is an astronomical statement.** The next three are statements about the analysis, and the last two about the data. That distinction matters more than the tally: twenty-five nulls sound like broad coverage, and the honest reading is that twenty-two channels were searched competently, three searches were too weak to count, two were defeated by their own machinery, and one was defeated by the data.
+**Only the first is an astronomical statement.** The next three are statements about the analysis, and the last two about the data. That distinction matters more than the tally: twenty-six nulls sound like broad coverage, and the honest reading is that twenty-two channels were searched competently, three searches were too weak to count, two were defeated by their own machinery, and one was defeated by the data.
 
 ### A.1 Solar, fast band (14)
 
@@ -1304,6 +1376,7 @@ Twenty-nine searches, one row each: **null** (no detection), **void** (the detec
 | 31 | Broadband irradiance, coherent | SOHO/VIRGO SPM blue+green+red, 60 s | 7.16M bins x 3, 27.3 yr | null | nothing above threshold | 0 bins above threshold on any channel; 0 pass the three-photometer gate (§4.15) |
 | 32 | p-mode frequency structure | SOHO/GOLF Doppler velocity, 20 s | 25.9 yr, 98.4% duty; PM1+PM2, 180 d segments | null | nothing above threshold | 1.46×10⁻⁵ fractional at 95% recovery — **15× short of the designer level** (§4.16) |
 | 33 | Occultation dips, transit timing | SOHO/VIRGO TSI, 60 s, 27.0 yr | 6 known planetary transits | void | see §4.5 / §4.9 / §4.17 / §4.19 | the detector cannot recover Venus at 76 ppm; six-hour noise floor measured at 31–108 ppm (§4.17) |
+| 50 | Line-profile ratios, disc-integrated | HARPS-N solar telescope, 300 s | 173,793 spectra, 9.86 yr, 2,444 daily means | null | nothing above threshold | 9.4×10⁻⁵ fractional at 95% recovery, equivalent-width channel, 4–40 d band; §3.6 estimated 10⁻⁶ (§4.20) |
 | 34 | Sub-minute EUV, four bands + dark diode | SDO/EVE ESP, 0.25 s, 120 d | 20.7M bins x 4, Nyquist 2 Hz | null | nothing above threshold | all candidates at exactly Nyquist; p-modes recovered in light, absent from dark (§4.18) |
 
 ### A.2 Solar, slow band (10)
@@ -1336,7 +1409,7 @@ Twenty-nine searches, one row each: **null** (no detection), **void** (the detec
 |---|---|---|---|---|---|---|
 | 26 | Radial coincidence, 20–160 AU | Voyager 1 + 2, 48 yr | 32k hourly samples | null | nothing above threshold | FP 3.0%, 100% power at 50% injection |
 
-*29 rows: 25 null, 3 void, 1 detection. Seventeen of the twenty-five nulls state a sensitivity — **14 injection-verified amplitude limits and 3 measured false-alarm-and-power pairs** — and the other eight are enumeration or control results that bound structure without quoting an amplitude. Per-search method, code and data provenance are in the supplementary material.*
+*29 rows: 25 null, 3 void, 1 detection. Eighteen of the twenty-six nulls state a sensitivity — **15 injection-verified amplitude limits and 3 measured false-alarm-and-power pairs** — and the other eight are enumeration or control results that bound structure without quoting an amplitude. Per-search method, code and data provenance are in the supplementary material.*
 
 ## Appendix B. The datasets
 
