@@ -465,7 +465,7 @@ For σ₁ ≈ 10⁻³ per minute and _N_ ≈ 2.6×10⁶ (five years) this gives 
 | 7 | p-mode frequency structure | 10⁻⁶ | **1.46×10⁻⁵ measured** | **0.069** | **yes** — §4.16, added after this table was drawn |
 | 8 | neutron monitor / particle flux | 10⁻⁴ | 7.6×10⁻⁵ | ~1 | **yes** |
 | 9 | solar-wind composition | 10⁻³ | 10⁻³ | ~1 | **yes** (§4.8); implausible as a carrier |
-| 10 | line-profile ratios, disc-integrated | 10⁻⁷ | **9.4×10⁻⁵ measured** | **0.001** | **yes** — §4.20, added after this table was drawn |
+| 10 | line-profile ratios, disc-integrated | 10⁻⁷ | **9.4×10⁻⁶ measured** | **0.011** | **yes** — §4.20, added after this table was drawn |
 | 11 | polarization, disc-integrated | 10⁻⁷ | 10⁻⁵–10⁻⁶ | ~0.01–0.1 | no |
 | 12 | static artifact, Lagrange points and co-orbitals | ~10 m | few hundred m | ~10⁻² | no |
 | 13 | static artifact, asteroid surfaces | 1 m/pixel | a dozen bodies imaged | ~10⁻³ | no |
@@ -996,23 +996,55 @@ cancels part of it: scatter falls from 5.10×10⁻⁴ to 3.02×10⁻⁴.
 > activity modelling does; the cost is that a beacon sitting exactly in that
 > structure is partly absorbed.
 
-**Null.** No periodic fractional modulation in the 4–40 day band, at an
-**injection-verified 9.4×10⁻⁵** (95% recovery, equivalent width, zero arm 0.0%,
-monotonic). Contrast gives 2.84×10⁻⁴ and returns the same figure under either
-working null, which is a useful check that its answer does not depend on the
-choice.
+**Null, slow band.** No periodic fractional modulation in the 4–40 day band, at
+an **injection-verified 9.4×10⁻⁵** (95% recovery, equivalent width, zero arm
+0.0%, monotonic). Contrast gives 2.84×10⁻⁴ and returns the same figure under
+either working null, which is a useful check that its answer does not depend on
+the choice.
 
-**§3.6 estimated 10⁻⁶ and the measurement is 94× worse.** That is the largest
-miss in the table, and it follows rows 6 and 7 coming in at margins 0.5 and
-0.069 against their own estimates. The margin column is an upper bound on
-capability, as §5.1 says, and each measurement has widened the gap.
+**In that band the limit is the Sun, not the spectrograph.** Detrended daily
+scatter is 25 to 43 times the photon floor of 1.2×10⁻⁵, so the search is bounded
+by solar rotation and active-region evolution and no integration improves it.
+This paper's own claim — that the archives are far more informative at two
+minutes than at one day — predicts the Sun should go quiet at high frequency.
+It does, and the same archive is recorded at five-minute cadence.
 
-**The limit is the Sun, not the spectrograph.** Detrended daily scatter is 25 to
-43 times the photon floor of 1.2×10⁻⁵, so in this band the search is bounded by
-solar rotation and active-region evolution and no integration improves it. The
-same archive is recorded at five-minute cadence, where the solar background falls
-steeply and the photon floor does not — the fast band is where this channel's
-sensitivity actually lives, and it is the search §5.5 already ranks first.
+**Null, fast band, and it is ten times better.** Within a contiguous observing
+session the residual falls to **1.21×** the photon floor on contrast and 1.48× on
+equivalent width, against 25–43× for the daily series: at minute cadence this
+channel is photon-limited. Searched over **8.6–130.9 cycles per day** (periods of
+11 minutes to 2.8 hours) across 1,656 sessions and 96,732 exposures, the result
+is **null at an injection-verified 9.4×10⁻⁶** — zero arm 0.0%, median _p_ 0.4453,
+clean transition between 3×10⁻⁶ and 10⁻⁵.
+
+> **Sessions, not calendar days, and the distinction is not cosmetic.** Grouping
+> by integer BJD gives a median span of 23.7 h per bucket, impossible for a
+> daytime telescope: the day boundary falls mid-observation and each bucket
+> straddles a night, so a within-day detrend fits a line across twenty hours of
+> darkness. A session is a run with no gap over an hour — 1,919 of them, median
+> 5.53 h and 56 exposures.
+>
+> **The within-session residual is not white and the null must not pretend it
+> is.** Contrast shows lag-1 autocorrelation +0.415 decaying to +0.047 by lag 10;
+> equivalent width +0.155 and white past lag 2. Permuting residuals would destroy
+> that structure and manufacture significance — the failure that produced the
+> 100% and 95% zero arms above. Surrogates are therefore drawn **per session**
+> from that session's own empirical autocovariance at the observed times.
+> Sessions are ~56 points, so the factorisation is trivial where the slow-band
+> null needed 2,444 × 2,444.
+>
+> Two limits on the fast-band figure. The surrogate carries **no phase relation
+> between sessions** by construction — that is the point, since the test asks
+> whether coherence persists across the decade, but a genuinely solar signal
+> coherent across sessions would also fire. And five-minute p-modes sit at
+> 288 c/d, above the 133 c/d Nyquist of a 325 s cadence, and alias into this band
+> near 22 c/d (~65 min): a candidate there is solar before it is anything else.
+
+**§3.6 estimated 10⁻⁶. The fast band comes in 9.4× short of that and the slow
+band 94×**, so the estimate was closer than the first search suggested and the
+slow band was simply the wrong band. The pattern of §5.1 survives either way —
+rows 6 and 7 came in at margins 0.5 and 0.069 against their own estimates, and
+the margin column remains an upper bound on capability rather than capability.
 
 > **The search now allows the signal frequency to drift, and the paper did not
 > previously.** A designer with a probe in-system knows the star's rotation rate
@@ -1376,7 +1408,7 @@ Thirty searches, one row each: **null** (no detection), **void** (the detector o
 | 31 | Broadband irradiance, coherent | SOHO/VIRGO SPM blue+green+red, 60 s | 7.16M bins x 3, 27.3 yr | null | nothing above threshold | 0 bins above threshold on any channel; 0 pass the three-photometer gate (§4.15) |
 | 32 | p-mode frequency structure | SOHO/GOLF Doppler velocity, 20 s | 25.9 yr, 98.4% duty; PM1+PM2, 180 d segments | null | nothing above threshold | 1.46×10⁻⁵ fractional at 95% recovery — **15× short of the designer level** (§4.16) |
 | 33 | Occultation dips, transit timing | SOHO/VIRGO TSI, 60 s, 27.0 yr | 6 known planetary transits | void | see §4.5 / §4.9 / §4.17 / §4.19 | the detector cannot recover Venus at 76 ppm; six-hour noise floor measured at 31–108 ppm (§4.17) |
-| 50 | Line-profile ratios, disc-integrated | HARPS-N solar telescope, 300 s | 173,793 spectra, 9.86 yr, 2,444 daily means | null | nothing above threshold | 9.4×10⁻⁵ fractional at 95% recovery, equivalent-width channel, 4–40 d band; §3.6 estimated 10⁻⁶ (§4.20) |
+| 50 | Line-profile ratios, disc-integrated | HARPS-N solar telescope, 300 s | 173,793 spectra, 9.86 yr, 2,444 daily means | null | nothing above threshold | 9.4×10⁻⁶ fractional at 95% recovery, equivalent-width channel, fast band (11 min – 2.8 h); 9.4×10⁻⁵ in the 4–40 d band; §3.6 estimated 10⁻⁶ (§4.20) |
 | 34 | Sub-minute EUV, four bands + dark diode | SDO/EVE ESP, 0.25 s, 120 d | 20.7M bins x 4, Nyquist 2 Hz | null | nothing above threshold | all candidates at exactly Nyquist; p-modes recovered in light, absent from dark (§4.18) |
 
 ### A.2 Solar, slow band (10)
