@@ -1129,6 +1129,41 @@ fixed-frequency arm, so its thresholds are a floor on de-chirped performance
 rather than a ceiling. No arm is anti-conservative; the zero arm is clean in
 all five.
 
+**What the sinusoid assumption costs.** Every threshold quoted in this paper,
+here and in the rows above, was measured by injecting a *sinusoid* — and the
+search is a periodogram, which is matched to exactly that. A designer's
+modulation need not be smooth, and if it were coded the quoted sensitivities
+could be optimistic by an unknown factor. Six morphologies were therefore
+injected into the same series at the same power, each scaled to the RMS of a
+unit-amplitude sine so that only the shape varies:
+
+| injected morphology | 95% recovery | relative to sine |
+|---|---|---|
+| sine | 8.8×10⁻⁵ | 1.00× |
+| square | 1.1×10⁻⁴ | 1.27× |
+| pulse train, 25% duty | 1.2×10⁻⁴ | 1.36× |
+| pulse train, 10% duty | 2.0×10⁻⁴ | 2.33× |
+| binary phase shift, length-7 code | 2.0×10⁻⁴ | 2.33× |
+| Gaussian-envelope burst | 2.8×10⁻⁴ | 3.15× |
+
+**The worst case across the family is 3.15×**, and the reason it is bounded is
+structural rather than fortunate. Any strictly periodic modulation, whatever
+its shape, deposits power into a comb of lines at multiples of its repetition
+frequency, and where the modulation is coded, into sidebands around them. A
+search that maximizes over a band finds the strongest line in that comb.
+Changing the morphology redistributes power among the lines; it does not remove
+the comb. The limits quoted throughout are therefore specific to the sinusoid
+only to within a factor of about three, across the range of shapes a designer
+might plausibly use.
+
+Two boundaries on that claim. The family tested is **strictly periodic
+throughout** — a one-off transient, a non-repeating code, or a modulation whose
+frequency wanders non-linearly deposits no comb at all, and nothing here bounds
+what such a signal would cost to miss. And the comparison holds *power* fixed
+rather than peak depth: the 10% pulse train reaches a peak 2.09 times its RMS,
+so a designer limited by peak modulation rather than by average power pays more
+for a pulsed format than the table shows.
+
 ### 4.19 The one spatially resolved channel, and why it is void
 
 Every other search in this paper is disc-integrated. SOHO/VIRGO's Luminosity Oscillation Imager gives **twelve science pixels across the solar disc**, plus four guiding references, at 60 s over **29.0 years with a 97.19% duty cycle** — the best-sampled record used anywhere here.

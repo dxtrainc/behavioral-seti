@@ -140,13 +140,52 @@ class GPNull:
         return self.L @ rng.standard_normal(self.n)
 
 
-def run(t, y, amp, f_inj, nsh, fmin, fmax, rng, drift=0.0, ks=None):
+# repeating +/-1 chip code (length-7 m-sequence) used by the bpsk morphology
+_CODE = np.array([1, 1, 1, -1, -1, 1, -1], dtype=float)
+
+
+def modulation(kind, ph, rng):
+    """Zero-mean modulation carrying the same RMS as a unit-amplitude sine.
+
+    Every search in this paper injects a sinusoid, which is also what the
+    periodogram is matched to. These alternatives keep the power budget fixed
+    and vary only the morphology, so the resulting thresholds say how much of
+    the quoted sensitivity is specific to the sinusoid assumption.
+
+    Normalizing to the RMS of a unit sine (not to unit RMS) makes `sine`
+    reproduce the original injection byte for byte, so the existing numbers
+    stay comparable.
+    """
+    th = ph + rng.uniform(0, 2 * np.pi)
+    if kind == "sine":
+        w = np.sin(th)
+    elif kind == "square":
+        w = np.sign(np.sin(th))
+    elif kind.startswith("pulse"):
+        duty = float(kind[5:]) / 100.0
+        w = (np.mod(th / (2 * np.pi), 1.0) < duty).astype(float)
+    elif kind == "bpsk":
+        k = np.mod(np.floor(th / (2 * np.pi)).astype(np.int64), _CODE.size)
+        w = np.sin(th) * _CODE[k]
+    elif kind == "burst":
+        u = np.mod(th / (2 * np.pi), 1.0) - 0.5
+        w = np.exp(-0.5 * (u / 0.06) ** 2) * np.sin(2 * np.pi * 6.0 * u)
+    else:
+        raise ValueError("unknown waveform %r" % kind)
+    w = w - w.mean()
+    s = float(w.std())
+    if s <= 0:
+        return w
+    return w / (s * np.sqrt(2.0))
+
+
+def run(t, y, amp, f_inj, nsh, fmin, fmax, rng, drift=0.0, ks=None, wave="sine"):
     r = y / np.median(y)
     if amp > 0:
         t0 = t - t.mean()
         # drift: fractional change in frequency across the whole span
         ph = 2 * np.pi * f_inj * (t0 + 0.5 * (drift / (t0.max() - t0.min())) * t0 ** 2)
-        r = r * (1.0 + amp * np.sin(ph + rng.uniform(0, 2 * np.pi)))
+        r = r * (1.0 + amp * modulation(wave, ph, rng))
     x = r - median_filter(r, size=W, mode="nearest")
     key = CFG.get("gpkey")
     gp = _GP_CACHE.get(key)
@@ -174,7 +213,8 @@ def _work(job):
     amp, trial = job
     rng = np.random.default_rng(7000 + trial * 97 + int(amp * 1e9))
     return run(CFG["t"], CFG["y"], amp, CFG["f_inj"], CFG["nsh"],
-               CFG["fmin"], CFG["fmax"], rng, CFG.get("drift", 0.0), CFG.get("ks"))
+               CFG["fmin"], CFG["fmax"], rng, CFG.get("drift", 0.0), CFG.get("ks"),
+               CFG.get("wave", "sine"))
 
 
 def main():
@@ -189,6 +229,8 @@ def main():
                     help="fractional frequency drift of the INJECTED signal across the span")
     ap.add_argument("--chirp", action="store_true",
                     help="search over frequency drift as well as frequency")
+    ap.add_argument("--wave", default="sine",
+                    help="injected morphology: sine|square|pulseNN|bpsk|burst")
     ap.add_argument("--amps", default="",
                     help="comma-separated amplitude ladder; overrides the default grid")
     ap.add_argument("--out", default="~/row10.json")
@@ -214,7 +256,8 @@ def main():
         # drift rates spanning +/-3% of the frequency across the record
         ks = [d / span for d in np.linspace(-0.03, 0.03, 7)]
     CFG = dict(t=t, y=y, f_inj=1.0 / A.period, nsh=A.shifts, fmin=fmin, fmax=fmax,
-               drift=A.drift, ks=ks, gpkey=A.chan)
+               drift=A.drift, ks=ks, gpkey=A.chan, wave=A.wave)
+    print("  injected waveform: %s (same RMS as a unit-amplitude sine)" % A.wave)
     print("  injected drift %.1f%% across the span; search = %s"
           % (100 * A.drift, "de-chirped (7 drift rates)" if A.chirp else "fixed frequency"))
     amps = ([0.0] + [float(v) for v in A.amps.split(",") if v.strip()]
