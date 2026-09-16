@@ -1164,6 +1164,67 @@ rather than peak depth: the 10% pulse train reaches a peak 2.09 times its RMS,
 so a designer limited by peak modulation rather than by average power pays more
 for a pulsed format than the table shows.
 
+**The aperiodic class, and where its floor actually is.** The bound above holds
+for periodic morphologies because they deposit a comb; the three cases named as
+unbounded — a one-off transient, a non-repeating code, and a carrier whose
+frequency wanders — deposit none. Each was injected into the same series under
+the same power convention and put through two searches: this paper's own
+Lomb-Scargle peak, and a multi-scale matched filter maximized over arrival time
+and duration.
+
+| injected morphology | Lomb-Scargle (this paper's search) | matched filter |
+|---|---|---|
+| sine, for reference | 1.1×10⁻⁴ | not reached |
+| frequency wander, ±10% random walk | 5.8×10⁻⁴ (5.1×) | not reached |
+| transient, 3 d | not reached | 1.7×10⁻⁴ (1.5×) |
+| transient, 5 d | not reached | 1.7×10⁻⁴ (1.5×) |
+| transient, 10 d | not reached | 2.9×10⁻⁴ (2.5×) |
+| transient, 20 / 45 / 90 d | not reached | not reached |
+| non-repeating code | not reached | not reached |
+
+Three things follow, and they do not point the same way.
+
+**The blind spot is real and it is large.** This paper's search never recovers a
+transient or a non-repeating code at any amplitude tested — the ladder ran to
+1.4×10⁻², more than 120 times its own sinusoid threshold, and recovery never
+left zero. Every limit quoted in this paper is a limit on periodic signals, and
+that qualification is not a formality.
+
+**One of the three cases is now bounded.** A carrier whose frequency random-walks
+by ±10% across the record is still recovered, at 5.1× the sinusoid cost, because
+wandering smears the line without abolishing it — the power stays quasi-coherent
+and the band maximum still finds it. Frequency wander therefore joins the
+periodic family rather than escaping it.
+
+**What is missing is the statistic, not the data.** A matched filter recovers a
+short transient at 1.5× the sinusoid cost, so the information is present in the
+record; the periodogram simply cannot see it. Closing this gap is a second
+search, not a better instrument. But it closes only within a duration window:
+recovery is flat out to about 10 days and gone by 20, and the reason is
+physical rather than technical. The Sun's own variability at 20–90 day
+timescales — active-region emergence and evolution, and rotation at 27 days —
+is exactly where an injected excursion of that length becomes indistinguishable
+from the star. A transient beacon would have to be brief to be findable at all.
+
+> **A matched-filter maximum cannot be calibrated against a Gaussian null on
+> this data, and the failure is worth recording.** The detrended residual
+> carries excess kurtosis 1.58 and a max|x|/MAD of 6.74, against 3.41 for a
+> Gaussian surrogate of the same autocovariance. The maximum of a matched
+> filter is an extreme-value statistic, so against that null the unmodified
+> data sits 4–6.4 sd high at every scale and the test fires on nothing 100% of
+> the time: it is measuring the Sun's non-Gaussianity, not any injected signal.
+> Rank-matching the surrogate to the data's marginal removes most of the excess
+> and still leaves 3.6 sd, because real solar excursions also cluster in time.
+> Dividing the peak by the 99th percentile of the same response makes the
+> statistic self-normalizing and asks the only question a single record can
+> answer — whether the largest excursion is larger than that record's other
+> large excursions. That combination calibrates to within 1.2 sd at every scale
+> and gives a 0.0% zero arm; its median _p_ at zero amplitude is 0.22 rather
+> than 0.50, so the data still sits high in the null, and the thresholds above
+> are read with that in mind. A circular-shift null, used elsewhere in this
+> paper, is inadmissible here on principle: the statistic is shift-invariant,
+> so shifting generates no background at all.
+
 ### 4.19 The one spatially resolved channel, and why it is void
 
 Every other search in this paper is disc-integrated. SOHO/VIRGO's Luminosity Oscillation Imager gives **twelve science pixels across the solar disc**, plus four guiding references, at 60 s over **29.0 years with a 97.19% duty cycle** — the best-sampled record used anywhere here.
